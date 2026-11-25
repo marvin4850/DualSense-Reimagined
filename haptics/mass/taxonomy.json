@@ -1,0 +1,87 @@
+﻿// Mass HD taxonomy (wave 1, 16.11.2026): game sound leaf (FMOD event of an AnimNotify_PlayCustomFX) -> physical class -> forge
+// method + tier. FIRST matching rule wins (regex, case-insensitive, on the leaf). User rules (HAPTICS.md 1b, game96/97):
+//   ambient / world interaction quiet (0.3-0.45); the hero's working action leads (0.7-1.0); background handling 0.35-0.5;
+//   character from the PHYSICS of the action, not from loudness: sliding/rubbing = friction, metal/stone grind = scrape,
+//   one hard contact = impact, rattle ONLY for real separate small hits (coins, nuggets, seeds), air = low friction.
+//   Vocal / body noises (cough, yawn, sniffle, spit...) carry no touch: silent (AGENTS.md 3.5 - no effect without a reason).
+// Each user remark should become a rule HERE (a class), not a fix of one event.
+{
+ "version": 4,
+ "tiers": { "ambient": 0.35, "handling": 0.45, "body": 0.3, "drink": 0.6, "eat": 0.55, "seat": 0.5, "drop": 0.5, "weapon_draw": 0.75, "work_soft": 0.52, "work_hard": 0.78, "mechanism": 0.7, "story": 0.85 },
+ // v3 (game98): crafts slightly quieter (0.6/0.9 -> 0.52/0.78), drinking louder (body 0.3 -> drink 0.6), eating had no sample -> bite sample.
+ "methods": {
+  "impact":   { "method": "impact", "grit": 0.4, "maxMs": 450 },
+  "impact_soft": { "method": "impact", "grit": 0.2, "maxMs": 350 },
+  "scrape":   { "method": "scrape", "carrierHz": 160, "compress": 0.55, "stick": 0.85, "maxMs": 700 },
+  "friction": { "method": "friction", "carrierHz": 115, "releaseMs": 50, "maxMs": 700 },
+  "air":      { "method": "friction", "carrierHz": 90, "releaseMs": 60, "maxMs": 500 },
+  "rattle":   { "method": "rattle", "carrierHz": 160, "tauMs": 8, "threshold": 0.18, "maxHits": 8, "maxMs": 500 },
+  "texture":  { "method": "texture", "carrierHz": 110, "releaseMs": 40, "am": 0.5, "maxMs": 900 }
+ },
+ // Montages without a sound at the moment (sitting has no notify at all): an effect at a fraction of a named section.
+ // Entry of a seat montage = walk in + sit down; the body lands near its end (game98: Man_Digger_Sit Entry 1.37 s). Long entries
+ // (> maxLenS, e.g. lute 6.8 s) have other actions inside: left out until timed in game.
+ "sectionEffects": [
+  { "montageRe": "Sit(?!Ground)|SitThrone", "sectionRe": "^Entry", "atFraction": 0.7, "maxLenS": 2.0,
+    "class": "sit down on bench / chair", "method": "impact_soft", "tier": "seat", "sample": "SFX_OBJ_Furniture_Bench_SitDown_Clothes_01", "slot": "sit_down" }
+ ],
+ // Hand-checked rules copied into a wave pack as they are. Bow sneaking (STL) = the APPROVED N bow samples (game90/91),
+ // shifted by the STL notify times: AttachWeapon 0.818 (N 0.871), DeattachWeapon 0.858 (N 1.410), HandToQuiver 0.437 /
+ // ArrowToBow 1.080 (N 0.532 / 0.912: the arrow part of the sample starts 380 ms in, so it is cut and placed separately).
+ "extraRules": [
+  { "wave": "mass2", "id": "mass2-bow-stl-equip", "event": "montage:start", "where": { "m": "Man_Bow_STL_Equip" }, "priority": "normal", "path": "hd",
+    "effect": { "preset": "Sample", "bank": "pilot", "name": "draw_bow", "variant": "A", "slot": "pilot.draw_bow", "intensity": 1.0, "delayMs": 721 },
+    "continuous": { "loop": false, "maxMs": 1200, "stopOn": [], "stopWhen": ["montage:complete"], "stopIf": "m == 'Man_Bow_STL_Equip'", "stopFadeMs": 8 },
+    "note": "approved N draw_bow (delay 774 vs AttachWeapon 871) shifted to STL AttachWeapon 818" },
+  { "wave": "mass2", "id": "mass2-bow-stl-unequip", "event": "montage:start", "where": { "m": "Man_Bow_STL_Unequip" }, "priority": "normal", "path": "hd",
+    "effect": { "preset": "Sample", "bank": "pilot", "name": "sheathe_bow", "variant": "A", "slot": "pilot.sheathe_bow", "intensity": 1.0, "delayMs": 569 },
+    "note": "approved N sheathe_bow (delay 1121 vs DeattachWeapon 1410) shifted to STL DeattachWeapon 858" },
+  { "wave": "mass2", "id": "mass2-bow-stl-reload", "event": "montage:start", "where": { "m": "Man_Bow_STL_Reload_AnimMontage" }, "priority": "normal", "path": "hd",
+    "effect": { "layers": [
+      { "preset": "Sample", "bank": "pilot", "name": "reload_bow", "variant": "A", "slot": "pilot.reload_bow", "intensity": 1.0, "delayMs": 437, "durationMs": 380, "fadeMs": 20 },
+      { "preset": "Sample", "bank": "pilot", "name": "reload_bow", "variant": "A", "slot": "pilot.reload_bow", "intensity": 1.0, "delayMs": 1080, "offsetMs": 380 } ] },
+    "continuous": { "loop": false, "maxMs": 1800, "stopOn": [], "stopWhen": ["montage:complete"], "stopIf": "m == 'Man_Bow_STL_Reload_AnimMontage'", "stopFadeMs": 8 },
+    "note": "approved N reload_bow split: hand to quiver at STL 437, arrow onto the bow at STL 1080" }
+ ],
+ "rules": [
+  { "re": "^/|Particles|PS_",                                   "silent": "not a sound event" },
+  { "re": "Cough|Sniffle|Yawn|ClearThroat|Spit|Vomit|Burb|Burp|Sneeze", "silent": "vocal/body noise, nothing touched" },
+  { "re": "Smoke_(In|Out|Blow)|Exhale|Inhale",                  "silent": "breathing" },
+  { "re": "Torch_Drop_Whoosh",       "wave": "mass2", "class": "throw the torch away (arm swing)", "method": "air", "tier": "ambient", "sample": "SFX_COMBAT_Melee_Swing_Torch_L1_01" },
+  { "re": "Torch_Drop_Impact",       "wave": "mass2", "class": "torch hits the ground",           "method": "impact_soft", "tier": "drop", "sample": "SFX_OBJ_Cargo_Brushwood_Drop_L1_01" },
+  { "re": "Torch_PickUpAndEquip",    "wave": "mass2", "class": "grab the torch",                  "method": "impact_soft", "tier": "handling", "sample": "SFX_COMBAT_Melee_Draw_1HWood_L1_02" },
+  { "re": "Melee_Draw_\\d?H?Wood", "wave": "mass2", "class": "wooden weapon from the belt (not a blade: game92)", "method": "friction", "tier": "weapon_draw", "carrierHz": 100, "sample": "SFX_COMBAT_Melee_Draw_1HWood_L1_02" },
+  { "re": "Melee_Undraw_\\dHWood",   "wave": "mass2", "class": "wooden weapon back on the belt", "method": "friction", "tier": "weapon_draw", "carrierHz": 100, "sample": "SFX_COMBAT_Melee_Undraw_1HWood_L1_01" },
+  { "re": "Melee_Draw_1HBlade",      "wave": "mass2", "class": "blade out of the scabbard (approved draw_s1h, game91)", "useSlot": "pilot.draw_s1h", "tier": "weapon_draw" },
+  { "re": "Melee_Draw_2HBlade",      "wave": "mass2", "class": "blade out of the scabbard",       "method": "scrape", "tier": "weapon_draw", "carrierHz": 170, "sample": "SFX_COMBAT_Melee_Draw_2HMetalBlade_L1_01" },
+  { "re": "Melee_Draw_1HAxe_L2",     "wave": "mass2", "class": "axe / heavy weapon off the belt or back", "method": "scrape", "tier": "weapon_draw", "carrierHz": 130, "sample": "SFX_COMBAT_Melee_Draw_1HAxe_L2_01" },
+  { "re": "Melee_Draw_\\dHAxe",      "wave": "mass2", "class": "axe / heavy weapon off the belt or back", "method": "scrape", "tier": "weapon_draw", "carrierHz": 130, "sample": "SFX_COMBAT_Melee_Draw_1HAxe_L1_01" },
+  { "re": "COMBAT_|Ranged_Bow|Impacts_Arrow",                   "skip": "combat/bow: approved routes exist, wave 1 does not touch them" },
+  { "re": "Forging_",                                          "skip": "forge station: approved bank 'crafting' (pack 75)" },
+  { "re": "Scavenger_HitShort",                              "skip": "creature sound, not the hero" },
+  { "re": "^SFX_ITEMS_(Draw|Shelve|PickUp)$",                  "class": "handling an object", "method": "impact_soft", "tier": "handling", "sample": "SFX_ITEMS_Misc_Medium_PickUp_Clothes_01" },
+  { "re": "^SFX_ITEMS_Drop$",                                  "class": "set down / land",   "method": "impact_soft", "tier": "handling", "sample": "SFX_ITEMS_Misc_Medium_Drop_Clothes_01" },
+  { "re": "Pan_Fry|IngredientEffect",                          "class": "sizzle / sparkle",  "method": "texture", "tier": "ambient" },
+  { "re": "Pan_AddSpice",                                      "class": "small separate hits", "method": "rattle", "tier": "handling" },
+  { "re": "Pan_ShakeFood|HerbsRip",                            "class": "rub / slide / water", "method": "friction", "tier": "work_soft" },
+  { "re": "Pan_TossFood",                                      "class": "set down / land",   "method": "impact_soft", "tier": "handling" },
+  { "re": "WoodChopSpot_Stick",                                "class": "tool strike",       "method": "impact", "tier": "work_hard" },
+  { "re": "Food_Hard_Consume",                                "class": "eating",            "method": "impact", "tier": "eat", "sample": "SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Bite_01" },
+  { "re": "Potions_Consume|Drink|Slurp|Swallow|Spill|Bottle_Move", "class": "drinking",       "method": "impact_soft", "tier": "drink" },
+  { "re": "Light_Cast",                                        "class": "air / swing",       "method": "air", "tier": "ambient" },
+  { "re": "_Pet",                                              "class": "fur stroke",        "method": "friction", "tier": "ambient", "carrierHz": 100 },
+  { "re": "KnuckleCrack|Clap|Scratch|Sweat_Swipe",             "class": "own body contact",  "method": "impact_soft", "tier": "body" },
+  { "re": "Consume|Eat_|Squish|Rustle|TryFood|Bite",          "class": "eating",            "method": "impact", "tier": "eat" },
+  { "re": "Hammer_Hit|Anvil_Hit|CutTree_Hit|WoodChopSpot_Split|Couldron_Smash|HerbStomper_Down|TrainingDummy_Hit|Darts_HitBoard|Sweep_StompBroom", "class": "tool strike", "method": "impact", "tier": "work_hard" },
+  { "re": "Sharpen|Grindstone|Carve(?!ToolP)|StoneDoor.*Slide|Rice_Bunch_Cut", "class": "hard grind / cut", "method": "scrape", "tier": "work_soft" },
+  { "re": "Scrub|Sweep_(Move|Swing)|Stir|LeatherTanning|Brush|HerbStomper_(Up|Handle)|Rice_Bunch_(Rip|Pick)|WashFace|Splash|Crawl", "class": "rub / slide / water", "method": "friction", "tier": "work_soft" },
+  { "re": "Lever_.*Pull|Lever_.*Reset|Mechanism|Activate|PlaceItem|InsertItem|Rotisserie", "class": "mechanism", "method": "impact", "tier": "mechanism" },
+  { "re": "Cargo_.*Drop|Items_Drop|_Drop$|LandSaddle|Land_Human|Bed_LayDown|PullAxe|WoodChopSpot_Place|Book_Close|Bowl_Shelve|PutDown", "class": "set down / land", "method": "impact_soft", "tier": "handling" },
+  { "re": "CountOre_(Ore|Toss|BagShake)|Bottle_Shake|Seeds_|Mechanism_Clank|Unscrew|SpoonRim|Bowl_Spoon", "class": "small separate hits", "method": "rattle", "tier": "handling" },
+  { "re": "Whoosh|Swing|Throw|Swipe|Blow|Fire_|Gesture|Call|TorchSwing|Wind", "class": "air / swing", "method": "air", "tier": "ambient" },
+  { "re": "Climb_Human_(Wall_)?(Hand|Foot)",                           "class": "climb grip",        "method": "impact_soft", "tier": "handling" },
+  { "re": "Climb_Human_(Wall_)?(Body|Rock)|Mount|Unmount|Bed_StandUp|Emerge", "class": "body effort",  "method": "friction", "tier": "handling" },
+  { "re": "Explode|Boom|Appear|BarrierCollapse|Collapse|Arena.*Open|DirtSlide|Uriziel|FocusCast|FocusDraw|Trance", "class": "story / magic event", "method": "texture", "tier": "story" },
+  { "re": "PickUp|Pickup|Grab|Handle|Draw|Shelve|Book_|Page|Paper|Bowl_Draw|Catch|Open|Pop|Place|ToolPick|ToolPlace|Shoulder|Bag", "class": "handling an object", "method": "impact_soft", "tier": "handling" }
+ ]
+}

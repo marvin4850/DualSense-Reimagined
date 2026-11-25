@@ -1,0 +1,72 @@
+// G1R-DualSense haptics configuration (JSON with comments).
+// packs: evaluated so that LATER packs win (a rule with the same id replaces the earlier one; other rules of later packs
+//        are tried first). Disable a pack here ("enabled": false) or at run time: --disable-pack NAME / --only-pack NAME.
+// registry: catalogue of game events the mod can send (type, phases, fields, source, status) - see registry.json.
+// limits: safety of the HD mixer (also used by offline replay).
+// onsetLead: true on a pack entry = slow-onset bank samples of that pack start earlier (silent lead-in cut, swell <= 250 ms;
+//        SampleBank.WithLead, check: python tools/bank_onset.py --packs). Remove it to return the pack to its old timing.
+{
+  "registry": "registry.json",
+  "actions": "actions.json",
+  "derived": "derived.json",     // edge events from polled states (bow draw / full draw ...)     // correlated actions (jump, swing, water, dive, guard, fight) -> act_* fields for rules
+  // mixer groups: mix (sum) | crossfade (a new effect fades the group's playing ones out over fadeMs) | exclusive
+  "groups": {
+    "calm-sway": { "mode": "crossfade", "fadeMs": 1600, "fadeInMs": 1600 },
+    "combat-clash": { "mode": "crossfade", "fadeMs": 6, "fadeInMs": 2, "note": "game108: the body shove of a hit and the clash of a block / parry / wall replace each other instead of the shove burying the ring" },
+    "breadth-physical": { "mode": "crossfade", "fadeMs": 6, "fadeInMs": 6, "note": "new physical contacts replace tails within candidate category; approved groups untouched" },
+    "water":  { "mode": "crossfade", "fadeMs": 250, "fadeInMs": 200, "note": "splash -> dive -> surface follow each other smoothly instead of summing (was peak 2.35)" },
+    "impact": { "mode": "mix" },
+    "bow":    { "mode": "crossfade", "fadeMs": 80, "note": "draw -> hold -> strain -> shot replace each other" }
+  },
+  "packs": [
+    { "file": "packs/91-threat-lightbar.json", "enabled": true },
+    { "file": "packs/00-base.json", "enabled": true },
+    { "file": "packs/20-auto.json", "enabled": true },  // generated: tools/gen_rules.py <- automap.json
+    { "file": "packs/30-lockpick.json", "enabled": true },  // original lock physics + adaptive L2/R2
+    { "file": "packs/40-lockpick-selected.json", "enabled": true }, // approved height cues and cancellable confirmation
+    { "file": "packs/45-lockpick-failure.json", "enabled": true },  // v34: approved pick-break scene on lp_break:start
+    { "file": "packs/46-lockpick-trained.json", "enabled": true },  // v36: Trained - double click after a move that shortens the path
+    { "file": "packs/47-lockpick-links.json", "enabled": true }     // v36: Trained, EXPERIMENTAL - 1..4 thuds = plates moved; false = off
+    , { "file": "packs/55-generated.json", "enabled": true }   // GENERATED, approved by the user in game (intel/approved.json)
+    , { "file": "packs/60-pilot.json", "enabled": false }   // GENERATED candidates (haptic_intel.py pilot): run --enable-pack pilot
+    , { "file": "packs/70-scenes.json", "enabled": false } // semantic candidates, never auto-approved
+    , { "file": "packs/56-scenes-approved.json", "enabled": true } // explicit semantic approvals only
+    , { "file": "packs/75-crafting-test.json", "enabled": true } // APPROVED game97 16.11.2026: forge station + torch extinguish (crafting v2, HAPTICS.md 1b)
+    , { "file": "packs/76-mass-wave1.json", "enabled": true, "onsetLead": true } // GENERATED mass wave 1 (tools/mass_haptics.py, taxonomy v3): APPROVED game99 16.11.2026
+    , { "file": "packs/77-mass-wave2.json", "enabled": true, "onsetLead": true } // GENERATED mass wave 2: torch/weapon equipment outside combat + bow STL: APPROVED game100 16.11.2026
+    , { "file": "packs/78-landing.json", "enabled": true } // landing v2: game sounds, low, 3 tiers by height (replaces base 'land'): APPROVED game101 16.11.2026
+    , { "file": "packs/79-weapon-equip.json", "enabled": true } // weapon equipment v2 + loot v2 (tools/weapon_equip_pack.py): APPROVED 16.11.2026 (game105-109 + pad audition)
+    , { "file": "packs/86-combat-wave3.json", "enabled": true } // combat v5 matrix (tools/combat_pack.py): APPROVED 16.11.2026 (game106-109 + pad audition)
+    , { "file": "packs/87-feedback.json", "enabled": true } // user-requested common game/library feedback
+    , { "file": "packs/88-magic-library.json", "enabled": false } // LIBRARY-ONLY magic candidates (tools/magic_library.py), never in game
+    , { "file": "packs/89-magic.json", "enabled": true, "onsetLead": true } // GAME magic, mod v44 (tools/magic_library.py): candidates until the user approves them
+    , { "file": "packs/90-bow-full.json", "enabled": true } // bow full-draw signal (mod v45): candidate until confirmed in game
+    , { "file": "packs/92-ladder-slide.json", "enabled": true } // fast ladder descent (forge/ladder.forge.json): candidate 17.11.2026 until confirmed in game
+    , { "file": "packs/93-finishers.json", "enabled": true } // GENERATED tools/finisher_pack.py: finishing attacks by weapon + skill, candidate 18.11.2026
+    , { "file": "packs/94-env.json", "enabled": true } // door after lockpick, out-of-air pulses, waterfall (mod v46): candidate 18.11.2026
+    , { "file": "packs/95-combo.json", "enabled": true } // combo blows build up to the peak blow (tools/combo_pack.py): candidate 19.11.2026
+    , { "file": "packs/96-world-v48.json", "enabled": true } // weed by kind, spell desk, winch, orc lever, heal channel, scavenger jump/land (mod v48): candidate 21.11.2026
+    , { "file": "packs/97-magic-feel.json", "enabled": true } // mod v51: adaptive spell charge, R2 per spell kind, transformation / un-transformation, book puzzle (tools/spell_feel_pack.py): candidate 23.11.2026
+    , { "file": "packs/80-breadth-craft.json", "enabled": false } // breadth candidates
+    , { "file": "packs/81-breadth-interactions.json", "enabled": false } // breadth candidates
+    , { "file": "packs/82-breadth-items.json", "enabled": false } // breadth candidates
+    , { "file": "packs/83-breadth-environment.json", "enabled": false } // breadth candidates
+    , { "file": "packs/84-breadth-equipment.json", "enabled": false } // breadth candidates
+    , { "file": "packs/85-breadth-special.json", "enabled": false } // breadth candidates
+  ],
+  "limits": {
+    "masterGain": 1.0,
+    "ceiling": 0.95,          // soft limiter ceiling
+    "knee": 0.9,              // transparent up to knee x ceiling (0.855): a single approved effect passes (almost) unchanged
+    "guardFloor": 0.6,        // overload guard: master may drop to x0.6 while the sum keeps exceeding ceiling x 1.15
+    "duckLower": 0.5,         // lower-priority voices x 0.5 while a higher-priority voice plays
+    "maxVoices": 8,
+    "stallMs": 80,            // audio callback gap counted as a stall
+    "conflictPolicy": "hd-wins",  // motor-path effects are played through HD while HD voices are active (no fight for the actuators)
+    // delivery lateness (20.11.2026): an event that arrived later than the 2 s best case by more than the target pulls its
+    // HD voice earlier by the excess, at most lateTrimMaxMs, only out of its leading silence (scheduled layers).
+    // Journals 19.11: lateness p50 11, p95 26, p99 37 ms -> the late tail is brought back to the usual ~12 ms. 0 = off.
+    "lateTrimTargetMs": 12,
+    "lateTrimMaxMs": 20
+  }
+}

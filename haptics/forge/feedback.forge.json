@@ -1,0 +1,457 @@
+{
+ "bank": "feedback",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": {
+   "peak": 0.8
+  },
+  "check": {
+   "maxSub": 0.15,
+   "maxHigh": 0.04,
+   "minCore": 0.6,
+   "balance": "center",
+   "btMinCorr": 0.5
+  }
+ },
+ "variants": {
+  "A": {
+   "label": "User feedback, 16 November 2026",
+   "vars": {}
+  }
+ },
+ "slots": {
+  "step_stone_crouch": {
+   "role": "Crouching foot contact texture: stone",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1550_SFX_MOVE_Footsteps_Human_Stone_Sneak_01",
+     "method": "texture",
+     "carrierHz": 180,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_gravel_crouch": {
+   "role": "Crouching foot contact texture: gravel",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "521_SFX_MOVE_Footsteps_Human_Gravel_Sneak_01",
+     "method": "texture",
+     "carrierHz": 215,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_woodbridge_crouch": {
+   "role": "Crouching foot contact texture: woodbridge",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4888_SFX_MOVE_Footsteps_Human_WoodBridge_Sneak_01",
+     "method": "texture",
+     "carrierHz": 125,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_woodfloor_crouch": {
+   "role": "Crouching foot contact texture: woodfloor",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "949_SFX_MOVE_Footsteps_Human_WoodFloor_Sneak_01",
+     "method": "texture",
+     "carrierHz": 145,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_sand_crouch": {
+   "role": "Crouching foot contact texture: sand",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4995_SFX_MOVE_Footsteps_Human_Sand_Sneak_01",
+     "method": "texture",
+     "carrierHz": 195,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_layermud_crouch": {
+   "role": "Crouching foot contact texture: layermud",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "840_SFX_MOVE_Footsteps_Human_LayerMud_Sneak_01",
+     "method": "texture",
+     "carrierHz": 95,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_layerwater_crouch": {
+   "role": "Crouching foot contact texture: layerwater",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1510_SFX_MOVE_Footsteps_Human_LayerWater_Sneak_01",
+     "method": "texture",
+     "carrierHz": 115,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_grass_crouch": {
+   "role": "Crouching foot contact texture: grass",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "469_SFX_MOVE_Footsteps_Human_Grass_Sneak_01",
+     "method": "texture",
+     "carrierHz": 135,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_foliage_crouch": {
+   "role": "Crouching foot contact texture: foliage",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3136_SFX_MOVE_Footsteps_Human_Foliage_Sneak_01",
+     "method": "texture",
+     "carrierHz": 165,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "step_soil_crouch": {
+   "role": "Crouching foot contact texture: soil",
+   "lengthMs": 250,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1643_SFX_MOVE_Footsteps_Human_Soil_Sneak_01",
+     "method": "texture",
+     "carrierHz": 105,
+     "releaseMs": 45,
+     "am": 0.35,
+     "maxMs": 220
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "exactMs": 240,
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 25,
+    "maxMs": 260,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "ladder_contact": {
+   "role": "A hand/foot settles on the next ladder rung; one game sample with eight gentle event variations",
+   "lengthMs": 260,
+   "maxLengthMs": 330,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "782_SFX_OBJ_Traversal_Ladder_StepUp_04",
+     "method": "texture",
+     "carrierHz": 155,
+     "releaseMs": 55,
+     "am": 0.35,
+     "maxMs": 230
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "check": {
+    "minMs": 30,
+    "maxMs": 330,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "equip_weight": {
+   "role": "The extra grip/body of lifting a two-handed weapon; soft weight, no hammer blow",
+   "lengthMs": 280,
+   "maxLengthMs": 350,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 118,
+     "attackMs": 16,
+     "glide": 0.97,
+     "modes": [
+      [
+       1,
+       1,
+       65
+      ],
+      [
+       1.8,
+       0.15,
+       22
+      ]
+     ],
+     "durMs": 230,
+     "gain": 1,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.75,
+    "rms20": 0.32
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 350,
+    "rms20Min": 0.22,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "roll": {
+   "role": "Continuous shoulder-to-hip rolling contact and cloth friction, not a louder double dodge pulse",
+   "lengthMs": 820,
+   "maxLengthMs": 900,
+   "layers": [
+    {
+     "type": "noise",
+     "freq": 145,
+     "q": 1.4,
+     "at": 0,
+     "durMs": 720,
+     "gain": 0.4,
+     "pan": -0.7,
+     "panEnd": 0.7,
+     "attackMs": 80,
+     "releaseMs": 190,
+     "amRate": 3,
+     "amDepth": 0.25
+    },
+    {
+     "type": "tone",
+     "freq": 100,
+     "freqEnd": 135,
+     "at": 80,
+     "durMs": 480,
+     "gain": 0.28,
+     "pan": 0.65,
+     "panEnd": -0.65,
+     "attackMs": 90,
+     "releaseMs": 180
+    },
+    {
+     "type": "modal",
+     "f": 120,
+     "attackMs": 12,
+     "modes": [
+      [
+       1,
+       1,
+       27
+      ]
+     ],
+     "durMs": 110,
+     "gain": 0.32,
+     "at": 35,
+     "pan": -0.4
+    },
+    {
+     "type": "modal",
+     "f": 85,
+     "attackMs": 15,
+     "modes": [
+      [
+       1,
+       1,
+       35
+      ]
+     ],
+     "durMs": 145,
+     "gain": 0.3,
+     "at": 470,
+     "pan": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "check": {
+    "minMs": 450,
+    "maxMs": 900,
+    "rms20Min": 0.24,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  }
+ }
+}

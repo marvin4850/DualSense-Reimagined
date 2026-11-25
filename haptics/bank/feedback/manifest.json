@@ -1,0 +1,331 @@
+{
+  "bank": "feedback",
+  "recipe": "feedback.forge.json",
+  "generated": "2026-11-16 15:38",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "User feedback, 16 November 2026",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "step_stone_crouch",
+      "role": "Crouching foot contact texture: stone",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.6,
+          "peak": 0.8,
+          "rms20": 0.422,
+          "crest": 4.31,
+          "attackMs": 173.85,
+          "btCorr": 0.66,
+          "btRms20": 0.614,
+          "centroidHz": 178,
+          "dominantHz": 135,
+          "sub": 0,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_gravel_crouch",
+      "role": "Crouching foot contact texture: gravel",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 220,
+          "peak": 0.8,
+          "rms20": 0.357,
+          "crest": 4.18,
+          "attackMs": 3.73,
+          "btCorr": 0.57,
+          "btRms20": 0.536,
+          "centroidHz": 205,
+          "dominantHz": 176,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.94,
+          "warnings": [
+            "Bluetooth: correlation only 0.57"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "step_woodbridge_crouch",
+      "role": "Crouching foot contact texture: woodbridge",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.9,
+          "peak": 0.8,
+          "rms20": 0.365,
+          "crest": 5.68,
+          "attackMs": 40.15,
+          "btCorr": 0.79,
+          "btRms20": 0.539,
+          "centroidHz": 138,
+          "dominantHz": 158,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.48,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_woodfloor_crouch",
+      "role": "Crouching foot contact texture: woodfloor",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 215.6,
+          "peak": 0.8,
+          "rms20": 0.371,
+          "crest": 5.16,
+          "attackMs": 30.71,
+          "btCorr": 0.75,
+          "btRms20": 0.549,
+          "centroidHz": 156,
+          "dominantHz": 126,
+          "sub": 0,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_sand_crouch",
+      "role": "Crouching foot contact texture: sand",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 223,
+          "peak": 0.8,
+          "rms20": 0.359,
+          "crest": 3.52,
+          "attackMs": 18.67,
+          "btCorr": 0.63,
+          "btRms20": 0.581,
+          "centroidHz": 190,
+          "dominantHz": 208,
+          "sub": 0,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.62,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_layermud_crouch",
+      "role": "Crouching foot contact texture: layermud",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 220.4,
+          "peak": 0.8,
+          "rms20": 0.454,
+          "crest": 3.2,
+          "attackMs": 60.9,
+          "btCorr": 0.85,
+          "btRms20": 0.645,
+          "centroidHz": 116,
+          "dominantHz": 114,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_layerwater_crouch",
+      "role": "Crouching foot contact texture: layerwater",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.1,
+          "peak": 0.8,
+          "rms20": 0.369,
+          "crest": 3.6,
+          "attackMs": 114.27,
+          "btCorr": 0.82,
+          "btRms20": 0.58,
+          "centroidHz": 128,
+          "dominantHz": 94,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.45,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_grass_crouch",
+      "role": "Crouching foot contact texture: grass",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 223.5,
+          "peak": 0.8,
+          "rms20": 0.416,
+          "crest": 3.32,
+          "attackMs": 11.38,
+          "btCorr": 0.76,
+          "btRms20": 0.633,
+          "centroidHz": 149,
+          "dominantHz": 135,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_foliage_crouch",
+      "role": "Crouching foot contact texture: foliage",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.7,
+          "peak": 0.8,
+          "rms20": 0.358,
+          "crest": 3.73,
+          "attackMs": 71.94,
+          "btCorr": 0.74,
+          "btRms20": 0.549,
+          "centroidHz": 156,
+          "dominantHz": 114,
+          "sub": 0,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.59,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "step_soil_crouch",
+      "role": "Crouching foot contact texture: soil",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 178.6,
+          "peak": 0.8,
+          "rms20": 0.378,
+          "crest": 3.83,
+          "attackMs": 58.6,
+          "btCorr": 0.86,
+          "btRms20": 0.578,
+          "centroidHz": 109,
+          "dominantHz": 73,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "ladder_contact",
+      "role": "A hand/foot settles on the next ladder rung; one game sample with eight gentle event variations",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 222.4,
+          "peak": 0.8,
+          "rms20": 0.435,
+          "crest": 3.06,
+          "attackMs": 34,
+          "btCorr": 0.7,
+          "btRms20": 0.651,
+          "centroidHz": 173,
+          "dominantHz": 190,
+          "sub": 0,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "equip_weight",
+      "role": "The extra grip/body of lifting a two-handed weapon; soft weight, no hammer blow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 229.8,
+          "peak": 0.75,
+          "rms20": 0.498,
+          "crest": 3.34,
+          "attackMs": 17.19,
+          "btCorr": 0.86,
+          "btRms20": 0.725,
+          "centroidHz": 118,
+          "dominantHz": 117,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "roll",
+      "role": "Continuous shoulder-to-hip rolling contact and cloth friction, not a louder double dodge pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 704.9,
+          "peak": 0.8,
+          "rms20": 0.551,
+          "crest": 2.7,
+          "attackMs": 161.6,
+          "btCorr": 0.86,
+          "btRms20": 0.76,
+          "centroidHz": 116,
+          "dominantHz": 111,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": -0.88,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

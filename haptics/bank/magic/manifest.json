@@ -1,0 +1,3225 @@
+{
+  "bank": "magic",
+  "recipe": "magic.forge.json",
+  "generated": "2026-11-16 17:29",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "Magic library candidates, 16 November 2026",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "firebolt_cast",
+      "role": "Firebolt: a few dry crackles of a small flame forming",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 705.5,
+          "peak": 0.8,
+          "rms20": 0.436,
+          "crest": 4.69,
+          "attackMs": 358.44,
+          "btCorr": 0.71,
+          "btRms20": 0.642,
+          "centroidHz": 170,
+          "dominantHz": 191,
+          "sub": 0,
+          "core": 0.974,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firebolt_release",
+      "role": "Firebolt: sharp light launch",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 374.6,
+          "peak": 0.8,
+          "rms20": 0.414,
+          "crest": 6.14,
+          "attackMs": 4.1,
+          "btCorr": 0.79,
+          "btRms20": 0.603,
+          "centroidHz": 136,
+          "dominantHz": 155,
+          "sub": 0.012,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.06,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firebolt_impact",
+      "role": "Firebolt: small flame pop at the target",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 293.7,
+          "peak": 0.8,
+          "rms20": 0.459,
+          "crest": 5.14,
+          "attackMs": 52.85,
+          "btCorr": 0.87,
+          "btRms20": 0.687,
+          "centroidHz": 108,
+          "dominantHz": 105,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_cast",
+      "role": "Fireball: dense ignition",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 763.9,
+          "peak": 0.8,
+          "rms20": 0.358,
+          "crest": 5.96,
+          "attackMs": 398.5,
+          "btCorr": 0.82,
+          "btRms20": 0.566,
+          "centroidHz": 130,
+          "dominantHz": 86,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_charge",
+      "role": "Fireball: charge stage S",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 604,
+          "peak": 0.8,
+          "rms20": 0.44,
+          "crest": 5.45,
+          "attackMs": 160.58,
+          "btCorr": 0.88,
+          "btRms20": 0.639,
+          "centroidHz": 103,
+          "dominantHz": 70,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_charge2",
+      "role": "Fireball: charge stage M (stronger, lower)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 974.7,
+          "peak": 0.8,
+          "rms20": 0.389,
+          "crest": 4.08,
+          "attackMs": 212.65,
+          "btCorr": 0.9,
+          "btRms20": 0.595,
+          "centroidHz": 96,
+          "dominantHz": 76,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_charge3",
+      "role": "Fireball: charge stage L (densest)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1191.4,
+          "peak": 0.8,
+          "rms20": 0.441,
+          "crest": 3.48,
+          "attackMs": 121.65,
+          "btCorr": 0.92,
+          "btRms20": 0.68,
+          "centroidHz": 89,
+          "dominantHz": 84,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_hold",
+      "role": "Fireball hold: dense rolling burn, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2400,
+          "peak": 0.8,
+          "rms20": 0.404,
+          "crest": 3.73,
+          "attackMs": 507.62,
+          "btCorr": 0.88,
+          "btRms20": 0.64,
+          "centroidHz": 103,
+          "dominantHz": 78,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_release",
+      "role": "Fireball: heavy launch",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 806.4,
+          "peak": 0.8,
+          "rms20": 0.499,
+          "crest": 3.88,
+          "attackMs": 639.1,
+          "btCorr": 0.94,
+          "btRms20": 0.728,
+          "centroidHz": 75,
+          "dominantHz": 74,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.54,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fireball_impact",
+      "role": "Fireball: volumetric explosion with decaying flashes",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2312.3,
+          "peak": 0.8,
+          "rms20": 0.583,
+          "crest": 7.02,
+          "attackMs": 247.4,
+          "btCorr": 0.95,
+          "btRms20": 0.801,
+          "centroidHz": 61,
+          "dominantHz": 58,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firestorm_cast",
+      "role": "Fire storm: building turbulence",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1291.3,
+          "peak": 0.8,
+          "rms20": 0.454,
+          "crest": 5.1,
+          "attackMs": 926.5,
+          "btCorr": 0.85,
+          "btRms20": 0.648,
+          "centroidHz": 118,
+          "dominantHz": 79,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firestorm_release",
+      "role": "Fire storm: launch rumble",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1008.6,
+          "peak": 0.8,
+          "rms20": 0.505,
+          "crest": 5.03,
+          "attackMs": 786.4,
+          "btCorr": 0.93,
+          "btRms20": 0.741,
+          "centroidHz": 76,
+          "dominantHz": 67,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firestorm_storm",
+      "role": "Fire storm: chaotic flashes rotating left/right, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 3200,
+          "peak": 0.8,
+          "rms20": 0.413,
+          "crest": 5.66,
+          "attackMs": 953.06,
+          "btCorr": 0.79,
+          "btRms20": 0.632,
+          "centroidHz": 141,
+          "dominantHz": 126,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0.76,
+          "drive": 0.33,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firestorm_end",
+      "role": "Fire storm: dying flames",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1699.8,
+          "peak": 0.8,
+          "rms20": 0.462,
+          "crest": 5.79,
+          "attackMs": 200.48,
+          "btCorr": 0.79,
+          "btRms20": 0.696,
+          "centroidHz": 141,
+          "dominantHz": 124,
+          "sub": 0,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firerain_cast",
+      "role": "Fire rain: gesture swell",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1272.2,
+          "peak": 0.8,
+          "rms20": 0.488,
+          "crest": 3.94,
+          "attackMs": 906.73,
+          "btCorr": 0.95,
+          "btRms20": 0.723,
+          "centroidHz": 68,
+          "dominantHz": 64,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firerain_charge",
+      "role": "Fire rain: thunderclap, then lightning flashes at +420 and +1160 ms (montage)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1373.6,
+          "peak": 0.8,
+          "rms20": 0.501,
+          "crest": 6.13,
+          "attackMs": 715.25,
+          "btCorr": 0.9,
+          "btRms20": 0.726,
+          "centroidHz": 81,
+          "dominantHz": 54,
+          "sub": 0.015,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firerain_release",
+      "role": "Fire rain: hit the ground",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 578.4,
+          "peak": 0.8,
+          "rms20": 0.542,
+          "crest": 4.29,
+          "attackMs": 77.85,
+          "btCorr": 0.95,
+          "btRms20": 0.767,
+          "centroidHz": 65,
+          "dominantHz": 64,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "firerain_rain",
+      "role": "Fire rain: many separate irregular falls, residual crackle - not one continuous buzz",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 3918.9,
+          "peak": 0.8,
+          "rms20": 0.474,
+          "crest": 6.63,
+          "attackMs": 968.58,
+          "btCorr": 0.91,
+          "btRms20": 0.71,
+          "centroidHz": 93,
+          "dominantHz": 91,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 1.49,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "icebolt_cast",
+      "role": "Ice bolt: dry crystal forming - fine ticks, no warm body",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1423,
+          "peak": 0.8,
+          "rms20": 0.403,
+          "crest": 6.75,
+          "attackMs": 835.06,
+          "btCorr": 0.52,
+          "btRms20": 0.613,
+          "centroidHz": 226,
+          "dominantHz": 216,
+          "sub": 0,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.52"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "icebolt_hold",
+      "role": "Ice bolt hold: thin cold tension, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1600,
+          "peak": 0.8,
+          "rms20": 0.304,
+          "crest": 4.49,
+          "attackMs": 1008.6,
+          "btCorr": 0.58,
+          "btRms20": 0.514,
+          "centroidHz": 211,
+          "dominantHz": 210,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.58"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "icebolt_release",
+      "role": "Ice bolt: hard dry snap",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 255.4,
+          "peak": 0.8,
+          "rms20": 0.418,
+          "crest": 4.07,
+          "attackMs": 150.6,
+          "btCorr": 0.52,
+          "btRms20": 0.629,
+          "centroidHz": 226,
+          "dominantHz": 229,
+          "sub": 0,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.76,
+          "warnings": [
+            "Bluetooth: correlation only 0.52"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "icebolt_impact",
+      "role": "Ice bolt: small shard cracking",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 310.3,
+          "peak": 0.8,
+          "rms20": 0.317,
+          "crest": 3.5,
+          "attackMs": 53.75,
+          "btCorr": 0.51,
+          "btRms20": 0.467,
+          "centroidHz": 227,
+          "dominantHz": 237,
+          "sub": 0,
+          "core": 0.985,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.96,
+          "warnings": [
+            "Bluetooth: correlation only 0.51"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "iceblock_cast",
+      "role": "Ice block: ice densifying - creak that tightens",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1898.3,
+          "peak": 0.8,
+          "rms20": 0.355,
+          "crest": 4.87,
+          "attackMs": 736.02,
+          "btCorr": 0.75,
+          "btRms20": 0.577,
+          "centroidHz": 160,
+          "dominantHz": 145,
+          "sub": 0,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "iceblock_release",
+      "role": "Ice block: several heavy crunches",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 462.1,
+          "peak": 0.8,
+          "rms20": 0.485,
+          "crest": 3.71,
+          "attackMs": 174.92,
+          "btCorr": 0.87,
+          "btRms20": 0.711,
+          "centroidHz": 113,
+          "dominantHz": 114,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.87,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "iceblock_impact",
+      "role": "Ice block: final powerful cracking and settling",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1257.8,
+          "peak": 0.8,
+          "rms20": 0.458,
+          "crest": 5.24,
+          "attackMs": 242.65,
+          "btCorr": 0.89,
+          "btRms20": 0.697,
+          "centroidHz": 98,
+          "dominantHz": 96,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.71,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "icewave_cast",
+      "role": "Ice wave: cold gathering, sparse ticks",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1899,
+          "peak": 0.8,
+          "rms20": 0.264,
+          "crest": 9.19,
+          "attackMs": 1131.92,
+          "btCorr": 0.56,
+          "btRms20": 0.409,
+          "centroidHz": 219,
+          "dominantHz": 200,
+          "sub": 0,
+          "core": 0.985,
+          "high": 0.004,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.56"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "icewave_release",
+      "role": "Ice wave: spreading wave of many brittle clicks sweeping across",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2258.6,
+          "peak": 0.8,
+          "rms20": 0.318,
+          "crest": 7.41,
+          "attackMs": 884.44,
+          "btCorr": 0.52,
+          "btRms20": 0.457,
+          "centroidHz": 228,
+          "dominantHz": 173,
+          "sub": 0,
+          "core": 0.954,
+          "high": 0.001,
+          "balanceDb": 0.16,
+          "drive": 0.87,
+          "warnings": [
+            "Bluetooth: correlation only 0.52"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "icewave_end",
+      "role": "Ice wave: rare residual cracks",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1169.6,
+          "peak": 0.8,
+          "rms20": 0.303,
+          "crest": 11.95,
+          "attackMs": 294.5,
+          "btCorr": 0.55,
+          "btRms20": 0.459,
+          "centroidHz": 217,
+          "dominantHz": 212,
+          "sub": 0,
+          "core": 0.988,
+          "high": 0.001,
+          "balanceDb": -2.35,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.55"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "balllightning_cast",
+      "role": "Ball lightning: first nervous discharge",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 523.1,
+          "peak": 0.8,
+          "rms20": 0.339,
+          "crest": 4.76,
+          "attackMs": 32.02,
+          "btCorr": 0.57,
+          "btRms20": 0.494,
+          "centroidHz": 216,
+          "dominantHz": 214,
+          "sub": 0,
+          "core": 0.968,
+          "high": 0.005,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.57"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "balllightning_charge",
+      "role": "Ball lightning: unstable discharges at the four charge loops (+0, +1000, +2020, +3070 ms)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 3973.2,
+          "peak": 0.8,
+          "rms20": 0.316,
+          "crest": 8.32,
+          "attackMs": 3082.67,
+          "btCorr": 0.51,
+          "btRms20": 0.451,
+          "centroidHz": 219,
+          "dominantHz": 179,
+          "sub": 0,
+          "core": 0.969,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.08,
+          "warnings": [
+            "Bluetooth: correlation only 0.51"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "balllightning_release",
+      "role": "Ball lightning: sharp release",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 522.6,
+          "peak": 0.8,
+          "rms20": 0.417,
+          "crest": 4.26,
+          "attackMs": 129.73,
+          "btCorr": 0.5,
+          "btRms20": 0.605,
+          "centroidHz": 229,
+          "dominantHz": 231,
+          "sub": 0,
+          "core": 0.99,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 2.51,
+          "warnings": [
+            "Bluetooth: correlation only 0.50"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "balllightning_impact",
+      "role": "Ball lightning: dense electric flash",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 457.9,
+          "peak": 0.8,
+          "rms20": 0.498,
+          "crest": 2.6,
+          "attackMs": 193.56,
+          "btCorr": 0.71,
+          "btRms20": 0.738,
+          "centroidHz": 168,
+          "dominantHz": 95,
+          "sub": 0.001,
+          "core": 0.984,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.25,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "chainlightning_cast",
+      "role": "Chain lightning: draw spark",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 559.7,
+          "peak": 0.8,
+          "rms20": 0.358,
+          "crest": 3.89,
+          "attackMs": 12.35,
+          "btCorr": 0.53,
+          "btRms20": 0.519,
+          "centroidHz": 227,
+          "dominantHz": 211,
+          "sub": 0,
+          "core": 0.965,
+          "high": 0.007,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.53"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "chainlightning_release",
+      "role": "Chain lightning: powerful first discharge",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 766.4,
+          "peak": 0.8,
+          "rms20": 0.505,
+          "crest": 3.63,
+          "attackMs": 152,
+          "btCorr": 0.75,
+          "btRms20": 0.718,
+          "centroidHz": 141,
+          "dominantHz": 51,
+          "sub": 0.025,
+          "core": 0.969,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 5,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "chainlightning_chain",
+      "role": "Chain lightning: crackling ray while held, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1200,
+          "peak": 0.8,
+          "rms20": 0.298,
+          "crest": 7.85,
+          "attackMs": 386.02,
+          "btCorr": 0.53,
+          "btRms20": 0.462,
+          "centroidHz": 222,
+          "dominantHz": 200,
+          "sub": 0.001,
+          "core": 0.967,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.54,
+          "warnings": [
+            "Bluetooth: correlation only 0.53"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "chainlightning_jump",
+      "role": "Chain lightning: one separate quick breakdown (one per jump)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 247.9,
+          "peak": 0.8,
+          "rms20": 0.419,
+          "crest": 3.9,
+          "attackMs": 67.6,
+          "btCorr": 0.56,
+          "btRms20": 0.611,
+          "centroidHz": 213,
+          "dominantHz": 214,
+          "sub": 0,
+          "core": 0.988,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 2.4,
+          "warnings": [
+            "Bluetooth: correlation only 0.56"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "chainlightning_end",
+      "role": "Chain lightning: fizzle out",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 315.2,
+          "peak": 0.8,
+          "rms20": 0.334,
+          "crest": 6.01,
+          "attackMs": 0.54,
+          "btCorr": 0.53,
+          "btRms20": 0.476,
+          "centroidHz": 229,
+          "dominantHz": 185,
+          "sub": 0,
+          "core": 0.931,
+          "high": 0.009,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.53"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "fistofwind_charge",
+      "role": "Fist of wind: smooth compression of air pressure",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 819.8,
+          "peak": 0.8,
+          "rms20": 0.479,
+          "crest": 3.04,
+          "attackMs": 518.73,
+          "btCorr": 0.96,
+          "btRms20": 0.693,
+          "centroidHz": 56,
+          "dominantHz": 45,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fistofwind_release",
+      "role": "Fist of wind: one powerful short push",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 607.7,
+          "peak": 0.8,
+          "rms20": 0.548,
+          "crest": 3.49,
+          "attackMs": 392.02,
+          "btCorr": 0.96,
+          "btRms20": 0.771,
+          "centroidHz": 61,
+          "dominantHz": 59,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.92,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fistofwind_end",
+      "role": "Fist of wind: quick dissipation",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 686.1,
+          "peak": 0.8,
+          "rms20": 0.421,
+          "crest": 3.53,
+          "attackMs": 430.77,
+          "btCorr": 0.96,
+          "btRms20": 0.654,
+          "centroidHz": 60,
+          "dominantHz": 51,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "stormfist_charge",
+      "role": "Storm fist: howling unstable build-up",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 976.8,
+          "peak": 0.8,
+          "rms20": 0.528,
+          "crest": 3.66,
+          "attackMs": 811.38,
+          "btCorr": 0.96,
+          "btRms20": 0.753,
+          "centroidHz": 52,
+          "dominantHz": 42,
+          "sub": 0.013,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "stormfist_release",
+      "role": "Storm fist: heavy air strike + ground hit",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 704.5,
+          "peak": 0.8,
+          "rms20": 0.594,
+          "crest": 2.72,
+          "attackMs": 281.19,
+          "btCorr": 0.95,
+          "btRms20": 0.813,
+          "centroidHz": 58,
+          "dominantHz": 51,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.21,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "stormfist_end",
+      "role": "Storm fist: unstable gusts and decaying vortex swings left/right",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1634.7,
+          "peak": 0.8,
+          "rms20": 0.409,
+          "crest": 6.13,
+          "attackMs": 916.77,
+          "btCorr": 0.91,
+          "btRms20": 0.619,
+          "centroidHz": 89,
+          "dominantHz": 74,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0.18,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "pyrokinesis_cast",
+      "role": "Pyrokinesis: fast ignition",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 606.8,
+          "peak": 0.8,
+          "rms20": 0.491,
+          "crest": 4.88,
+          "attackMs": 275.4,
+          "btCorr": 0.88,
+          "btRms20": 0.713,
+          "centroidHz": 106,
+          "dominantHz": 98,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "pyrokinesis_burn",
+      "role": "Pyrokinesis: held uneven burning, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2100,
+          "peak": 0.8,
+          "rms20": 0.42,
+          "crest": 5.14,
+          "attackMs": 1080.94,
+          "btCorr": 0.83,
+          "btRms20": 0.632,
+          "centroidHz": 125,
+          "dominantHz": 126,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "pyrokinesis_end",
+      "role": "Pyrokinesis: release, flame collapses",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 873.1,
+          "peak": 0.8,
+          "rms20": 0.463,
+          "crest": 5.15,
+          "attackMs": 36.88,
+          "btCorr": 0.87,
+          "btRms20": 0.698,
+          "centroidHz": 109,
+          "dominantHz": 79,
+          "sub": 0.004,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "sleep_cast",
+      "role": "Sleep: soft slow lulling",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2067.8,
+          "peak": 0.8,
+          "rms20": 0.563,
+          "crest": 3.77,
+          "attackMs": 432.27,
+          "btCorr": 0.95,
+          "btRms20": 0.776,
+          "centroidHz": 70,
+          "dominantHz": 72,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "sleep_release",
+      "role": "Sleep: soft pulses that slow down and fade",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2908.8,
+          "peak": 0.8,
+          "rms20": 0.516,
+          "crest": 4.22,
+          "attackMs": 115.48,
+          "btCorr": 0.94,
+          "btRms20": 0.732,
+          "centroidHz": 70,
+          "dominantHz": 45,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "charm_cast",
+      "role": "Charm: two thin rhythmic pulsations, left 4.0 Hz and right 5.2 Hz",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1232,
+          "peak": 0.8,
+          "rms20": 0.538,
+          "crest": 2.69,
+          "attackMs": 123.77,
+          "btCorr": 0.75,
+          "btRms20": 0.744,
+          "centroidHz": 159,
+          "dominantHz": 150,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0.97,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "charm_hold",
+      "role": "Charm hold: the two pulses meet in one harmonious wave, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2000,
+          "peak": 0.8,
+          "rms20": 0.547,
+          "crest": 2.24,
+          "attackMs": 154.04,
+          "btCorr": 0.76,
+          "btRms20": 0.75,
+          "centroidHz": 158,
+          "dominantHz": 158,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "charm_impact",
+      "role": "Charm: unified harmonious wave reaches the target",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1440.6,
+          "peak": 0.8,
+          "rms20": 0.476,
+          "crest": 3.32,
+          "attackMs": 260.5,
+          "btCorr": 0.82,
+          "btRms20": 0.686,
+          "centroidHz": 137,
+          "dominantHz": 140,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fear_cast",
+      "role": "Fear: sudden short jolt",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 424,
+          "peak": 0.8,
+          "rms20": 0.565,
+          "crest": 4.27,
+          "attackMs": 7.75,
+          "btCorr": 0.94,
+          "btRms20": 0.78,
+          "centroidHz": 69,
+          "dominantHz": 63,
+          "sub": 0.016,
+          "core": 0.984,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "fear_wave",
+      "role": "Fear: faltering anxious heartbeat - irregular lub-dub",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 3312,
+          "peak": 0.8,
+          "rms20": 0.503,
+          "crest": 7.62,
+          "attackMs": 1135.9,
+          "btCorr": 0.95,
+          "btRms20": 0.734,
+          "centroidHz": 62,
+          "dominantHz": 62,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "control_cast",
+      "role": "Control: heavy strict start",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 819.8,
+          "peak": 0.8,
+          "rms20": 0.465,
+          "crest": 6.73,
+          "attackMs": 254.71,
+          "btCorr": 0.93,
+          "btRms20": 0.697,
+          "centroidHz": 76,
+          "dominantHz": 69,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "control_charge",
+      "role": "Control: heavy strict pulse train, loopable at 1.5 Hz",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2000,
+          "peak": 0.8,
+          "rms20": 0.56,
+          "crest": 5.54,
+          "attackMs": 676.29,
+          "btCorr": 0.93,
+          "btRms20": 0.776,
+          "centroidHz": 74,
+          "dominantHz": 67,
+          "sub": 0.008,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "control_release",
+      "role": "Control: rhythm compresses (pulses closer), then the submission blow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1351,
+          "peak": 0.8,
+          "rms20": 0.536,
+          "crest": 5.19,
+          "attackMs": 866.98,
+          "btCorr": 0.95,
+          "btRms20": 0.756,
+          "centroidHz": 59,
+          "dominantHz": 50,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "control_end",
+      "role": "Control ends",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1347.5,
+          "peak": 0.8,
+          "rms20": 0.51,
+          "crest": 3.51,
+          "attackMs": 182.1,
+          "btCorr": 0.96,
+          "btRms20": 0.749,
+          "centroidHz": 52,
+          "dominantHz": 42,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "telekinesis_cast",
+      "role": "Telekinesis: invisible grip closes",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1641.4,
+          "peak": 0.8,
+          "rms20": 0.455,
+          "crest": 3.68,
+          "attackMs": 365.19,
+          "btCorr": 0.91,
+          "btRms20": 0.682,
+          "centroidHz": 92,
+          "dominantHz": 57,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "telekinesis_hold",
+      "role": "Telekinesis hold: weak steady tension, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2100,
+          "peak": 0.8,
+          "rms20": 0.476,
+          "crest": 2.45,
+          "attackMs": 1307.04,
+          "btCorr": 0.86,
+          "btRms20": 0.707,
+          "centroidHz": 120,
+          "dominantHz": 118,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "telekinesis_end",
+      "role": "Telekinesis: soft release",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 750.5,
+          "peak": 0.8,
+          "rms20": 0.552,
+          "crest": 2.31,
+          "attackMs": 4.81,
+          "btCorr": 0.88,
+          "btRms20": 0.764,
+          "centroidHz": 107,
+          "dominantHz": 111,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summonskeletons_cast",
+      "role": "Summon skeletons: gloomy pulsation",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1785.2,
+          "peak": 0.8,
+          "rms20": 0.577,
+          "crest": 2.49,
+          "attackMs": 255.29,
+          "btCorr": 0.96,
+          "btRms20": 0.784,
+          "centroidHz": 57,
+          "dominantHz": 55,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summonskeletons_release",
+      "role": "Summon skeletons: launch into the ground",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 662.8,
+          "peak": 0.8,
+          "rms20": 0.469,
+          "crest": 6.32,
+          "attackMs": 271.31,
+          "btCorr": 0.94,
+          "btRms20": 0.71,
+          "centroidHz": 71,
+          "dominantHz": 67,
+          "sub": 0.009,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summonskeletons_charge",
+      "role": "Summon skeletons: series of dry bone clicks gathering",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2566.1,
+          "peak": 0.8,
+          "rms20": 0.307,
+          "crest": 8.97,
+          "attackMs": 1244,
+          "btCorr": 0.79,
+          "btRms20": 0.438,
+          "centroidHz": 138,
+          "dominantHz": 71,
+          "sub": 0.013,
+          "core": 0.979,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.14,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summonskeletons_impact",
+      "role": "Summon skeletons: short reanimation snap",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 770,
+          "peak": 0.8,
+          "rms20": 0.45,
+          "crest": 6.43,
+          "attackMs": 0.71,
+          "btCorr": 0.85,
+          "btRms20": 0.697,
+          "centroidHz": 109,
+          "dominantHz": 73,
+          "sub": 0.007,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.54,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summongolem_cast",
+      "role": "Summon golem: deep build-up",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1794,
+          "peak": 0.8,
+          "rms20": 0.573,
+          "crest": 2.18,
+          "attackMs": 1260.27,
+          "btCorr": 0.96,
+          "btRms20": 0.772,
+          "centroidHz": 50,
+          "dominantHz": 50,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summongolem_release",
+      "role": "Summon golem: ground hit",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 807.2,
+          "peak": 0.8,
+          "rms20": 0.5,
+          "crest": 5.88,
+          "attackMs": 274.23,
+          "btCorr": 0.95,
+          "btRms20": 0.722,
+          "centroidHz": 59,
+          "dominantHz": 54,
+          "sub": 0.019,
+          "core": 0.981,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.56,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summongolem_charge",
+      "role": "Summon golem: heavy stone grinding shifts",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2415.8,
+          "peak": 0.8,
+          "rms20": 0.387,
+          "crest": 11.38,
+          "attackMs": 119.33,
+          "btCorr": 0.78,
+          "btRms20": 0.577,
+          "centroidHz": 144,
+          "dominantHz": 122,
+          "sub": 0,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summongolem_impact",
+      "role": "Summon golem: powerful final stomp",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 987.8,
+          "peak": 0.8,
+          "rms20": 0.616,
+          "crest": 3.34,
+          "attackMs": 7.54,
+          "btCorr": 0.97,
+          "btRms20": 0.832,
+          "centroidHz": 48,
+          "dominantHz": 44,
+          "sub": 0.024,
+          "core": 0.976,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.83,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summondemon_cast",
+      "role": "Summon demon: unstable alien energy (wobbling pitch)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1806.8,
+          "peak": 0.8,
+          "rms20": 0.44,
+          "crest": 4.93,
+          "attackMs": 83.58,
+          "btCorr": 0.82,
+          "btRms20": 0.663,
+          "centroidHz": 131,
+          "dominantHz": 118,
+          "sub": 0,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summondemon_release",
+      "role": "Summon demon: ground hit",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 682.4,
+          "peak": 0.8,
+          "rms20": 0.499,
+          "crest": 5.32,
+          "attackMs": 160.29,
+          "btCorr": 0.95,
+          "btRms20": 0.73,
+          "centroidHz": 65,
+          "dominantHz": 62,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summondemon_charge",
+      "role": "Summon demon: space tearing - rising crackling rip",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2679.4,
+          "peak": 0.8,
+          "rms20": 0.399,
+          "crest": 5.12,
+          "attackMs": 1532.98,
+          "btCorr": 0.72,
+          "btRms20": 0.623,
+          "centroidHz": 166,
+          "dominantHz": 107,
+          "sub": 0,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.95,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "summondemon_impact",
+      "role": "Summon demon: heavy multi-layer appearance pulse (wings + growl)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1590.5,
+          "peak": 0.8,
+          "rms20": 0.601,
+          "crest": 4.16,
+          "attackMs": 9.04,
+          "btCorr": 0.95,
+          "btRms20": 0.813,
+          "centroidHz": 61,
+          "dominantHz": 48,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.36,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "armyofdarkness_cast",
+      "role": "Army of darkness: darkness thickens",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1774.2,
+          "peak": 0.8,
+          "rms20": 0.547,
+          "crest": 2.35,
+          "attackMs": 260.1,
+          "btCorr": 0.97,
+          "btRms20": 0.756,
+          "centroidHz": 48,
+          "dominantHz": 46,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "armyofdarkness_release",
+      "role": "Army of darkness: wide dark wave rolling across both sides",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 3334.4,
+          "peak": 0.8,
+          "rms20": 0.501,
+          "crest": 5.82,
+          "attackMs": 2157.67,
+          "btCorr": 0.94,
+          "btRms20": 0.722,
+          "centroidHz": 72,
+          "dominantHz": 59,
+          "sub": 0.057,
+          "core": 0.943,
+          "high": 0,
+          "balanceDb": 0.04,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "armyofdarkness_impact",
+      "role": "Army of darkness: many awakenings spread left/right",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2523.3,
+          "peak": 0.8,
+          "rms20": 0.55,
+          "crest": 6.38,
+          "attackMs": 7.23,
+          "btCorr": 0.92,
+          "btRms20": 0.766,
+          "centroidHz": 79,
+          "dominantHz": 69,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0.12,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "deathtoundead_cast",
+      "role": "Death to the undead: dense start",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 428,
+          "peak": 0.8,
+          "rms20": 0.482,
+          "crest": 3.4,
+          "attackMs": 283.58,
+          "btCorr": 0.9,
+          "btRms20": 0.698,
+          "centroidHz": 93,
+          "dominantHz": 85,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "deathtoundead_release",
+      "role": "Death to the undead: sharp break of the magic structure",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 405.4,
+          "peak": 0.8,
+          "rms20": 0.544,
+          "crest": 4.69,
+          "attackMs": 1.46,
+          "btCorr": 0.68,
+          "btRms20": 0.749,
+          "centroidHz": 159,
+          "dominantHz": 111,
+          "sub": 0.009,
+          "core": 0.985,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 4.83,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "deathtoundead_impact",
+      "role": "Death to the undead: brittle destruction, then sudden silence (hard stop)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 890.6,
+          "peak": 0.8,
+          "rms20": 0.457,
+          "crest": 5.07,
+          "attackMs": 0.77,
+          "btCorr": 0.62,
+          "btRms20": 0.665,
+          "centroidHz": 192,
+          "dominantHz": 66,
+          "sub": 0.008,
+          "core": 0.968,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 2.83,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "breathofdeath_charge",
+      "role": "Breath of death: inhale",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1548.9,
+          "peak": 0.8,
+          "rms20": 0.542,
+          "crest": 2.72,
+          "attackMs": 403.27,
+          "btCorr": 0.95,
+          "btRms20": 0.753,
+          "centroidHz": 65,
+          "dominantHz": 57,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "breathofdeath_release",
+      "role": "Breath of death: long uneven wave with rare heavy pulses, slow decay",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2583,
+          "peak": 0.8,
+          "rms20": 0.568,
+          "crest": 5.2,
+          "attackMs": 108.23,
+          "btCorr": 0.94,
+          "btRms20": 0.778,
+          "centroidHz": 66,
+          "dominantHz": 52,
+          "sub": 0.015,
+          "core": 0.985,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "wavedeath_cast",
+      "role": "Wave of death: colossal build-up with long and short zaps (+690, +1350 ms)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2047.1,
+          "peak": 0.8,
+          "rms20": 0.396,
+          "crest": 3.7,
+          "attackMs": 359.88,
+          "btCorr": 0.95,
+          "btRms20": 0.642,
+          "centroidHz": 66,
+          "dominantHz": 57,
+          "sub": 0.017,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.2,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "wavedeath_release",
+      "role": "Wave of death: wide powerful burst, multi-layer spread outward",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 4838.2,
+          "peak": 0.8,
+          "rms20": 0.55,
+          "crest": 5.06,
+          "attackMs": 460,
+          "btCorr": 0.95,
+          "btRms20": 0.762,
+          "centroidHz": 57,
+          "dominantHz": 42,
+          "sub": 0.124,
+          "core": 0.876,
+          "high": 0,
+          "balanceDb": 0.41,
+          "drive": 0.8,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "wavedeath_end",
+      "role": "Wave of death: deep dying tail",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2565.5,
+          "peak": 0.8,
+          "rms20": 0.483,
+          "crest": 3.46,
+          "attackMs": 401.94,
+          "btCorr": 0.95,
+          "btRms20": 0.712,
+          "centroidHz": 65,
+          "dominantHz": 52,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "light_cast",
+      "role": "Light: soft clean swell of light appearing",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1734.8,
+          "peak": 0.8,
+          "rms20": 0.467,
+          "crest": 3.07,
+          "attackMs": 1057.21,
+          "btCorr": 0.72,
+          "btRms20": 0.677,
+          "centroidHz": 170,
+          "dominantHz": 176,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "light_release",
+      "role": "Light: light final pulse, then silence",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 502.9,
+          "peak": 0.8,
+          "rms20": 0.493,
+          "crest": 4.86,
+          "attackMs": 9.1,
+          "btCorr": 0.76,
+          "btRms20": 0.706,
+          "centroidHz": 157,
+          "dominantHz": 176,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "heal_cast",
+      "role": "Heal: calm, even restoring pulses at 1.6 Hz",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1066.6,
+          "peak": 0.8,
+          "rms20": 0.501,
+          "crest": 2.61,
+          "attackMs": 370.94,
+          "btCorr": 0.86,
+          "btRms20": 0.724,
+          "centroidHz": 116,
+          "dominantHz": 120,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "heal_release",
+      "role": "Heal: pulses merge into one soft fading glow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2154.4,
+          "peak": 0.8,
+          "rms20": 0.563,
+          "crest": 2.51,
+          "attackMs": 369.85,
+          "btCorr": 0.86,
+          "btRms20": 0.769,
+          "centroidHz": 117,
+          "dominantHz": 118,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "shrink_cast",
+      "role": "Shrink: dense first impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1296.7,
+          "peak": 0.8,
+          "rms20": 0.541,
+          "crest": 4.22,
+          "attackMs": 1144.69,
+          "btCorr": 0.96,
+          "btRms20": 0.765,
+          "centroidHz": 58,
+          "dominantHz": 55,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "shrink_impact",
+      "role": "Shrink: oscillation scale compresses fast - big slow swing to small fast tick",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 4338.5,
+          "peak": 0.8,
+          "rms20": 0.537,
+          "crest": 2.83,
+          "attackMs": 1328.6,
+          "btCorr": 0.88,
+          "btRms20": 0.753,
+          "centroidHz": 90,
+          "dominantHz": 72,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "shrink_end",
+      "role": "Shrink: tiny final click",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 53.8,
+          "peak": 0.8,
+          "rms20": 0.336,
+          "crest": 3.83,
+          "attackMs": 2.48,
+          "btCorr": 0.53,
+          "btRms20": 0.518,
+          "centroidHz": 221,
+          "dominantHz": 234,
+          "sub": 0,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.53"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "innospray_cast",
+      "role": "Innos prayer: first solemn wave on the thunderclap moment",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1033.6,
+          "peak": 0.8,
+          "rms20": 0.524,
+          "crest": 2.58,
+          "attackMs": 214.23,
+          "btCorr": 0.91,
+          "btRms20": 0.745,
+          "centroidHz": 93,
+          "dominantHz": 96,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "innospray_charge",
+      "role": "Innos prayer: widening coordinated waves at the two lightning moments (+0, +740 ms) and the gesture (+1200 ms)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2582,
+          "peak": 0.8,
+          "rms20": 0.413,
+          "crest": 3.02,
+          "attackMs": 1596.46,
+          "btCorr": 0.85,
+          "btRms20": 0.638,
+          "centroidHz": 120,
+          "dominantHz": 96,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": -0.05,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "innospray_release",
+      "role": "Innos prayer: soft but expressive final - one full chord swell, no hit",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2041.5,
+          "peak": 0.8,
+          "rms20": 0.416,
+          "crest": 3.02,
+          "attackMs": 111.81,
+          "btCorr": 0.92,
+          "btRms20": 0.622,
+          "centroidHz": 86,
+          "dominantHz": 72,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.65,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "transform_activation",
+      "role": "Transformation: magic activation (game sound shared by all forms: Transform_Cast_In + Launch)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1753.8,
+          "peak": 0.8,
+          "rms20": 0.479,
+          "crest": 5.93,
+          "attackMs": 1545.81,
+          "btCorr": 0.94,
+          "btRms20": 0.711,
+          "centroidHz": 70,
+          "dominantHz": 60,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_biter_restructure",
+      "role": "Transformation into Biter: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2227.8,
+          "peak": 0.8,
+          "rms20": 0.352,
+          "crest": 11.37,
+          "attackMs": 82.92,
+          "btCorr": 0.54,
+          "btRms20": 0.529,
+          "centroidHz": 219,
+          "dominantHz": 208,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0.6,
+          "warnings": [
+            "Bluetooth: correlation only 0.54"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "tr_biter_release",
+      "role": "Transformation into Biter: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 466.4,
+          "peak": 0.8,
+          "rms20": 0.468,
+          "crest": 7.12,
+          "attackMs": 320.06,
+          "btCorr": 0.87,
+          "btRms20": 0.684,
+          "centroidHz": 108,
+          "dominantHz": 105,
+          "sub": 0.006,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_bloodfly_restructure",
+      "role": "Transformation into Bloodfly: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2360.4,
+          "peak": 0.8,
+          "rms20": 0.341,
+          "crest": 5.38,
+          "attackMs": 1015.42,
+          "btCorr": 0.68,
+          "btRms20": 0.542,
+          "centroidHz": 182,
+          "dominantHz": 185,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.52,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_bloodfly_release",
+      "role": "Transformation into Bloodfly: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 275.5,
+          "peak": 0.8,
+          "rms20": 0.457,
+          "crest": 5.44,
+          "attackMs": 10.12,
+          "btCorr": 0.63,
+          "btRms20": 0.651,
+          "centroidHz": 181,
+          "dominantHz": 214,
+          "sub": 0.008,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.02,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_bloodhound_restructure",
+      "role": "Transformation into Bloodhound: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2294.1,
+          "peak": 0.8,
+          "rms20": 0.405,
+          "crest": 6.4,
+          "attackMs": 217.35,
+          "btCorr": 0.87,
+          "btRms20": 0.639,
+          "centroidHz": 110,
+          "dominantHz": 152,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_bloodhound_release",
+      "role": "Transformation into Bloodhound: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 595.5,
+          "peak": 0.8,
+          "rms20": 0.572,
+          "crest": 4.18,
+          "attackMs": 15.29,
+          "btCorr": 0.94,
+          "btRms20": 0.783,
+          "centroidHz": 67,
+          "dominantHz": 63,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_firelizard_restructure",
+      "role": "Transformation into FireLizard: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2302.4,
+          "peak": 0.8,
+          "rms20": 0.388,
+          "crest": 6.63,
+          "attackMs": 717.98,
+          "btCorr": 0.86,
+          "btRms20": 0.591,
+          "centroidHz": 112,
+          "dominantHz": 124,
+          "sub": 0.013,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_firelizard_release",
+      "role": "Transformation into FireLizard: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 486.7,
+          "peak": 0.8,
+          "rms20": 0.473,
+          "crest": 5.54,
+          "attackMs": 234.27,
+          "btCorr": 0.89,
+          "btRms20": 0.703,
+          "centroidHz": 100,
+          "dominantHz": 98,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_harpy_restructure",
+      "role": "Transformation into Harpy: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2335.8,
+          "peak": 0.8,
+          "rms20": 0.339,
+          "crest": 5.62,
+          "attackMs": 211.25,
+          "btCorr": 0.74,
+          "btRms20": 0.56,
+          "centroidHz": 164,
+          "dominantHz": 160,
+          "sub": 0,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.01,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_harpy_release",
+      "role": "Transformation into Harpy: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 373.6,
+          "peak": 0.8,
+          "rms20": 0.459,
+          "crest": 5.84,
+          "attackMs": 10.42,
+          "btCorr": 0.87,
+          "btRms20": 0.685,
+          "centroidHz": 109,
+          "dominantHz": 107,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_lizard_restructure",
+      "role": "Transformation into Lizard: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2237.2,
+          "peak": 0.8,
+          "rms20": 0.338,
+          "crest": 7.64,
+          "attackMs": 0.79,
+          "btCorr": 0.64,
+          "btRms20": 0.536,
+          "centroidHz": 194,
+          "dominantHz": 170,
+          "sub": 0,
+          "core": 0.975,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.18,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_lizard_release",
+      "role": "Transformation into Lizard: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 491.3,
+          "peak": 0.8,
+          "rms20": 0.457,
+          "crest": 6.88,
+          "attackMs": 435.56,
+          "btCorr": 0.89,
+          "btRms20": 0.67,
+          "centroidHz": 93,
+          "dominantHz": 91,
+          "sub": 0.017,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_lurker_restructure",
+      "role": "Transformation into Lurker: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2381.7,
+          "peak": 0.8,
+          "rms20": 0.521,
+          "crest": 6.26,
+          "attackMs": 1857.96,
+          "btCorr": 0.96,
+          "btRms20": 0.733,
+          "centroidHz": 61,
+          "dominantHz": 55,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_lurker_release",
+      "role": "Transformation into Lurker: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 603.5,
+          "peak": 0.8,
+          "rms20": 0.53,
+          "crest": 2.81,
+          "attackMs": 69.85,
+          "btCorr": 0.95,
+          "btRms20": 0.762,
+          "centroidHz": 65,
+          "dominantHz": 57,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_meatbug_restructure",
+      "role": "Transformation into Meatbug: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2352.4,
+          "peak": 0.8,
+          "rms20": 0.337,
+          "crest": 7.88,
+          "attackMs": 198.83,
+          "btCorr": 0.52,
+          "btRms20": 0.505,
+          "centroidHz": 223,
+          "dominantHz": 205,
+          "sub": 0,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.85,
+          "warnings": [
+            "Bluetooth: correlation only 0.52"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "tr_meatbug_release",
+      "role": "Transformation into Meatbug: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 57.6,
+          "peak": 0.8,
+          "rms20": 0.456,
+          "crest": 2.82,
+          "attackMs": 1.21,
+          "btCorr": 0.56,
+          "btRms20": 0.664,
+          "centroidHz": 213,
+          "dominantHz": 211,
+          "sub": 0.002,
+          "core": 0.989,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.89,
+          "warnings": [
+            "Bluetooth: correlation only 0.56"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "tr_minecrawler_restructure",
+      "role": "Transformation into Minecrawler: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1319.6,
+          "peak": 0.8,
+          "rms20": 0.338,
+          "crest": 6.45,
+          "attackMs": 240.92,
+          "btCorr": 0.58,
+          "btRms20": 0.46,
+          "centroidHz": 207,
+          "dominantHz": 200,
+          "sub": 0.002,
+          "core": 0.979,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.9,
+          "warnings": [
+            "Bluetooth: correlation only 0.58"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "tr_minecrawler_release",
+      "role": "Transformation into Minecrawler: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 389,
+          "peak": 0.8,
+          "rms20": 0.478,
+          "crest": 5.12,
+          "attackMs": 124.98,
+          "btCorr": 0.85,
+          "btRms20": 0.702,
+          "centroidHz": 119,
+          "dominantHz": 116,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_molerat_restructure",
+      "role": "Transformation into Molerat: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2351,
+          "peak": 0.8,
+          "rms20": 0.44,
+          "crest": 5.58,
+          "attackMs": 1430,
+          "btCorr": 0.9,
+          "btRms20": 0.659,
+          "centroidHz": 92,
+          "dominantHz": 83,
+          "sub": 0.013,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_molerat_release",
+      "role": "Transformation into Molerat: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 483,
+          "peak": 0.8,
+          "rms20": 0.492,
+          "crest": 5.79,
+          "attackMs": 288.1,
+          "btCorr": 0.93,
+          "btRms20": 0.733,
+          "centroidHz": 73,
+          "dominantHz": 67,
+          "sub": 0.007,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_orcdog_restructure",
+      "role": "Transformation into OrcDog: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2385.8,
+          "peak": 0.8,
+          "rms20": 0.476,
+          "crest": 5.37,
+          "attackMs": 1111.44,
+          "btCorr": 0.92,
+          "btRms20": 0.713,
+          "centroidHz": 83,
+          "dominantHz": 65,
+          "sub": 0.023,
+          "core": 0.977,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_orcdog_release",
+      "role": "Transformation into OrcDog: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 548.3,
+          "peak": 0.8,
+          "rms20": 0.461,
+          "crest": 4.04,
+          "attackMs": 165.29,
+          "btCorr": 0.94,
+          "btRms20": 0.699,
+          "centroidHz": 71,
+          "dominantHz": 70,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_razor_restructure",
+      "role": "Transformation into Razor: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2278.4,
+          "peak": 0.8,
+          "rms20": 0.348,
+          "crest": 12.01,
+          "attackMs": 60.25,
+          "btCorr": 0.54,
+          "btRms20": 0.522,
+          "centroidHz": 219,
+          "dominantHz": 252,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0.78,
+          "warnings": [
+            "Bluetooth: correlation only 0.54"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "tr_razor_release",
+      "role": "Transformation into Razor: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 357.4,
+          "peak": 0.8,
+          "rms20": 0.458,
+          "crest": 4.76,
+          "attackMs": 7.27,
+          "btCorr": 0.69,
+          "btRms20": 0.68,
+          "centroidHz": 176,
+          "dominantHz": 111,
+          "sub": 0.003,
+          "core": 0.972,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 2.37,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_scavenger_restructure",
+      "role": "Transformation into Scavenger: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2171.7,
+          "peak": 0.8,
+          "rms20": 0.375,
+          "crest": 15.52,
+          "attackMs": 230.17,
+          "btCorr": 0.64,
+          "btRms20": 0.559,
+          "centroidHz": 192,
+          "dominantHz": 180,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_scavenger_release",
+      "role": "Transformation into Scavenger: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 309.9,
+          "peak": 0.8,
+          "rms20": 0.464,
+          "crest": 4.67,
+          "attackMs": 70,
+          "btCorr": 0.6,
+          "btRms20": 0.649,
+          "centroidHz": 201,
+          "dominantHz": 186,
+          "sub": 0,
+          "core": 0.96,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.81,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_shadowbeast_restructure",
+      "role": "Transformation into Shadowbeast: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2376.5,
+          "peak": 0.8,
+          "rms20": 0.518,
+          "crest": 5.51,
+          "attackMs": 565.65,
+          "btCorr": 0.97,
+          "btRms20": 0.742,
+          "centroidHz": 53,
+          "dominantHz": 44,
+          "sub": 0.023,
+          "core": 0.977,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_shadowbeast_release",
+      "role": "Transformation into Shadowbeast: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 628.1,
+          "peak": 0.8,
+          "rms20": 0.542,
+          "crest": 4,
+          "attackMs": 84.6,
+          "btCorr": 0.96,
+          "btRms20": 0.752,
+          "centroidHz": 54,
+          "dominantHz": 52,
+          "sub": 0.019,
+          "core": 0.981,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_snapper_restructure",
+      "role": "Transformation into Snapper: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1782.2,
+          "peak": 0.8,
+          "rms20": 0.483,
+          "crest": 9.5,
+          "attackMs": 210.98,
+          "btCorr": 0.86,
+          "btRms20": 0.705,
+          "centroidHz": 114,
+          "dominantHz": 107,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_snapper_release",
+      "role": "Transformation into Snapper: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 333.4,
+          "peak": 0.8,
+          "rms20": 0.46,
+          "crest": 4.58,
+          "attackMs": 189.98,
+          "btCorr": 0.7,
+          "btRms20": 0.655,
+          "centroidHz": 173,
+          "dominantHz": 138,
+          "sub": 0,
+          "core": 0.956,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.35,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_swampshark_restructure",
+      "role": "Transformation into Swampshark: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2363.3,
+          "peak": 0.8,
+          "rms20": 0.376,
+          "crest": 4.88,
+          "attackMs": 434.1,
+          "btCorr": 0.96,
+          "btRms20": 0.583,
+          "centroidHz": 60,
+          "dominantHz": 50,
+          "sub": 0.02,
+          "core": 0.98,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_swampshark_release",
+      "role": "Transformation into Swampshark: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 588,
+          "peak": 0.8,
+          "rms20": 0.509,
+          "crest": 3.79,
+          "attackMs": 107.31,
+          "btCorr": 0.95,
+          "btRms20": 0.744,
+          "centroidHz": 63,
+          "dominantHz": 56,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_wolf_restructure",
+      "role": "Transformation into Wolf: organic restructuring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1972.9,
+          "peak": 0.8,
+          "rms20": 0.421,
+          "crest": 5.8,
+          "attackMs": 942.65,
+          "btCorr": 0.86,
+          "btRms20": 0.609,
+          "centroidHz": 114,
+          "dominantHz": 111,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tr_wolf_release",
+      "role": "Transformation into Wolf: characteristic final pulse",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 464.4,
+          "peak": 0.8,
+          "rms20": 0.488,
+          "crest": 4.56,
+          "attackMs": 14.67,
+          "btCorr": 0.93,
+          "btRms20": 0.717,
+          "centroidHz": 76,
+          "dominantHz": 70,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "teleport_cast",
+      "role": "Teleport: space contracting around the hero",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 670.3,
+          "peak": 0.8,
+          "rms20": 0.457,
+          "crest": 3.06,
+          "attackMs": 347.54,
+          "btCorr": 0.93,
+          "btRms20": 0.687,
+          "centroidHz": 76,
+          "dominantHz": 66,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "teleport_charge",
+      "role": "Teleport: swirling energy, alternating sides, loopable",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2000,
+          "peak": 0.8,
+          "rms20": 0.434,
+          "crest": 4.13,
+          "attackMs": 629.25,
+          "btCorr": 0.81,
+          "btRms20": 0.66,
+          "centroidHz": 135,
+          "dominantHz": 140,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "teleport_vanish",
+      "role": "Teleport: vanishing - surge then abrupt cut",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 444.5,
+          "peak": 0.8,
+          "rms20": 0.518,
+          "crest": 2.21,
+          "attackMs": 322.44,
+          "btCorr": 0.67,
+          "btRms20": 0.712,
+          "centroidHz": 182,
+          "dominantHz": 190,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 3.36,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "teleport_arrive",
+      "role": "Teleport arrival: softer materialisation pulse (swirl end + appear)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1315.2,
+          "peak": 0.8,
+          "rms20": 0.492,
+          "crest": 3.52,
+          "attackMs": 574,
+          "btCorr": 0.93,
+          "btRms20": 0.716,
+          "centroidHz": 84,
+          "dominantHz": 63,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

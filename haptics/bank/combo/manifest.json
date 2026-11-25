@@ -1,0 +1,113 @@
+{
+  "bank": "combo",
+  "recipe": "combo.forge.json",
+  "generated": "2026-11-19 00:55",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "combo build-up to the peak blow",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "beat1",
+      "role": "First blow of a combo (opener): short, light push of the swing - 'the combo has started'",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 93.2,
+          "peak": 0.75,
+          "rms20": 0.428,
+          "crest": 3.18,
+          "attackMs": 5.58,
+          "btCorr": 0.9,
+          "btRms20": 0.655,
+          "centroidHz": 95,
+          "dominantHz": 94,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "beat2",
+      "role": "Middle blow of a 3-blow combo: deeper and longer than beat1 - the combo gains weight",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 140.1,
+          "peak": 0.82,
+          "rms20": 0.519,
+          "crest": 3.21,
+          "attackMs": 6.65,
+          "btCorr": 0.93,
+          "btRms20": 0.735,
+          "centroidHz": 78,
+          "dominantHz": 76,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "flourish",
+      "role": "Master's extra beat 60 ms after each combo blow: a quick second tap (two beats = mastery, same cue as master finishers)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 65.2,
+          "peak": 0.7,
+          "rms20": 0.38,
+          "crest": 3.05,
+          "attackMs": 5.02,
+          "btCorr": 0.88,
+          "btRms20": 0.608,
+          "centroidHz": 110,
+          "dominantHz": 105,
+          "sub": 0.006,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "surge",
+      "role": "Crescendo right before the peak blow of a combo: pressure rises for ~160 ms and breaks into the blow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 182.1,
+          "peak": 0.75,
+          "rms20": 0.427,
+          "crest": 2.58,
+          "attackMs": 98.65,
+          "btCorr": 0.88,
+          "btRms20": 0.654,
+          "centroidHz": 103,
+          "dominantHz": 67,
+          "sub": 0.002,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

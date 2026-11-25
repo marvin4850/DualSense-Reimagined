@@ -1,0 +1,795 @@
+{
+  "events": [
+    {
+      "type": "containeranim",
+      "phases": [
+        "update"
+      ],
+      "category": "anim",
+      "status": "IMPLEMENTED",
+      "source": "Chest montage section changes, observed every 30ms; diagnosis for close anchor",
+      "fields": {
+        "sec": "section name",
+        "pos": "montage position ms"
+      },
+      "sample": {
+        "sec": "Out",
+        "pos": "800"
+      }
+    },
+    {
+      "type": "containerlid",
+      "phases": [
+        "start",
+        "complete",
+        "cancel"
+      ],
+      "category": "interaction",
+      "status": "IMPLEMENTED",
+      "source": "Once on entry to Out of PT_NH_Interact_OpenLockedChest_Montage, not State.Interact.Ongoing off",
+      "fields": {
+        "kind": "close",
+        "pos": "montage position ms"
+      },
+      "sample": {
+        "kind": "close",
+        "pos": "800"
+      }
+    },
+    {
+      "type": "session",
+      "phases": [
+        "start"
+      ],
+      "category": "system",
+      "status": "TESTED",
+      "source": "listener ability activated (OnActivateAbility_Scriptable)"
+    },
+    {
+      "type": "hooks",
+      "phases": [
+        "update"
+      ],
+      "category": "system",
+      "status": "IMPLEMENTED",
+      "source": "listener after generic hook registration (mod v11)",
+      "fields": {
+        "build": "mod build id (gen_hooks.py)",
+        "tags": "generic tag hooks registered",
+        "events": "generic event hooks registered"
+      }
+    },
+    {
+      "type": "waterfall",
+      "phases": [
+        "start",
+        "update",
+        "complete"
+      ],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "mod v46 DsB_Waterfall.as: hero inside the splash zone of an FMOD waterfall emitter (radius by size, [Г] until the game test); update = emitter scan",
+      "fields": {
+        "k": "strength 45..85 by waterfall size",
+        "ev": "FMOD event name of the emitter",
+        "d": "horizontal distance cm",
+        "dz": "height difference cm",
+        "n": "update: waterfall emitters found",
+        "why": "complete: out / switch / nohero / destruct"
+      }
+    },
+    {
+      "type": "ride",
+      "phases": ["start", "complete"],
+      "category": "state",
+      "status": "IMPLEMENTED",
+      "source": "mod v48 DsB_Ride.as: the hero is attached to a character (mount = scavenger)",
+      "fields": { "mount": "start: mount class", "why": "complete: dismount / nohero / destruct" }
+    },
+    {
+      "type": "rideair",
+      "phases": ["start", "complete"],
+      "category": "movement",
+      "status": "IMPLEMENTED",
+      "source": "mod v48 DsB_Ride.as: the ridden mount's CharacterMovement IsFalling edges (the hero's own falling tags do not come while riding)",
+      "fields": { "vz": "start: vertical speed cm/s", "jump": "start: 1 = jumped up (vz > 150), 0 = fell off an edge", "drop": "complete: highest point - landing cm", "net": "complete: take-off - landing cm", "ms": "complete: time in the air" }
+    },
+    {
+      "type": "spellcharge",
+      "phases": ["start", "update", "complete"],
+      "category": "magic",
+      "status": "IMPLEMENTED",
+      "source": "mod v51 DsB_Charge.as: the hero's active cast ability while State.Casting (level, levels, the game's own time of this level = cast section + CastTime)",
+      "fields": { "lvl": "current spell level (0 = first)", "max": "number of levels", "dur": "ms this level takes (adaptive: mods change CastTime)", "took": "update: ms the previous level really took", "full": "update: 1 = last level reached and held", "itm": "rune / scroll class", "why": "complete: release / cancel / nohero / destruct" }
+    },
+    {
+      "type": "book",
+      "phases": ["start", "update", "complete"],
+      "category": "interaction",
+      "status": "IMPLEMENTED",
+      "source": "mod v51 DsB_Books.as: Man_Secret_Door_Book_Montage (secret passage book puzzle); the answer is read from the puzzle subsystem and the other bookshelves after the click",
+      "fields": { "obj": "bookshelf actor", "def": "start: definition class", "near": "start: bookshelves within 15 m", "res": "update: ok / reset / solved / unk", "look": "update: click (2.85 s) / late (4.2 s)", "done": "puzzle steps done (start: before the click; update: after)", "done0": "update: steps done before the click", "fin": "finished puzzles (update: after)", "fin0": "update: finished puzzles before", "moving": "update: other bookshelves animating" }
+    },
+    {
+      "type": "handitem",
+      "phases": ["update"],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "mod v48 DsB_Hand.as: consumable item visual attached to the hero (joint, food, potion, plant)",
+      "fields": { "itm": "item class (e.g. ItMi_Joint_02) or none" }
+    },
+    {
+      "type": "oxygen",
+      "phases": [
+        "start",
+        "update",
+        "complete"
+      ],
+      "category": "state",
+      "status": "IMPLEMENTED",
+      "source": "mod v47 DsB_Air.as: hero attribute UAttributeSet_Oxygen read 10x/s; start = below CriticalLevelPercent (red warning), update src=beat = one choking beat (faster as the air runs out), src=probe = telemetry once per dive",
+      "fields": {
+        "o": "air left, % of MaxOxygen",
+        "crit": "critical level %",
+        "n": "beat number",
+        "empty": "1 = no air left (drowning damage)",
+        "max": "probe: MaxOxygen",
+        "critraw": "probe: CriticalLevelPercent x100 as read",
+        "rate": "probe: OxygenDepletionRate x100",
+        "why": "complete: recovered / full / nohero / noattr / destruct",
+        "beats": "complete: beats played"
+      }
+    },
+    {
+      "type": "bow",
+      "phases": [
+        "update"
+      ],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "probe of UArcheryComponent every 30 ms while bow/crossbow is the weapon family (mod v12); reported on change",
+      "fields": {
+        "aim": "IsAiming",
+        "sec": "IsSecureToFire",
+        "notch": "IsNotchingArrowOntoBow",
+        "rel": "IsWaitingToFinishRelease",
+        "arrow": "HasArrowNotched",
+        "draw": "mod v45: UBipedRangedCombatAnimInstance.m_IsDrawing (na = anim layer not found)",
+        "full": "mod v45: m_IsDrawing && m_DrawingStringAlpha >= 0.98 (fully drawn)",
+        "alpha": "mod v45: m_DrawingStringAlpha x100 at the change (-100 = layer not found)"
+      },
+      "sample": {
+        "aim": "1",
+        "sec": "1",
+        "notch": "0",
+        "rel": "0",
+        "arrow": "1",
+        "draw": "1",
+        "full": "1",
+        "alpha": "100"
+      }
+    },
+    {
+      "type": "pad",
+      "phases": [
+        "update"
+      ],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "companion: L2 / R2 from the DualSense input reports (hysteresis 64/24), on change; only used together with game state",
+      "fields": {
+        "l2": "0|1",
+        "r2": "0|1"
+      },
+      "sample": {
+        "l2": "1",
+        "r2": "1"
+      }
+    },
+    {
+      "type": "montage",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "anim",
+      "status": "IMPLEMENTED",
+      "maxRatePerSec": 30,
+      "restartable": true,
+      "source": "UAnimInstance.OnMontageStarted / OnMontageEnded of the player (mod v13): every montage by asset name",
+      "fields": {
+        "m": "montage asset name",
+        "int": "1 = interrupted (complete)",
+        "wf": "opt-in actual equipped item family; animation names may be shared"
+      },
+      "sample": {
+        "m": "Man_Bow_N_ShootReload_AnimMontage",
+        "int": "0"
+      }
+    },
+    {
+      "type": "bowdraw",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "derived",
+      "status": "IMPLEMENTED",
+      "continuous": true,
+      "source": "derived.json: R2 pressed while the game says the bow is READY (bow:update aim=1, family archery/bow/crossbow); ends on R2 release or leaving the ready stance"
+    },
+    {
+      "type": "bowtire",
+      "phases": [
+        "update"
+      ],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "derived.json: the game drops IsSecureToFire (bow sec 1->0) while aiming with R2 held and no shot = resistance limit reached (session 75: ~5.1 s at full draw)",
+      "fields": {
+        "held": "ms the bow was secure-to-fire before the drop (learned limit)"
+      },
+      "sample": {
+        "held": "5100"
+      }
+    },
+    {
+      "type": "overtime",
+      "phases": [
+        "start"
+      ],
+      "category": "derived",
+      "status": "IMPLEMENTED",
+      "source": "an action open longer than its overtimeMs (actions.json)",
+      "fields": {
+        "a": "action id",
+        "n": "instance",
+        "ms": "open time"
+      },
+      "sample": {
+        "a": "draw",
+        "n": "1",
+        "ms": "3500"
+      }
+    },
+    {
+      "type": "step",
+      "phases": [
+        "update"
+      ],
+      "category": "movement",
+      "status": "TESTED",
+      "maxRatePerSec": 12,
+      "source": "DsB_Footsteps.as (steps v1, pilot): ReplaceParentClass on UFootStepFXDefinition.PrepareFX_Implementation = the game's own footstep FX at the foot contact (native FootstepNotify); player only, crouch steps only (steps v2); TESTED session_game86",
+      "fields": {
+        "mat": "physical material asset name under the foot",
+        "gait": "walk|run|sprint|crouch (movement tags)",
+        "surf": "EPhysicalSurface index (the FMOD GroundMaterial parameter)",
+        "v": "steps hook version"
+      },
+      "sample": {
+        "mat": "PM_Soil",
+        "gait": "run",
+        "surf": "3",
+        "v": "1"
+      }
+    },
+    {
+      "type": "testhud",
+      "phases": [
+        "update"
+      ],
+      "category": "system",
+      "status": "IMPLEMENTED",
+      "source": "DsB_TestHud.as (test HUD v1): the in-game test checklist got its host widget (once per world)",
+      "fields": {
+        "host": "widget class"
+      },
+      "sample": {
+        "host": "W_NotificationMain_C"
+      }
+    },
+    {
+      "type": "lp",
+      "phases": [
+        "start",
+        "update",
+        "complete"
+      ],
+      "category": "interaction",
+      "status": "IMPLEMENTED",
+      "maxRatePerSec": 40,
+      "source": "Tactile Lockpicking 2.0 (mod v16, DsLp_Lockpick.as): extension of W_LockPickUI; plates read every 50 ms (25 ms while a move is in flight); projection by LockPick Helper's Solver.Apply",
+      "fields": {
+        "lock": "lock name (start)",
+        "pl": "plates (start)",
+        "prec": "hero skill 0..2",
+        "cut": "connections dropped by skill",
+        "src": "ability|near|none",
+        "known": "1 = lock graph known",
+        "ph": "insert|ready|press|motion|cross|settle|strain|sel|trig|guide|device|skill|alive (update)",
+        "via": "insert: montage|timer|timeout|montage_ended (how the moment was found)",
+        "ms": "insert: ms after State.PickLock",
+        "tx": "move id within the session",
+        "dir": "L|R (|0 settle without press)",
+        "valid": "press: 1 legal / 0 strain / unknown",
+        "conf": "predicted|observed|unknown|derived",
+        "stage": "motion: start|none",
+        "est": "motion: expected duration ms (EMA)",
+        "pm": "press -> motion ms",
+        "md": "motion duration ms",
+        "ch": "plates moving (projected / settled)",
+        "same": "plates moving with the push",
+        "opp": "plates moving against it",
+        "k": "links (v36, Trained): plates a push of the selected plate moves, 1..4 (4 = 4+)",
+        "mask": "bit mask of plates",
+        "p": "cross: average progress 0..1000",
+        "t": "cross: ms since motion start",
+        "status": "settle: accepted|reset|break",
+        "ctr": "plates in the centre",
+        "n": "plates",
+        "cin": "reached the centre",
+        "cout": "left the centre",
+        "unx": "settle: moving plates whose crossing was not observed",
+        "mismatch": "settle: 1 = layout differs from the projection",
+        "cur": "selected plate",
+        "l": "L2 profile click_ok|click_soft|wall|load* (trig)",
+        "r": "R2 profile (trig)",
+        "load": "trig: load1|loadn|loadopp during motion",
+        "next": "solver's next key W|S|A|D|none|nopath|bad",
+        "skill": "tactile profile 0..2",
+        "gen": "guide generation",
+        "kind": "guide: sel (wrong plate, side = L1/R1 to press)|plate (right plate, side = L2/R2 push)|off|nopath|bad",
+        "side": "guide: L|R|-",
+        "prof": "guide / skill: profile 0..2",
+        "real": "skill: hero skill",
+        "manual": "skill: 1 = profile chosen by hand",
+        "res": "open|close (complete)",
+        "moves": "accepted moves",
+        "strains": "predicted strains",
+        "d0": "progress (v36, Trained): fewest A/D presses to open before the move",
+        "d1": "progress: after it (< d0)",
+        "moved": "links: the exact count"
+      },
+      "sample": {
+        "ph": "cross",
+        "dir": "R",
+        "ch": "3",
+        "same": "2",
+        "opp": "1",
+        "k": "3",
+        "est": "300",
+        "unx": "1",
+        "status": "accepted",
+        "ctr": "3",
+        "n": "5",
+        "cin": "1",
+        "cout": "0",
+        "l": "click_ok",
+        "r": "wall",
+        "kind": "sel",
+        "side": "L",
+        "valid": "1",
+        "stage": "start",
+        "res": "open",
+        "prec": "2",
+        "pl": "5"
+      }
+    },
+    {
+      "type": "lp_break",
+      "phases": [
+        "start",
+        "update"
+      ],
+      "category": "interaction",
+      "status": "IMPLEMENTED",
+      "source": "mod v34 (DsLp_Lockpick.as FollowBreakAnim): ULockPickAnimInstance.m_LockPickAnimState enters 4 = the start of A_Lockpicking_BrokenPick (v33 trace: ~25 ms after the fatal press, settle break +1909 ms)",
+      "fields": {
+        "state": "anim state (4)",
+        "prev": "previous anim state",
+        "tx": "move id",
+        "lives": "mod's derived pick life at that moment",
+        "n": "breaks in this window",
+        "ver": "mod version",
+        "ph": "update: out = the broken tip pick_1 starts moving (BrokenPick_Out, v35)",
+        "src": "out: bone (motion seen) | timer (2480 ms fallback)",
+        "since": "out: ms after lp_break:start",
+        "d100": "out: pick_1 displacement x100 (world units)"
+      },
+      "sample": {
+        "state": "4",
+        "prev": "1",
+        "tx": "5",
+        "lives": "0",
+        "n": "1",
+        "ver": "34"
+      }
+    },
+    {
+      "type": "mode",
+      "phases": [
+        "update"
+      ],
+      "category": "system",
+      "status": "TESTED",
+      "source": "UG1RGameInstance.GetInputMode() + Gameplay::IsGamePaused(), 100 ms poll",
+      "fields": {
+        "m": "world|menu"
+      },
+      "sample": {
+        "m": "world"
+      }
+    },
+    {
+      "type": "weapon",
+      "phases": [
+        "update"
+      ],
+      "category": "context",
+      "status": "TESTED",
+      "source": "State.Combat.* family tags, 100 ms poll",
+      "fields": {
+        "fam": "fist|s1h|s2h|axe1h|axe2h|mace1h|mace2h|staff|torch|pickaxe|bow|crossbow|rune|scroll|unknown|none"
+      },
+      "sample": {
+        "fam": "fist"
+      }
+    },
+    {
+      "type": "air",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "movement",
+      "status": "TESTED",
+      "continuous": true,
+      "staleMs": 15000,
+      "endedBy": [
+        "swim:start"
+      ],
+      "restartable": true,
+      "expectUnended": true,
+      "source": "State.Falling (start), State.Landing (complete); Z polled every 30 ms while airborne",
+      "fields": {
+        "drop": "cm, highest Z - landing Z",
+        "net": "cm, take-off Z - landing Z (mod v9)"
+      },
+      "sample": {
+        "drop": "127",
+        "net": "0"
+      }
+    },
+    {
+      "type": "attack",
+      "phases": [
+        "start",
+        "update",
+        "interrupt",
+        "complete"
+      ],
+      "category": "combat",
+      "status": "TESTED",
+      "continuous": true,
+      "restartable": true,
+      "staleMs": 15000,
+      "source": "start: UDataModule_Combat.GetCurrentAttack() change / State.Attack count / OnMontageStarted; update: Event.Damaged.Target.Before (res=contact), Action.Deflected (res=deflected); interrupt: Action.Parried; complete: State.Attack -> 0",
+      "fields": {
+        "dir": "top|bottom|left|right|kick|unknown",
+        "node": "combo config name",
+        "fam": "weapon family",
+        "skill": "untrained|trained|master",
+        "res": "contact|deflected|parried",
+        "dmg": "damage",
+        "imp": "standard|additive|knockback|parried|deflected|dot|other|nocontext",
+        "contact": "0|1"
+      },
+      "sample": {
+        "dir": "left",
+        "fam": "fist",
+        "res": "contact",
+        "dmg": "5",
+        "imp": "standard",
+        "contact": "1"
+      }
+    },
+    {
+      "type": "hurt",
+      "phases": [
+        "start"
+      ],
+      "category": "combat",
+      "status": "TESTED",
+      "source": "Event.Damaged.Me.Before (player is the target)",
+      "fields": {
+        "dmg": "damage",
+        "imp": "hit type"
+      },
+      "sample": {
+        "dmg": "12",
+        "imp": "standard"
+      }
+    },
+    {
+      "type": "parry",
+      "phases": [
+        "start"
+      ],
+      "category": "combat",
+      "status": "IMPLEMENTED",
+      "source": "Action.Parry (player parried; only in ParryMode 1)",
+      "fields": {
+        "imp": "hit type"
+      }
+    },
+    {
+      "type": "hitreact",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "combat",
+      "status": "TESTED",
+      "continuous": true,
+      "staleMs": 15000,
+      "source": "State.Hit tag"
+    },
+    {
+      "type": "dodge",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "movement",
+      "status": "TESTED",
+      "continuous": true,
+      "staleMs": 15000,
+      "source": "State.Dodge tag"
+    },
+    {
+      "type": "roll",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "movement",
+      "status": "IMPLEMENTED",
+      "continuous": true,
+      "staleMs": 15000,
+      "source": "State.Roll tag (never seen in a game session yet)"
+    },
+    {
+      "type": "swim",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "water",
+      "status": "TESTED",
+      "continuous": true,
+      "source": "State.Swimming tag; entry=fall,drop when the player fell into the water",
+      "fields": {
+        "entry": "walk|fall",
+        "drop": "cm"
+      },
+      "sample": {
+        "entry": "fall",
+        "drop": "329"
+      }
+    },
+    {
+      "type": "dive",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "water",
+      "status": "TESTED",
+      "continuous": true,
+      "source": "State.Movement.Diving tag (game's own IsDiving())"
+    },
+    {
+      "type": "physicalfx",
+      "phases": [
+        "start"
+      ],
+      "category": "physical",
+      "status": "IMPLEMENTED",
+      "source": "Opt-in UGothicFXDefinition.PrepareFX; relevance-gated; compilation and capture pending",
+      "fields": {
+        "kind": "canonical physical situation, underscored",
+        "mat": "native physical material or none",
+        "surf": "SurfaceType",
+        "size": "small/large/unknown",
+        "fx": "source FX class"
+      },
+      "sample": {
+        "kind": "craft_ore_strike"
+      }
+    },
+    {
+      "type": "equipmentfx",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "physical",
+      "status": "IMPLEMENTED",
+      "source": "Opt-in Draw/UndrawWeapon FX after original selection; NOT runtime verified",
+      "fields": {
+        "family": "actual UItemDefinition type",
+        "crouch": "hero crouching at exact FX moment"
+      },
+      "sample": {
+        "family": "torch",
+        "crouch": "0"
+      }
+    },
+    {
+      "type": "weaponfx",
+      "phases": [
+        "start",
+        "complete"
+      ],
+      "category": "physical",
+      "status": "IMPLEMENTED",
+      "source": "Always on: Draw/UndrawWeapon_Human FX (exact native sound moment) with the real item type",
+      "fields": {
+        "family": "s1h s2h m1h m2h a1h a2h staff torch bow crossbow none unknown",
+        "crouch": "0/1"
+      },
+      "sample": {
+        "family": "m1h",
+        "crouch": "0"
+      }
+    },
+    {
+      "type": "impactfx",
+      "phases": [
+        "start"
+      ],
+      "category": "combat",
+      "status": "IMPLEMENTED",
+      "source": "DsB_CombatFX.as: Impact_Hit_Character / _Weapon / _Environment_Deflected FX (ReplaceParentClass), hero as attacker or target",
+      "fields": {
+        "kind": "body|weapon|deflect",
+        "side": "out|in",
+        "wpn": "attacker family or creature",
+        "def": "target family",
+        "mat": "wood|metal|fists",
+        "armor": "IMP_targetArmor",
+        "crt": "target creature 0/1",
+        "srcw": "IMP_sourceWeapon",
+        "blk": "hero State.Block",
+        "surf": "surface type"
+      },
+      "sample": {
+        "kind": "body",
+        "side": "in",
+        "wpn": "s1h"
+      }
+    },
+    {
+      "type": "weaponanim",
+      "phases": [
+        "update"
+      ],
+      "category": "equipment",
+      "status": "IMPLEMENTED",
+      "source": "listener: 150 ms after a melee _Draw/_Shelve montage starts (weapon equipment v2, game102)",
+      "fields": {
+        "act": "draw|sheathe",
+        "m": "montage",
+        "fam": "real item family",
+        "pos": "montage position ms"
+      },
+      "sample": {
+        "act": "draw",
+        "fam": "m1h"
+      }
+    },
+    {
+      "type": "spell",
+      "phases": [
+        "start",
+        "update",
+        "complete"
+      ],
+      "category": "combat",
+      "status": "IMPLEMENTED",
+      "restartable": true,
+      "source": "mod v44 DsB_Magic.as: hero cast / channel montage (A_Man_*_Cast*, *_Launch*, UnTransform) start, section NAME change (30 ms poll), end; itm = rune/scroll class in hand. Spell damage: attack:update res=contact gets mag=1,itm",
+      "fields": {
+        "m": "montage asset",
+        "itm": "item class in hand (ItAr_Rune_* / ItAr_Scroll_*)",
+        "sec": "new section (update)",
+        "pos": "montage position ms",
+        "int": "1 = interrupted (complete)"
+      },
+      "sample": {
+        "m": "A_Man_Fireball_Cast_Montage",
+        "itm": "ItAr_Rune_FireBall",
+        "sec": "Launch",
+        "pos": "3500",
+        "int": "0"
+      }
+    },
+    {
+      "type": "loottake",
+      "phases": [
+        "update"
+      ],
+      "category": "interaction",
+      "status": "IMPLEMENTED",
+      "source": "listener: while State.Interact; body = its total item amount dropped, chest (has a container data module) = the hero total amount grew (chest slot amounts are not script-visible)",
+      "fields": {
+        "n": "pieces taken",
+        "kind": "body|chest"
+      },
+      "sample": {
+        "n": "1",
+        "kind": "body"
+      }
+    },
+    {
+      "type": "landfx",
+      "phases": [
+        "update"
+      ],
+      "category": "movement",
+      "status": "IMPLEMENTED",
+      "source": "DsB_Footsteps.as: ULand_Human footstep FX = exact landing contact (game105 latency diagnostic)",
+      "fields": {
+        "mat": "physical material",
+        "surf": "surface type"
+      },
+      "sample": {
+        "mat": "PM_Soil",
+        "surf": "12"
+      }
+    },
+    {
+      "type": "jumpfx",
+      "phases": [
+        "update"
+      ],
+      "category": "movement",
+      "status": "IMPLEMENTED",
+      "source": "DsB_Footsteps.as: UJump_Human footstep FX = take-off contact",
+      "fields": {
+        "mat": "physical material",
+        "surf": "surface type"
+      },
+      "sample": {
+        "mat": "PM_Soil",
+        "surf": "12"
+      }
+    },
+    {
+      "type": "threat",
+      "phases": [
+        "update"
+      ],
+      "category": "context",
+      "status": "IMPLEMENTED",
+      "source": "DsB_Threat.as: NPC perception and AI conflict target, 100ms poll; heartbeat 500ms",
+      "fields": {
+        "level": "idle|noticed|combat",
+        "sneak": "0|1",
+        "seen": "awake NPCs that matter: hostile sensing hero, warning/searching hero, or (sneak) a person seeing hero",
+        "fighters": "NPCs fighting hero",
+        "v": "observer version"
+      },
+      "sample": {
+        "level": "noticed",
+        "sneak": "1",
+        "seen": "1",
+        "fighters": "0",
+        "v": "2"
+      },
+      "maxRatePerSec": 10,
+      "note": "Implemented in isolated branch, game compilation/runtime not yet verified."
+    }
+  ]
+}

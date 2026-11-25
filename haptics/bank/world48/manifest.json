@@ -1,0 +1,329 @@
+{
+  "bank": "world48",
+  "recipe": "world48.forge.json",
+  "generated": "2026-11-21 11:42",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "game sounds + synthetic, world v48",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "smoke_inhale",
+      "role": "Drawing on the joint: a slow pull that swells (SFX_ACTION_Smoke_Inhale)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1413.8,
+          "peak": 0.75,
+          "rms20": 0.468,
+          "crest": 3.6,
+          "attackMs": 823.56,
+          "btCorr": 0.96,
+          "btRms20": 0.692,
+          "centroidHz": 60,
+          "dominantHz": 48,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "smoke_exhale",
+      "role": "Blowing the smoke out: a soft release that fades (SFX_ACTION_Smoke_Exhale)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1084.3,
+          "peak": 0.7,
+          "rms20": 0.464,
+          "crest": 5.59,
+          "attackMs": 203.77,
+          "btCorr": 0.92,
+          "btRms20": 0.704,
+          "centroidHz": 83,
+          "dominantHz": 59,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "smoke_cough",
+      "role": "The strongest weed: a short double cough after the exhale (SFX_ACTION_Cough)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 667.5,
+          "peak": 0.8,
+          "rms20": 0.43,
+          "crest": 5.86,
+          "attackMs": 358.69,
+          "btCorr": 0.89,
+          "btRms20": 0.653,
+          "centroidHz": 97,
+          "dominantHz": 64,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "high_wave",
+      "role": "The weed takes effect: one slow warm swell (1.6 s), repeated / stretched by the weed's strength",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1566.4,
+          "peak": 0.7,
+          "rms20": 0.497,
+          "crest": 2.65,
+          "attackMs": 491.29,
+          "btCorr": 0.97,
+          "btRms20": 0.728,
+          "centroidHz": 50,
+          "dominantHz": 48,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "heartbeat",
+      "role": "Dream Call (strongest weed): a slow heavy heartbeat - lub-dub",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 389.8,
+          "peak": 0.8,
+          "rms20": 0.563,
+          "crest": 3.4,
+          "attackMs": 9.27,
+          "btCorr": 0.96,
+          "btRms20": 0.769,
+          "centroidHz": 51,
+          "dominantHz": 47,
+          "sub": 0.053,
+          "core": 0.947,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "page_turn",
+      "role": "Stepping up to the spell desk: the book's page is turned (SFX_OBJ_Book_PageTurn)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 520.5,
+          "peak": 0.7,
+          "rms20": 0.424,
+          "crest": 3.19,
+          "attackMs": 340.67,
+          "btCorr": 0.93,
+          "btRms20": 0.656,
+          "centroidHz": 76,
+          "dominantHz": 66,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "quill",
+      "role": "The quill scratching over parchment (SFX_ACTION_Writing_QuillLoop): fine strokes in a rhythm",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1595.6,
+          "peak": 0.7,
+          "rms20": 0.319,
+          "crest": 6.69,
+          "attackMs": 225.29,
+          "btCorr": 0.77,
+          "btRms20": 0.528,
+          "centroidHz": 148,
+          "dominantHz": 120,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "scroll_magic",
+      "role": "The spell flows into the finished scroll: a rising magic swell that blooms (SFX_OBJ_ScrollCreation_MagicAccent)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1366.5,
+          "peak": 0.78,
+          "rms20": 0.408,
+          "crest": 4.09,
+          "attackMs": 774.6,
+          "btCorr": 0.88,
+          "btRms20": 0.635,
+          "centroidHz": 106,
+          "dominantHz": 110,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "winch_turn",
+      "role": "Turning the winch of a heavy gate: the ratchet clacks under load (SFX_OBJ_Mechanism_Winch_L_Rotate) - looped",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1844.4,
+          "peak": 0.8,
+          "rms20": 0.474,
+          "crest": 7.73,
+          "attackMs": 54.17,
+          "btCorr": 0.93,
+          "btRms20": 0.704,
+          "centroidHz": 76,
+          "dominantHz": 74,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "lever_insert",
+      "role": "The orc lever is pushed into the mechanism and locks with a heavy stone-metal clunk (SFX_OBJ_OrcPuzzleDoor_InsertItem)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 294.5,
+          "peak": 0.85,
+          "rms20": 0.55,
+          "crest": 3.78,
+          "attackMs": 18.4,
+          "btCorr": 0.93,
+          "btRms20": 0.771,
+          "centroidHz": 69,
+          "dominantHz": 54,
+          "sub": 0.007,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "lever_pull",
+      "role": "Pulling the heavy ground lever: grinding resistance, then the lever drops into place (SFX_OBJ_Levers_Ground_Pull)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1479.8,
+          "peak": 0.82,
+          "rms20": 0.605,
+          "crest": 3.75,
+          "attackMs": 545.23,
+          "btCorr": 0.95,
+          "btRms20": 0.798,
+          "centroidHz": 60,
+          "dominantHz": 51,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "heal_flow",
+      "role": "Healing rune held: a calm warm pulse flowing through the hands, ~1.3 Hz (SFX_Magic_Heal_Cast) - looped while channelled",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2272.8,
+          "peak": 0.7,
+          "rms20": 0.353,
+          "crest": 4.58,
+          "attackMs": 696.42,
+          "btCorr": 0.89,
+          "btRms20": 0.589,
+          "centroidHz": 100,
+          "dominantHz": 79,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "ride_land",
+      "role": "The scavenger lands with the hero on its back: two heavy claw thuds and the body sagging under the rider",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 250.1,
+          "peak": 0.85,
+          "rms20": 0.591,
+          "crest": 2.95,
+          "attackMs": 9.19,
+          "btCorr": 0.95,
+          "btRms20": 0.784,
+          "centroidHz": 57,
+          "dominantHz": 59,
+          "sub": 0.022,
+          "core": 0.978,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

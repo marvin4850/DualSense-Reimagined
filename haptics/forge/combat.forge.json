@@ -1,0 +1,1486 @@
+{
+ "bank": "combat",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": {
+   "peak": 0.85
+  },
+  "check": {
+   "maxSub": 0.2,
+   "maxHigh": 0.04,
+   "minCore": 0.55,
+   "balance": "center",
+   "btMinCorr": 0.5
+  }
+ },
+ "variants": {
+  "A": {
+   "label": "game impact sounds",
+   "vars": {}
+  }
+ },
+ "slots": {
+  "hit_blade_flesh": {
+   "role": "Hero's blade cuts into an unarmoured body (Impacts_T_Blade_Flesh)",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5232_SFX_PHYSICS_Impacts_T_Blade_Flesh_L1_01",
+     "method": "impact",
+     "grit": 0.35,
+     "maxMs": 260
+    },
+    {
+     "type": "modal",
+     "f": 85,
+     "attackMs": 2,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       30
+      ]
+     ],
+     "durMs": 120,
+     "gain": 1.2,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 380,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "hit_blade_armor": {
+   "role": "Hero's blade stopped by armour / chitin (Impacts_T_Blade_Metal)",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 0.5,
+     "maxMs": 260
+    },
+    {
+     "type": "modal",
+     "f": 110,
+     "attackMs": 1.5,
+     "glide": 0.95,
+     "modes": [
+      [
+       1,
+       1,
+       22
+      ],
+      [
+       2.3,
+       0.2,
+       10
+      ]
+     ],
+     "durMs": 100,
+     "gain": 1.2,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 50,
+    "maxMs": 380,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "hit_blunt": {
+   "role": "Hero's club / mace / staff / fist into a body: deep thud + crack (Impacts_Melee_Flesh + Melee_Bones)",
+   "lengthMs": 340,
+   "maxLengthMs": 420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3150_SFX_PHYSICS_Impacts_Melee_Flesh_L1_01",
+     "method": "impact",
+     "grit": 0.15,
+     "maxMs": 280
+    },
+    {
+     "type": "audio",
+     "sound": "6608_SFX_PHYSICS_Impacts_Melee_Bones_L1_01",
+     "method": "impact",
+     "grit": 0.35,
+     "maxMs": 200,
+     "gain": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 65,
+     "attackMs": 2,
+     "glide": 0.88,
+     "modes": [
+      [
+       1,
+       1,
+       45
+      ]
+     ],
+     "durMs": 160,
+     "gain": 0.9,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.5
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 420,
+    "rms20Min": 0.4,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "hit_creature": {
+   "role": "Hero's weapon into a creature (Impacts_T_FleshCreature)",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "616_SFX_PHYSICS_Impacts_T_FleshCreature_L1_01",
+     "method": "impact",
+     "grit": 0.3,
+     "maxMs": 280
+    },
+    {
+     "type": "modal",
+     "f": 75,
+     "attackMs": 2,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       35
+      ]
+     ],
+     "durMs": 130,
+     "gain": 0.7,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 400,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "take_hit": {
+   "role": "The hero is hit: low heavy shove through the body + the flesh impact (Impacts_T_FleshHuman)",
+   "lengthMs": 420,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 55,
+     "attackMs": 1.5,
+     "glide": 0.85,
+     "modes": [
+      [
+       1,
+       1,
+       75
+      ],
+      [
+       1.8,
+       0.25,
+       20
+      ]
+     ],
+     "durMs": 300,
+     "gain": 1.2,
+     "at": 0
+    },
+    {
+     "type": "audio",
+     "sound": "4163_SFX_PHYSICS_Impacts_T_FleshHuman_L1_01",
+     "method": "impact",
+     "grit": 0.25,
+     "maxMs": 300,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.55
+   },
+   "check": {
+    "minMs": 120,
+    "maxMs": 500,
+    "rms20Min": 0.45,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "block_metal": {
+   "role": "Metal meets metal in a block: a clang the arms absorb (Impacts_T_Blade_Metal), short ring",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 0.6,
+     "maxMs": 260
+    },
+    {
+     "type": "modal",
+     "f": 140,
+     "attackMs": 1,
+     "glide": 0.98,
+     "modes": [
+      [
+       1,
+       1,
+       45
+      ],
+      [
+       2.7,
+       0.25,
+       15
+      ]
+     ],
+     "durMs": 180,
+     "gain": 0.55,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 70,
+     "attackMs": 2,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       25
+      ]
+     ],
+     "durMs": 90,
+     "gain": 0.6,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 400,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "block_wood": {
+   "role": "Wood in a block: dull knock (Impacts_T_Blade_Wood)",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2456_SFX_PHYSICS_Impacts_T_Blade_Wood_L1_01",
+     "method": "impact",
+     "grit": 0.3,
+     "maxMs": 240
+    },
+    {
+     "type": "modal",
+     "f": 90,
+     "attackMs": 2,
+     "glide": 0.92,
+     "modes": [
+      [
+       1,
+       1,
+       30
+      ]
+     ],
+     "durMs": 120,
+     "gain": 1.2,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 380,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "block_fists": {
+   "role": "Bare hands / creature in a block: soft heavy push (Impacts_Melee_LowPunch)",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3225_SFX_PHYSICS_Impacts_Melee_LowPunch_L1_01",
+     "method": "impact",
+     "grit": 0.15,
+     "maxMs": 240
+    },
+    {
+     "type": "modal",
+     "f": 60,
+     "attackMs": 2,
+     "glide": 0.88,
+     "modes": [
+      [
+       1,
+       1,
+       40
+      ]
+     ],
+     "durMs": 150,
+     "gain": 0.9,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.48
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 380,
+    "rms20Min": 0.38,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "deflect_stone": {
+   "role": "Hero's weapon bounces off a wall / rock (Impacts_T_Blade_Stone) + recoil",
+   "lengthMs": 340,
+   "maxLengthMs": 420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2732_SFX_PHYSICS_Impacts_T_Blade_Stone_L1_01",
+     "method": "impact",
+     "grit": 0.5,
+     "maxMs": 260
+    },
+    {
+     "type": "modal",
+     "f": 70,
+     "attackMs": 2,
+     "glide": 0.85,
+     "modes": [
+      [
+       1,
+       1,
+       40
+      ]
+     ],
+     "durMs": 160,
+     "gain": 0.8,
+     "at": 30
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 60,
+    "maxMs": 420,
+    "rms20Min": 0.36,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "parry": {
+   "role": "Perfect parry: the sharpest, brightest contact + a quick low push back",
+   "lengthMs": 360,
+   "maxLengthMs": 440,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 0.7,
+     "maxMs": 220,
+     "gain": 1.1
+    },
+    {
+     "type": "modal",
+     "f": 160,
+     "attackMs": 0.8,
+     "glide": 0.99,
+     "modes": [
+      [
+       1,
+       1,
+       60
+      ],
+      [
+       2.4,
+       0.3,
+       20
+      ]
+     ],
+     "durMs": 240,
+     "gain": 1.3,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 60,
+     "attackMs": 2,
+     "glide": 0.85,
+     "modes": [
+      [
+       1,
+       1,
+       35
+      ]
+     ],
+     "durMs": 140,
+     "gain": 0.9,
+     "at": 40
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.5
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 440,
+    "rms20Min": 0.4,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_blade1h": {
+   "role": "combat matrix: 1H blade: light, quick, bright edge",
+   "lengthMs": 160,
+   "maxLengthMs": 240,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 125,
+     "attackMs": 1.5,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       16
+      ],
+      [
+       2.2,
+       0.3,
+       7
+      ]
+     ],
+     "durMs": 90,
+     "gain": 1.0,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 240,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_blade2h": {
+   "role": "combat matrix: 2H blade: long heavy cut, deeper",
+   "lengthMs": 240,
+   "maxLengthMs": 320,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 90,
+     "attackMs": 1.5,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       30
+      ],
+      [
+       2.1,
+       0.3,
+       12
+      ]
+     ],
+     "durMs": 150,
+     "gain": 1.0,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 60,
+     "attackMs": 1.5,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       25
+      ]
+     ],
+     "durMs": 120,
+     "gain": 0.6,
+     "at": 15
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 320,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_axe1h": {
+   "role": "combat matrix: 1H axe: sharp chop + the bite of the head",
+   "lengthMs": 200,
+   "maxLengthMs": 280,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 105,
+     "attackMs": 0.8,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       20
+      ],
+      [
+       1.6,
+       0.4,
+       9
+      ]
+     ],
+     "durMs": 100,
+     "gain": 1.0,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 70,
+     "attackMs": 1.5,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       22
+      ]
+     ],
+     "durMs": 90,
+     "gain": 0.8,
+     "at": 25
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 280,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_axe2h": {
+   "role": "combat matrix: 2H axe: heavy chop, deep bite",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 78,
+     "attackMs": 0.8,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       40
+      ],
+      [
+       1.6,
+       0.4,
+       14
+      ]
+     ],
+     "durMs": 170,
+     "gain": 1.0,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 52,
+     "attackMs": 1.5,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       40
+      ]
+     ],
+     "durMs": 160,
+     "gain": 0.9,
+     "at": 30
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 380,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_mace1h": {
+   "role": "1H mace: compact dry blunt strike, distinctly shorter and lighter than the 2H mace",
+   "lengthMs": 190,
+   "maxLengthMs": 250,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 112,
+     "attackMs": 1.8,
+     "glide": 0.88,
+     "modes": [
+      [
+       1,
+       1,
+       24
+      ],
+      [
+       1.55,
+       0.22,
+       10
+      ]
+     ],
+     "durMs": 125,
+     "gain": 1,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.78,
+    "rms20": 0.36
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 320,
+    "rms20Min": 0.25,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_mace2h": {
+   "role": "combat matrix: 2H mace: crushing, the lowest and longest blow",
+   "lengthMs": 420,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 72,
+     "attackMs": 3,
+     "glide": 0.92,
+     "modes": [
+      [
+       1,
+       1,
+       85
+      ],
+      [
+       1.5,
+       0.4,
+       30
+      ]
+     ],
+     "durMs": 330,
+     "gain": 1.0,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 54,
+     "attackMs": 4,
+     "glide": 0.95,
+     "modes": [
+      [
+       1,
+       1,
+       60
+      ]
+     ],
+     "durMs": 280,
+     "gain": 0.55,
+     "at": 20
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 500,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_staff": {
+   "role": "Staff: heavy two-handed wooden body, close to the 2H mace with a hollow upper mode",
+   "lengthMs": 360,
+   "maxLengthMs": 440,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 76,
+     "attackMs": 3,
+     "glide": 0.92,
+     "modes": [
+      [
+       1,
+       1,
+       95
+      ],
+      [
+       1.9,
+       0.22,
+       24
+      ]
+     ],
+     "durMs": 280,
+     "gain": 1,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 54,
+     "attackMs": 4,
+     "glide": 0.94,
+     "modes": [
+      [
+       1,
+       1,
+       65
+      ]
+     ],
+     "durMs": 250,
+     "gain": 0.4,
+     "at": 18
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 440,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "src_fist": {
+   "role": "combat matrix: fist: soft heavy punch",
+   "lengthMs": 180,
+   "maxLengthMs": 260,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 72,
+     "attackMs": 3,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       26
+      ]
+     ],
+     "durMs": 110,
+     "gain": 1.0,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 260,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "mass_big": {
+   "role": "combat matrix: big body: the target barely moves, a deep mass behind the contact",
+   "lengthMs": 380,
+   "maxLengthMs": 460,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 52,
+     "attackMs": 4,
+     "glide": 0.95,
+     "modes": [
+      [
+       1,
+       1,
+       90
+      ],
+      [
+       1.6,
+       0.2,
+       25
+      ]
+     ],
+     "durMs": 320,
+     "gain": 1.0,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 460,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_flesh": {
+   "role": "combat matrix: unarmoured human",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4163_SFX_PHYSICS_Impacts_T_FleshHuman_L1_01",
+     "method": "impact",
+     "grit": 0.25,
+     "maxMs": 260
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 400,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_creature": {
+   "role": "combat matrix: creature hide / flesh",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "616_SFX_PHYSICS_Impacts_T_FleshCreature_L1_01",
+     "method": "impact",
+     "grit": 0.3,
+     "maxMs": 260
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 400,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_leather": {
+   "role": "combat matrix: leather armour: dull slap",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3150_SFX_PHYSICS_Impacts_Melee_Flesh_L1_01",
+     "method": "impact",
+     "grit": 0.15,
+     "maxMs": 240
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 380,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_metal": {
+   "role": "combat matrix: metal / ore armour: hard metallic stop",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 0.55,
+     "maxMs": 240
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 380,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_stone": {
+   "role": "combat matrix: stone golem: hard rock, the weapon rebounds",
+   "lengthMs": 380,
+   "maxLengthMs": 460,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6487_SFX_CREA_Golem_Stone_M_Boom_L1_01",
+     "method": "impact",
+     "grit": 0.3,
+     "maxMs": 320
+    },
+    {
+     "type": "audio",
+     "sound": "2732_SFX_PHYSICS_Impacts_T_Blade_Stone_L1_01",
+     "method": "impact",
+     "grit": 0.5,
+     "maxMs": 220,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 460,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_ice": {
+   "role": "combat matrix: ice golem: hard and brittle, a crack",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2732_SFX_PHYSICS_Impacts_T_Blade_Stone_L1_01",
+     "method": "impact",
+     "grit": 0.6,
+     "maxMs": 220
+    },
+    {
+     "type": "audio",
+     "sound": "1362_SFX_CREA_Skeleton_Bones_ShortCrack_01",
+     "method": "impact",
+     "grit": 0.5,
+     "maxMs": 200,
+     "gain": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 380,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_bone": {
+   "role": "combat matrix: skeleton: dry bone crack",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1362_SFX_CREA_Skeleton_Bones_ShortCrack_01",
+     "method": "impact",
+     "grit": 0.45,
+     "maxMs": 260
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 400,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_zombie": {
+   "role": "combat matrix: zombie: soft, soggy give",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3150_SFX_PHYSICS_Impacts_Melee_Flesh_L1_01",
+     "method": "impact",
+     "grit": 0.1,
+     "maxMs": 260
+    },
+    {
+     "type": "audio",
+     "sound": "4163_SFX_PHYSICS_Impacts_T_FleshHuman_L1_01",
+     "method": "impact",
+     "grit": 0.15,
+     "maxMs": 200,
+     "gain": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 400,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "tgt_chitin": {
+   "role": "combat matrix: minecrawler chitin: hollow hard shell",
+   "lengthMs": 320,
+   "maxLengthMs": 400,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1319_SFX_OBJ_MinecrawlerWall_Hit_L1_01",
+     "method": "impact",
+     "grit": 0.4,
+     "maxMs": 260
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 400,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "hit_punch": {
+   "role": "combat: the confirmation of a landed blow - one short dense low punch at the contact (game105: hits lacked a clear impact)",
+   "lengthMs": 150,
+   "maxLengthMs": 220,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 78,
+     "attackMs": 0.8,
+     "glide": 0.88,
+     "modes": [
+      [
+       1,
+       1,
+       26
+      ],
+      [
+       1.9,
+       0.3,
+       9
+      ]
+     ],
+     "durMs": 110,
+     "gain": 1.0,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.5
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 220,
+    "rms20Min": 0.4,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "clash_steel": {
+   "role": "v5 steel meets steel (game109: the 310-648 Hz ring was weak on the pad): a hard strike click + a ringing blade in the actuators' strong band 200/290/410 Hz, long decay, a light push",
+   "lengthMs": 420,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 240,
+     "attackMs": 0.2,
+     "glide": 1.0,
+     "modes": [
+      [
+       1,
+       1,
+       4
+      ]
+     ],
+     "durMs": 18,
+     "gain": 1.6,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 200,
+     "attackMs": 0.3,
+     "glide": 0.998,
+     "modes": [
+      [
+       1,
+       1,
+       130
+      ],
+      [
+       1.45,
+       0.75,
+       95
+      ],
+      [
+       2.05,
+       0.45,
+       60
+      ]
+     ],
+     "durMs": 380,
+     "gain": 1.4,
+     "at": 2
+    },
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 0.8,
+     "maxMs": 160,
+     "gain": 0.45
+    },
+    {
+     "type": "modal",
+     "f": 90,
+     "attackMs": 1.0,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       18
+      ]
+     ],
+     "durMs": 60,
+     "gain": 0.4,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.45
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 500,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "minCore": 0.5,
+    "maxHigh": 0.06
+   }
+  },
+  "clash_wood": {
+   "role": "wood in a clash: dry short knock (higher and shorter than steel, no ring) + a low push",
+   "lengthMs": 200,
+   "maxLengthMs": 260,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2456_SFX_PHYSICS_Impacts_T_Blade_Wood_L1_01",
+     "method": "impact",
+     "grit": 0.45,
+     "maxMs": 150
+    },
+    {
+     "type": "modal",
+     "f": 175,
+     "attackMs": 0.6,
+     "glide": 0.97,
+     "modes": [
+      [
+       1,
+       1,
+       22
+      ],
+      [
+       2.3,
+       0.35,
+       9
+      ]
+     ],
+     "durMs": 90,
+     "gain": 1.0,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 85,
+     "attackMs": 1.0,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       25
+      ]
+     ],
+     "durMs": 80,
+     "gain": 0.7,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 260,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "minCore": 0.3,
+    "maxHigh": 0.08
+   }
+  },
+  "parry_steel": {
+   "role": "v5 perfect parry, steel: the hardest click + the longest blade ring 210/305/430 Hz + a quick low push back",
+   "lengthMs": 520,
+   "maxLengthMs": 600,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 250,
+     "attackMs": 0.2,
+     "glide": 1.0,
+     "modes": [
+      [
+       1,
+       1,
+       4
+      ]
+     ],
+     "durMs": 18,
+     "gain": 1.8,
+     "at": 0
+    },
+    {
+     "type": "modal",
+     "f": 210,
+     "attackMs": 0.3,
+     "glide": 0.998,
+     "modes": [
+      [
+       1,
+       1,
+       170
+      ],
+      [
+       1.45,
+       0.8,
+       120
+      ],
+      [
+       2.05,
+       0.5,
+       80
+      ]
+     ],
+     "durMs": 480,
+     "gain": 1.5,
+     "at": 2
+    },
+    {
+     "type": "audio",
+     "sound": "1175_SFX_PHYSICS_Impacts_T_Blade_Metal_L1_01",
+     "method": "impact",
+     "grit": 1.0,
+     "maxMs": 180,
+     "gain": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 60,
+     "attackMs": 2.0,
+     "glide": 0.85,
+     "modes": [
+      [
+       1,
+       1,
+       35
+      ]
+     ],
+     "durMs": 140,
+     "gain": 0.7,
+     "at": 30
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.48
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 600,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "minCore": 0.5,
+    "maxHigh": 0.06
+   }
+  },
+  "src_torch": {
+   "role": "Original light staff body retained for torch contacts; staff feedback must not reweight the torch",
+   "lengthMs": 180,
+   "maxLengthMs": 260,
+   "layers": [
+    {
+     "type": "modal",
+     "f": 108,
+     "attackMs": 1.2,
+     "glide": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       24
+      ],
+      [
+       2.6,
+       0.25,
+       8
+      ]
+     ],
+     "durMs": 110,
+     "gain": 1.0,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.42
+   },
+   "check": {
+    "minMs": 40,
+    "maxMs": 260,
+    "rms20Min": 0.3,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  }
+ }
+}

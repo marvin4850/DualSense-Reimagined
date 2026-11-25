@@ -1,0 +1,6574 @@
+{
+ "bank": "magic",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": {
+   "peak": 0.8
+  },
+  "check": {
+   "maxSub": 0.15,
+   "maxHigh": 0.04,
+   "minCore": 0.6,
+   "balance": "center",
+   "btMinCorr": 0.5
+  }
+ },
+ "variants": {
+  "A": {
+   "label": "Magic library candidates, 16 November 2026",
+   "vars": {}
+  }
+ },
+ "slots": {
+  "firebolt_cast": {
+   "role": "Firebolt: a few dry crackles of a small flame forming",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6472_SFX_Magic_FireBall_Cast_In_LayerA_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 150,
+     "tauMs": 4,
+     "threshold": 0.18,
+     "maxHits": 14,
+     "dynamics": 0.9
+    },
+    {
+     "type": "noise",
+     "freq": 120,
+     "durMs": 850,
+     "at": 0,
+     "gain": 0.25,
+     "q": 1.6,
+     "attackMs": 300,
+     "releaseMs": 200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firebolt_release": {
+   "role": "Firebolt: sharp light launch",
+   "lengthMs": 420,
+   "maxLengthMs": 540,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3196_SFX_Magic_FireBolt_Shoot_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 420,
+     "carrierHz": 135,
+     "decayScale": 0.6,
+     "grit": 0.25
+    },
+    {
+     "type": "grain",
+     "freq": 160,
+     "at": 0,
+     "durMs": 60,
+     "decayMs": 14,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 820,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6,
+    "rms20Max": 0.7
+   }
+  },
+  "firebolt_impact": {
+   "role": "Firebolt: small flame pop at the target",
+   "lengthMs": 320,
+   "maxLengthMs": 440,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4330_SFX_Magic_FireBall_Impact_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 320,
+     "carrierHz": 110,
+     "decayScale": 0.5,
+     "maxHits": 2,
+     "grit": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.38
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 720,
+    "rms20Min": 0.236,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fireball_cast": {
+   "role": "Fireball: dense ignition",
+   "lengthMs": 850,
+   "maxLengthMs": 970,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6472_SFX_Magic_FireBall_Cast_In_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 850,
+     "carrierHz": 105,
+     "am": 0.55,
+     "releaseMs": 40
+    },
+    {
+     "type": "audio",
+     "sound": "6472_SFX_Magic_FireBall_Cast_In_LayerA_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 850,
+     "carrierHz": 140,
+     "tauMs": 5,
+     "threshold": 0.22,
+     "maxHits": 10,
+     "gain": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1250,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fireball_charge": {
+   "role": "Fireball: charge stage S",
+   "lengthMs": 640,
+   "maxLengthMs": 760,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2669_SFX_Magic_FireBall_Cast_ChargeS_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 620,
+     "carrierHz": 110,
+     "am": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 70,
+     "durMs": 620,
+     "at": 0,
+     "gain": 0.3,
+     "attackMs": 400,
+     "releaseMs": 120
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.28
+   },
+   "fadeOutMs": 60,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1040,
+    "rms20Min": 0.174,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fireball_charge2": {
+   "role": "Fireball: charge stage M (stronger, lower)",
+   "lengthMs": 1000,
+   "maxLengthMs": 1120,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3354_SFX_Magic_FireBall_Cast_ChargeM_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 980,
+     "carrierHz": 95,
+     "am": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 76,
+     "durMs": 980,
+     "at": 0,
+     "gain": 0.35,
+     "attackMs": 300,
+     "releaseMs": 150
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.33
+   },
+   "fadeOutMs": 60,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1400,
+    "rms20Min": 0.205,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fireball_charge3": {
+   "role": "Fireball: charge stage L (densest)",
+   "lengthMs": 1220,
+   "maxLengthMs": 1340,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3131_SFX_Magic_FireBall_Cast_ChargeL_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1200,
+     "carrierHz": 82,
+     "am": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 84,
+     "durMs": 1200,
+     "at": 0,
+     "gain": 0.4,
+     "attackMs": 300,
+     "releaseMs": 150
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.38
+   },
+   "fadeOutMs": 60,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1620,
+    "rms20Min": 0.236,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fireball_hold": {
+   "role": "Fireball hold: dense rolling burn, loopable",
+   "lengthMs": 2400,
+   "maxLengthMs": 2740,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1581_SFX_Magic_FireBall_Hold_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 90,
+     "am": 0.6,
+     "releaseMs": 60
+    },
+    {
+     "type": "tone",
+     "freq": 78,
+     "durMs": 2600,
+     "at": 0,
+     "gain": 0.3,
+     "amRate": 1.6,
+     "amDepth": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 2400,
+   "loopCrossfadeMs": 300
+  },
+  "fireball_release": {
+   "role": "Fireball: heavy launch",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1111_SFX_Magic_FireBall_Cast_Launch_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 78,
+     "decayScale": 1.4,
+     "maxHits": 3,
+     "grit": 0.3
+    },
+    {
+     "type": "modal",
+     "f": 70,
+     "at": 0,
+     "durMs": 360,
+     "gain": 0.7,
+     "modes": [
+      [
+       1,
+       1,
+       90
+      ],
+      [
+       1.9,
+       0.3,
+       30
+      ]
+     ],
+     "attackMs": 4,
+     "glide": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6,
+    "rms20Max": 0.8
+   }
+  },
+  "fireball_impact": {
+   "role": "Fireball: volumetric explosion with decaying flashes",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4374_SFX_Magic_FireBall_Impact_LayerB_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 62,
+     "decayScale": 2.2,
+     "maxHits": 6,
+     "grit": 0.35,
+     "dynamics": 0.7
+    },
+    {
+     "type": "audio",
+     "sound": "4374_SFX_Magic_FireBall_Impact_LayerB_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 130,
+     "tauMs": 6,
+     "threshold": 0.16,
+     "maxHits": 18,
+     "gain": 0.45
+    },
+    {
+     "type": "modal",
+     "f": 55,
+     "at": 0,
+     "durMs": 900,
+     "gain": 0.6,
+     "modes": [
+      [
+       1,
+       1,
+       260
+      ],
+      [
+       2.2,
+       0.2,
+       60
+      ]
+     ],
+     "attackMs": 3,
+     "glide": 0.75
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firestorm_cast": {
+   "role": "Fire storm: building turbulence",
+   "lengthMs": 1350,
+   "maxLengthMs": 1470,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4589_SFX_Magic_FireStorm_Cast_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1350,
+     "carrierHz": 95,
+     "am": 0.7,
+     "releaseMs": 30
+    },
+    {
+     "type": "noise",
+     "freq": 80,
+     "durMs": 1350,
+     "at": 0,
+     "gain": 0.35,
+     "q": 1.2,
+     "attackMs": 900,
+     "releaseMs": 100
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 60,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1750,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firestorm_release": {
+   "role": "Fire storm: launch rumble",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5602_SFX_Magic_FireStorm_Cast_Rumble_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "startMs": 1300,
+     "carrierHz": 68,
+     "decayScale": 1.8,
+     "maxHits": 4
+    },
+    {
+     "type": "audio",
+     "sound": "4418_SFX_Magic_FireStorm_Cast_LayerB_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "startMs": 1300,
+     "carrierHz": 150,
+     "tauMs": 5,
+     "threshold": 0.2,
+     "gain": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.48
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.298,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firestorm_storm": {
+   "role": "Fire storm: chaotic flashes rotating left/right, loopable",
+   "lengthMs": 3200,
+   "maxLengthMs": 3500,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5790_SFX_Magic_FireStorm_Storm_LayerA_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 3400,
+     "carrierHz": 125,
+     "tauMs": 7,
+     "threshold": 0.14,
+     "maxHits": 40,
+     "stereo": 1,
+     "dynamics": 1.1
+    },
+    {
+     "type": "audio",
+     "sound": "5430_SFX_Magic_FireStorm_Storm_LayerB_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 3400,
+     "carrierHz": 85,
+     "am": 0.8,
+     "gain": 0.6,
+     "stereo": 1
+    },
+    {
+     "type": "noise",
+     "freq": 95,
+     "durMs": 1600,
+     "at": 0,
+     "gain": 0.45,
+     "q": 1.3,
+     "pan": -0.9,
+     "panEnd": 0.9,
+     "attackMs": 200,
+     "releaseMs": 200
+    },
+    {
+     "type": "noise",
+     "freq": 95,
+     "durMs": 1600,
+     "at": 1600,
+     "gain": 0.45,
+     "q": 1.3,
+     "pan": 0.9,
+     "panEnd": -0.9,
+     "attackMs": 200,
+     "releaseMs": 200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3600,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 3200,
+   "loopCrossfadeMs": 260
+  },
+  "firestorm_end": {
+   "role": "Fire storm: dying flames",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2576_SFX_Magic_FireStorm_End_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 120,
+     "tauMs": 6,
+     "threshold": 0.2,
+     "maxHits": 12
+    },
+    {
+     "type": "audio",
+     "sound": "2576_SFX_Magic_FireStorm_End_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 80,
+     "am": 0.5,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firerain_cast": {
+   "role": "Fire rain: gesture swell",
+   "lengthMs": 1300,
+   "maxLengthMs": 1420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "60_SFX_Magic_FireRain_Gesture_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1300,
+     "carrierHz": 105,
+     "releaseMs": 40
+    },
+    {
+     "type": "tone",
+     "freq": 64,
+     "durMs": 1300,
+     "at": 0,
+     "gain": 0.3,
+     "attackMs": 700,
+     "releaseMs": 300
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.26
+   },
+   "fadeOutMs": 200,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1700,
+    "rms20Min": 0.161,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firerain_charge": {
+   "role": "Fire rain: thunderclap, then lightning flashes at +420 and +1160 ms (montage)",
+   "lengthMs": 1900,
+   "maxLengthMs": 2020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3792_SFX_Magic_FireRain_Cast_Thunder_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 1400,
+     "carrierHz": 58,
+     "decayScale": 2,
+     "maxHits": 3,
+     "grit": 0.2
+    },
+    {
+     "type": "audio",
+     "sound": "2850_SFX_Magic_FireRain_Cast_Lightning_LayerA_01",
+     "method": "rattle",
+     "at": 420,
+     "maxMs": 700,
+     "carrierHz": 230,
+     "tauMs": 2.5,
+     "threshold": 0.15,
+     "gain": 0.8
+    },
+    {
+     "type": "audio",
+     "sound": "5717_SFX_Magic_FireRain_Cast_Lightning_LayerA_02",
+     "method": "rattle",
+     "at": 1160,
+     "maxMs": 700,
+     "carrierHz": 210,
+     "tauMs": 2.5,
+     "threshold": 0.15,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2300,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firerain_release": {
+   "role": "Fire rain: hit the ground",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "699_SFX_Magic_FireRain_Cast_HitGround_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 66,
+     "decayScale": 1.6,
+     "maxHits": 3,
+     "grit": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "firerain_rain": {
+   "role": "Fire rain: many separate irregular falls, residual crackle - not one continuous buzz",
+   "lengthMs": 4200,
+   "maxLengthMs": 4320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3737_SFX_Magic_FireRain_Cast_Rain_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 4200,
+     "carrierHz": 92,
+     "maxHits": 22,
+     "gapMs": 90,
+     "threshold": 0.12,
+     "decayScale": 0.6,
+     "dynamics": 1.0,
+     "grit": 0.25,
+     "stereo": 1
+    },
+    {
+     "type": "audio",
+     "sound": "2541_SFX_Magic_FireRain_Cast_Rain_LayerC_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 4200,
+     "carrierHz": 150,
+     "tauMs": 4,
+     "threshold": 0.3,
+     "maxHits": 30,
+     "gain": 0.35,
+     "stereo": 1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 500,
+   "check": {
+    "minMs": 20,
+    "maxMs": 4600,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "icebolt_cast": {
+   "role": "Ice bolt: dry crystal forming - fine ticks, no warm body",
+   "lengthMs": 1500,
+   "maxLengthMs": 1620,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4553_SFX_Magic_IceBolt_Cast_In_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 1500,
+     "carrierHz": 225,
+     "threshold": 0.12,
+     "maxHits": 12,
+     "gapMs": 60,
+     "decayScale": 0.25,
+     "grit": 0
+    },
+    {
+     "type": "tone",
+     "freq": 200,
+     "durMs": 1500,
+     "at": 0,
+     "gain": 0.3,
+     "freqEnd": 240,
+     "attackMs": 1200,
+     "releaseMs": 60
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1900,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 560
+   }
+  },
+  "icebolt_hold": {
+   "role": "Ice bolt hold: thin cold tension, loopable",
+   "lengthMs": 1600,
+   "maxLengthMs": 1840,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4501_SFX_Magic_TargetEffect_Frozen_LayerB_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 230,
+     "tauMs": 4,
+     "threshold": 0.25,
+     "maxHits": 10
+    },
+    {
+     "type": "tone",
+     "freq": 210,
+     "durMs": 1800,
+     "at": 0,
+     "gain": 0.6,
+     "amRate": 3,
+     "amDepth": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2000,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 1600,
+   "loopCrossfadeMs": 200,
+   "eq": {
+    "hpf": 100,
+    "lpf": 600
+   }
+  },
+  "icebolt_release": {
+   "role": "Ice bolt: hard dry snap",
+   "lengthMs": 380,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6034_SFX_Magic_IceBolt_Cast_Launch_LayerB_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 380,
+     "carrierHz": 230,
+     "maxHits": 3,
+     "decayScale": 0.3,
+     "grit": 0
+    },
+    {
+     "type": "grain",
+     "freq": 210,
+     "at": 0,
+     "durMs": 60,
+     "decayMs": 14,
+     "gain": 1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 780,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6,
+    "rms20Max": 0.7
+   },
+   "eq": {
+    "hpf": 90,
+    "lpf": 600
+   }
+  },
+  "icebolt_impact": {
+   "role": "Ice bolt: small shard cracking",
+   "lengthMs": 520,
+   "maxLengthMs": 640,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "7098_SFX_Magic_IceBolt_Cast_Launch_LayerD_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 520,
+     "carrierHz": 235,
+     "tauMs": 4,
+     "threshold": 0.12,
+     "maxHits": 10,
+     "gapMs": 25
+    },
+    {
+     "type": "grain",
+     "freq": 220,
+     "at": 0,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 920,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 620
+   }
+  },
+  "iceblock_cast": {
+   "role": "Ice block: ice densifying - creak that tightens",
+   "lengthMs": 1900,
+   "maxLengthMs": 2020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4777_SFX_CREA_Golem_Ice_L_Creak2s_L1_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 1900,
+     "carrierHz": 150,
+     "bandLo": 600,
+     "bandHi": 5000,
+     "compress": 0.5,
+     "stick": 0.9
+    },
+    {
+     "type": "tone",
+     "freq": 110,
+     "durMs": 1900,
+     "at": 0,
+     "gain": 0.3,
+     "freqEnd": 150,
+     "attackMs": 1500,
+     "releaseMs": 80
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 60,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2300,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "iceblock_release": {
+   "role": "Ice block: several heavy crunches",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4358_SFX_CREA_Golem_Ice_L_Creak500ms_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 120,
+     "maxHits": 4,
+     "gapMs": 60,
+     "decayScale": 0.7,
+     "grit": 0.1
+    },
+    {
+     "type": "modal",
+     "f": 130,
+     "at": 0,
+     "durMs": 120,
+     "gain": 0.7,
+     "modes": [
+      [
+       1,
+       1,
+       18
+      ],
+      [
+       2.6,
+       0.4,
+       6
+      ]
+     ],
+     "noise": 0.4
+    },
+    {
+     "type": "modal",
+     "f": 115,
+     "at": 170,
+     "durMs": 120,
+     "gain": 0.8,
+     "modes": [
+      [
+       1,
+       1,
+       18
+      ],
+      [
+       2.6,
+       0.4,
+       6
+      ]
+     ],
+     "noise": 0.4
+    },
+    {
+     "type": "modal",
+     "f": 100,
+     "at": 360,
+     "durMs": 140,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       22
+      ],
+      [
+       2.6,
+       0.4,
+       6
+      ]
+     ],
+     "noise": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.48
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.298,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "iceblock_impact": {
+   "role": "Ice block: final powerful cracking and settling",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4703_SFX_CREA_Golem_Ice_Collapse_L1_02",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 95,
+     "maxHits": 8,
+     "gapMs": 45,
+     "decayScale": 0.8,
+     "grit": 0.15
+    },
+    {
+     "type": "audio",
+     "sound": "4703_SFX_CREA_Golem_Ice_Collapse_L1_02",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 280,
+     "tauMs": 2,
+     "threshold": 0.15,
+     "gain": 0.55
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 200,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "icewave_cast": {
+   "role": "Ice wave: cold gathering, sparse ticks",
+   "lengthMs": 2000,
+   "maxLengthMs": 2120,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6709_SFX_Magic_IceWave_Cast_In_LayerA_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 2000,
+     "carrierHz": 250,
+     "threshold": 0.18,
+     "maxHits": 10,
+     "gapMs": 80
+    },
+    {
+     "type": "tone",
+     "freq": 200,
+     "durMs": 2000,
+     "at": 0,
+     "gain": 0.18,
+     "attackMs": 1500,
+     "releaseMs": 100
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2400,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 120,
+    "lpf": 600
+   }
+  },
+  "icewave_release": {
+   "role": "Ice wave: spreading wave of many brittle clicks sweeping across",
+   "lengthMs": 2600,
+   "maxLengthMs": 2720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4096_SFX_Magic_IceWave_Cast_Launch_LayerA_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 290,
+     "tauMs": 1.6,
+     "threshold": 0.08,
+     "maxHits": 48,
+     "gapMs": 12,
+     "stereo": 1
+    },
+    {
+     "type": "pulses",
+     "rate": 26,
+     "durMs": 1500,
+     "at": 0,
+     "gain": 0.6,
+     "grain": "custom",
+     "pulse": {
+      "freq": 300,
+      "durMs": 9,
+      "decayMs": 2.2
+     },
+     "rateEnd": 8,
+     "jitter": 0.6,
+     "pan": -0.8,
+     "panEnd": 0.8,
+     "ampJitter": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 180,
+     "durMs": 1200,
+     "at": 0,
+     "gain": 0.2,
+     "freqEnd": 120,
+     "releaseMs": 900
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3000,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 120,
+    "lpf": 620
+   }
+  },
+  "icewave_end": {
+   "role": "Ice wave: rare residual cracks",
+   "lengthMs": 1600,
+   "maxLengthMs": 1720,
+   "layers": [
+    {
+     "type": "pulses",
+     "rate": 3,
+     "durMs": 1600,
+     "at": 0,
+     "gain": 0.8,
+     "grain": "custom",
+     "pulse": {
+      "freq": 215,
+      "durMs": 24,
+      "decayMs": 7
+     },
+     "jitter": 0.9,
+     "spread": 0.7,
+     "ampJitter": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.18
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2000,
+    "rms20Min": 0.06,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 600
+   }
+  },
+  "balllightning_cast": {
+   "role": "Ball lightning: first nervous discharge",
+   "lengthMs": 1400,
+   "maxLengthMs": 1520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6786_SFX_Magic_Lightning_Draw_L1_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1400,
+     "carrierHz": 215,
+     "tauMs": 2.8,
+     "threshold": 0.1,
+     "maxHits": 24,
+     "gapMs": 9,
+     "dynamics": 1.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1800,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 600
+   }
+  },
+  "balllightning_charge": {
+   "role": "Ball lightning: unstable discharges at the four charge loops (+0, +1000, +2020, +3070 ms)",
+   "lengthMs": 4000,
+   "maxLengthMs": 4120,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5782_SFX_Magic_Lightning_Draw_L1_02",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 230,
+     "tauMs": 1.5,
+     "threshold": 0.1,
+     "gain": 0.55
+    },
+    {
+     "type": "audio",
+     "sound": "5001_SFX_Magic_Lightning_Draw_L1_03",
+     "method": "rattle",
+     "at": 1000,
+     "maxMs": 900,
+     "carrierHz": 250,
+     "tauMs": 1.5,
+     "threshold": 0.1,
+     "gain": 0.68
+    },
+    {
+     "type": "audio",
+     "sound": "1782_SFX_Magic_Lightning_Draw_L1_04",
+     "method": "rattle",
+     "at": 2020,
+     "maxMs": 900,
+     "carrierHz": 270,
+     "tauMs": 1.5,
+     "threshold": 0.1,
+     "gain": 0.82
+    },
+    {
+     "type": "audio",
+     "sound": "5043_SFX_Magic_Lightning_Draw_L1_05",
+     "method": "rattle",
+     "at": 3070,
+     "maxMs": 900,
+     "carrierHz": 290,
+     "tauMs": 1.5,
+     "threshold": 0.1,
+     "gain": 1
+    },
+    {
+     "type": "audio",
+     "sound": "6968_SFX_Magic_Lightning_Charge_L3_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 4000,
+     "carrierHz": 170,
+     "gain": 0.4,
+     "compress": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 4400,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 620
+   }
+  },
+  "balllightning_release": {
+   "role": "Ball lightning: sharp release",
+   "lengthMs": 600,
+   "maxLengthMs": 720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2764_SFX_Magic_Lightning_Cast_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 230,
+     "maxHits": 5,
+     "gapMs": 20
+    },
+    {
+     "type": "grain",
+     "freq": 220,
+     "at": 0,
+     "durMs": 40,
+     "decayMs": 8,
+     "gain": 0.9
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1000,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 620
+   }
+  },
+  "balllightning_impact": {
+   "role": "Ball lightning: dense electric flash",
+   "lengthMs": 1100,
+   "maxLengthMs": 1220,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6669_SFX_Magic_Lightning_Impact_L2_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1100,
+     "carrierHz": 210,
+     "tauMs": 2.5,
+     "threshold": 0.07,
+     "maxHits": 40,
+     "gapMs": 6,
+     "dynamics": 0.6
+    },
+    {
+     "type": "modal",
+     "f": 95,
+     "at": 0,
+     "durMs": 260,
+     "gain": 0.7,
+     "modes": [
+      [
+       1,
+       1,
+       60
+      ]
+     ],
+     "attackMs": 1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1500,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 70,
+    "lpf": 620
+   }
+  },
+  "chainlightning_cast": {
+   "role": "Chain lightning: draw spark",
+   "lengthMs": 650,
+   "maxLengthMs": 770,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "7211_SFX_Magic_Lightning_Draw_L2_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 650,
+     "carrierHz": 225,
+     "tauMs": 2.8,
+     "threshold": 0.1,
+     "gapMs": 9
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.28
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1050,
+    "rms20Min": 0.174,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 110,
+    "lpf": 620
+   }
+  },
+  "chainlightning_release": {
+   "role": "Chain lightning: powerful first discharge",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6488_SFX_Magic_Lightning_Cast_L4_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 120,
+     "decayScale": 0.5,
+     "maxHits": 3,
+     "grit": 0.4
+    },
+    {
+     "type": "audio",
+     "sound": "6488_SFX_Magic_Lightning_Cast_L4_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 250,
+     "tauMs": 1.3,
+     "threshold": 0.1,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.55
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.341,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "chainlightning_chain": {
+   "role": "Chain lightning: crackling ray while held, loopable",
+   "lengthMs": 1200,
+   "maxLengthMs": 1390,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1770_SFX_Magic_Lightning_ChainLoop_L1_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 1300,
+     "carrierHz": 230,
+     "tauMs": 1.5,
+     "threshold": 0.12,
+     "maxHits": 40,
+     "gapMs": 8
+    },
+    {
+     "type": "audio",
+     "sound": "1770_SFX_Magic_Lightning_ChainLoop_L1_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 1300,
+     "carrierHz": 180,
+     "gain": 0.45
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1600,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 1200,
+   "loopCrossfadeMs": 150,
+   "eq": {
+    "hpf": 100,
+    "lpf": 620
+   }
+  },
+  "chainlightning_jump": {
+   "role": "Chain lightning: one separate quick breakdown (one per jump)",
+   "lengthMs": 260,
+   "maxLengthMs": 380,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2392_SFX_Magic_Lightning_ChainPulse_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 260,
+     "carrierHz": 210,
+     "maxHits": 3,
+     "gapMs": 15
+    },
+    {
+     "type": "grain",
+     "freq": 250,
+     "at": 0,
+     "durMs": 22,
+     "decayMs": 5,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 660,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 620
+   }
+  },
+  "chainlightning_end": {
+   "role": "Chain lightning: fizzle out",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5290_SFX_Magic_Lightning_Fizzle_L3_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 220,
+     "tauMs": 1.5,
+     "threshold": 0.15,
+     "maxHits": 14
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 200,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 100,
+    "lpf": 600
+   }
+  },
+  "fistofwind_charge": {
+   "role": "Fist of wind: smooth compression of air pressure",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "733_SFX_Magic_WindFist_Cast_Gesture_A-01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 75,
+     "releaseMs": 30
+    },
+    {
+     "type": "noise",
+     "freq": 60,
+     "durMs": 900,
+     "at": 0,
+     "gain": 0.6,
+     "freqEnd": 95,
+     "q": 0.9,
+     "attackMs": 800,
+     "releaseMs": 40
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 30,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 300
+  },
+  "fistofwind_release": {
+   "role": "Fist of wind: one powerful short push",
+   "lengthMs": 500,
+   "maxLengthMs": 620,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2120_SFX_Magic_WindFist_Gust_A-01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 62,
+     "decayScale": 1.1,
+     "maxHits": 1,
+     "grit": 0.1
+    },
+    {
+     "type": "modal",
+     "f": 58,
+     "at": 0,
+     "durMs": 260,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       70
+      ]
+     ],
+     "attackMs": 6,
+     "glide": 0.85
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.55
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 900,
+    "rms20Min": 0.341,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.2,
+    "minCore": 0.6
+   }
+  },
+  "fistofwind_end": {
+   "role": "Fist of wind: quick dissipation",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6704_SFX_Magic_WindFist_Wind_A-01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 85,
+     "releaseMs": 60
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.22
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.136,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "stormfist_charge": {
+   "role": "Storm fist: howling unstable build-up",
+   "lengthMs": 1000,
+   "maxLengthMs": 1120,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2805_SFX_Magic_WindFist_Howl_A-01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1000,
+     "carrierHz": 70,
+     "releaseMs": 40
+    },
+    {
+     "type": "noise",
+     "freq": 55,
+     "durMs": 1000,
+     "at": 0,
+     "gain": 0.5,
+     "q": 1,
+     "attackMs": 500,
+     "releaseMs": 60,
+     "amRate": 7,
+     "amDepth": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1400,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "stormfist_release": {
+   "role": "Storm fist: heavy air strike + ground hit",
+   "lengthMs": 600,
+   "maxLengthMs": 720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "7155_SFX_Magic_WindFist_Gust_A-04",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 55,
+     "decayScale": 1.5,
+     "maxHits": 2
+    },
+    {
+     "type": "audio",
+     "sound": "4035_SFX_Magic_FireRain_Cast_HitGround_LayerB_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 50,
+     "decayScale": 1.2,
+     "maxHits": 2,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.6
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1000,
+    "rms20Min": 0.372,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   }
+  },
+  "stormfist_end": {
+   "role": "Storm fist: unstable gusts and decaying vortex swings left/right",
+   "lengthMs": 1700,
+   "maxLengthMs": 1820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4708_SFX_Magic_WindFist_Debris_A-01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1700,
+     "carrierHz": 75,
+     "am": 0.6,
+     "gain": 0.6
+    },
+    {
+     "type": "noise",
+     "freq": 70,
+     "durMs": 420,
+     "at": 0,
+     "gain": 0.8,
+     "pan": -0.9,
+     "panEnd": 0.4,
+     "attackMs": 60,
+     "releaseMs": 200
+    },
+    {
+     "type": "noise",
+     "freq": 70,
+     "durMs": 420,
+     "at": 420,
+     "gain": 0.6,
+     "pan": 0.9,
+     "panEnd": -0.4,
+     "attackMs": 60,
+     "releaseMs": 200
+    },
+    {
+     "type": "noise",
+     "freq": 70,
+     "durMs": 420,
+     "at": 840,
+     "gain": 0.42,
+     "pan": -0.9,
+     "panEnd": 0.4,
+     "attackMs": 60,
+     "releaseMs": 200
+    },
+    {
+     "type": "noise",
+     "freq": 70,
+     "durMs": 420,
+     "at": 1260,
+     "gain": 0.28,
+     "pan": 0.9,
+     "panEnd": -0.4,
+     "attackMs": 60,
+     "releaseMs": 200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2100,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "pyrokinesis_cast": {
+   "role": "Pyrokinesis: fast ignition",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3096_SFX_Magic_Pyrokinesis_Cast_L2_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 100,
+     "maxHits": 3,
+     "decayScale": 0.9,
+     "grit": 0.4
+    },
+    {
+     "type": "audio",
+     "sound": "3096_SFX_Magic_Pyrokinesis_Cast_L2_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 160,
+     "tauMs": 4,
+     "threshold": 0.2,
+     "gain": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "pyrokinesis_burn": {
+   "role": "Pyrokinesis: held uneven burning, loopable",
+   "lengthMs": 2100,
+   "maxLengthMs": 2390,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5813_SFX_Magic_Pyrokinesis_BeamLoop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2300,
+     "carrierHz": 110,
+     "am": 0.7,
+     "releaseMs": 40
+    },
+    {
+     "type": "audio",
+     "sound": "1261_SFX_Magic_Pyrokinesis_Damage_L1_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2300,
+     "carrierHz": 145,
+     "tauMs": 5,
+     "threshold": 0.2,
+     "maxHits": 16,
+     "gain": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2500,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 2100,
+   "loopCrossfadeMs": 250
+  },
+  "pyrokinesis_end": {
+   "role": "Pyrokinesis: release, flame collapses",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2335_SFX_Magic_Pyrokinesis_Cast_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 900,
+     "startMs": 2600,
+     "carrierHz": 95,
+     "am": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.22
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.136,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "sleep_cast": {
+   "role": "Sleep: soft slow lulling",
+   "lengthMs": 2300,
+   "maxLengthMs": 2420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "362_SFX_Magic_Sleep_Cast_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 2300,
+     "carrierHz": 85,
+     "releaseMs": 80,
+     "gain": 0.6
+    },
+    {
+     "type": "tone",
+     "freq": 72,
+     "durMs": 2300,
+     "at": 0,
+     "gain": 0.7,
+     "amRate": 1.1,
+     "amDepth": 0.85,
+     "attackMs": 500,
+     "releaseMs": 600
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.22
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2700,
+    "rms20Min": 0.136,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 300
+  },
+  "sleep_release": {
+   "role": "Sleep: soft pulses that slow down and fade",
+   "lengthMs": 3000,
+   "maxLengthMs": 3120,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4549_SFX_Magic_Sleep_Drop_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 3000,
+     "carrierHz": 75,
+     "releaseMs": 120,
+     "gain": 0.4
+    },
+    {
+     "type": "grain",
+     "freq": 78,
+     "at": 0,
+     "durMs": 420,
+     "decayMs": 170,
+     "gain": 0.9,
+     "attackMs": 120
+    },
+    {
+     "type": "grain",
+     "freq": 76,
+     "at": 650,
+     "durMs": 470,
+     "decayMs": 190,
+     "gain": 0.72,
+     "attackMs": 140
+    },
+    {
+     "type": "grain",
+     "freq": 74,
+     "at": 1450,
+     "durMs": 520,
+     "decayMs": 210,
+     "gain": 0.55,
+     "attackMs": 160
+    },
+    {
+     "type": "grain",
+     "freq": 72,
+     "at": 2450,
+     "durMs": 560,
+     "decayMs": 230,
+     "gain": 0.38,
+     "attackMs": 180
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 600,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3400,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "charm_cast": {
+   "role": "Charm: two thin rhythmic pulsations, left 4.0 Hz and right 5.2 Hz",
+   "lengthMs": 1300,
+   "maxLengthMs": 1420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6120_SFX_Magic_Charm_Cast_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1300,
+     "carrierHz": 150,
+     "am": 0.3,
+     "gain": 0.35
+    },
+    {
+     "type": "tone",
+     "freq": 150,
+     "durMs": 1300,
+     "at": 0,
+     "gain": 0.8,
+     "pan": -1,
+     "amRate": 4.0,
+     "amDepth": 0.9,
+     "attackMs": 200,
+     "releaseMs": 100
+    },
+    {
+     "type": "tone",
+     "freq": 170,
+     "durMs": 1300,
+     "at": 0,
+     "gain": 0.8,
+     "pan": 1,
+     "amRate": 5.2,
+     "amDepth": 0.9,
+     "attackMs": 200,
+     "releaseMs": 100
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.22
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1700,
+    "rms20Min": 0.136,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 150
+  },
+  "charm_hold": {
+   "role": "Charm hold: the two pulses meet in one harmonious wave, loopable",
+   "lengthMs": 2000,
+   "maxLengthMs": 2290,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "7108_SFX_Magic_Charm_Hold_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2200,
+     "carrierHz": 158,
+     "am": 0.25,
+     "gain": 0.3
+    },
+    {
+     "type": "tone",
+     "freq": 158,
+     "durMs": 2200,
+     "at": 0,
+     "gain": 0.9,
+     "amRate": 4.5,
+     "amDepth": 0.75
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2400,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 2000,
+   "loopCrossfadeMs": 250
+  },
+  "charm_impact": {
+   "role": "Charm: unified harmonious wave reaches the target",
+   "lengthMs": 1600,
+   "maxLengthMs": 1720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1833_SFX_Magic_Charm_Target_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1600,
+     "carrierHz": 140,
+     "releaseMs": 80,
+     "gain": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 140,
+     "durMs": 1600,
+     "at": 0,
+     "gain": 0.9,
+     "amRate": 2.2,
+     "amDepth": 0.6,
+     "attackMs": 250,
+     "releaseMs": 700
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.26
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2000,
+    "rms20Min": 0.161,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 100
+  },
+  "fear_cast": {
+   "role": "Fear: sudden short jolt",
+   "lengthMs": 400,
+   "maxLengthMs": 520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1918_SFX_Magic_Fear_Cast_L7_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 400,
+     "carrierHz": 70,
+     "maxHits": 1,
+     "decayScale": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 64,
+     "at": 0,
+     "durMs": 220,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       45
+      ]
+     ],
+     "attackMs": 1.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.52
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 800,
+    "rms20Min": 0.322,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "fear_wave": {
+   "role": "Fear: faltering anxious heartbeat - irregular lub-dub",
+   "lengthMs": 3600,
+   "maxLengthMs": 3720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4623_SFX_Magic_Fear_Wave_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 3600,
+     "carrierHz": 60,
+     "am": 0.4,
+     "gain": 0.25
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 0,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.9,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 150,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.55,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 620,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.85,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 760,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.5,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 1120,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.9,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 1250,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.55,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 1820,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.75,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 1960,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.45,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 2260,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.8,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 2420,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.5,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 3050,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.55,
+     "attackMs": 8
+    },
+    {
+     "type": "grain",
+     "freq": 58,
+     "at": 3190,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.35,
+     "attackMs": 8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 4000,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.2,
+    "minCore": 0.6
+   }
+  },
+  "control_cast": {
+   "role": "Control: heavy strict start",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6113_SFX_Magic_Control_Cast_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 72,
+     "maxHits": 2,
+     "decayScale": 1.2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.223,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "control_charge": {
+   "role": "Control: heavy strict pulse train, loopable at 1.5 Hz",
+   "lengthMs": 2000,
+   "maxLengthMs": 2160,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2755_SFX_Magic_Control_EnterLoop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2200,
+     "carrierHz": 70,
+     "am": 0.3,
+     "gain": 0.3
+    },
+    {
+     "type": "grain",
+     "freq": 66,
+     "at": 0,
+     "durMs": 160,
+     "decayMs": 60,
+     "gain": 0.9,
+     "attackMs": 6
+    },
+    {
+     "type": "grain",
+     "freq": 66,
+     "at": 667,
+     "durMs": 160,
+     "decayMs": 60,
+     "gain": 0.9,
+     "attackMs": 6
+    },
+    {
+     "type": "grain",
+     "freq": 66,
+     "at": 1333,
+     "durMs": 160,
+     "decayMs": 60,
+     "gain": 0.9,
+     "attackMs": 6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2400,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.2,
+    "minCore": 0.6
+   },
+   "loopMs": 2000,
+   "loopCrossfadeMs": 120
+  },
+  "control_release": {
+   "role": "Control: rhythm compresses (pulses closer), then the submission blow",
+   "lengthMs": 1400,
+   "maxLengthMs": 1520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2271_SFX_Magic_Control_EnterEnd_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1300,
+     "carrierHz": 70,
+     "am": 0.4,
+     "gain": 0.3
+    },
+    {
+     "type": "grain",
+     "freq": 68,
+     "at": 0,
+     "durMs": 110,
+     "decayMs": 40,
+     "gain": 0.55,
+     "attackMs": 5
+    },
+    {
+     "type": "grain",
+     "freq": 68,
+     "at": 260,
+     "durMs": 110,
+     "decayMs": 40,
+     "gain": 0.65,
+     "attackMs": 5
+    },
+    {
+     "type": "grain",
+     "freq": 68,
+     "at": 460,
+     "durMs": 110,
+     "decayMs": 40,
+     "gain": 0.75,
+     "attackMs": 5
+    },
+    {
+     "type": "grain",
+     "freq": 68,
+     "at": 610,
+     "durMs": 110,
+     "decayMs": 40,
+     "gain": 0.8500000000000001,
+     "attackMs": 5
+    },
+    {
+     "type": "grain",
+     "freq": 68,
+     "at": 720,
+     "durMs": 110,
+     "decayMs": 40,
+     "gain": 0.9500000000000001,
+     "attackMs": 5
+    },
+    {
+     "type": "modal",
+     "f": 52,
+     "at": 860,
+     "durMs": 500,
+     "gain": 1.2,
+     "modes": [
+      [
+       1,
+       1,
+       130
+      ],
+      [
+       1.5,
+       0.3,
+       50
+      ]
+     ],
+     "attackMs": 4,
+     "glide": 0.85
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1800,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   }
+  },
+  "control_end": {
+   "role": "Control ends",
+   "lengthMs": 1400,
+   "maxLengthMs": 1520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2819_SFX_Magic_Control_ControlEnd_L2_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1400,
+     "carrierHz": 70,
+     "releaseMs": 80
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1800,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "telekinesis_cast": {
+   "role": "Telekinesis: invisible grip closes",
+   "lengthMs": 1700,
+   "maxLengthMs": 1820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4475_SFX_Magic_Telekinesis_Cast_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1700,
+     "carrierHz": 95,
+     "releaseMs": 50
+    },
+    {
+     "type": "tone",
+     "freq": 90,
+     "durMs": 1700,
+     "at": 0,
+     "gain": 0.6,
+     "freqEnd": 120,
+     "attackMs": 1100,
+     "releaseMs": 150
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2100,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 200
+  },
+  "telekinesis_hold": {
+   "role": "Telekinesis hold: weak steady tension, loopable",
+   "lengthMs": 2100,
+   "maxLengthMs": 2440,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5653_SFX_Magic_Telekinesis_BridgeLoop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2300,
+     "carrierHz": 118,
+     "am": 0.2,
+     "gain": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 118,
+     "durMs": 2300,
+     "at": 0,
+     "gain": 0.8,
+     "amRate": 0.5,
+     "amDepth": 0.25
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.16
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2500,
+    "rms20Min": 0.08,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 2100,
+   "loopCrossfadeMs": 300
+  },
+  "telekinesis_end": {
+   "role": "Telekinesis: soft release",
+   "lengthMs": 800,
+   "maxLengthMs": 920,
+   "layers": [
+    {
+     "type": "tone",
+     "freq": 118,
+     "durMs": 800,
+     "at": 0,
+     "gain": 1,
+     "freqEnd": 80,
+     "releaseMs": 700
+    },
+    {
+     "type": "noise",
+     "freq": 90,
+     "durMs": 500,
+     "at": 0,
+     "gain": 0.3,
+     "releaseMs": 400
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.18
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1200,
+    "rms20Min": 0.08,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summonskeletons_cast": {
+   "role": "Summon skeletons: gloomy pulsation",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1283_SFX_Magic_Summon_Cast_In_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 62,
+     "am": 0.4,
+     "gain": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 55,
+     "durMs": 1800,
+     "at": 0,
+     "gain": 0.8,
+     "amRate": 1.4,
+     "amDepth": 0.8,
+     "attackMs": 300,
+     "releaseMs": 200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.28
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.174,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summonskeletons_release": {
+   "role": "Summon skeletons: launch into the ground",
+   "lengthMs": 800,
+   "maxLengthMs": 920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3750_SFX_Magic_Summon_Cast_HitGround_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 800,
+     "carrierHz": 70,
+     "maxHits": 2,
+     "decayScale": 1.1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1200,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summonskeletons_charge": {
+   "role": "Summon skeletons: series of dry bone clicks gathering",
+   "lengthMs": 2600,
+   "maxLengthMs": 2720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2544_SFX_CREA_Skeleton_Bones_Move_3s_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 200,
+     "tauMs": 2.5,
+     "threshold": 0.12,
+     "maxHits": 40,
+     "gapMs": 25,
+     "stereo": 1
+    },
+    {
+     "type": "audio",
+     "sound": "1686_SFX_Magic_Summon_Cast_Charge_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 60,
+     "am": 0.5,
+     "gain": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3000,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 50,
+    "lpf": 600
+   }
+  },
+  "summonskeletons_impact": {
+   "role": "Summon skeletons: short reanimation snap",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4707_SFX_CREA_Skeleton_Bones_Intense_1s_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 210,
+     "maxHits": 6,
+     "gapMs": 25
+    },
+    {
+     "type": "audio",
+     "sound": "4080_SFX_Magic_Summon_Cast_Launch_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 75,
+     "maxHits": 1,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.44
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.273,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 50,
+    "lpf": 620
+   }
+  },
+  "summongolem_cast": {
+   "role": "Summon golem: deep build-up",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1283_SFX_Magic_Summon_Cast_In_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 50,
+     "am": 0.3,
+     "gain": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 44,
+     "durMs": 1800,
+     "at": 0,
+     "gain": 0.9,
+     "freqEnd": 52,
+     "attackMs": 1400,
+     "releaseMs": 100
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "summongolem_release": {
+   "role": "Summon golem: ground hit",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3750_SFX_Magic_Summon_Cast_HitGround_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 56,
+     "maxHits": 2,
+     "decayScale": 1.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.5
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.31,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   }
+  },
+  "summongolem_charge": {
+   "role": "Summon golem: heavy stone grinding shifts",
+   "lengthMs": 2700,
+   "maxLengthMs": 2820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1318_SFX_CREA_Golem_Stone_L_Grind2s_L1_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 85,
+     "bandLo": 300,
+     "bandHi": 4000,
+     "compress": 0.6,
+     "stick": 0.9
+    },
+    {
+     "type": "audio",
+     "sound": "2768_SFX_CREA_Golem_Stone_L_Grind1s_L1_01",
+     "method": "impact",
+     "at": 1300,
+     "maxMs": 1200,
+     "carrierHz": 60,
+     "maxHits": 3,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.38
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3100,
+    "rms20Min": 0.236,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.2,
+    "minCore": 0.6
+   }
+  },
+  "summongolem_impact": {
+   "role": "Summon golem: powerful final stomp",
+   "lengthMs": 1100,
+   "maxLengthMs": 1220,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1625_SFX_CREA_Golem_Stone_L_Boom_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 1100,
+     "carrierHz": 48,
+     "maxHits": 2,
+     "decayScale": 2,
+     "grit": 0.2
+    },
+    {
+     "type": "modal",
+     "f": 46,
+     "at": 0,
+     "durMs": 600,
+     "gain": 0.9,
+     "modes": [
+      [
+       1,
+       1,
+       180
+      ],
+      [
+       2.3,
+       0.25,
+       40
+      ]
+     ],
+     "attackMs": 3,
+     "glide": 0.85
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.62
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1500,
+    "rms20Min": 0.384,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "summondemon_cast": {
+   "role": "Summon demon: unstable alien energy (wobbling pitch)",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1351_SFX_Magic_Summon_Cast_Zap_LayerA_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 120,
+     "compress": 0.5,
+     "stick": 0.8
+    },
+    {
+     "type": "tone",
+     "freq": 90,
+     "durMs": 600,
+     "at": 0,
+     "gain": 0.5,
+     "freqEnd": 140,
+     "amRate": 9,
+     "amDepth": 0.6
+    },
+    {
+     "type": "tone",
+     "freq": 140,
+     "durMs": 600,
+     "at": 600,
+     "gain": 0.5,
+     "freqEnd": 75,
+     "amRate": 11,
+     "amDepth": 0.6
+    },
+    {
+     "type": "tone",
+     "freq": 75,
+     "durMs": 600,
+     "at": 1200,
+     "gain": 0.5,
+     "freqEnd": 125,
+     "amRate": 8,
+     "amDepth": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summondemon_release": {
+   "role": "Summon demon: ground hit",
+   "lengthMs": 800,
+   "maxLengthMs": 920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2585_SFX_Magic_Summon_Cast_HitGround_LayerA_02",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 800,
+     "carrierHz": 64,
+     "maxHits": 2,
+     "decayScale": 1.2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.48
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1200,
+    "rms20Min": 0.298,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summondemon_charge": {
+   "role": "Summon demon: space tearing - rising crackling rip",
+   "lengthMs": 2700,
+   "maxLengthMs": 2820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1620_SFX_Magic_Summon_Cast_Charge_LayerB_01",
+     "method": "scrape",
+     "at": 0,
+     "maxMs": 2700,
+     "carrierHz": 110,
+     "compress": 0.5,
+     "stick": 1
+    },
+    {
+     "type": "audio",
+     "sound": "3885_SFX_Magic_Summon_Cast_Zap_LayerB_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2700,
+     "carrierHz": 190,
+     "tauMs": 2,
+     "threshold": 0.12,
+     "gain": 0.55
+    },
+    {
+     "type": "noise",
+     "freq": 80,
+     "durMs": 2700,
+     "at": 0,
+     "gain": 0.4,
+     "freqEnd": 160,
+     "attackMs": 2000,
+     "releaseMs": 80
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3100,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "summondemon_impact": {
+   "role": "Summon demon: heavy multi-layer appearance pulse (wings + growl)",
+   "lengthMs": 1600,
+   "maxLengthMs": 1720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5738_SFX_CREA_DemonLesser_Growl_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1600,
+     "carrierHz": 58,
+     "am": 0.6,
+     "gain": 0.6
+    },
+    {
+     "type": "audio",
+     "sound": "889_SFX_CREA_Demon_Wings_L1_01",
+     "method": "impact",
+     "at": 180,
+     "maxMs": 1400,
+     "carrierHz": 70,
+     "maxHits": 3,
+     "gain": 0.8
+    },
+    {
+     "type": "modal",
+     "f": 50,
+     "at": 0,
+     "durMs": 700,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       160
+      ],
+      [
+       1.6,
+       0.4,
+       80
+      ],
+      [
+       2.9,
+       0.2,
+       30
+      ]
+     ],
+     "attackMs": 3,
+     "glide": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.6
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2000,
+    "rms20Min": 0.372,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "armyofdarkness_cast": {
+   "role": "Army of darkness: darkness thickens",
+   "lengthMs": 1800,
+   "maxLengthMs": 1920,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5207_SFX_Magic_Summon_Cast_In_02",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 1800,
+     "carrierHz": 52,
+     "am": 0.4,
+     "gain": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 46,
+     "durMs": 1800,
+     "at": 0,
+     "gain": 0.8,
+     "attackMs": 1200,
+     "releaseMs": 150,
+     "amRate": 0.8,
+     "amDepth": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2200,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "armyofdarkness_release": {
+   "role": "Army of darkness: wide dark wave rolling across both sides",
+   "lengthMs": 3400,
+   "maxLengthMs": 3520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2408_SFX_Magic_Summon_Cast_Launch_LayerC_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 3400,
+     "carrierHz": 50,
+     "am": 0.5,
+     "stereo": 1
+    },
+    {
+     "type": "noise",
+     "freq": 48,
+     "durMs": 3400,
+     "at": 0,
+     "gain": 0.7,
+     "pan": -0.9,
+     "panEnd": 0.9,
+     "attackMs": 600,
+     "releaseMs": 1500,
+     "q": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 500,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3800,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "armyofdarkness_impact": {
+   "role": "Army of darkness: many awakenings spread left/right",
+   "lengthMs": 2700,
+   "maxLengthMs": 2820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4382_SFX_CREA_Zombie_Accent_1s_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 800,
+     "carrierHz": 65,
+     "maxHits": 2,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 70,
+     "at": 0,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 1,
+     "attackMs": 4,
+     "pan": -0.8
+    },
+    {
+     "type": "grain",
+     "freq": 190,
+     "at": 90,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.5,
+     "attackMs": 4,
+     "pan": -0.8
+    },
+    {
+     "type": "grain",
+     "freq": 64,
+     "at": 420,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.9,
+     "attackMs": 4,
+     "pan": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 180,
+     "at": 500,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.45,
+     "attackMs": 4,
+     "pan": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 76,
+     "at": 900,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.85,
+     "attackMs": 4,
+     "pan": -0.2
+    },
+    {
+     "type": "grain",
+     "freq": 205,
+     "at": 980,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.45,
+     "attackMs": 4,
+     "pan": -0.2
+    },
+    {
+     "type": "grain",
+     "freq": 60,
+     "at": 1350,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.9,
+     "attackMs": 4,
+     "pan": 0.9
+    },
+    {
+     "type": "grain",
+     "freq": 175,
+     "at": 1430,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.4,
+     "attackMs": 4,
+     "pan": 0.9
+    },
+    {
+     "type": "grain",
+     "freq": 72,
+     "at": 1800,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.8,
+     "attackMs": 4,
+     "pan": -0.6
+    },
+    {
+     "type": "grain",
+     "freq": 195,
+     "at": 1880,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.4,
+     "attackMs": 4,
+     "pan": -0.6
+    },
+    {
+     "type": "grain",
+     "freq": 66,
+     "at": 2350,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.7,
+     "attackMs": 4,
+     "pan": 0.3
+    },
+    {
+     "type": "grain",
+     "freq": 185,
+     "at": 2430,
+     "durMs": 160,
+     "decayMs": 45,
+     "gain": 0.35,
+     "attackMs": 4,
+     "pan": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.38
+   },
+   "fadeOutMs": 200,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3100,
+    "rms20Min": 0.236,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "deathtoundead_cast": {
+   "role": "Death to the undead: dense start",
+   "lengthMs": 420,
+   "maxLengthMs": 540,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "470_SFX_Magic_DeathToTheUndead_Cast_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 420,
+     "carrierHz": 90,
+     "am": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 85,
+     "durMs": 420,
+     "at": 0,
+     "gain": 0.7,
+     "attackMs": 200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 20,
+   "check": {
+    "minMs": 20,
+    "maxMs": 820,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "deathtoundead_release": {
+   "role": "Death to the undead: sharp break of the magic structure",
+   "lengthMs": 400,
+   "maxLengthMs": 520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "470_SFX_Magic_DeathToTheUndead_Cast_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 400,
+     "startMs": 300,
+     "carrierHz": 95,
+     "maxHits": 2,
+     "decayScale": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 110,
+     "at": 0,
+     "durMs": 90,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       12
+      ],
+      [
+       2.756,
+       0.5,
+       5
+      ]
+     ],
+     "noise": 0.5,
+     "attackMs": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.55
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 800,
+    "rms20Min": 0.341,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "deathtoundead_impact": {
+   "role": "Death to the undead: brittle destruction, then sudden silence (hard stop)",
+   "lengthMs": 900,
+   "maxLengthMs": 1020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4736_SFX_Magic_DeathToTheUndead_HitGround_L1_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 240,
+     "tauMs": 1.8,
+     "threshold": 0.1,
+     "maxHits": 30,
+     "gapMs": 10
+    },
+    {
+     "type": "audio",
+     "sound": "4736_SFX_Magic_DeathToTheUndead_HitGround_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 80,
+     "maxHits": 2,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 12,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1300,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 60,
+    "lpf": 620
+   }
+  },
+  "breathofdeath_charge": {
+   "role": "Breath of death: inhale",
+   "lengthMs": 1600,
+   "maxLengthMs": 1720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2307_SFX_Magic_BreathOfDeath_Inhale_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1600,
+     "carrierHz": 95,
+     "releaseMs": 60
+    },
+    {
+     "type": "tone",
+     "freq": 58,
+     "durMs": 1600,
+     "at": 0,
+     "gain": 0.6,
+     "freqEnd": 66,
+     "attackMs": 1300,
+     "releaseMs": 60
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2000,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   },
+   "fadeInMs": 300
+  },
+  "breathofdeath_release": {
+   "role": "Breath of death: long uneven wave with rare heavy pulses, slow decay",
+   "lengthMs": 3300,
+   "maxLengthMs": 3420,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1502_SFX_Magic_BreathOfDeath_Exhale_L5_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 3300,
+     "carrierHz": 55,
+     "am": 0.7,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 48,
+     "at": 120,
+     "durMs": 380,
+     "decayMs": 150,
+     "gain": 1,
+     "attackMs": 20
+    },
+    {
+     "type": "grain",
+     "freq": 52,
+     "at": 1250,
+     "durMs": 360,
+     "decayMs": 150,
+     "gain": 0.75,
+     "attackMs": 25
+    },
+    {
+     "type": "grain",
+     "freq": 46,
+     "at": 2350,
+     "durMs": 420,
+     "decayMs": 170,
+     "gain": 0.55,
+     "attackMs": 30
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 900,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3700,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "wavedeath_cast": {
+   "role": "Wave of death: colossal build-up with long and short zaps (+690, +1350 ms)",
+   "lengthMs": 2100,
+   "maxLengthMs": 2220,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4640_SFX_Magic_WaveOfDeath_Cast_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2100,
+     "carrierHz": 55,
+     "am": 0.5
+    },
+    {
+     "type": "audio",
+     "sound": "5836_SFX_Magic_WaveOfDeath_ZapLong_L1_01",
+     "method": "rattle",
+     "at": 690,
+     "maxMs": 900,
+     "carrierHz": 180,
+     "tauMs": 2,
+     "threshold": 0.1,
+     "gain": 0.6
+    },
+    {
+     "type": "audio",
+     "sound": "6990_SFX_Magic_WaveOfDeath_ZapShort_L1_01",
+     "method": "rattle",
+     "at": 1350,
+     "maxMs": 700,
+     "carrierHz": 200,
+     "tauMs": 2,
+     "threshold": 0.1,
+     "gain": 0.7
+    },
+    {
+     "type": "tone",
+     "freq": 42,
+     "durMs": 2100,
+     "at": 0,
+     "gain": 0.7,
+     "freqEnd": 60,
+     "attackMs": 1900,
+     "releaseMs": 60
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2500,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "wavedeath_release": {
+   "role": "Wave of death: wide powerful burst, multi-layer spread outward",
+   "lengthMs": 5200,
+   "maxLengthMs": 5320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "561_SFX_Magic_WaveOfDeath_Wave_L3_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 5200,
+     "carrierHz": 50,
+     "maxHits": 5,
+     "decayScale": 2.5,
+     "grit": 0.25,
+     "stereo": 1
+    },
+    {
+     "type": "audio",
+     "sound": "561_SFX_Magic_WaveOfDeath_Wave_L3_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 5200,
+     "carrierHz": 70,
+     "am": 0.6,
+     "gain": 0.6,
+     "stereo": 1
+    },
+    {
+     "type": "modal",
+     "f": 44,
+     "at": 860,
+     "durMs": 1600,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       600
+      ],
+      [
+       1.5,
+       0.4,
+       300
+      ],
+      [
+       2.4,
+       0.2,
+       90
+      ]
+     ],
+     "attackMs": 4,
+     "glide": 0.7
+    },
+    {
+     "type": "noise",
+     "freq": 60,
+     "durMs": 4200,
+     "at": 900,
+     "gain": 0.5,
+     "pan": -0.3,
+     "panEnd": -1,
+     "releaseMs": 3000
+    },
+    {
+     "type": "noise",
+     "freq": 60,
+     "durMs": 4200,
+     "at": 900,
+     "gain": 0.5,
+     "pan": 0.3,
+     "panEnd": 1,
+     "releaseMs": 3000
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.55
+   },
+   "fadeOutMs": 1500,
+   "check": {
+    "minMs": 20,
+    "maxMs": 5600,
+    "rms20Min": 0.341,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.25,
+    "minCore": 0.6
+   }
+  },
+  "wavedeath_end": {
+   "role": "Wave of death: deep dying tail",
+   "lengthMs": 2600,
+   "maxLengthMs": 2720,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6229_SFX_Magic_WaveOfDeath_Loop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2600,
+     "carrierHz": 58,
+     "am": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 52,
+     "durMs": 2600,
+     "at": 0,
+     "gain": 0.6,
+     "releaseMs": 2200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 1500,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3000,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   }
+  },
+  "light_cast": {
+   "role": "Light: soft clean swell of light appearing",
+   "lengthMs": 1900,
+   "maxLengthMs": 2020,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1677_SFX_Magic_Light_Cast_In_LayerB_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1900,
+     "carrierHz": 165,
+     "releaseMs": 120,
+     "gain": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 165,
+     "durMs": 1900,
+     "at": 0,
+     "gain": 0.9,
+     "freqEnd": 180,
+     "attackMs": 1300,
+     "releaseMs": 350
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.2
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2300,
+    "rms20Min": 0.124,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 500
+  },
+  "light_release": {
+   "role": "Light: light final pulse, then silence",
+   "lengthMs": 500,
+   "maxLengthMs": 620,
+   "layers": [
+    {
+     "type": "grain",
+     "freq": 175,
+     "at": 0,
+     "durMs": 160,
+     "decayMs": 55,
+     "gain": 1,
+     "attackMs": 10
+    },
+    {
+     "type": "audio",
+     "sound": "2334_SFX_Magic_Light_Cast_Launch_LayerA_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 170,
+     "releaseMs": 80,
+     "gain": 0.3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 200,
+   "check": {
+    "minMs": 20,
+    "maxMs": 900,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "heal_cast": {
+   "role": "Heal: calm, even restoring pulses at 1.6 Hz",
+   "lengthMs": 1100,
+   "maxLengthMs": 1220,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3567_SFX_Magic_Heal_Cast_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1100,
+     "carrierHz": 120,
+     "releaseMs": 100,
+     "gain": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 120,
+     "durMs": 1100,
+     "at": 0,
+     "gain": 1,
+     "amRate": 1.6,
+     "amDepth": 0.7,
+     "attackMs": 200,
+     "releaseMs": 100
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 80,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1500,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 150
+  },
+  "heal_release": {
+   "role": "Heal: pulses merge into one soft fading glow",
+   "lengthMs": 2200,
+   "maxLengthMs": 2320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6092_SFX_Magic_Heal_Cast_L2_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 2200,
+     "carrierHz": 115,
+     "releaseMs": 200,
+     "gain": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 118,
+     "durMs": 2200,
+     "at": 0,
+     "gain": 1,
+     "amRate": 1.6,
+     "amDepth": 0.35,
+     "releaseMs": 1700
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.24
+   },
+   "fadeOutMs": 800,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2600,
+    "rms20Min": 0.149,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "shrink_cast": {
+   "role": "Shrink: dense first impact",
+   "lengthMs": 1200,
+   "maxLengthMs": 1320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3886_SFX_Magic_TrollShrink_Cast_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 1200,
+     "carrierHz": 60,
+     "maxHits": 2,
+     "decayScale": 1.5
+    },
+    {
+     "type": "tone",
+     "freq": 55,
+     "durMs": 1200,
+     "at": 0,
+     "gain": 0.5,
+     "attackMs": 200,
+     "releaseMs": 600
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1600,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.22,
+    "minCore": 0.6
+   }
+  },
+  "shrink_impact": {
+   "role": "Shrink: oscillation scale compresses fast - big slow swing to small fast tick",
+   "lengthMs": 4400,
+   "maxLengthMs": 4520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "582_SFX_Magic_TrollShrink_Troll_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 4400,
+     "carrierHz": 70,
+     "am": 0.3,
+     "gain": 0.35
+    },
+    {
+     "type": "tone",
+     "freq": 52,
+     "durMs": 4300,
+     "at": 0,
+     "gain": 1,
+     "freqEnd": 260,
+     "amRate": 2,
+     "amDepth": 0.5,
+     "releaseMs": 900,
+     "attackMs": 40
+    },
+    {
+     "type": "pulses",
+     "rate": 3,
+     "durMs": 4300,
+     "at": 0,
+     "gain": 0.6,
+     "grain": "custom",
+     "pulse": {
+      "freq": 60,
+      "durMs": 90,
+      "decayMs": 30,
+      "freqEnd": 260
+     },
+     "rateEnd": 18,
+     "ampJitter": 0.1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.36
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 4800,
+    "rms20Min": 0.223,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "shrink_end": {
+   "role": "Shrink: tiny final click",
+   "lengthMs": 160,
+   "maxLengthMs": 280,
+   "layers": [
+    {
+     "type": "grain",
+     "freq": 230,
+     "at": 0,
+     "durMs": 45,
+     "decayMs": 10,
+     "gain": 1
+    },
+    {
+     "type": "grain",
+     "freq": 115,
+     "at": 0,
+     "durMs": 60,
+     "decayMs": 16,
+     "gain": 0.4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 5,
+    "maxMs": 560,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "eq": {
+    "hpf": 90,
+    "lpf": 640
+   }
+  },
+  "innospray_cast": {
+   "role": "Innos prayer: first solemn wave on the thunderclap moment",
+   "lengthMs": 1100,
+   "maxLengthMs": 1220,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3792_SFX_Magic_FireRain_Cast_Thunder_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1100,
+     "carrierHz": 95,
+     "releaseMs": 120,
+     "gain": 0.35
+    },
+    {
+     "type": "tone",
+     "freq": 96,
+     "durMs": 1100,
+     "at": 0,
+     "gain": 1,
+     "attackMs": 350,
+     "releaseMs": 600
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 300,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1500,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 200
+  },
+  "innospray_charge": {
+   "role": "Innos prayer: widening coordinated waves at the two lightning moments (+0, +740 ms) and the gesture (+1200 ms)",
+   "lengthMs": 2700,
+   "maxLengthMs": 2820,
+   "layers": [
+    {
+     "type": "tone",
+     "freq": 96,
+     "durMs": 900,
+     "at": 0,
+     "gain": 0.7,
+     "attackMs": 300,
+     "releaseMs": 500,
+     "pan": -0.4,
+     "panEnd": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 120,
+     "durMs": 900,
+     "at": 740,
+     "gain": 0.8,
+     "attackMs": 300,
+     "releaseMs": 500,
+     "pan": 0.4,
+     "panEnd": -0.4
+    },
+    {
+     "type": "tone",
+     "freq": 144,
+     "durMs": 1500,
+     "at": 1200,
+     "gain": 0.9,
+     "attackMs": 500,
+     "releaseMs": 700
+    },
+    {
+     "type": "tone",
+     "freq": 96,
+     "durMs": 1500,
+     "at": 1200,
+     "gain": 0.6,
+     "attackMs": 500,
+     "releaseMs": 700
+    },
+    {
+     "type": "audio",
+     "sound": "3801_SFX_Magic_FireRain_Cast_Lightning_LayerB_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 2700,
+     "carrierHz": 110,
+     "releaseMs": 150,
+     "gain": 0.25
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.32
+   },
+   "fadeOutMs": 400,
+   "check": {
+    "minMs": 20,
+    "maxMs": 3100,
+    "rms20Min": 0.198,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 150
+  },
+  "innospray_release": {
+   "role": "Innos prayer: soft but expressive final - one full chord swell, no hit",
+   "lengthMs": 2200,
+   "maxLengthMs": 2320,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4035_SFX_Magic_FireRain_Cast_HitGround_LayerB_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 2200,
+     "carrierHz": 90,
+     "releaseMs": 200,
+     "gain": 0.3
+    },
+    {
+     "type": "tone",
+     "freq": 72,
+     "durMs": 2200,
+     "at": 0,
+     "gain": 0.9,
+     "attackMs": 120,
+     "releaseMs": 1600
+    },
+    {
+     "type": "tone",
+     "freq": 108,
+     "durMs": 2200,
+     "at": 0,
+     "gain": 0.6,
+     "attackMs": 160,
+     "releaseMs": 1700
+    },
+    {
+     "type": "tone",
+     "freq": 144,
+     "durMs": 2200,
+     "at": 0,
+     "gain": 0.4,
+     "attackMs": 200,
+     "releaseMs": 1800
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.42
+   },
+   "fadeOutMs": 900,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2600,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 80
+  },
+  "transform_activation": {
+   "role": "Transformation: magic activation (game sound shared by all forms: Transform_Cast_In + Launch)",
+   "lengthMs": 1700,
+   "maxLengthMs": 1820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2494_SFX_Magic_Transform_Cast_In_Whoosh_02",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1100,
+     "carrierHz": 100,
+     "releaseMs": 60,
+     "gain": 0.6
+    },
+    {
+     "type": "audio",
+     "sound": "6798_SFX_Magic_Transform_Cast_Launch_Thunder_01",
+     "method": "impact",
+     "at": 1000,
+     "maxMs": 700,
+     "carrierHz": 70,
+     "maxHits": 2,
+     "decayScale": 1.2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.4
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2100,
+    "rms20Min": 0.248,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_biter_restructure": {
+   "role": "Transformation into Biter: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5768_SFX_CREA_Biter_Attack_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 210,
+     "maxHits": 14,
+     "gapMs": 60
+    },
+    {
+     "type": "pulses",
+     "rate": 7,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.6,
+     "grain": "custom",
+     "pulse": {
+      "freq": 200,
+      "durMs": 10,
+      "decayMs": 3
+     },
+     "rateEnd": 11,
+     "jitter": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_biter_release": {
+   "role": "Transformation into Biter: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3125_SFX_CREA_Biter_Bite_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 450,
+     "carrierHz": 110,
+     "maxHits": 2,
+     "decayScale": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_bloodfly_restructure": {
+   "role": "Transformation into Bloodfly: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4843_SFX_CREA_Bloodfly_Wings_3s_LayerA_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 190,
+     "am": 0.9
+    },
+    {
+     "type": "tone",
+     "freq": 185,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.5,
+     "amRate": 18,
+     "amDepth": 0.8,
+     "attackMs": 1200
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_bloodfly_release": {
+   "role": "Transformation into Bloodfly: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3021_SFX_CREA_Bloodfly_Accent_Short_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 400,
+     "carrierHz": 195,
+     "maxHits": 3,
+     "decayScale": 0.4
+    },
+    {
+     "type": "grain",
+     "freq": 190,
+     "at": 0,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_bloodhound_restructure": {
+   "role": "Transformation into Bloodhound: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5273_SFX_CREA_Bloodhound_ShakeBody_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 85,
+     "am": 0.5
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 200,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 620,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 1040,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 1460,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 1880,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    },
+    {
+     "type": "grain",
+     "freq": 150,
+     "at": 2300,
+     "durMs": 70,
+     "decayMs": 20,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_bloodhound_release": {
+   "role": "Transformation into Bloodhound: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3419_SFX_CREA_Bloodhound_Growl_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 70,
+     "am": 0.4,
+     "gain": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 62,
+     "at": 0,
+     "durMs": 300,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       80
+      ]
+     ],
+     "attackMs": 6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_firelizard_restructure": {
+   "role": "Transformation into FireLizard: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3580_SFX_CREA_Lizard_Gutteral_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 80,
+     "am": 0.4,
+     "gain": 0.6
+    },
+    {
+     "type": "audio",
+     "sound": "98_SFX_Magic_TargetEffect_Burning_LayerA_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 145,
+     "tauMs": 5,
+     "threshold": 0.15,
+     "maxHits": 30,
+     "gain": 0.8
+    },
+    {
+     "type": "noise",
+     "freq": 130,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.3,
+     "attackMs": 2000
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_firelizard_release": {
+   "role": "Transformation into FireLizard: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5544_SFX_Magic_FireBall_Impact_LayerA_02",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 100,
+     "maxHits": 2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_harpy_restructure": {
+   "role": "Transformation into Harpy: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3324_SFX_Magic_Transform_Cast_In_Bones_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 900,
+     "carrierHz": 220,
+     "maxHits": 6
+    },
+    {
+     "type": "audio",
+     "sound": "3307_SFX_CREA_Harpy_Wings_L1_01",
+     "method": "impact",
+     "at": 900,
+     "maxMs": 1500,
+     "carrierHz": 95,
+     "maxHits": 4,
+     "gain": 0.8
+    },
+    {
+     "type": "tone",
+     "freq": 160,
+     "durMs": 1400,
+     "at": 1000,
+     "gain": 0.35,
+     "amRate": 12,
+     "amDepth": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_harpy_release": {
+   "role": "Transformation into Harpy: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5181_SFX_CREA_Harpy_Wings_L1_02",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 105,
+     "maxHits": 2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_lizard_restructure": {
+   "role": "Transformation into Lizard: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2930_SFX_CREA_Lizard_Tongue_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 180,
+     "maxHits": 10,
+     "gapMs": 120
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 150,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 380,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 610,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 840,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 1070,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 1300,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 1530,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 1760,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 1990,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 165,
+     "at": 2220,
+     "durMs": 40,
+     "decayMs": 10,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_lizard_release": {
+   "role": "Transformation into Lizard: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6800_SFX_CREA_Lizard_Taunt_Short_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 90,
+     "maxHits": 2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_lurker_restructure": {
+   "role": "Transformation into Lurker: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6791_SFX_CREA_Lurker_Gargle_Loop_L2_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 62,
+     "am": 0.75
+    },
+    {
+     "type": "tone",
+     "freq": 55,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.5,
+     "amRate": 1.3,
+     "amDepth": 0.7,
+     "attackMs": 500
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_lurker_release": {
+   "role": "Transformation into Lurker: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3863_SFX_CREA_Lurker_Gargle_Soft_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 95,
+     "releaseMs": 120
+    },
+    {
+     "type": "grain",
+     "freq": 70,
+     "at": 0,
+     "durMs": 260,
+     "decayMs": 90,
+     "gain": 0.6,
+     "attackMs": 40
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_meatbug_restructure": {
+   "role": "Transformation into Meatbug: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3768_SFX_CREA_Meatbug_Idle_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 225,
+     "tauMs": 2.6,
+     "threshold": 0.1,
+     "maxHits": 40
+    },
+    {
+     "type": "pulses",
+     "rate": 30,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.5,
+     "grain": "custom",
+     "pulse": {
+      "freq": 230,
+      "durMs": 11,
+      "decayMs": 3
+     },
+     "rateEnd": 45,
+     "jitter": 0.6,
+     "ampJitter": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_meatbug_release": {
+   "role": "Transformation into Meatbug: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "grain",
+     "freq": 215,
+     "at": 0,
+     "durMs": 60,
+     "decayMs": 14,
+     "gain": 1
+    },
+    {
+     "type": "grain",
+     "freq": 140,
+     "at": 0,
+     "durMs": 50,
+     "decayMs": 12,
+     "gain": 0.35
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_minecrawler_restructure": {
+   "role": "Transformation into Minecrawler: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6269_SFX_CREA_Minecrawler_WalkSmall_L1_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 230,
+     "tauMs": 2.2,
+     "threshold": 0.1,
+     "maxHits": 40,
+     "stereo": 1
+    },
+    {
+     "type": "audio",
+     "sound": "2090_SFX_CREA_Minecrawler_Ambient_L2_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 170,
+     "tauMs": 3,
+     "threshold": 0.14,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_minecrawler_release": {
+   "role": "Transformation into Minecrawler: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2142_SFX_CREA_Minecrawler_Attack_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 450,
+     "carrierHz": 120,
+     "maxHits": 2,
+     "decayScale": 0.5
+    },
+    {
+     "type": "grain",
+     "freq": 240,
+     "at": 0,
+     "durMs": 20,
+     "decayMs": 5,
+     "gain": 0.8
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_molerat_restructure": {
+   "role": "Transformation into Molerat: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "478_SFX_CREA_Molerat_DigGround_DigSequence_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 72,
+     "am": 0.5
+    },
+    {
+     "type": "grain",
+     "freq": 95,
+     "at": 300,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 95,
+     "at": 1000,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 95,
+     "at": 1700,
+     "durMs": 120,
+     "decayMs": 40,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_molerat_release": {
+   "role": "Transformation into Molerat: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "537_SFX_CREA_Molerat_Attack_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 450,
+     "carrierHz": 70,
+     "maxHits": 1,
+     "decayScale": 1.2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_orcdog_restructure": {
+   "role": "Transformation into OrcDog: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3943_SFX_CREA_Orcdog_Growl_Loop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 58,
+     "am": 0.6
+    },
+    {
+     "type": "grain",
+     "freq": 125,
+     "at": 250,
+     "durMs": 90,
+     "decayMs": 25,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 125,
+     "at": 900,
+     "durMs": 90,
+     "decayMs": 25,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 125,
+     "at": 1200,
+     "durMs": 90,
+     "decayMs": 25,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 125,
+     "at": 1900,
+     "durMs": 90,
+     "decayMs": 25,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_orcdog_release": {
+   "role": "Transformation into OrcDog: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "182_SFX_CREA_Orcdog_Attack_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 450,
+     "carrierHz": 75,
+     "maxHits": 2
+    },
+    {
+     "type": "modal",
+     "f": 60,
+     "at": 0,
+     "durMs": 260,
+     "gain": 0.8,
+     "modes": [
+      [
+       1,
+       1,
+       70
+      ]
+     ],
+     "attackMs": 3
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_razor_restructure": {
+   "role": "Transformation into Razor: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6769_SFX_CREA_Razor_Transient_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 240,
+     "maxHits": 12
+    },
+    {
+     "type": "audio",
+     "sound": "709_SFX_CREA_Razor_Grunt_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 95,
+     "am": 0.6,
+     "gain": 0.5
+    },
+    {
+     "type": "pulses",
+     "rate": 5,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.6,
+     "grain": "custom",
+     "pulse": {
+      "freq": 230,
+      "durMs": 9,
+      "decayMs": 2.5
+     },
+     "rateEnd": 14
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_razor_release": {
+   "role": "Transformation into Razor: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6267_SFX_CREA_Razor_Attack_L1_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 400,
+     "carrierHz": 200,
+     "maxHits": 2
+    },
+    {
+     "type": "modal",
+     "f": 110,
+     "at": 0,
+     "durMs": 160,
+     "gain": 0.8,
+     "modes": [
+      [
+       1,
+       1,
+       25
+      ],
+      [
+       2.7,
+       0.4,
+       8
+      ]
+     ]
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_scavenger_restructure": {
+   "role": "Transformation into Scavenger: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2255_SFX_CREA_Scavenger_Scratch_Scratch_01",
+     "method": "rattle",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 190,
+     "tauMs": 3,
+     "threshold": 0.15,
+     "maxHits": 30
+    },
+    {
+     "type": "pulses",
+     "rate": 6,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.5,
+     "grain": "custom",
+     "pulse": {
+      "freq": 170,
+      "durMs": 16,
+      "decayMs": 5
+     },
+     "jitter": 0.8,
+     "ampJitter": 0.5
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_scavenger_release": {
+   "role": "Transformation into Scavenger: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "865_SFX_CREA_Scavenger_Attack_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 350,
+     "carrierHz": 180,
+     "maxHits": 2
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_shadowbeast_restructure": {
+   "role": "Transformation into Shadowbeast: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5577_SFX_CREA_Shadowbeast_Rumble2s_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 48,
+     "am": 0.5
+    },
+    {
+     "type": "tone",
+     "freq": 44,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.7,
+     "amRate": 0.8,
+     "amDepth": 0.8,
+     "attackMs": 400
+    },
+    {
+     "type": "audio",
+     "sound": "6940_SFX_CREA_Shadowbeast_Spikes_LayerA_01",
+     "method": "impact",
+     "at": 1200,
+     "maxMs": 1200,
+     "carrierHz": 60,
+     "maxHits": 2,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_shadowbeast_release": {
+   "role": "Transformation into Shadowbeast: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2311_SFX_CREA_Shadowbeast_Attack_LayerA_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 54,
+     "maxHits": 2,
+     "decayScale": 1.8
+    },
+    {
+     "type": "modal",
+     "f": 52,
+     "at": 0,
+     "durMs": 500,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       150
+      ]
+     ],
+     "attackMs": 4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_snapper_restructure": {
+   "role": "Transformation into Snapper: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6101_SFX_CREA_Snapper_Transform_2s_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 110,
+     "maxHits": 6,
+     "gapMs": 200,
+     "decayScale": 0.5
+    },
+    {
+     "type": "audio",
+     "sound": "6483_SFX_CREA_Snapper_Chew_01",
+     "method": "click",
+     "at": 900,
+     "maxMs": 1300,
+     "carrierHz": 170,
+     "maxHits": 5,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_snapper_release": {
+   "role": "Transformation into Snapper: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5850_SFX_CREA_Snapper_TauntShort_LayerA_01",
+     "method": "click",
+     "at": 0,
+     "maxMs": 350,
+     "carrierHz": 150,
+     "maxHits": 2
+    },
+    {
+     "type": "grain",
+     "freq": 130,
+     "at": 0,
+     "durMs": 40,
+     "decayMs": 9,
+     "gain": 1
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_swampshark_restructure": {
+   "role": "Transformation into Swampshark: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6175_SFX_CREA_Swampshark_Slide_L2_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 55,
+     "am": 0.7
+    },
+    {
+     "type": "tone",
+     "freq": 50,
+     "durMs": 2400,
+     "at": 0,
+     "gain": 0.6,
+     "amRate": 0.7,
+     "amDepth": 0.85,
+     "attackMs": 600
+    },
+    {
+     "type": "audio",
+     "sound": "4104_SFX_CREA_Swampshark_MouthClose_L3_01",
+     "method": "impact",
+     "at": 1400,
+     "maxMs": 700,
+     "carrierHz": 60,
+     "maxHits": 1,
+     "gain": 0.6
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_swampshark_release": {
+   "role": "Transformation into Swampshark: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6886_SFX_CREA_Swampshark_MouthClose_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 600,
+     "carrierHz": 92,
+     "releaseMs": 150
+    },
+    {
+     "type": "grain",
+     "freq": 62,
+     "at": 60,
+     "durMs": 300,
+     "decayMs": 110,
+     "gain": 0.8,
+     "attackMs": 50
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_wolf_restructure": {
+   "role": "Transformation into Wolf: organic restructuring",
+   "lengthMs": 2400,
+   "maxLengthMs": 2520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "5320_SFX_CREA_Wolf_Shake_A_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2400,
+     "carrierHz": 95,
+     "am": 0.5
+    },
+    {
+     "type": "grain",
+     "freq": 140,
+     "at": 200,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 120,
+     "at": 550,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 140,
+     "at": 900,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 120,
+     "at": 1250,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 140,
+     "at": 1600,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    },
+    {
+     "type": "grain",
+     "freq": 120,
+     "at": 1950,
+     "durMs": 80,
+     "decayMs": 22,
+     "gain": 0.7
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.34
+   },
+   "fadeOutMs": 150,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2800,
+    "rms20Min": 0.211,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.05,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "tr_wolf_release": {
+   "role": "Transformation into Wolf: characteristic final pulse",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2455_SFX_CREA_Wolf_Gnarl_500ms_A_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 500,
+     "carrierHz": 80,
+     "am": 0.4,
+     "gain": 0.5
+    },
+    {
+     "type": "modal",
+     "f": 70,
+     "at": 0,
+     "durMs": 300,
+     "gain": 1,
+     "modes": [
+      [
+       1,
+       1,
+       75
+      ],
+      [
+       1.9,
+       0.3,
+       25
+      ]
+     ],
+     "attackMs": 4
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.46
+   },
+   "fadeOutMs": 120,
+   "check": {
+    "minMs": 5,
+    "maxMs": 1100,
+    "rms20Min": 0.285,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.06,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "teleport_cast": {
+   "role": "Teleport: space contracting around the hero",
+   "lengthMs": 700,
+   "maxLengthMs": 820,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "7039_SFX_Magic_Teleport_Cast_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 700,
+     "carrierHz": 110,
+     "releaseMs": 60
+    },
+    {
+     "type": "noise",
+     "freq": 70,
+     "durMs": 700,
+     "at": 0,
+     "gain": 0.6,
+     "freqEnd": 140,
+     "q": 1,
+     "attackMs": 500,
+     "releaseMs": 40
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1100,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 200
+  },
+  "teleport_charge": {
+   "role": "Teleport: swirling energy, alternating sides, loopable",
+   "lengthMs": 2000,
+   "maxLengthMs": 2260,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3834_SFX_Magic_Teleport_SwirlLoop_L1_01",
+     "method": "texture",
+     "at": 0,
+     "maxMs": 2200,
+     "carrierHz": 120,
+     "am": 0.5,
+     "stereo": 1
+    },
+    {
+     "type": "noise",
+     "freq": 115,
+     "durMs": 1000,
+     "at": 0,
+     "gain": 0.5,
+     "pan": -0.9,
+     "panEnd": 0.9,
+     "attackMs": 150,
+     "releaseMs": 150
+    },
+    {
+     "type": "noise",
+     "freq": 115,
+     "durMs": 1000,
+     "at": 1000,
+     "gain": 0.5,
+     "pan": 0.9,
+     "panEnd": -0.9,
+     "attackMs": 150,
+     "releaseMs": 150
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 40,
+   "check": {
+    "minMs": 20,
+    "maxMs": 2400,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "free",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "loopMs": 2000,
+   "loopCrossfadeMs": 220
+  },
+  "teleport_vanish": {
+   "role": "Teleport: vanishing - surge then abrupt cut",
+   "lengthMs": 420,
+   "maxLengthMs": 540,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "3975_SFX_Magic_Teleport_Vanish_L1_01",
+     "method": "impact",
+     "at": 0,
+     "maxMs": 420,
+     "carrierHz": 95,
+     "maxHits": 2,
+     "decayScale": 0.4
+    },
+    {
+     "type": "tone",
+     "freq": 110,
+     "durMs": 380,
+     "at": 0,
+     "gain": 0.9,
+     "freqEnd": 260,
+     "attackMs": 300
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.52
+   },
+   "fadeOutMs": 6,
+   "check": {
+    "minMs": 20,
+    "maxMs": 820,
+    "rms20Min": 0.322,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   }
+  },
+  "teleport_arrive": {
+   "role": "Teleport arrival: softer materialisation pulse (swirl end + appear)",
+   "lengthMs": 1400,
+   "maxLengthMs": 1520,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "1223_SFX_Magic_Teleport_SwirlOut_L1_01",
+     "method": "friction",
+     "at": 0,
+     "maxMs": 1400,
+     "carrierHz": 105,
+     "releaseMs": 150,
+     "gain": 0.6
+    },
+    {
+     "type": "tone",
+     "freq": 95,
+     "durMs": 1400,
+     "at": 0,
+     "gain": 0.8,
+     "freqEnd": 80,
+     "attackMs": 400,
+     "releaseMs": 700
+    }
+   ],
+   "normalize": {
+    "peak": 0.8,
+    "rms20": 0.3
+   },
+   "fadeOutMs": 500,
+   "check": {
+    "minMs": 20,
+    "maxMs": 1800,
+    "rms20Min": 0.186,
+    "btMinCorr": 0.5,
+    "balance": "center",
+    "maxHigh": 0.04,
+    "maxSub": 0.15,
+    "minCore": 0.6
+   },
+   "fadeInMs": 250
+  }
+ }
+}

@@ -1,0 +1,112 @@
+// Automatic effect assignment: event -> style. tools/gen_rules.py turns this into packs/20-auto.json.
+// styles = reusable template settings (preset + soft parameters); map entries may override params ("params").
+// 14.11.2026 after session 67: mechanical effects were barely noticeable -> intensities x1.5-2; aiming limited to bows.
+// Principle (user, 13.11.2026): effects only where the game action is real and logical; subtle by default; tuning later by
+// editing parameters here (or a later pack, e.g. 90-tuning.json, which overrides rules by id). Approved effects stay in 00-base.
+{
+  "styles": {
+    // ---- Mechanical ----
+    "draw":        { "preset": "Mechanical", "intensity": 0.35, "count": 2, "intervalMs": 55, "clickHz": 170, "clickMs": 14 },
+    "lockpick":    { "preset": "Mechanical", "intensity": 0.30, "count": 3, "intervalMs": 70, "clickHz": 240, "clickMs": 8, "jitterMs": 15 },
+    "latch":       { "preset": "Mechanical", "intensity": 0.40, "count": 1, "clickHz": 150, "clickMs": 25 },
+    "touch":       { "preset": "Mechanical", "intensity": 0.25, "count": 1, "clickHz": 120, "clickMs": 18 },
+    "rummage":     { "preset": "SurfaceContact", "intensity": 0.25, "durationMs": 140, "surface": "sand" },
+    "grab":        { "preset": "Impact", "intensity": 0.32, "durationMs": 90, "freqHz": 70, "edge": 0.3 },
+    // ---- Impact ----
+    "knockback":   { "preset": "Impact", "intensity": 0.55, "durationMs": 200, "tail": 0.6 },
+    "death":       { "preset": "Impact", "intensity": 0.65, "durationMs": 280, "tail": 1, "tailHz": 35 },
+    "knockout":    { "preset": "Impact", "intensity": 0.50, "durationMs": 240, "tail": 1 },
+    "fall_body":   { "preset": "Impact", "intensity": 0.32, "durationMs": 180 },
+    "metal_hit":   { "preset": "Impact", "intensity": 0.45, "durationMs": 130, "freqHz": 120, "edgeHz": 260, "edge": 0.6, "noise": 0.3 },
+    "clang":       { "preset": "Impact", "intensity": 0.40, "durationMs": 110, "freqHz": 140, "edgeHz": 280, "edge": 0.6, "noise": 0.25 },
+    "jarring":     { "preset": "Impact", "intensity": 0.45, "durationMs": 150, "freqHz": 90, "edgeHz": 200, "edge": 0.5 },
+    "shield_up":   { "preset": "Impact", "intensity": 0.28, "durationMs": 70, "freqHz": 80 },
+    "shield_hit":  { "preset": "Impact", "intensity": 0.40, "durationMs": 130, "freqHz": 110, "edgeHz": 240, "edge": 0.5 },
+    // ---- Charge / Release ----
+    "bow_tension": { "preset": "Charge", "intensity": 0.30, "durationMs": 1200, "f0": 35, "f1": 80, "curve": 1.4, "noise": 0.05 },
+    "magic_charge":{ "preset": "Charge", "intensity": 0.25, "durationMs": 1500, "f0": 50, "f1": 110, "pulseHz": 6 },
+    "spell_cast":  { "preset": "Release", "intensity": 0.55, "durationMs": 140, "freqHz": 100, "noise": 0.35 },
+    "parry_ok":    { "preset": "Release", "intensity": 0.40, "durationMs": 90, "freqHz": 150, "noise": 0.2 },
+    "fizzle":      { "preset": "Release", "intensity": 0.15, "durationMs": 150, "freqHz": 60, "noise": 0.7 },
+    // ---- Continuous (looping until the state ends) ----
+    "channel":     { "preset": "Continuous", "loop": 1, "intensity": 0.18, "durationMs": 1000, "freqHz": 55, "noise": 0.3, "pulseHz": 4, "depth": 0.6 },
+    "fire":        { "preset": "Continuous", "loop": 1, "intensity": 0.22, "durationMs": 1000, "freqHz": 40, "noise": 0.85, "pulseHz": 9, "depth": 0.6, "lowpass": 0.15 },
+    "frost":       { "preset": "Continuous", "loop": 1, "intensity": 0.15, "durationMs": 1000, "freqHz": 140, "noise": 0.2 },
+    "paralysis":   { "preset": "Continuous", "loop": 1, "intensity": 0.20, "durationMs": 1000, "freqHz": 45, "noise": 0.2, "pulseHz": 2, "depth": 0.9 },
+    "daze":        { "preset": "Continuous", "loop": 1, "intensity": 0.18, "durationMs": 1400, "freqHz": 50, "noise": 0.3, "wobbleHz": 1.5 },
+    "choking":     { "preset": "Continuous", "loop": 1, "intensity": 0.30, "durationMs": 1700, "freqHz": 35, "noise": 0.3, "pulseHz": 1.2, "depth": 0.9 },
+    "drunk":       { "preset": "Continuous", "loop": 1, "intensity": 0.10, "durationMs": 2500, "freqHz": 40, "noise": 0.3, "wobbleHz": 0.4 },
+    "high":        { "preset": "Continuous", "loop": 1, "intensity": 0.08, "durationMs": 4000, "freqHz": 30, "noise": 0.2, "wobbleHz": 0.25, "pulseHz": 0.5, "depth": 0.5 },
+    // ---- bow (14.11.2026, user: ready = silent, draw = rising tension, held too long = unpleasant, shot = pleasant release) ----
+    "bow_draw":    { "layers": [ { "preset": "Charge", "intensity": 0.38, "durationMs": 1000, "f0": 35, "f1": 75, "curve": 1.3, "noise": 0.04 },
+                                 { "preset": "Continuous", "intensity": 0.14, "durationMs": 2600, "freqHz": 72, "noise": 0.1, "fadeMs": 120, "delayMs": 980 } ] },
+    "bow_hold":    { "preset": "Continuous", "loop": 1, "intensity": 0.14, "durationMs": 1000, "freqHz": 72, "noise": 0.1 },
+    "bow_strain":  { "preset": "Continuous", "loop": 1, "intensity": 0.30, "durationMs": 1000, "freqHz": 45, "noise": 0.5, "pulseHz": 7, "depth": 0.7, "wobbleHz": 3 },
+    "bow_shot":    { "layers": [ { "preset": "Release", "intensity": 0.75, "durationMs": 80, "freqHz": 85, "noise": 0.12 },
+                                 { "preset": "Impact", "intensity": 0.30, "durationMs": 380, "freqHz": 45, "weight": 0.6, "edgeHz": 110, "edge": 0.2, "decayTauMs": 160, "delayMs": 20 } ] },
+    "bow_quick":   { "layers": [ { "preset": "Release", "intensity": 0.50, "durationMs": 70, "freqHz": 95, "noise": 0.12 },
+                                 { "preset": "Impact", "intensity": 0.18, "durationMs": 250, "freqHz": 50, "decayTauMs": 110, "delayMs": 15 } ] },
+    "bow_tire":    { "layers": [ { "preset": "Release", "intensity": 0.32, "durationMs": 90, "freqHz": 55, "noise": 0.5 },
+                                 { "preset": "Impact", "intensity": 0.26, "durationMs": 320, "freqHz": 38, "noise": 0.6, "edge": 0, "decayTauMs": 140, "delayMs": 30 } ] },
+    "bow_fail":    { "preset": "Impact", "intensity": 0.35, "durationMs": 160, "freqHz": 50, "edge": 0, "noise": 0.4 },
+    "xbow_shot":   { "preset": "Impact", "intensity": 0.60, "durationMs": 140, "freqHz": 70, "edgeHz": 180, "edge": 0.5, "noise": 0.2 },
+    "shock":       { "preset": "Continuous", "loop": 1, "intensity": 0.25, "durationMs": 1000, "freqHz": 180, "noise": 0.5, "pulseHz": 15, "depth": 0.7 }
+  },
+
+  "map": [
+    // mechanical interactions
+    { "id": "auto-draw",        "event": "itemdraw:start",    "style": "draw",       "priority": "low",  "cooldownMs": 400 },
+    { "id": "auto-lockpick",    "event": "picklock:start",    "style": "lockpick",   "priority": "low" },
+    { "id": "auto-latch",       "event": "picklock:complete", "style": "latch",      "priority": "low" },
+    { "id": "auto-interact",    "event": "interact:start",    "style": "touch",      "priority": "low",  "cooldownMs": 500 },
+    { "id": "auto-loot",        "event": "loot:start",        "style": "rummage",    "priority": "low",  "cooldownMs": 500 },
+    { "id": "auto-climb",       "event": "climbing:start",    "style": "grab",       "priority": "low",  "cooldownMs": 300 },
+    { "id": "auto-ladder",      "event": "ladder:start",      "style": "grab",       "priority": "low",  "cooldownMs": 300, "params": { "intensity": 0.18 } },
+    { "id": "auto-outmana",     "event": "outmana:start",     "style": "fizzle",     "priority": "low",  "cooldownMs": 800 },
+    // impacts
+    { "id": "auto-knockback",   "event": "knockback:start",   "style": "knockback",  "priority": "high", "cooldownMs": 300 },
+    { "id": "auto-death",       "event": "dead:start",        "style": "death",      "priority": "critical" },
+    { "id": "auto-defeated",    "event": "defeated:start",    "style": "knockout",   "priority": "high" },
+    { "id": "auto-ragdoll",     "event": "ragdoll:start",     "style": "fall_body",  "priority": "normal", "cooldownMs": 500 },
+    { "id": "auto-armorbreak",  "event": "armorbreak:start",  "style": "metal_hit",  "priority": "high", "cooldownMs": 200 },
+    { "id": "auto-breakarmor",  "event": "breakarmorhit:start","style": "metal_hit", "priority": "high", "cooldownMs": 200 },
+    { "id": "auto-deflected",   "event": "attack:update", "where": { "res": "deflected" }, "style": "clang", "priority": "normal", "cooldownMs": 120,
+      "note": "the game's own rumble table has NoRumble for deflected hits -> no double feedback" },
+    { "id": "auto-parried",     "event": "attack:interrupt", "where": { "res": "parried" }, "style": "jarring", "priority": "normal", "cooldownMs": 120 },
+    { "id": "auto-parry",       "event": "parry:start",       "style": "parry_ok",   "priority": "normal", "cooldownMs": 120 },
+    { "id": "auto-block-up",    "event": "block:start",       "style": "shield_up",  "priority": "low",  "cooldownMs": 300 },
+    { "id": "auto-block-hit",   "event": "hurt:start", "where": { "act_guard": "step" }, "style": "shield_hit", "priority": "high", "cooldownMs": 120,
+      "note": "correlated: a hit received while the 'guard' action (block held) is open" },
+    // charge / release
+    // auto-aim DISABLED (14.11.2026): State.Aiming = the bow's READY stage (zoom, slow walk), not the draw. The draw will be mapped
+    // to the bow probe (bow:update) once a session shows which flag switches on the trigger.
+    { "id": "auto-aim", "disabled": true,       "event": "aiming:start",      "style": "bow_tension", "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 8000 },
+      "when": "=last_weapon_fam == 'bow' || last_weapon_fam == 'crossbow'",
+      "note": "session 67: State.Aiming also fires with no bow in hand (target lock / aiming in fists combat) -> bow tension only with a bow / crossbow" },
+    { "id": "auto-cast",        "event": "casting:start",     "style": "magic_charge","priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 8000 } },
+    { "id": "auto-channel",     "event": "channeling:start",  "style": "channel",    "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 20000, "loop": true } },
+    { "id": "auto-spell",       "event": "spellrelease:start","style": "spell_cast", "priority": "normal", "cooldownMs": 150 },
+    // bow: READY (L2, State.Aiming / bow aim=1) stays silent; draw = R2 while ready (derived.json) -> rise 1 s, then hold ->
+    // [held > 3.5 s: strain] -> shot (montage) = pleasant release (user 14.11.2026: "великолепное ощущение выпуска стрелы")
+    { "id": "bow-draw",   "event": "bowdraw:start", "style": "bow_draw", "group": "bow", "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 60000 } },
+    { "id": "bow-strain", "event": "overtime:start", "where": { "a": "draw" }, "style": "bow_strain", "group": "bow", "priority": "high",
+      "continuous": { "stopWhen": ["bowdraw:complete"], "untilAction": "draw", "maxMs": 60000, "loop": true, "fadeMs": 400 } },
+    { "id": "bow-tire",   "event": "bowtire:update", "style": "bow_tire", "group": "bow", "priority": "high",
+      "note": "game resistance limit: the arm gives out (string slips forward), then the game re-draws by itself" },
+    { "id": "bow-shot",   "event": "montage:start", "where": { "m": "~Bow" }, "when": "=contains(m, 'ShootReload') && !contains(m, 'Quick') && !contains(m, 'Failure')",
+      "style": "bow_shot", "group": "bow", "priority": "high" },
+    { "id": "bow-quick",  "event": "montage:start", "where": { "m": "~Bow" }, "when": "=contains(m, 'QuickShootReload') && !contains(m, 'Failure')",
+      "style": "bow_quick", "group": "bow", "priority": "high" },
+    { "id": "bow-fail",   "event": "montage:start", "where": { "m": "~Bow" }, "when": "=contains(m, 'Failure')", "style": "bow_fail", "group": "bow", "priority": "high" },
+    { "id": "xbow-shot",  "event": "montage:start", "where": { "m": "~Crossbow" }, "when": "=contains(m, 'Shoot') && !contains(m, 'Reload')", "style": "xbow_shot", "group": "bow", "priority": "high" },
+    // continuous states (loop until the game state ends; maxMs as a safety net)
+    { "id": "auto-burning",     "event": "burning:start",     "style": "fire",       "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 30000, "loop": true } },
+    { "id": "auto-frozen",      "event": "frozen:start",      "style": "frost",      "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 20000, "loop": true } },
+    { "id": "auto-paralyzed",   "event": "paralyzed:start",   "style": "paralysis",  "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 20000, "loop": true } },
+    { "id": "auto-stunned",     "event": "stunned:start",     "style": "daze",       "priority": "normal", "continuous": { "stopOn": ["complete"], "maxMs": 15000, "loop": true } },
+    { "id": "auto-drowning",    "event": "drowning:start",    "style": "choking",    "priority": "high",   "continuous": { "stopOn": ["complete"], "maxMs": 60000, "loop": true } },
+    { "id": "auto-drunk",       "event": "drunk_high:start",  "style": "drunk",      "priority": "low",    "continuous": { "stopOn": ["complete"], "maxMs": 60000, "loop": true } },
+    { "id": "auto-weed",        "event": "weed_high:start",   "style": "high",       "priority": "low",    "continuous": { "stopOn": ["complete"], "maxMs": 60000, "loop": true } },
+    { "id": "auto-electrified", "event": "electrified:start", "style": "shock",      "priority": "high",   "continuous": { "stopOn": ["complete"], "maxMs": 15000, "loop": true } }
+  ]
+}

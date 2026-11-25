@@ -1,0 +1,800 @@
+{
+  "bank": "lp",
+  "recipe": "lockpick.forge.json",
+  "generated": "2026-11-14 10:16",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "Латунь",
+      "note": "тёплый звонкий металл, средний звон, мягкое трение",
+      "auto": false
+    },
+    {
+      "name": "B",
+      "label": "Сталь",
+      "note": "яркие короткие сухие щелчки, жёсткое трение",
+      "auto": false
+    },
+    {
+      "name": "C",
+      "label": "Кованое железо",
+      "note": "тяжёлый массивный механизм: глухой удар + короткий звон, грубое трение",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "guide",
+      "role": "навигация: яркий щелчок (центр = верная пластина; сторона - через pan/cross правила)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 50.4,
+          "peak": 0.85,
+          "rms20": 0.498,
+          "crest": 2.51,
+          "attackMs": 2.38,
+          "centroidHz": 294,
+          "dominantHz": 293,
+          "sub": 0.001,
+          "core": 0.993,
+          "high": 0.003,
+          "balanceDb": 0,
+          "drive": 2.27,
+          "warnings": [
+            "contrast to 'notch': distance 0.91, centroid x1.94, energy x2.41",
+            "contrast to 'detent': distance 0.84, centroid x1.33, energy x1.20"
+          ]
+        },
+        {
+          "variant": "B",
+          "ms": 45.7,
+          "peak": 0.85,
+          "rms20": 0.498,
+          "crest": 2.48,
+          "attackMs": 2.25,
+          "centroidHz": 332,
+          "dominantHz": 340,
+          "sub": 0.002,
+          "core": 0.985,
+          "high": 0.004,
+          "balanceDb": 0,
+          "drive": 3.03,
+          "warnings": [
+            "contrast to 'notch': distance 0.91, centroid x1.94, energy x2.56",
+            "contrast to 'detent': distance 0.64, centroid x1.16, energy x1.19"
+          ]
+        },
+        {
+          "variant": "C",
+          "ms": 45.8,
+          "peak": 0.85,
+          "rms20": 0.499,
+          "crest": 2.51,
+          "attackMs": 0.92,
+          "centroidHz": 279,
+          "dominantHz": 281,
+          "sub": 0.002,
+          "core": 0.988,
+          "high": 0.005,
+          "balanceDb": 0,
+          "drive": 3.2,
+          "warnings": [
+            "contrast to 'notch': distance 0.90, centroid x2.11, energy x2.28",
+            "contrast to 'detent': distance 0.86, centroid x1.66, energy x1.20"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "notch",
+      "role": "выбор пластины: слабая низкая засечка (физика, не подсказка)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 29.2,
+          "peak": 0.5,
+          "rms20": 0.207,
+          "crest": 2.92,
+          "attackMs": 1.38,
+          "centroidHz": 151,
+          "dominantHz": 152,
+          "sub": 0.009,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 28.4,
+          "peak": 0.5,
+          "rms20": 0.195,
+          "crest": 3.06,
+          "attackMs": 3.48,
+          "centroidHz": 171,
+          "dominantHz": 164,
+          "sub": 0.005,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 28.9,
+          "peak": 0.5,
+          "rms20": 0.219,
+          "crest": 2.75,
+          "attackMs": 1.25,
+          "centroidHz": 133,
+          "dominantHz": 129,
+          "sub": 0.015,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "insert",
+      "role": "вставка отмычки: короткий скрежет входа + два касания штифтов",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 134.3,
+          "peak": 0.85,
+          "rms20": 0.376,
+          "crest": 4.49,
+          "attackMs": 51.94,
+          "centroidHz": 238,
+          "dominantHz": 240,
+          "sub": 0.002,
+          "core": 0.989,
+          "high": 0.003,
+          "balanceDb": 0,
+          "drive": 1.62,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 132.4,
+          "peak": 0.85,
+          "rms20": 0.378,
+          "crest": 4.37,
+          "attackMs": 52.38,
+          "centroidHz": 304,
+          "dominantHz": 311,
+          "sub": 0.002,
+          "core": 0.969,
+          "high": 0.005,
+          "balanceDb": 0,
+          "drive": 2.49,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 125.5,
+          "peak": 0.85,
+          "rms20": 0.376,
+          "crest": 4.18,
+          "attackMs": 53.83,
+          "centroidHz": 190,
+          "dominantHz": 199,
+          "sub": 0.006,
+          "core": 0.982,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 2.13,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "glide",
+      "role": "движение пластин: трение со «схватыванием» (stick-slip), 900 мс, правило обрезает по ожидаемой длительности",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 904.4,
+          "peak": 0.62,
+          "rms20": 0.298,
+          "crest": 3.27,
+          "attackMs": 70.96,
+          "centroidHz": 182,
+          "dominantHz": 166,
+          "sub": 0.009,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.84,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 893.5,
+          "peak": 0.62,
+          "rms20": 0.296,
+          "crest": 3.11,
+          "attackMs": 47.71,
+          "centroidHz": 247,
+          "dominantHz": 244,
+          "sub": 0.003,
+          "core": 0.966,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 2.73,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 893.9,
+          "peak": 0.62,
+          "rms20": 0.303,
+          "crest": 3.31,
+          "attackMs": 73.54,
+          "centroidHz": 140,
+          "dominantHz": 122,
+          "sub": 0.014,
+          "core": 0.981,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.44,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "glide_opp",
+      "role": "встречные пластины: суше и выше, на другой стороне (сторону задаёт правило)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 695.4,
+          "peak": 0.45,
+          "rms20": 0.201,
+          "crest": 3.88,
+          "attackMs": 178.9,
+          "centroidHz": 247,
+          "dominantHz": 248,
+          "sub": 0.006,
+          "core": 0.952,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.62,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 694.4,
+          "peak": 0.45,
+          "rms20": 0.199,
+          "crest": 3.35,
+          "attackMs": 79.71,
+          "centroidHz": 330,
+          "dominantHz": 353,
+          "sub": 0.003,
+          "core": 0.803,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 1.69,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 696.6,
+          "peak": 0.45,
+          "rms20": 0.2,
+          "crest": 4.37,
+          "attackMs": 262.31,
+          "centroidHz": 184,
+          "dominantHz": 167,
+          "sub": 0.011,
+          "core": 0.977,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.9,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "detent",
+      "role": "пластина проходит/западает в лунку: металлический щелчок + пружинка корпуса",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 42.5,
+          "peak": 0.85,
+          "rms20": 0.417,
+          "crest": 2.91,
+          "attackMs": 2.77,
+          "centroidHz": 221,
+          "dominantHz": 234,
+          "sub": 0.009,
+          "core": 0.987,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.18,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 40.2,
+          "peak": 0.85,
+          "rms20": 0.418,
+          "crest": 2.86,
+          "attackMs": 2.31,
+          "centroidHz": 287,
+          "dominantHz": 305,
+          "sub": 0.009,
+          "core": 0.979,
+          "high": 0.004,
+          "balanceDb": 0,
+          "drive": 2.05,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 39,
+          "peak": 0.85,
+          "rms20": 0.417,
+          "crest": 2.82,
+          "attackMs": 0.85,
+          "centroidHz": 168,
+          "dominantHz": 199,
+          "sub": 0.03,
+          "core": 0.963,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0.88,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "counter",
+      "role": "пластина, идущая против толчка: парный сухой транзиент",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 37.4,
+          "peak": 0.72,
+          "rms20": 0.261,
+          "crest": 3.72,
+          "attackMs": 0.44,
+          "centroidHz": 279,
+          "dominantHz": 316,
+          "sub": 0.002,
+          "core": 0.943,
+          "high": 0.017,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 34.5,
+          "peak": 0.72,
+          "rms20": 0.245,
+          "crest": 3.79,
+          "attackMs": 0.38,
+          "centroidHz": 357,
+          "dominantHz": 387,
+          "sub": 0.001,
+          "core": 0.742,
+          "high": 0.02,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 38.8,
+          "peak": 0.72,
+          "rms20": 0.274,
+          "crest": 3.6,
+          "attackMs": 0.48,
+          "centroidHz": 234,
+          "dominantHz": 258,
+          "sub": 0.003,
+          "core": 0.964,
+          "high": 0.012,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "settle",
+      "role": "ход закончен: пластины сели - глухой удар корпуса + щелчок",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 72.6,
+          "peak": 0.85,
+          "rms20": 0.497,
+          "crest": 3.05,
+          "attackMs": 4.46,
+          "centroidHz": 150,
+          "dominantHz": 123,
+          "sub": 0.009,
+          "core": 0.977,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.76,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 64.2,
+          "peak": 0.85,
+          "rms20": 0.493,
+          "crest": 3,
+          "attackMs": 4.04,
+          "centroidHz": 200,
+          "dominantHz": 158,
+          "sub": 0.013,
+          "core": 0.968,
+          "high": 0.003,
+          "balanceDb": 0,
+          "drive": 4.31,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 73.9,
+          "peak": 0.85,
+          "rms20": 0.498,
+          "crest": 2.94,
+          "attackMs": 5.17,
+          "centroidHz": 96,
+          "dominantHz": 88,
+          "sub": 0.008,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.72,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "settle_center",
+      "role": "пластина встала в центр: двухступенчатая фиксация «чк-тук» (щелчок, затем глубокая посадка)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 104.2,
+          "peak": 0.85,
+          "rms20": 0.545,
+          "crest": 2.62,
+          "attackMs": 2.65,
+          "centroidHz": 143,
+          "dominantHz": 100,
+          "sub": 0.007,
+          "core": 0.99,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 1.59,
+          "warnings": [
+            "contrast to 'settle': distance 0.72, centroid x0.95, energy x1.10"
+          ]
+        },
+        {
+          "variant": "B",
+          "ms": 101.4,
+          "peak": 0.85,
+          "rms20": 0.543,
+          "crest": 2.65,
+          "attackMs": 0.9,
+          "centroidHz": 194,
+          "dominantHz": 129,
+          "sub": 0.006,
+          "core": 0.985,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 3.18,
+          "warnings": [
+            "contrast to 'settle': distance 0.73, centroid x0.97, energy x1.10"
+          ]
+        },
+        {
+          "variant": "C",
+          "ms": 109.4,
+          "peak": 0.85,
+          "rms20": 0.554,
+          "crest": 2.84,
+          "attackMs": 37.21,
+          "centroidHz": 87,
+          "dominantHz": 70,
+          "sub": 0.019,
+          "core": 0.98,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.53,
+          "warnings": [
+            "contrast to 'settle': distance 0.65, centroid x0.91, energy x1.11"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "release",
+      "role": "пластина ушла из центра: лёгкий высокий отщёлк",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 26.3,
+          "peak": 0.6,
+          "rms20": 0.219,
+          "crest": 3.14,
+          "attackMs": 0.83,
+          "centroidHz": 263,
+          "dominantHz": 281,
+          "sub": 0.009,
+          "core": 0.975,
+          "high": 0.004,
+          "balanceDb": 0,
+          "drive": 1.67,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 25.7,
+          "peak": 0.6,
+          "rms20": 0.218,
+          "crest": 3.11,
+          "attackMs": 0.9,
+          "centroidHz": 342,
+          "dominantHz": 363,
+          "sub": 0.005,
+          "core": 0.861,
+          "high": 0.003,
+          "balanceDb": 0,
+          "drive": 1.97,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 27.1,
+          "peak": 0.6,
+          "rms20": 0.218,
+          "crest": 3.2,
+          "attackMs": 0.79,
+          "centroidHz": 218,
+          "dominantHz": 234,
+          "sub": 0.012,
+          "core": 0.976,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 1.21,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "strain",
+      "role": "надрыв: отмычка гнётся - скрип с ускоряющимся «скрежетом» и напряжённым тоном",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 150.9,
+          "peak": 0.85,
+          "rms20": 0.498,
+          "crest": 2.28,
+          "attackMs": 82.1,
+          "centroidHz": 156,
+          "dominantHz": 152,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.55,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 148.8,
+          "peak": 0.85,
+          "rms20": 0.499,
+          "crest": 2.43,
+          "attackMs": 62.1,
+          "centroidHz": 194,
+          "dominantHz": 205,
+          "sub": 0,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.54,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 152.2,
+          "peak": 0.85,
+          "rms20": 0.576,
+          "crest": 2.31,
+          "attackMs": 46.15,
+          "centroidHz": 112,
+          "dominantHz": 105,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "snap",
+      "role": "поломка: хрупкий излом + осыпание обломков",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 171.4,
+          "peak": 0.85,
+          "rms20": 0.399,
+          "crest": 5.89,
+          "attackMs": 0.75,
+          "centroidHz": 233,
+          "dominantHz": 249,
+          "sub": 0.014,
+          "core": 0.962,
+          "high": 0.003,
+          "balanceDb": 0,
+          "drive": 3.74,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 173.6,
+          "peak": 0.85,
+          "rms20": 0.399,
+          "crest": 5.92,
+          "attackMs": 0.77,
+          "centroidHz": 294,
+          "dominantHz": 328,
+          "sub": 0.008,
+          "core": 0.969,
+          "high": 0.005,
+          "balanceDb": 0,
+          "drive": 3.72,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 172.2,
+          "peak": 0.85,
+          "rms20": 0.397,
+          "crest": 5.93,
+          "attackMs": 0.71,
+          "centroidHz": 190,
+          "dominantHz": 223,
+          "sub": 0.024,
+          "core": 0.962,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 3.58,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "ratchet",
+      "role": "сброс: один зуб храповика (правило повторяет по числу пластин)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 30.6,
+          "peak": 0.8,
+          "rms20": 0.306,
+          "crest": 3.22,
+          "attackMs": 0.71,
+          "centroidHz": 175,
+          "dominantHz": 211,
+          "sub": 0.039,
+          "core": 0.946,
+          "high": 0.002,
+          "balanceDb": 0,
+          "drive": 1.41,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 28.8,
+          "peak": 0.8,
+          "rms20": 0.311,
+          "crest": 3.08,
+          "attackMs": 0.65,
+          "centroidHz": 249,
+          "dominantHz": 270,
+          "sub": 0.015,
+          "core": 0.969,
+          "high": 0.006,
+          "balanceDb": 0,
+          "drive": 1.42,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 31,
+          "peak": 0.8,
+          "rms20": 0.309,
+          "crest": 3.21,
+          "attackMs": 0.77,
+          "centroidHz": 134,
+          "dominantHz": 82,
+          "sub": 0.066,
+          "core": 0.914,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0.86,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "unlock",
+      "role": "открытие: захват последних пластин -> отпускание защёлок (сверху вниз) -> удар засова со скольжением",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 408,
+          "peak": 0.85,
+          "rms20": 0.546,
+          "crest": 4.57,
+          "attackMs": 264.92,
+          "centroidHz": 132,
+          "dominantHz": 85,
+          "sub": 0.009,
+          "core": 0.987,
+          "high": 0.001,
+          "balanceDb": -0.01,
+          "drive": 1.36,
+          "warnings": []
+        },
+        {
+          "variant": "B",
+          "ms": 409.1,
+          "peak": 0.85,
+          "rms20": 0.546,
+          "crest": 4.8,
+          "attackMs": 264.29,
+          "centroidHz": 155,
+          "dominantHz": 104,
+          "sub": 0.006,
+          "core": 0.987,
+          "high": 0.001,
+          "balanceDb": -0.01,
+          "drive": 1.49,
+          "warnings": []
+        },
+        {
+          "variant": "C",
+          "ms": 405.4,
+          "peak": 0.85,
+          "rms20": 0.586,
+          "crest": 4.71,
+          "attackMs": 261.98,
+          "centroidHz": 92,
+          "dominantHz": 59,
+          "sub": 0.03,
+          "core": 0.965,
+          "high": 0,
+          "balanceDb": -0,
+          "drive": 0.82,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

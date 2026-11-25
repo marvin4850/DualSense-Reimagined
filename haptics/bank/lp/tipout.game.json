@@ -1,0 +1,56 @@
+{
+  "output": "haptics/bank/lp/tipout.game.wav",
+  "lengthMs": 640.0,
+  "detectClipMs": 40.0,
+  "sources": {
+    "texture": "7037_SFX_Objects_Lockpicking_Remove_L1_01.wav",
+    "release": "1156_SFX_Objects_Lockpicking_Break_L2_03.wav",
+    "motion": "reports/failure-out-bone-poses.csv (pick_1)"
+  },
+  "clipTimes": {
+    "releaseAngularPeakMs": 216.7,
+    "speedPeakMs": 183.3,
+    "exitMs": 416.7
+  },
+  "wavTimes": {
+    "releaseMs": 176.7,
+    "exitMs": 376.7
+  },
+  "grains": [
+    [
+      6.9,
+      0.319
+    ],
+    [
+      26.2,
+      0.55
+    ],
+    [
+      56.0,
+      0.246
+    ],
+    [
+      108.3,
+      0.593
+    ],
+    [
+      317.0,
+      0.134
+    ]
+  ],
+  "peak": 0.62,
+  "rms20": 0.309,
+  "gain": 1.601,
+  "amplitudes": {
+    "scrape": 0.22,
+    "grain": 0.2,
+    "release": 0.46,
+    "edge": 0.34
+  },
+  "carriersHz": {
+    "scrape": 230.0,
+    "grain": 280.0,
+    "release": 210.0,
+    "edge": 310.0
+  }
+}

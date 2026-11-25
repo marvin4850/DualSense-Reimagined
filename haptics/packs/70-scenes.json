@@ -1,0 +1,1277 @@
+{
+  "pack": "scenes",
+  "description": "Automatically planned semantic candidates. OFF; use a separate focused test. No protected approved rules are replaced.",
+  "rules": [
+    {
+      "id": "scene-e9d77695dec0c8d5",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Ma_Draw_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 416,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Ma_Draw_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 265.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-7aff46c3423a9046",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Ma_Shelve_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 650,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Ma_Shelve_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 500.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-b3150db5b61c2040",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Tr_Draw_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 416,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Tr_Draw_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 265.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-5230448e1db22c55",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Tr_Shelve_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 650,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Tr_Shelve_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 500.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-490f217a752def39",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Un_Draw_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 416,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Un_Draw_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 265.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-62e2d81429c4ea96",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A1H_Un_Shelve_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 650,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A1H_Un_Shelve_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 500.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-9037331db6157e33",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Ma_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 550,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Ma_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 400.4
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-364dce950c121597",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Ma_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Ma_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-d867fc775d263823",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Tr_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 538,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Tr_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 388.3
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-17bd01db97bba1c6",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Tr_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Tr_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-9ee49fa7428f4418",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Un_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 526,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Un_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 376.1
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-ad2f8435623bcffe",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_A2H_Un_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_A2H_Un_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-19baf6d5e282c2b2",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M1H_Ma_Draw_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 416,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M1H_Ma_Draw_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 265.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-4cd8b6223a90db99",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M1H_Ma_Shelve_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 650,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M1H_Ma_Shelve_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 500.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-4636ad3559cffa9f",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M1H_Tr_Draw_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 416,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M1H_Tr_Draw_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 265.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-9d10202f3392fefe",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M1H_Tr_Shelve_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 650,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M1H_Tr_Shelve_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 500.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-81eb20bb75489b03",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Ma_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 583,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Ma_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 433.3
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-317faac03b7f0f80",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Ma_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Ma_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-89c563a3a09d6321",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Tr_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 564,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Tr_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 413.7
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-43d53cf5eaebcc3a",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Tr_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Tr_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-6f609fb152f4d107",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Un_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 546,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Un_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 395.5
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-8594e1889785e14e",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_M2H_Un_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1152,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_M2H_Un_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1002.5
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-12ad871f7bf3112e",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Ma_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1078,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Ma_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 385.4
+          },
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "draw_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 467.9
+          }
+        ]
+      },
+      "note": "blade.draw | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-0cae426bf51593e9",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Ma_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1396,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Ma_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "sheathe_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 773.6
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 958.4
+          }
+        ]
+      },
+      "note": "blade.sheathe | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-bdeee290f86a4129",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Tr_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1078,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Tr_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 389.4
+          },
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "draw_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 467.9
+          }
+        ]
+      },
+      "note": "blade.draw | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-9fa0f6519a440b16",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Tr_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1357,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Tr_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "sheathe_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 734.3
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 954.5
+          }
+        ]
+      },
+      "note": "blade.sheathe | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-8dc8e99d636049f5",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Un_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1078,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Un_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 391.4
+          },
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "draw_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 467.9
+          }
+        ]
+      },
+      "note": "blade.draw | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-f61dd1b0355002aa",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_S2H_Un_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1410,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_S2H_Un_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "sheathe_s1h",
+            "variant": "A",
+            "intensity": 1.0,
+            "delayMs": 786.7
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 130,
+            "ms": 45,
+            "attackMs": 2,
+            "tauMs": 12,
+            "intensity": 0.55,
+            "delayMs": 965.2
+          }
+        ]
+      },
+      "note": "blade.sheathe | auto-planned from native phase evidence; material metal_scabbard; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-7b39c7312d9d16c0",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Ma_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 585,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Ma_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 434.8
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-49b47814628245c3",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Ma_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Ma_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-9aa54c20d5de81ea",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Tr_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 585,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Tr_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 434.8
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-0290a5990e297fe6",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Tr_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Tr_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-27599a2dc68ff6a0",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Un_DrawBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 585,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Un_DrawBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 434.8
+          }
+        ]
+      },
+      "note": "held.draw | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-5e0e7499e740f115",
+      "event": "montage:start",
+      "where": {
+        "m": "A_Man_Sff2H_Un_ShelveBack_Montage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1150,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'A_Man_Sff2H_Un_ShelveBack_Montage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 110,
+            "ms": 70,
+            "attackMs": 4,
+            "tauMs": 18,
+            "partial": 2,
+            "partialGain": 0.15,
+            "intensity": 0.6,
+            "delayMs": 1000.0
+          }
+        ]
+      },
+      "note": "held.sheathe | auto-planned from native phase evidence; material weighted_handle; CANDIDATE, not perceptually approved"
+    },
+    {
+      "id": "scene-5cff2c6acef8161c",
+      "event": "montage:start",
+      "where": {
+        "m": "Man_Bow_STL_Reload_AnimMontage"
+      },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1230,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'Man_Bow_STL_Reload_AnimMontage'",
+        "stopFadeMs": 8
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "reload_bow",
+            "variant": "A",
+            "intensity": 0.9975,
+            "durationMs": 300,
+            "fadeMs": 3,
+            "delayMs": 437.2
+          },
+          {
+            "preset": "Sample",
+            "bank": "pilot",
+            "name": "reload_bow",
+            "variant": "A",
+            "intensity": 1.0,
+            "offsetMs": 380,
+            "durationMs": 70,
+            "fadeMs": 3,
+            "delayMs": 1080.4
+          }
+        ]
+      },
+      "note": "bow.reload | auto-planned from native phase evidence; material arrow_wood; CANDIDATE, not perceptually approved"
+    }
+  ]
+}

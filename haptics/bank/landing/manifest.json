@@ -1,0 +1,89 @@
+{
+  "bank": "landing",
+  "recipe": "landing.forge.json",
+  "generated": "2026-11-16 01:06",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "game landing sounds, low body",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "land_light",
+      "role": "Hop / small drop: a short dull tap of the feet (Land_Human_Stone)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 185.5,
+          "peak": 0.85,
+          "rms20": 0.399,
+          "crest": 3.62,
+          "attackMs": 115.79,
+          "btCorr": 0.85,
+          "btRms20": 0.589,
+          "centroidHz": 115,
+          "dominantHz": 144,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.95,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "land_heavy",
+      "role": "Heavy landing (the game plays LandHeavyStep): earth thump + low body resonance (Land_Human_Soil)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 437,
+          "peak": 0.85,
+          "rms20": 0.497,
+          "crest": 4.66,
+          "attackMs": 15.08,
+          "btCorr": 0.95,
+          "btRms20": 0.725,
+          "centroidHz": 64,
+          "dominantHz": 59,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.42,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "land_crash",
+      "role": "Damaging fall: full-force earth impact, long low body hit, then the body settling (second low knock)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 520.9,
+          "peak": 0.85,
+          "rms20": 0.574,
+          "crest": 3.43,
+          "attackMs": 21.96,
+          "btCorr": 0.96,
+          "btRms20": 0.788,
+          "centroidHz": 55,
+          "dominantHz": 45,
+          "sub": 0.016,
+          "core": 0.984,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.78,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

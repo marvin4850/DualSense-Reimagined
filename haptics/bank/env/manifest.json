@@ -1,0 +1,113 @@
+{
+  "bank": "env",
+  "recipe": "env.forge.json",
+  "generated": "2026-11-18 23:04",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "game sounds + procedural",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "door_latch",
+      "role": "The freed latch gives under the hand: short dry wooden knock",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 80,
+          "peak": 0.8,
+          "rms20": 0.427,
+          "crest": 3.65,
+          "attackMs": 5.88,
+          "btCorr": 0.91,
+          "btRms20": 0.627,
+          "centroidHz": 88,
+          "dominantHz": 94,
+          "sub": 0.019,
+          "core": 0.981,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "door_swing",
+      "role": "The heavy door swings open on its hinges: creaking friction that slows down (SFX_OBJ_Door_Wood_Open)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1383.8,
+          "peak": 0.8,
+          "rms20": 0.484,
+          "crest": 3.45,
+          "attackMs": 392.73,
+          "btCorr": 0.96,
+          "btRms20": 0.713,
+          "centroidHz": 60,
+          "dominantHz": 51,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "air_pulse",
+      "role": "Out of air: one choking throb in the chest, the haptic twin of one red flash of the screen",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 378.6,
+          "peak": 0.85,
+          "rms20": 0.594,
+          "crest": 2.01,
+          "attackMs": 27.38,
+          "btCorr": 0.97,
+          "btRms20": 0.789,
+          "centroidHz": 49,
+          "dominantHz": 48,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "waterfall_loop",
+      "role": "Standing under a waterfall: water mass pounding on the shoulders, irregular heavy drumming (Waterfall_Large_Close)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 2413.6,
+          "peak": 0.8,
+          "rms20": 0.414,
+          "crest": 4.15,
+          "attackMs": 1920.94,
+          "btCorr": 0.86,
+          "btRms20": 0.631,
+          "centroidHz": 113,
+          "dominantHz": 88,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

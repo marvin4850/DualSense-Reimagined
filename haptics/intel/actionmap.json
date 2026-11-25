@@ -1,0 +1,1560 @@
+{
+ "generated": "2026-11-19 16:18",
+ "actions": [
+  {
+   "id": "melee.attack",
+   "family": "combat",
+   "title": "Атака ближнего боя (замах по направлению)",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "attack",
+     "status": "TESTED"
+    }
+   ],
+   "montageClasses": [
+    "melee.attack"
+   ],
+   "montages": 414,
+   "montagesSeen": 1402,
+   "phases": [
+    {
+     "name": "swing",
+     "source": "attack:start",
+     "timing": "exact",
+     "params": [
+      "dir",
+      "node",
+      "fam"
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L1",
+     "samples": 2,
+     "confidence": "high",
+     "why": "a1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L2",
+     "samples": 5,
+     "confidence": "high",
+     "why": "a1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L3",
+     "samples": 5,
+     "confidence": "high",
+     "why": "a1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L4",
+     "samples": 6,
+     "confidence": "high",
+     "why": "a1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L1",
+     "samples": 2,
+     "confidence": "high",
+     "why": "m1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L2",
+     "samples": 5,
+     "confidence": "high",
+     "why": "m1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L3",
+     "samples": 5,
+     "confidence": "high",
+     "why": "m1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L4",
+     "samples": 6,
+     "confidence": "high",
+     "why": "m1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L1",
+     "samples": 2,
+     "confidence": "high",
+     "why": "s1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L2",
+     "samples": 5,
+     "confidence": "high",
+     "why": "s1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L3",
+     "samples": 5,
+     "confidence": "high",
+     "why": "s1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_1H_L4",
+     "samples": 6,
+     "confidence": "high",
+     "why": "s1h->1H (high), name COMBAT_Melee_Swing_1H",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_1H"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_Torch_L1",
+     "samples": 7,
+     "confidence": "high",
+     "why": "torch->Torch (high), name COMBAT_Melee_Swing_Torch",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_Torch"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_Torch_L2",
+     "samples": 1,
+     "confidence": "high",
+     "why": "torch->Torch (high), name COMBAT_Melee_Swing_Torch",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_Torch"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_Torch_L3",
+     "samples": 3,
+     "confidence": "high",
+     "why": "torch->Torch (high), name COMBAT_Melee_Swing_Torch",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_Torch"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_Torch_L4",
+     "samples": 6,
+     "confidence": "high",
+     "why": "torch->Torch (high), name COMBAT_Melee_Swing_Torch",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_Torch"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Swing_Torch_L5",
+     "samples": 6,
+     "confidence": "high",
+     "why": "torch->Torch (high), name COMBAT_Melee_Swing_Torch",
+     "fmodEvent": "SFX/Combat/Swing/Constructed/SFX_COMBAT_Melee_Swing_Torch"
+    }
+   ],
+   "method": "friction",
+   "approvedRules": [
+    "attack-top",
+    "attack-bottom",
+    "attack-left",
+    "attack-right",
+    "attack-kick",
+    "attack-other"
+   ],
+   "autoRules": [],
+   "candidateRules": [
+    "pilot-melee-attack-swing-1h"
+   ],
+   "finished": false,
+   "note": "approved on motors (PROGRESS t.61-62): a generated HD swing is only a disabled candidate for A/B"
+  },
+  {
+   "id": "melee.contact",
+   "family": "combat",
+   "title": "Контакт оружия с целью",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "attack",
+     "status": "TESTED"
+    },
+    {
+     "type": "dmgcaused",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [
+    {
+     "name": "contact",
+     "source": "attack:update res=contact",
+     "timing": "exact",
+     "params": [
+      "dmg",
+      "imp",
+      "last_weapon_fam"
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_PHYSICS_Impacts_Melee_Bones_L1",
+     "samples": 12,
+     "confidence": "low",
+     "why": "torch->Melee_Bones (low), name PHYSICS_Impacts_Melee_Bones",
+     "fmodEvent": "SFX/Physics/Impacts/Melee/Creatures/SFX_PHYSICS_Impacts_Melee_CreatureM_Bones"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_PHYSICS_Impacts_Melee_Bones_L2",
+     "samples": 3,
+     "confidence": "low",
+     "why": "torch->Melee_Bones (low), name PHYSICS_Impacts_Melee_Bones",
+     "fmodEvent": "SFX/Physics/Impacts/Melee/Creatures/SFX_PHYSICS_Impacts_Melee_CreatureM_Bones"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_1HBlade_L1",
+     "samples": 4,
+     "confidence": "high",
+     "why": "s1h->T_1HBlade (high), name PHYSICS_Impacts_T_1HBlade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_1HBlade_L2"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_1HBlade_L2",
+     "samples": 4,
+     "confidence": "high",
+     "why": "s1h->T_1HBlade (high), name PHYSICS_Impacts_T_1HBlade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_1HBlade_L2"
+    },
+    {
+     "context": {
+      "w": "fist"
+     },
+     "group": "SFX_PHYSICS_Impacts_Melee_LowPunch_L1",
+     "samples": 4,
+     "confidence": "medium",
+     "why": "fist->Melee_LowPunch (medium), name PHYSICS_Impacts_Melee_LowPunch",
+     "fmodEvent": "SFX/Physics/Impacts/Melee/SFX_PHYSICS_Impacts_Melee"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Flesh_L1",
+     "samples": 4,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_2HBlade_Flesh"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Metal_L1",
+     "samples": 2,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Metal_L2",
+     "samples": 2,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Stone_L1",
+     "samples": 4,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_2HBlade_Stone"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Wood_L1",
+     "samples": 4,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_2HBlade_Wood"
+    },
+    {
+     "context": {
+      "w": "axe2h"
+     },
+     "group": "SFX_PHYSICS_Impacts_T_Blade_Wood_L2",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "axe2h->T_Blade (medium), name contains PHYSICS_Impacts_T_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/Elements/SFX_PHYSICS_Impacts_T_2HBlade_Wood"
+    }
+   ],
+   "method": "impact",
+   "approvedRules": [
+    "gen-melee-contact-contact-s1h",
+    "gen-melee-contact-contact-fist"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "the game plays its own rumble on melee contact (EVENT_MATRIX): one effect per contact (situation melee.contact)"
+  },
+  {
+   "id": "melee.deflected",
+   "family": "combat",
+   "title": "Удар отражён",
+   "importance": 0.8,
+   "events": [
+    {
+     "type": "attack",
+     "status": "TESTED"
+    }
+   ],
+   "montageClasses": [
+    "melee.deflected"
+   ],
+   "montages": 116,
+   "montagesSeen": 86,
+   "phases": [
+    {
+     "name": "deflect",
+     "source": "attack:update res=deflected",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [
+    {
+     "context": {},
+     "group": "SFX_PHYSICS_Impacts_S_Blade_L1",
+     "samples": 3,
+     "confidence": "high",
+     "why": "name PHYSICS_Impacts_S_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    },
+    {
+     "context": {},
+     "group": "SFX_PHYSICS_Impacts_S_Blade_L2",
+     "samples": 5,
+     "confidence": "high",
+     "why": "name PHYSICS_Impacts_S_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    }
+   ],
+   "method": "click",
+   "approvedRules": [
+    "auto-deflected"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "weapon.draw",
+   "family": "equipment",
+   "title": "Доставание оружия",
+   "importance": 0.8,
+   "events": [],
+   "montageClasses": [
+    "weapon.draw"
+   ],
+   "montages": 35,
+   "montagesSeen": 495,
+   "phases": [
+    {
+     "name": "draw",
+     "source": "montage:start mc=weapon.draw",
+     "timing": "approx",
+     "params": [
+      "mw"
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HAxe_L1",
+     "samples": 3,
+     "confidence": "high",
+     "why": "a1h->1HAxe (high), name COMBAT_Melee_Draw_1HAxe",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Draw_1HAxe"
+    },
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HAxe_L2",
+     "samples": 3,
+     "confidence": "high",
+     "why": "a1h->1HAxe (high), name COMBAT_Melee_Draw_1HAxe",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Draw_1HAxe"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HWood_L1",
+     "samples": 2,
+     "confidence": "medium",
+     "why": "m1h->1HWood (medium), name COMBAT_Melee_Draw_1HWood",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Draw_1HWood"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HMetalBlade_L1",
+     "samples": 3,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Draw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Draw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HMetalBlade_L2",
+     "samples": 2,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Draw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Draw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HMetalBlade_L3",
+     "samples": 3,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Draw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Draw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HMetalBlade_L4",
+     "samples": 4,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Draw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Draw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Draw_1HWood_L1",
+     "samples": 2,
+     "confidence": "low",
+     "why": "torch->1HWood (low), name COMBAT_Melee_Draw_1HWood",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Draw_1HWood"
+    }
+   ],
+   "method": "scrape",
+   "approvedRules": [
+    "gen-weapon-draw-*",
+    "weapon-draw-*"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "State.ItemDraw is the drawn-weapon STATE (lasts the whole fight), not the moment: the draw montage starts the action"
+  },
+  {
+   "id": "weapon.sheathe",
+   "family": "equipment",
+   "title": "Убирание оружия",
+   "importance": 0.7,
+   "events": [],
+   "montageClasses": [
+    "weapon.sheathe"
+   ],
+   "montages": 32,
+   "montagesSeen": 321,
+   "phases": [
+    {
+     "name": "sheathe",
+     "source": "montage:start mc=weapon.sheathe",
+     "timing": "approx",
+     "params": [
+      "mw"
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HAxe_L1",
+     "samples": 2,
+     "confidence": "high",
+     "why": "a1h->1HAxe (high), name COMBAT_Melee_Undraw_1HAxe",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Undraw_1HAxe"
+    },
+    {
+     "context": {
+      "w": "a1h"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HAxe_L2",
+     "samples": 2,
+     "confidence": "high",
+     "why": "a1h->1HAxe (high), name COMBAT_Melee_Undraw_1HAxe",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Undraw_1HAxe"
+    },
+    {
+     "context": {
+      "w": "m1h"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HWood_L1",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "m1h->1HWood (medium), name COMBAT_Melee_Undraw_1HWood",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Undraw_1HWood"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HMetalBlade_L1",
+     "samples": 2,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Undraw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Undraw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "s1h"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HMetalBlade_L2",
+     "samples": 3,
+     "confidence": "high",
+     "why": "s1h->1HMetalBlade (high), name COMBAT_Melee_Undraw_1HMetalBlade",
+     "fmodEvent": "SFX/Combat/DrawWeapon/Elements/SFX_COMBAT_Melee_Undraw_1HMetalBlade_L2"
+    },
+    {
+     "context": {
+      "w": "torch"
+     },
+     "group": "SFX_COMBAT_Melee_Undraw_1HWood_L1",
+     "samples": 1,
+     "confidence": "low",
+     "why": "torch->1HWood (low), name COMBAT_Melee_Undraw_1HWood",
+     "fmodEvent": "SFX/Combat/DrawWeapon/SFX_COMBAT_Melee_Undraw_1HWood"
+    }
+   ],
+   "method": "scrape",
+   "approvedRules": [
+    "gen-weapon-sheathe-*",
+    "weapon-sheathe-*"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "ranged.bow",
+   "family": "combat",
+   "title": "Лук: натяжение и выстрел",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "aiming",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "aimnormal",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "bow",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "bowdraw",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "bowtire",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "ranged.shoot",
+    "ranged.reload",
+    "ranged.equip"
+   ],
+   "montages": 38,
+   "montagesSeen": 129,
+   "phases": [
+    {
+     "name": "shot",
+     "source": "montage:start mc=ranged.shoot",
+     "timing": "approx"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "bow-draw",
+    "bow-shot",
+    "bow-quick",
+    "bow-strain",
+    "bow-tire",
+    "bow-fail",
+    "xbow-shot"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "move.jump",
+   "family": "movement",
+   "title": "Прыжок и приземление",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "air",
+     "status": "TESTED"
+    }
+   ],
+   "montageClasses": [
+    "move.land"
+   ],
+   "montages": 3,
+   "montagesSeen": 105,
+   "phases": [
+    {
+     "name": "takeoff",
+     "source": "air:start",
+     "timing": "exact"
+    },
+    {
+     "name": "land",
+     "source": "air:complete",
+     "timing": "exact",
+     "params": [
+      "drop",
+      "net"
+     ]
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "takeoff",
+    "land"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "move.dodge",
+   "family": "movement",
+   "title": "Уклонение",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "dodge",
+     "status": "TESTED"
+    },
+    {
+     "type": "roll",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "move.dodge"
+   ],
+   "montages": 204,
+   "montagesSeen": 536,
+   "phases": [
+    {
+     "name": "dodge",
+     "source": "dodge:start",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "dodge"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "move.steps",
+   "family": "movement",
+   "title": "Шаги крадучись по поверхностям",
+   "importance": 0.7,
+   "events": [
+    {
+     "type": "crouch",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "running",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "sprinting",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "step",
+     "status": "TESTED"
+    },
+    {
+     "type": "walking",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [
+    {
+     "name": "step",
+     "source": "step:update (mod v43 footstep FX hook)",
+     "timing": "exact",
+     "params": [
+      "mat",
+      "gait"
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "context": {
+      "mat": "Soil",
+      "gait": "walk"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Soil_Walk_Shoe",
+     "samples": 20,
+     "confidence": "medium",
+     "why": "name contains MOVE_Footsteps_Human_Soil_Walk",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Soil/SFX_MOVE_Footsteps_Human_Soil_Walk_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Soil",
+      "gait": "run"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Soil_Run_Shoe",
+     "samples": 20,
+     "confidence": "medium",
+     "why": "name contains MOVE_Footsteps_Human_Soil_Run",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Soil/SFX_MOVE_Footsteps_Human_Soil_Run_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Grass",
+      "gait": "walk"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Grass_Walk",
+     "samples": 8,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Grass_Walk",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Grass/SFX_MOVE_Footsteps_Human_Grass_Walk_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Grass",
+      "gait": "run"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Grass_Run",
+     "samples": 19,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Grass_Run",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Grass/SFX_MOVE_Footsteps_Human_Grass_Run_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Stone",
+      "gait": "walk"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Stone_Walk",
+     "samples": 9,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Stone_Walk",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Stone/SFX_MOVE_Footsteps_Human_Stone_Walk_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Stone",
+      "gait": "run"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Stone_Run",
+     "samples": 19,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Stone_Run",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Stone/SFX_MOVE_Footsteps_Human_Stone_Run_Shoe"
+    },
+    {
+     "context": {
+      "mat": "WoodFloor",
+      "gait": "walk"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_WoodFloor_Walk",
+     "samples": 20,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_WoodFloor_Walk",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/WoodFloor/SFX_MOVE_Footsteps_Human_WoodFloor_Walk_Shoe"
+    },
+    {
+     "context": {
+      "mat": "WoodFloor",
+      "gait": "run"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_WoodFloor_Run",
+     "samples": 20,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_WoodFloor_Run",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/WoodFloor/SFX_MOVE_Footsteps_Human_WoodFloor_Run_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Sand",
+      "gait": "walk"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Sand_Walk",
+     "samples": 9,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Sand_Walk",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Sand/SFX_MOVE_Footsteps_Human_Sand_Walk_Shoe"
+    },
+    {
+     "context": {
+      "mat": "Sand",
+      "gait": "run"
+     },
+     "group": "SFX_MOVE_Footsteps_Human_Sand_Run",
+     "samples": 19,
+     "confidence": "high",
+     "why": "name MOVE_Footsteps_Human_Sand_Run",
+     "fmodEvent": "SFX/Movement/Footsteps/Human/ByMaterials/Sand/SFX_MOVE_Footsteps_Human_Sand_Run_Shoe"
+    }
+   ],
+   "method": "impact",
+   "approvedRules": [
+    "gen-move-steps-*"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "user 15.11.2026: steps ONLY while sneaking (each careful step matters, by surface); contact moment = FX definition hook (UFootStepFXDefinition), mod sends crouch steps only"
+  },
+  {
+   "id": "move.traverse",
+   "family": "movement",
+   "title": "Подъём, спуск, перелезание",
+   "importance": 0.5,
+   "events": [
+    {
+     "type": "climbing",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "ladder",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "move.traverse",
+    "move.ladder"
+   ],
+   "montages": 30,
+   "montagesSeen": 306,
+   "phases": [
+    {
+     "name": "traverse",
+     "source": "montage:start mc=move.traverse",
+     "timing": "approx"
+    }
+   ],
+   "sounds": [],
+   "method": "impact",
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "react.hit",
+   "family": "combat",
+   "title": "Получение удара",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "armorbreak",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "hitreact",
+     "status": "TESTED"
+    },
+    {
+     "type": "hurt",
+     "status": "TESTED"
+    },
+    {
+     "type": "knockback",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "react.hit"
+   ],
+   "montages": 551,
+   "montagesSeen": 216,
+   "phases": [
+    {
+     "name": "hit",
+     "source": "hitreact:start",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "hit",
+    "combat-take-hit"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "react.defeated",
+   "family": "combat",
+   "title": "Повален / побеждён",
+   "importance": 0.8,
+   "events": [
+    {
+     "type": "dead",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "defeated",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "ragdoll",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "react.defeated",
+    "react.death"
+   ],
+   "montages": 204,
+   "montagesSeen": 250,
+   "phases": [
+    {
+     "name": "down",
+     "source": "defeated:start",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "guard.block",
+   "family": "combat",
+   "title": "Блок и парирование",
+   "importance": 0.9,
+   "events": [
+    {
+     "type": "attack",
+     "status": "TESTED"
+    },
+    {
+     "type": "block",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "blockstate",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "parry",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "guard.block",
+    "guard.parry"
+   ],
+   "montages": 296,
+   "montagesSeen": 153,
+   "phases": [
+    {
+     "name": "raise",
+     "source": "block:start",
+     "timing": "exact"
+    },
+    {
+     "name": "absorb",
+     "source": "hurt:start while blocking",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [
+    {
+     "context": {},
+     "group": "SFX_PHYSICS_Impacts_S_Blade_L1",
+     "samples": 3,
+     "confidence": "high",
+     "why": "name PHYSICS_Impacts_S_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    },
+    {
+     "context": {},
+     "group": "SFX_PHYSICS_Impacts_S_Blade_L2",
+     "samples": 5,
+     "confidence": "high",
+     "why": "name PHYSICS_Impacts_S_Blade",
+     "fmodEvent": "SFX/Physics/Impacts/SFX_PHYSICS_Impacts_1HBlade_Blade"
+    }
+   ],
+   "method": "impact",
+   "approvedRules": [
+    "auto-block-hit",
+    "auto-parry",
+    "auto-parried",
+    "combat-guard-hit"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "interact.container",
+   "family": "interaction",
+   "title": "Открытие сундука (без взлома)",
+   "importance": 0.6,
+   "events": [
+    {
+     "type": "interact",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "interacting",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "interact.container"
+   ],
+   "montages": 2,
+   "montagesSeen": 124,
+   "phases": [
+    {
+     "name": "open",
+     "source": "interact:complete without a lockpicking step",
+     "timing": "approx"
+    }
+   ],
+   "sounds": [
+    {
+     "context": {},
+     "group": "SFX_OBJ_Containers_Chest_Open_Main",
+     "samples": 2,
+     "confidence": "high",
+     "why": "name OBJ_Containers_Chest_Open_Main",
+     "fmodEvent": "SFX/Objects/Containers/Elements/SFX_OBJ_Containers_Chest_Open_Main"
+    }
+   ],
+   "method": "impact",
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "locked chests are Tactile Lockpicking v42 (finished, untouched)"
+  },
+  {
+   "id": "interact.lockpick",
+   "family": "interaction",
+   "title": "Взлом замка (v42, завершён)",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "lp",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "lp_break",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "picklock",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "interact.lockpick"
+   ],
+   "montages": 2,
+   "montagesSeen": 176,
+   "phases": [
+    {
+     "name": "minigame",
+     "source": "lp:*",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "*lockpick*"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": true,
+   "note": ""
+  },
+  {
+   "id": "magic.cast",
+   "family": "magic",
+   "title": "Сотворение заклинания",
+   "importance": 0.9,
+   "events": [
+    {
+     "type": "casting",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "channeling",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "doingmagic",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "outmana",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "spelllight",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "spellrelease",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "magic.cast"
+   ],
+   "montages": 186,
+   "montagesSeen": 80,
+   "phases": [
+    {
+     "name": "launch",
+     "source": "spellrelease:start (State.LaunchingSpell)",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [
+    {
+     "context": {},
+     "group": "SFX_Magic_Light_Cast_Launch_LayerA",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "name contains Magic_Light_Cast_Launch",
+     "fmodEvent": "SFX/Magic/Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+    },
+    {
+     "context": {},
+     "group": "SFX_Magic_Light_Cast_Launch_LayerB",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "name contains Magic_Light_Cast_Launch",
+     "fmodEvent": "SFX/Magic/Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+    },
+    {
+     "context": {},
+     "group": "SFX_Magic_Light_Cast_Launch_LayerC",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "name contains Magic_Light_Cast_Launch",
+     "fmodEvent": "SFX/Magic/Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+    },
+    {
+     "context": {},
+     "group": "SFX_Magic_Light_Cast_Launch_LayerD",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "name contains Magic_Light_Cast_Launch",
+     "fmodEvent": "SFX/Magic/Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+    },
+    {
+     "context": {},
+     "group": "SFX_Magic_Light_Cast_Launch_LayerE",
+     "samples": 1,
+     "confidence": "medium",
+     "why": "name contains Magic_Light_Cast_Launch",
+     "fmodEvent": "SFX/Magic/Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+    }
+   ],
+   "method": "texture",
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [
+    "pilot-magic-cast-spell-launch"
+   ],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "water",
+   "family": "movement",
+   "title": "Вода: вход, ныряние, всплытие",
+   "importance": 1.0,
+   "events": [
+    {
+     "type": "deepwater",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "dive",
+     "status": "TESTED"
+    },
+    {
+     "type": "drowning",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "midwater",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "shallowwater",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "swim",
+     "status": "TESTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [
+    {
+     "name": "entry",
+     "source": "swim:start",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [
+    "dive",
+    "surface",
+    "splash",
+    "wade"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "item.use",
+   "family": "interaction",
+   "title": "Использование предметов",
+   "importance": 0.5,
+   "events": [
+    {
+     "type": "carrying",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "consuming",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "iteminhand",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [
+    "item.use",
+    "item.pickup"
+   ],
+   "montages": 295,
+   "montagesSeen": 1230,
+   "phases": [
+    {
+     "name": "use",
+     "source": "consuming:start",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [
+    {
+     "context": {},
+     "group": "SFX_ITEMS_Consumables_Potions_Drink_Bottle",
+     "samples": 6,
+     "confidence": "medium",
+     "why": "name contains ITEMS_Consumables_Potions_Drink",
+     "fmodEvent": "SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Bottle"
+    },
+    {
+     "context": {},
+     "group": "SFX_ITEMS_Consumables_Potions_Drink_Slurp",
+     "samples": 4,
+     "confidence": "medium",
+     "why": "name contains ITEMS_Consumables_Potions_Drink",
+     "fmodEvent": "SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Slurp"
+    },
+    {
+     "context": {},
+     "group": "SFX_ITEMS_Consumables_Potions_Drink_Swallow",
+     "samples": 3,
+     "confidence": "medium",
+     "why": "name contains ITEMS_Consumables_Potions_Drink",
+     "fmodEvent": "SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Swallow"
+    }
+   ],
+   "method": "texture",
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": ""
+  },
+  {
+   "id": "status.effects",
+   "family": "status",
+   "title": "Состояния: горение, заморозка, электричество, опьянение",
+   "importance": 0.6,
+   "events": [
+    {
+     "type": "burning",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "drunk_high",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "electrified",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "frozen",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "paralyzed",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "stunned",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "transformed",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "weed_high",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [
+    {
+     "name": "state",
+     "source": "status tags",
+     "timing": "exact"
+    }
+   ],
+   "sounds": [],
+   "method": "texture",
+   "approvedRules": [
+    "auto-burning"
+   ],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "auto-burning (continuous texture while the hero burns) approved by the user 15.11.2026: 'very cool'"
+  },
+  {
+   "id": "talk",
+   "family": "ambient",
+   "title": "Разговор",
+   "importance": 0.0,
+   "events": [
+    {
+     "type": "conversation",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "speak",
+     "status": "IMPLEMENTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "no vibration needed (rule 5): a conversation is not a physical event"
+  },
+  {
+   "id": "stance",
+   "family": "context",
+   "title": "Боевая стойка, оружие в руках (контекст)",
+   "importance": 0.0,
+   "events": [
+    {
+     "type": "combat",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "controlled",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "execute",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "executing",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "hiding",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "invulnerable",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "itemdraw",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "lockmove",
+     "status": "IMPLEMENTED"
+    },
+    {
+     "type": "weapon",
+     "status": "TESTED"
+    }
+   ],
+   "montageClasses": [],
+   "montages": 0,
+   "montagesSeen": 0,
+   "phases": [],
+   "sounds": [],
+   "method": null,
+   "approvedRules": [],
+   "autoRules": [],
+   "candidateRules": [],
+   "finished": false,
+   "note": "context for other actions, not an effect of its own"
+  }
+ ]
+}

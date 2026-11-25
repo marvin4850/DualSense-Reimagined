@@ -1,0 +1,468 @@
+{
+  "pack": "failure-preview",
+  "version": 3,
+  "durationMs": 2400,
+  "animationMeasurement": {
+    "method": "Official ModKit: UAnimSequence.GetPlayLength(), RateScale",
+    "gameBuild": "Build106_CL176207",
+    "assets": {
+      "A_Lockpicking_BrokenPick": {
+        "lengthMs": 2400,
+        "rateScale": 1.0
+      },
+      "A_Lockpicking_BrokenPick_Out": {
+        "lengthMs": 1000,
+        "rateScale": 1.0
+      },
+      "A_Lockpicking_Out": {
+        "lengthMs": 1333,
+        "rateScale": 1.0
+      }
+    },
+    "sourceSha256": "5f24f8c1c9224178f01a8a982ba1f0ad833c2c7cfa348c74804568387723f185",
+    "fullRuntimeFailureWindowMeasured": false
+  },
+  "description": "Important unpleasant break of ONE lockpick: palpable tension, one hard saturated metal fracture plus one short coincident body impulse, abrupt decay. No cascades or repeated low waves. 2400 ms phase includes silent audition padding.",
+  "rules": [
+    {
+      "id": "preview-failure-1",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "1"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Хлёсткий излом — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 300,
+            "intensity": 0.28,
+            "f0": 160,
+            "f1": 235,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 320,
+            "freqHz": 245,
+            "intensity": 0.65,
+            "ms": 140,
+            "tauMs": 27,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 3.5,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 320,
+            "freqHz": 95,
+            "intensity": 0.2,
+            "durationMs": 110,
+            "lengthMs": 110,
+            "decayTauMs": 23,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 320,
+            "freqHz": 560,
+            "intensity": 0.05,
+            "ms": 130,
+            "tauMs": 25,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "preview-failure-2",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "2"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Жёсткий перелом — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 380,
+            "intensity": 0.32,
+            "f0": 150,
+            "f1": 225,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 400,
+            "freqHz": 210,
+            "intensity": 0.67,
+            "ms": 170,
+            "tauMs": 33,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 4,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 400,
+            "freqHz": 78,
+            "intensity": 0.18,
+            "durationMs": 120,
+            "lengthMs": 120,
+            "decayTauMs": 25,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 400,
+            "freqHz": 520,
+            "intensity": 0.045,
+            "ms": 150,
+            "tauMs": 30,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "preview-failure-3",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "3"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Звонкий разрыв — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 240,
+            "intensity": 0.27,
+            "f0": 185,
+            "f1": 285,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 260,
+            "freqHz": 285,
+            "intensity": 0.64,
+            "ms": 140,
+            "tauMs": 26,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 3.2,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 260,
+            "freqHz": 110,
+            "intensity": 0.24,
+            "durationMs": 95,
+            "lengthMs": 95,
+            "decayTauMs": 20,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 260,
+            "freqHz": 680,
+            "intensity": 0.05,
+            "ms": 140,
+            "tauMs": 28,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "preview-failure-4",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "4"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Излом под нагрузкой — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 560,
+            "intensity": 0.34,
+            "f0": 150,
+            "f1": 215,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 580,
+            "freqHz": 195,
+            "intensity": 0.67,
+            "ms": 185,
+            "tauMs": 38,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 4.2,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 580,
+            "freqHz": 85,
+            "intensity": 0.2,
+            "durationMs": 130,
+            "lengthMs": 130,
+            "decayTauMs": 26,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 580,
+            "freqHz": 430,
+            "intensity": 0.05,
+            "ms": 160,
+            "tauMs": 32,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "preview-failure-5",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "5"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Ломкий хруст — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 320,
+            "intensity": 0.3,
+            "f0": 165,
+            "f1": 250,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 340,
+            "freqHz": 235,
+            "intensity": 0.64,
+            "ms": 150,
+            "tauMs": 29,
+            "attackMs": 0.25,
+            "partial": 2.2,
+            "partialGain": 0.5,
+            "partialTauMs": 13,
+            "drive": 4.8,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 340,
+            "freqHz": 70,
+            "intensity": 0.23,
+            "durationMs": 110,
+            "lengthMs": 110,
+            "decayTauMs": 22,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 340,
+            "freqHz": 575,
+            "intensity": 0.04,
+            "ms": 140,
+            "tauMs": 25,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    },
+    {
+      "id": "preview-failure-6",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "6"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "Резкий обрыв — натяжение, один жёсткий излом и резкий спад · фаза 2400 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "durationMs": 180,
+            "intensity": 0.29,
+            "f0": 170,
+            "f1": 230,
+            "curve": 1.15,
+            "pulseHz": 0,
+            "noise": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 200,
+            "freqHz": 185,
+            "intensity": 0.65,
+            "ms": 160,
+            "tauMs": 32,
+            "attackMs": 0.25,
+            "partial": 3.7,
+            "partialGain": 0.4,
+            "partialTauMs": 8,
+            "drive": 3.6,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 200,
+            "freqHz": 95,
+            "intensity": 0.21,
+            "durationMs": 100,
+            "lengthMs": 100,
+            "decayTauMs": 20,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 200,
+            "freqHz": 470,
+            "intensity": 0.05,
+            "ms": 130,
+            "tauMs": 25,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    }
+  ],
+  "auditionOnlyPadding": true,
+  "audibleWindowMaxMs": 1000
+}

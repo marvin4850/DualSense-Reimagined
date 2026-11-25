@@ -1,0 +1,327 @@
+{
+  "pack": "breadth-special",
+  "description": "Baseline physical situations, OFF pending game test. No automatic perceptual approval.",
+  "rules": [
+    {
+      "id": "breadth-magic-teleport-vanish",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_teleport_vanish"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.56,
+            "durationMs": 130,
+            "packetMs": 12,
+            "gapMs": 7,
+            "freqLo": 100,
+            "freqHi": 300,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Release",
+            "intensity": 0.32,
+            "durationMs": 160,
+            "freqHz": 90,
+            "noise": 0.35,
+            "delayMs": 65
+          }
+        ]
+      },
+      "situation": "magic.teleport.vanish",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Растворение тела при телепортации | точка игрового FX; профиль release; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-teleport-appear",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_teleport_appear"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Release",
+        "intensity": 0.56,
+        "durationMs": 190,
+        "freqHz": 145,
+        "noise": 0.16,
+        "attackMs": 7,
+        "decayTauMs": 55
+      },
+      "situation": "magic.teleport.appear",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Появление тела после телепортации | точка игрового FX; профиль energy; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-transform-begin",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_transform_begin"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "magic.transform.begin",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Начало физического превращения тела | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-transform-land",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_transform_land"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "magic.transform.land",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Опора нового тела после превращения | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-untransform",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_untransform"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.56,
+            "durationMs": 130,
+            "packetMs": 12,
+            "gapMs": 7,
+            "freqLo": 100,
+            "freqHi": 300,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Release",
+            "intensity": 0.32,
+            "durationMs": 160,
+            "freqHz": 90,
+            "noise": 0.35,
+            "delayMs": 65
+          }
+        ]
+      },
+      "situation": "magic.untransform",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Возврат из превращения | точка игрового FX; профиль release; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-control-enter",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_control_enter"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Release",
+        "intensity": 0.56,
+        "durationMs": 190,
+        "freqHz": 145,
+        "noise": 0.16,
+        "attackMs": 7,
+        "decayTauMs": 55
+      },
+      "situation": "magic.control.enter",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Установить ментальный контакт | точка игрового FX; профиль energy; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-magic-control-release",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "magic_control_release"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.56,
+            "durationMs": 130,
+            "packetMs": 12,
+            "gapMs": 7,
+            "freqLo": 100,
+            "freqHi": 300,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Release",
+            "intensity": 0.32,
+            "durationMs": 160,
+            "freqHz": 90,
+            "noise": 0.35,
+            "delayMs": 65
+          }
+        ]
+      },
+      "situation": "magic.control.release",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Освободить ментальный контакт | точка игрового FX; профиль release; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-special-bridge-pull",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "special_bridge_pull"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.46,
+        "freqHz": 140,
+        "ms": 85,
+        "tauMs": 25,
+        "partial": 2,
+        "partialGain": 0.3,
+        "count": 2,
+        "intervalMs": 60,
+        "ampStep": 0.7
+      },
+      "situation": "special.bridge.pull",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Начать тянуть мост телекинезом | точка игрового FX; профиль mechanism; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-special-bridge-release",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "special_bridge_release"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.56,
+            "durationMs": 130,
+            "packetMs": 12,
+            "gapMs": 7,
+            "freqLo": 100,
+            "freqHi": 300,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Release",
+            "intensity": 0.32,
+            "durationMs": 160,
+            "freqHz": 90,
+            "noise": 0.35,
+            "delayMs": 65
+          }
+        ]
+      },
+      "situation": "special.bridge.release",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Отпустить телекинетический мост | точка игрового FX; профиль release; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-special-altar-heart",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "special_altar_heart"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "intensity": 0.68,
+            "durationMs": 100,
+            "freqHz": 135,
+            "edgeHz": 390,
+            "edge": 0.3,
+            "noise": 0.15
+          },
+          {
+            "preset": "Tick",
+            "intensity": 0.25,
+            "freqHz": 270,
+            "ms": 95,
+            "tauMs": 27,
+            "delayMs": 20
+          }
+        ]
+      },
+      "situation": "special.altar.heart",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Разрушить сердце у алтаря | точка игрового FX; профиль metal; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-special-stonehenge-arm",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "special_stonehenge_arm"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.75,
+        "durationMs": 150,
+        "freqHz": 70,
+        "edgeHz": 230,
+        "edge": 0.22,
+        "noise": 0.26
+      },
+      "situation": "special.stonehenge.arm",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Контакт рычага Стоунхенджа | точка игрового FX; профиль stone; CANDIDATE, live hook unverified"
+    }
+  ]
+}

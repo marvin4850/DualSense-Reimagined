@@ -1,0 +1,428 @@
+{
+  "pack": "lockpick-selected",
+  "version": 2,
+  "description": "Pinned height triad + audible per-input contact and step-end marker. Original trigger strengths unchanged; USB game validation pending.",
+  "disableRules": [
+    "lp-guide-sel",
+    "lp-guide-plate",
+    "lp-unlock"
+  ],
+  "rules": [
+    {
+      "id": "lp-height-down",
+      "event": "lp:update",
+      "where": {
+        "ph": "guide",
+        "kind": "sel",
+        "side": "L"
+      },
+      "priority": "high",
+      "duckOthers": 0.4,
+      "continuous": {
+        "loop": false,
+        "maxMs": 260,
+        "stopOn": [],
+        "stopWhen": [
+          "lp:update",
+          "lp:complete",
+          "lp:cancel"
+        ],
+        "stopFadeMs": 8,
+        "stopIf": "phase != 'update' || ph == 'navpress' || ph == 'press' || ph == 'sel' || ph == 'guide' || ph == 'skill' || ph == 'strain' || ph == 'motion' || ph == 'settle' || ph == 'leave' || ph == 'device' || ph == 'ready'"
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 240,
+            "ms": 14,
+            "attackMs": 0.4,
+            "tauMs": 4,
+            "partial": 2.76,
+            "partialGain": 0.25,
+            "drive": 1.4,
+            "intensity": 0.28
+          },
+          {
+            "preset": "Grain",
+            "delayMs": 8,
+            "durationMs": 60,
+            "packetMs": 12,
+            "gapMs": 2,
+            "freqLo": 160,
+            "freqHi": 240,
+            "shape": "sharp",
+            "fadeMs": 4,
+            "accentMs": 18,
+            "accentGain": 1.25,
+            "intensity": 0.29,
+            "seed": 21
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 74,
+            "freqHz": 220,
+            "ms": 35,
+            "attackMs": 0.4,
+            "tauMs": 10,
+            "partial": 2.76,
+            "partialGain": 0.35,
+            "partialTauMs": 4,
+            "drive": 2.7,
+            "intensity": 0.54,
+            "count": 3,
+            "intervalMs": 18,
+            "ampStep": -0.22,
+            "freqStep": -0.06
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 114,
+            "freqHz": 80,
+            "durationMs": 35,
+            "attackMs": 2,
+            "decayTauMs": 12,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.16
+          }
+        ]
+      },
+      "note": "Связанные пластины — сухой каскад и общий упор"
+    },
+    {
+      "id": "lp-height-up",
+      "event": "lp:update",
+      "where": {
+        "ph": "guide",
+        "kind": "sel",
+        "side": "R"
+      },
+      "priority": "high",
+      "duckOthers": 0.4,
+      "continuous": {
+        "loop": false,
+        "maxMs": 260,
+        "stopOn": [],
+        "stopWhen": [
+          "lp:update",
+          "lp:complete",
+          "lp:cancel"
+        ],
+        "stopFadeMs": 8,
+        "stopIf": "phase != 'update' || ph == 'navpress' || ph == 'press' || ph == 'sel' || ph == 'guide' || ph == 'skill' || ph == 'strain' || ph == 'motion' || ph == 'settle' || ph == 'leave' || ph == 'device' || ph == 'ready'"
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 310,
+            "ms": 14,
+            "attackMs": 0.4,
+            "tauMs": 4,
+            "partial": 2.76,
+            "partialGain": 0.35,
+            "drive": 1.2,
+            "intensity": 0.28
+          },
+          {
+            "preset": "Charge",
+            "delayMs": 8,
+            "durationMs": 90,
+            "f0": 130,
+            "f1": 260,
+            "curve": 0.8,
+            "noise": 0,
+            "intensity": 0.47
+          },
+          {
+            "preset": "Grain",
+            "delayMs": 16,
+            "durationMs": 75,
+            "packetMs": 5,
+            "gapMs": 1,
+            "freqLo": 210,
+            "freqHi": 300,
+            "shape": "sharp",
+            "fadeMs": 5,
+            "intensity": 0.1,
+            "seed": 32
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 104,
+            "freqHz": 260,
+            "ms": 105,
+            "attackMs": 0.4,
+            "tauMs": 26,
+            "partial": 2.76,
+            "partialGain": 0.45,
+            "partialTauMs": 14,
+            "drive": 1.6,
+            "intensity": 0.64
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 108,
+            "freqHz": 95,
+            "durationMs": 35,
+            "attackMs": 2,
+            "decayTauMs": 12,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.14
+          }
+        ]
+      },
+      "note": "Пружинный язычок — глубокое взведение и длинное освобождение"
+    },
+    {
+      "id": "lp-height-found",
+      "event": "lp:update",
+      "where": {
+        "ph": "guide",
+        "kind": "plate"
+      },
+      "priority": "high",
+      "duckOthers": 0.4,
+      "continuous": {
+        "loop": false,
+        "maxMs": 260,
+        "stopOn": [],
+        "stopWhen": [
+          "lp:update",
+          "lp:complete",
+          "lp:cancel"
+        ],
+        "stopFadeMs": 8,
+        "stopIf": "phase != 'update' || ph == 'navpress' || ph == 'press' || ph == 'sel' || ph == 'guide' || ph == 'skill' || ph == 'strain' || ph == 'motion' || ph == 'settle' || ph == 'leave' || ph == 'device' || ph == 'ready'"
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "freqHz": 85,
+            "durationMs": 125,
+            "attackMs": 2,
+            "decayTauMs": 25,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.43,
+            "delayMs": 0
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 200,
+            "ms": 40,
+            "attackMs": 0.4,
+            "tauMs": 10,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.57,
+            "delayMs": 14
+          }
+        ]
+      },
+      "note": "Глубокая посадка — весомое оседание и глухой зацеп"
+    },
+    {
+      "id": "lp-select",
+      "event": "lp:update",
+      "where": {
+        "ph": "sel"
+      },
+      "priority": "low",
+      "cooldownMs": 40,
+      "path": "hd",
+      "effect": {
+        "preset": "Tick",
+        "freqHz": 140,
+        "ms": 14,
+        "attackMs": 1,
+        "tauMs": 4,
+        "intensity": 0.16
+      },
+      "note": "Faint physical seating on observed cursor change; separate from the new immediate per-input contact. Retains old journal compatibility."
+    },
+    {
+      "id": "lp-nav-contact",
+      "event": "lp:update",
+      "where": {
+        "ph": "navpress",
+        "edge": ["!1"]
+      },
+      "priority": "normal",
+      "effect": {
+        "preset": "Tick",
+        "freqHz": 180,
+        "ms": 30,
+        "attackMs": 0.5,
+        "tauMs": 10,
+        "partial": 2.76,
+        "partialGain": 0.25,
+        "partialTauMs": 4,
+        "drive": 2,
+        "intensity": 0.52
+      },
+      "note": "Every received UI navigation press gets a short contact. No cooldown or debounce. It confirms input receipt, not an actual plate change. v38: not at the end stop (edge=1 -> lp-nav-stop)."
+    },
+    {
+      "id": "lp-nav-stop",
+      "event": "lp:update",
+      "where": {
+        "ph": "navpress",
+        "edge": "1"
+      },
+      "priority": "high",
+      "effect": {
+        "layers": [
+          { "preset": "Tick", "freqHz": 95, "ms": 70, "attackMs": 0.5, "tauMs": 20, "drive": 3, "pairGapMs": 48, "pairGain": 0.3,
+            "panFrom": "=k == 'W' ? 0.75 : -0.75", "intensity": 0.8 }
+        ],
+        "motor": { "preset": "Rumble", "steps": [[0, "=k == 'W' ? 220 : 0", "=k == 'W' ? 0 : 220", 45], [48, "=k == 'W' ? 90 : 0", "=k == 'W' ? 0 : 90", 25]] }
+      },
+      "note": "v38 (user 15.11.2026, all profiles): L1 on the bottom plate / R1 on the top one - the selector hits the mechanism's end stop: a dull heavy thud with a small rebound in the hand of the pressed button (R1 right, L1 left), instead of the light input contact."
+    },
+    {
+      "id": "lp-step-end",
+      "event": "lp:update",
+      "where": {
+        "ph": "leave"
+      },
+      "pad": {
+        "pulse": "knock",
+        "pulseMs": 65,
+        "note": "v27: one knock on both triggers together with the body cue (trigger vibration, then the state comes back)"
+      },
+      "priority": "high",
+      "duckOthers": 0.4,
+      "continuous": {
+        "loop": false,
+        "maxMs": 260,
+        "stopOn": [],
+        "stopWhen": [
+          "lp:update",
+          "lp:complete",
+          "lp:cancel"
+        ],
+        "stopFadeMs": 8,
+        "stopIf": "phase != 'update' || ph == 'navpress' || ph == 'press' || ph == 'sel' || ph == 'guide' || ph == 'skill' || ph == 'strain' || ph == 'motion' || ph == 'settle' || ph == 'leave' || ph == 'device' || ph == 'ready'"
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "durationMs": 40,
+            "packetMs": 8,
+            "gapMs": 1,
+            "freqLo": 240,
+            "freqHi": 330,
+            "shape": "sharp",
+            "fadeMs": 4,
+            "intensity": 0.26,
+            "seed": 17
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 32,
+            "freqHz": 210,
+            "ms": 45,
+            "attackMs": 0.4,
+            "tauMs": 9,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "drive": 2,
+            "intensity": 0.62
+          }
+        ]
+      },
+      "note": "Current planned step is over: stop turning this plate and navigate to the next target. Not a permanent completed-plate claim."
+    },
+    {
+      "id": "lp-press-tail",
+      "event": "lp:update",
+      "where": {
+        "ph": "press",
+        "valid": [
+          "1",
+          "unknown"
+        ],
+        "via": "pad"
+      },
+      "priority": "normal",
+      "pad": {
+        "pulse": "tail",
+        "pulseSide": "=dir",
+        "pulseMs": 150,
+        "pulseDelayMs": 5,
+        "pulseHold": true,
+        "note": "v29 'Сухой спуск': on the pulled trigger only, 5 ms after the fire point, 150 ms of vibration 0/3/40 Hz that replaces its profile and always plays to the end; then off while the finger holds, the profile again after ph=trigup"
+      },
+      "note": "Every real L2/R2 plate move: Weapon resistance 4->5 -> dry release -> vibration tail on the same trigger."
+    },
+    {
+      "id": "lp-trigger-up",
+      "event": "lp:update",
+      "where": {
+        "ph": "trigup"
+      },
+      "priority": "normal",
+      "pad": {
+        "release": "=side",
+        "note": "v29: the finger let go below 0.20: a trigger parked after its tail gets its profile (click / offpath) back"
+      },
+      "note": "Re-arm of the trigger click after the release; nothing else."
+    },
+    {
+      "id": "lp-lives",
+      "event": "lp:update",
+      "where": {
+        "ph": "lives"
+      },
+      "priority": "normal",
+      "light": {
+        "leds": "=leds",
+        "color": "=bar",
+        "note": "v30: the pick's life - 5 player LEDs = lives - 1, the lightbar = the last life (white, red on the last one, off when broken)"
+      },
+      "note": "Pick life from the mod (LockpickDurability: Untrained 2, Trained 4, Master 6). Reset with the triggers on lp:complete / menu / watchdog / exit."
+    },
+    {
+      "id": "lp-unlock-chain",
+      "event": "lp:complete",
+      "where": {
+        "res": "open"
+      },
+      "priority": "critical",
+      "effect": {
+        "layers": [
+          {"preset": "Tick", "delayMs": 0, "freqHz": 305, "intensity": 0.44, "count": 1, "intervalMs": 60, "ms": 75, "tauMs": 18, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5},
+          {"preset": "Impact", "delayMs": 18, "durationMs": 145, "freqHz": 120, "intensity": 0.17, "decayTauMs": 27, "attackMs": 4, "weight": 1, "edge": 0, "noise": 0},
+          {"preset": "Tick", "delayMs": 130, "freqHz": 350, "intensity": 0.32, "count": 3, "intervalMs": 47, "ms": 70, "tauMs": 16, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5, "ampStep": -0.09},
+          {"preset": "Grain", "delayMs": 210, "durationMs": 270, "intensity": 0.15, "freqLo": 200, "freqHi": 300, "packetMs": 14, "gapMs": 6, "shape": "sharp", "fadeMs": 40, "seed": 401},
+          {"preset": "Tick", "delayMs": 500, "freqHz": 290, "intensity": 0.36, "count": 3, "intervalMs": 58, "ms": 80, "tauMs": 18, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5, "freqStep": -0.06},
+          {"preset": "Grain", "delayMs": 590, "durationMs": 300, "intensity": 0.17, "freqLo": 165, "freqHi": 270, "packetMs": 19, "gapMs": 7, "shape": "sharp", "fadeMs": 40, "seed": 402},
+          {"preset": "Tick", "delayMs": 940, "freqHz": 245, "intensity": 0.4, "count": 3, "intervalMs": 74, "ms": 95, "tauMs": 24, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5, "freqStep": -0.055},
+          {"preset": "Impact", "delayMs": 960, "durationMs": 200, "freqHz": 98, "intensity": 0.22, "decayTauMs": 45, "attackMs": 4, "weight": 1, "edge": 0, "noise": 0},
+          {"preset": "Grain", "delayMs": 1080, "durationMs": 530, "intensity": 0.2, "freqLo": 145, "freqHi": 245, "packetMs": 26, "gapMs": 7, "shape": "sharp", "fadeMs": 40, "seed": 403},
+          {"preset": "Tick", "delayMs": 1410, "freqHz": 210, "intensity": 0.36, "count": 3, "intervalMs": 91, "ms": 115, "tauMs": 28, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5, "freqStep": -0.06},
+          {"preset": "Charge", "delayMs": 1620, "durationMs": 260, "intensity": 0.18, "f0": 80, "f1": 145, "curve": 1.6, "pulseHz": 10, "noise": 0},
+          {"preset": "Tick", "delayMs": 1900, "freqHz": 280, "intensity": 0.39, "count": 1, "intervalMs": 60, "ms": 100, "tauMs": 25, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5},
+          {"preset": "Impact", "delayMs": 1915, "durationMs": 350, "freqHz": 73, "intensity": 0.45, "decayTauMs": 83, "attackMs": 4, "weight": 1, "edge": 0, "noise": 0},
+          {"preset": "Tick", "delayMs": 2100, "freqHz": 230, "intensity": 0.24, "count": 4, "intervalMs": 82, "ms": 135, "tauMs": 31, "attackMs": 0.8, "partial": 2.76, "partialGain": 0.22, "partialTauMs": 7, "drive": 1.5, "ampStep": -0.2},
+          {"preset": "Continuous", "delayMs": 2100, "durationMs": 400, "intensity": 0.085, "freqHz": 115, "noise": 0, "fadeMs": 180, "pulseHz": 7, "depth": 0.65}
+        ],
+        "motor": { "preset": "Rumble", "steps": [[0, 0, 161, 60], [90, 147, 0, 30], [140, 147, 0, 30], [190, 147, 0, 30], [250, 255, 255, 120]] }
+      },
+      "pad": {
+        "reset": true
+      },
+      "note": "v28: lock opened - 'Цепь освобождения', 2500 ms, chosen by the user (haptics/experiments/unlock-selection.json = unlock-gallery v3 preview-unlock-4, commit 23983a7). Triggers off. Bluetooth: the motor version of the old lp-unlock."
+    }
+  ]
+}

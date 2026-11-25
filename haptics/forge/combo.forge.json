@@ -1,0 +1,56 @@
+// Combo attacks (user 19.11.2026): every blow of a Trained / Master combo (A_Man_<weapon>_<Tr|Ma>_A_<from>_<to>NN_Montage)
+// gets its own pulse; strength grows blow by blow and peaks on the LAST blow of the chain (no montage continues it).
+// The peak itself is the weapon material of bank 'finisher' (cut/chop/crush/wood/punch) preceded by 'surge' (crescendo).
+// Untrained has no combos (the game's Un sets are openers only) - untouched. Rules: tools/combo_pack.py -> packs/95-combo.json.
+// BT rule (AGENTS §3.11): carriers <= 140 Hz, meaning in strength / rhythm / length, nothing important below 10 %.
+{
+ "bank": "combo",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.85 },
+  "check": { "maxSub": 0.25, "maxHigh": 0.04, "minCore": 0.5, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": { "A": { "label": "combo build-up to the peak blow", "vars": {} } },
+ "slots": {
+  "beat1": {
+   "role": "First blow of a combo (opener): short, light push of the swing - 'the combo has started'",
+   "lengthMs": 120, "maxLengthMs": 160,
+   "layers": [
+    { "type": "modal", "f": 95, "attackMs": 3, "glide": 0.9, "modes": [[1, 1, 30]], "durMs": 90, "gain": 0.9, "at": 0 },
+    { "type": "noise", "durMs": 100, "freq": 110, "freqEnd": 85, "q": 1.4, "attackMs": 6, "releaseMs": 60, "gain": 0.4 }
+   ],
+   "normalize": { "peak": 0.75, "rms20": 0.36 },
+   "check": { "minMs": 50, "maxMs": 160, "rms20Min": 0.25, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "beat2": {
+   "role": "Middle blow of a 3-blow combo: deeper and longer than beat1 - the combo gains weight",
+   "lengthMs": 170, "maxLengthMs": 220,
+   "layers": [
+    { "type": "modal", "f": 78, "attackMs": 3, "glide": 0.86, "modes": [[1, 1, 42]], "durMs": 140, "gain": 1.0, "at": 0 },
+    { "type": "noise", "durMs": 150, "freq": 100, "freqEnd": 70, "q": 1.3, "attackMs": 8, "releaseMs": 80, "gain": 0.5 }
+   ],
+   "normalize": { "peak": 0.82, "rms20": 0.45 },
+   "check": { "minMs": 70, "maxMs": 220, "rms20Min": 0.32, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "flourish": {
+   "role": "Master's extra beat 60 ms after each combo blow: a quick second tap (two beats = mastery, same cue as master finishers)",
+   "lengthMs": 80, "maxLengthMs": 110,
+   "layers": [
+    { "type": "modal", "f": 110, "attackMs": 2, "glide": 0.92, "modes": [[1, 1, 22]], "durMs": 60, "gain": 0.9, "at": 0 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 30, "maxMs": 110, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "surge": {
+   "role": "Crescendo right before the peak blow of a combo: pressure rises for ~160 ms and breaks into the blow",
+   "lengthMs": 180, "maxLengthMs": 220,
+   "layers": [
+    { "type": "noise", "durMs": 170, "freq": 70, "freqEnd": 120, "q": 1.5, "amRate": 22, "amDepth": 0.3, "attackMs": 150, "releaseMs": 12, "gain": 0.8 },
+    { "type": "modal", "f": 60, "attackMs": 140, "glide": 1.4, "modes": [[1, 1, 25]], "durMs": 165, "gain": 0.6, "at": 0 }
+   ],
+   "normalize": { "peak": 0.75, "rms20": 0.3 },
+   "check": { "minMs": 80, "maxMs": 220, "rms20Min": 0.15, "btMinCorr": 0.5, "balance": "center" }
+  }
+ }
+}

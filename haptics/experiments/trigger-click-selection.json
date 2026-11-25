@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "selected": 2,
+  "name": "Сухой спуск",
+  "confirmedBy": "user",
+  "userFeedback": "Оставляем сухой спуск; добавить короткий высокочастотный HD-щелчок одновременно с триггером",
+  "mechanicalClickConfirmed": true,
+  "vibrationConfirmed": true,
+  "appliedToGame": true,
+  "variant": {
+    "name": "Сухой спуск",
+    "mode": "weapon",
+    "pos": 4,
+    "end": 5,
+    "strength": 8,
+    "snap": 8,
+    "pulseAmp": 3,
+    "pulseHz": 40,
+    "pulseMs": 150,
+    "delayMs": 5,
+    "fire": 0.58
+  },
+  "previousVariant": {
+    "name": "Сухой спуск",
+    "mode": "weapon",
+    "pos": 4,
+    "end": 5,
+    "strength": 8,
+    "snap": 8,
+    "pulseAmp": 3,
+    "pulseHz": 40,
+    "pulseMs": 120,
+    "delayMs": 5,
+    "fire": 0.58
+  },
+  "vibrationProbeConfirmed": true,
+  "pendingTest": "After moving zero rumble before HD init, Cross/Space plays same HD cue alone; trigger settings unchanged",
+  "latestFeedback": "HD-щелчка нет, работают только триггеры",
+  "vibration120msFelt": true,
+  "hdConfirmed": false,
+  "hdEffect": {
+    "layers": [
+      {
+        "preset": "Tick",
+        "freqHz": 360,
+        "ms": 40,
+        "intensity": 0.45,
+        "attackMs": 0.6,
+        "tauMs": 9,
+        "partial": 2.76,
+        "partialGain": 0.16,
+        "partialTauMs": 3,
+        "drive": 1.25,
+        "count": 1
+      }
+    ]
+  }
+}

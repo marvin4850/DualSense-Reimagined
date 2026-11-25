@@ -1,0 +1,92 @@
+// Crafting test v1 (16.11.2026): forge station + wall-torch extinguish. Every slot = the game's own sound for that animation notify
+// (NH_Interact_Forge_Montage / A_Man_UnLitTorch_Temp_Montage notify table, tools/anim_notifies.py + .scratch notes) -> forge method.
+// Timing lives in packs/75-crafting-test.json (delays from the montage notify times), not here.
+{
+ "bank": "crafting",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.85 },
+  "check": { "maxSub": 0.12, "maxHigh": 0.04, "minCore": 0.6, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": { "A": { "label": "from game sounds", "vars": {} } },
+ "slots": {
+  "forge_blade_in": {
+   "role": "Forge: iron rod pushed into the coal bed (SFX_OBJ_Forging_Draw). v2 (game96: felt like crackling fire): one dense push - contact thud + smooth low friction, no grain",
+   "lengthMs": 650, "maxLengthMs": 750,
+   "layers": [
+    { "type": "modal", "f": 95, "attackMs": 3, "glide": 0.92, "modes": [[1, 1, 28], [2.1, 0.12, 6]], "durMs": 140, "gain": 0.9, "at": 0 },
+    { "type": "audio", "sound": "297_SFX_OBJ_Forging_Draw_L1_01", "method": "friction", "carrierHz": 110, "releaseMs": 60, "maxMs": 560, "gain": 1.1 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.4 },
+   "check": { "minMs": 120, "maxMs": 700, "rms20Min": 0.3, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_blade_out": {
+   "role": "Forge: blade pulled out / put away (SFX_OBJ_Forging_Shelve)",
+   "lengthMs": 450, "maxLengthMs": 550,
+   "layers": [ { "type": "audio", "sound": "6093_SFX_OBJ_Forging_Shelve_L1_01", "method": "scrape", "carrierHz": 170, "compress": 0.55, "stick": 0.9, "maxMs": 440 } ],
+   "normalize": { "peak": 0.85, "rms20": 0.36 },
+   "check": { "minMs": 80, "maxMs": 550, "rms20Min": 0.3, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_coal_move": {
+   "role": "Forge: raking the coals (SFX_OBJ_Forging_CoalMove). v2: background slide, not a 24-tick rattle (read as crackling fire in game96)",
+   "lengthMs": 900, "maxLengthMs": 1000,
+   "layers": [ { "type": "audio", "sound": "3401_SFX_OBJ_Forging_CoalMove_L1_01", "method": "friction", "carrierHz": 120, "releaseMs": 50, "maxMs": 850 } ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 300, "maxMs": 1000, "rms20Min": 0.22, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_coal_poke": {
+   "role": "Forge: poking the coals (SFX_OBJ_Forging_CoalPoke) - short knocks",
+   "lengthMs": 600, "maxLengthMs": 700,
+   "layers": [ { "type": "audio", "sound": "1645_SFX_OBJ_Forging_CoalPoke_L1_01", "method": "impact", "grit": 0.5, "maxMs": 600 } ],
+   "normalize": { "peak": 0.85, "rms20": 0.42 },
+   "check": { "minMs": 60, "maxMs": 700, "rms20Min": 0.34, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_bellows_press": {
+   "role": "Forge: bellows pressed - air out + fire flare (SFX_OBJ_Forging_AirBellowsSmall_Out + AirBellows_Fire)",
+   "lengthMs": 520, "maxLengthMs": 600,
+   "layers": [
+    { "type": "audio", "sound": "1212_SFX_OBJ_Forging_AirBellow_Out_L1_01", "method": "friction", "carrierHz": 95, "releaseMs": 30, "maxMs": 420 },
+    { "type": "audio", "sound": "6245_SFX_OBJ_Forging_AirBellow_Fire_L1_01", "method": "texture", "carrierHz": 120, "releaseMs": 40, "am": 0.6, "maxMs": 480, "gain": 0.7 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.38 },
+   "check": { "minMs": 150, "maxMs": 600, "rms20Min": 0.3, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_bellows_draw": {
+   "role": "Forge: bellows drawing air back in (SFX_OBJ_Forging_AirBellowsSmall_In) - softer",
+   "lengthMs": 380, "maxLengthMs": 450,
+   "layers": [ { "type": "audio", "sound": "6329_SFX_OBJ_Forging_AirBellow_In_L1_01", "method": "friction", "carrierHz": 85, "releaseMs": 30, "maxMs": 360 } ],
+   "normalize": { "peak": 0.8, "rms20": 0.3 },
+   "check": { "minMs": 100, "maxMs": 450, "rms20Min": 0.24, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "forge_knuckles": {
+   "role": "Forge idle breaker: cracking knuckles (SFX_ACTION_KnuckleCrack)",
+   "lengthMs": 330, "maxLengthMs": 400,
+   "layers": [ { "type": "audio", "sound": "3450_SFX_ACTION_KnuckleCrack_L1_01", "method": "rattle", "maxMs": 330, "maxHits": 5, "threshold": 0.2, "carrierHz": 150, "tauMs": 9 } ],
+   "normalize": { "peak": 0.8, "rms20": 0.3 },
+   "check": { "minMs": 20, "maxMs": 400, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "torch_wave": {
+   "role": "Torch extinguish: the hand sweep before the flame goes out (air swish, no game sound - shaped noise)",
+   "lengthMs": 300, "maxLengthMs": 350,
+   "layers": [ { "type": "noise", "freq": 110, "freqEnd": 170, "q": 1.6, "durMs": 260, "attackMs": 110, "releaseMs": 120, "gain": 0.75, "at": 0 } ],
+   "normalize": { "peak": 0.75, "rms20": 0.3 },
+   "check": { "minMs": 150, "maxMs": 350, "rms20Min": 0.22, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "torch_puff": {
+   "role": "Torch extinguish: the flame dies (SFX_OBJ_FireObjects_Extinguish)",
+   "lengthMs": 700, "maxLengthMs": 800,
+   "layers": [ { "type": "audio", "sound": "6567_SFX_OBJ_FireObjects_Extinguish_L1_01", "method": "friction", "carrierHz": 100, "releaseMs": 60, "maxMs": 680 } ],
+   "normalize": { "peak": 0.85, "rms20": 0.36 },
+   "check": { "minMs": 150, "maxMs": 800, "rms20Min": 0.28, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "torch_ignite": {
+   "role": "Torch lit (16.11, user: the extinguish is great, lighting was a vague short rattle): the flame catches with a soft whoosh and crackles (SFX_OBJ_FireObjects_Ignite)",
+   "lengthMs": 850, "maxLengthMs": 950,
+   "layers": [ { "type": "audio", "sound": "6361_SFX_OBJ_FireObjects_Ignite_L1_03", "method": "friction", "carrierHz": 90, "releaseMs": 80, "maxMs": 820 },
+               { "type": "audio", "sound": "6361_SFX_OBJ_FireObjects_Ignite_L1_03", "method": "rattle", "carrierHz": 160, "tauMs": 5, "threshold": 0.2, "maxHits": 14, "dynamics": 0.85, "gain": 0.55, "maxMs": 820 } ],
+   "normalize": { "peak": 0.85, "rms20": 0.38 },
+   "check": { "minMs": 200, "maxMs": 950, "rms20Min": 0.28, "btMinCorr": 0.5, "balance": "center" }
+  }
+ }
+}

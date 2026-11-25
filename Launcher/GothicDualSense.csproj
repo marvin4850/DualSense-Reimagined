@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- GothicDualSense.exe: player launcher for the Nexus release (tools/release.ps1). No console window (WinExe).
+       Finds the game, syncs the mod into G1R\Mods, starts DsBridge hidden (bin\DsBridge.exe) and the game.
+       Windows only when something does not work (no game, no pad, DSX open, bridge stopped with an error). -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>GothicDualSense</AssemblyName>
+    <RootNamespace>GothicDualSense</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>

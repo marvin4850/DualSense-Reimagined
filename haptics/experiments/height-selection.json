@@ -1,0 +1,181 @@
+{
+    "version":  1,
+    "status":  "selected-by-user",
+    "scope":  "height cues only",
+    "source":  "height-gallery.json",
+    "sourceSha256":  "F4297BE90DE272A83E07870392D334B955B48736138CCAC42B9425F7792BADE8",
+    "galleryVersion":  1,
+    "down":  {
+                 "button":  "L1",
+                 "variant":  5,
+                 "name":  "Связанные пластины — сухой каскад и общий упор",
+                 "effect":  {
+                                "layers":  [
+                                               {
+                                                   "preset":  "Tick",
+                                                   "freqHz":  240,
+                                                   "ms":  14,
+                                                   "attackMs":  0.4,
+                                                   "tauMs":  4,
+                                                   "partial":  2.76,
+                                                   "partialGain":  0.25,
+                                                   "drive":  1.4,
+                                                   "intensity":  0.28
+                                               },
+                                               {
+                                                   "preset":  "Grain",
+                                                   "delayMs":  8,
+                                                   "durationMs":  60,
+                                                   "packetMs":  12,
+                                                   "gapMs":  2,
+                                                   "freqLo":  160,
+                                                   "freqHi":  240,
+                                                   "shape":  "sharp",
+                                                   "fadeMs":  4,
+                                                   "accentMs":  18,
+                                                   "accentGain":  1.25,
+                                                   "intensity":  0.29,
+                                                   "seed":  21
+                                               },
+                                               {
+                                                   "preset":  "Tick",
+                                                   "delayMs":  74,
+                                                   "freqHz":  220,
+                                                   "ms":  35,
+                                                   "attackMs":  0.4,
+                                                   "tauMs":  10,
+                                                   "partial":  2.76,
+                                                   "partialGain":  0.35,
+                                                   "partialTauMs":  4,
+                                                   "drive":  2.7,
+                                                   "intensity":  0.54,
+                                                   "count":  3,
+                                                   "intervalMs":  18,
+                                                   "ampStep":  -0.22,
+                                                   "freqStep":  -0.06
+                                               },
+                                               {
+                                                   "preset":  "Impact",
+                                                   "delayMs":  114,
+                                                   "freqHz":  80,
+                                                   "durationMs":  35,
+                                                   "attackMs":  2,
+                                                   "decayTauMs":  12,
+                                                   "weight":  1,
+                                                   "edge":  0,
+                                                   "noise":  0,
+                                                   "intensity":  0.16
+                                               }
+                                           ]
+                            }
+             },
+    "up":  {
+               "button":  "R1",
+               "variant":  3,
+               "name":  "Пружинный язычок — глубокое взведение и длинное освобождение",
+               "effect":  {
+                              "layers":  [
+                                             {
+                                                 "preset":  "Tick",
+                                                 "freqHz":  310,
+                                                 "ms":  14,
+                                                 "attackMs":  0.4,
+                                                 "tauMs":  4,
+                                                 "partial":  2.76,
+                                                 "partialGain":  0.35,
+                                                 "drive":  1.2,
+                                                 "intensity":  0.28
+                                             },
+                                             {
+                                                 "preset":  "Charge",
+                                                 "delayMs":  8,
+                                                 "durationMs":  90,
+                                                 "f0":  130,
+                                                 "f1":  260,
+                                                 "curve":  0.8,
+                                                 "noise":  0,
+                                                 "intensity":  0.47
+                                             },
+                                             {
+                                                 "preset":  "Grain",
+                                                 "delayMs":  16,
+                                                 "durationMs":  75,
+                                                 "packetMs":  5,
+                                                 "gapMs":  1,
+                                                 "freqLo":  210,
+                                                 "freqHi":  300,
+                                                 "shape":  "sharp",
+                                                 "fadeMs":  5,
+                                                 "intensity":  0.1,
+                                                 "seed":  32
+                                             },
+                                             {
+                                                 "preset":  "Tick",
+                                                 "delayMs":  104,
+                                                 "freqHz":  260,
+                                                 "ms":  105,
+                                                 "attackMs":  0.4,
+                                                 "tauMs":  26,
+                                                 "partial":  2.76,
+                                                 "partialGain":  0.45,
+                                                 "partialTauMs":  14,
+                                                 "drive":  1.6,
+                                                 "intensity":  0.64
+                                             },
+                                             {
+                                                 "preset":  "Impact",
+                                                 "delayMs":  108,
+                                                 "freqHz":  95,
+                                                 "durationMs":  35,
+                                                 "attackMs":  2,
+                                                 "decayTauMs":  12,
+                                                 "weight":  1,
+                                                 "edge":  0,
+                                                 "noise":  0,
+                                                 "intensity":  0.14
+                                             }
+                                         ]
+                          }
+           },
+    "triggerVibration":  false,
+    "appliedToGame":  true,
+    "blindRecognitionVerified":  false,
+    "gameTested":  false,
+    "found":  {
+                  "variant":  5,
+                  "name":  "Глубокая посадка — весомое оседание и глухой зацеп",
+                  "meaning":  "correct selected plate for next action",
+                  "effect":  {
+                                 "layers":  [
+                                                {
+                                                    "preset":  "Impact",
+                                                    "freqHz":  85,
+                                                    "durationMs":  125,
+                                                    "attackMs":  2,
+                                                    "decayTauMs":  25,
+                                                    "weight":  1,
+                                                    "edge":  0,
+                                                    "noise":  0,
+                                                    "intensity":  0.43,
+                                                    "delayMs":  0
+                                                },
+                                                {
+                                                    "preset":  "Tick",
+                                                    "freqHz":  200,
+                                                    "ms":  40,
+                                                    "attackMs":  0.4,
+                                                    "tauMs":  10,
+                                                    "partial":  2.76,
+                                                    "partialGain":  0.3,
+                                                    "partialTauMs":  5,
+                                                    "drive":  1.7,
+                                                    "intensity":  0.57,
+                                                    "delayMs":  14
+                                                }
+                                            ]
+                             }
+              },
+    "confirmationSource":  "height-confirm.json",
+    "confirmationSourceSha256":  "5C1B2D67D911F1F27CF2F519909B26A9472D7C565EAA76F4E805C022937BD428",
+    "productionPack":  "packs/40-lockpick-selected.json"
+}

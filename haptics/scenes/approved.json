@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "note": "Only explicit user verdicts. Exact scene or family scope with matching approvalSignature, date/session/quote. Family scope requires representative examples; never inferred from generated candidates.",
+  "scenes": {},
+  "families": {}
+}

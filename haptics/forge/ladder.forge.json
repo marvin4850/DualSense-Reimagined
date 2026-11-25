@@ -1,0 +1,48 @@
+// Ladder fast descent (user 17.11.2026): sliding down the rails of Man_Ladder_Locomotion (sections SlideLeftIn/SlideRightIn,
+// SlideLoop, SlideLoop2, SlideOut). The game has no separate slide sample in SFX.bank (only StepUp/StepDown), so the slide is
+// procedural friction of palms on wooden rails with a rung rhythm; the landing uses the game's own StepDown_01.
+// BT rule (AGENTS §3.11): meaning is in strength and rhythm (rung ~13 Hz AM), carriers <= 170 Hz.
+// Timing lives in packs/92-ladder-slide.json.
+{
+ "bank": "ladder",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.85 },
+  "check": { "maxSub": 0.12, "maxHigh": 0.04, "minCore": 0.6, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": { "A": { "label": "procedural rails + game step", "vars": { "fric": 105, "fricQ": 1.5, "rung": 13 } } },
+ "slots": {
+  "slide_in": {
+   "role": "Grip loosens and the body drops onto the rails: short rising friction swell",
+   "lengthMs": 320,
+   "maxLengthMs": 380,
+   "layers": [
+    { "type": "noise", "durMs": 300, "freq": "=fric * 0.8", "freqEnd": "=fric * 1.15", "q": "=fricQ", "amRate": "=rung * 0.7", "amDepth": 0.35, "attackMs": 40, "releaseMs": 60, "gain": 0.7 }
+   ],
+   "normalize": { "peak": 0.8, "rms20": 0.3 },
+   "check": { "minMs": 150, "maxMs": 380, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "slide_loop": {
+   "role": "Palms and boots sliding down the rails: steady friction pulsed by passing rungs",
+   "lengthMs": 1400,
+   "maxLengthMs": 1500,
+   "layers": [
+    { "type": "noise", "durMs": 1400, "freq": "=fric * 1.1", "freqEnd": "=fric", "q": "=fricQ", "amRate": "=rung", "amDepth": 0.55, "attackMs": 30, "releaseMs": 80, "gain": 0.75 },
+    { "type": "tone", "durMs": 1400, "freq": 70, "freqEnd": 64, "attackMs": 40, "releaseMs": 80, "gain": 0.12 }
+   ],
+   "normalize": { "peak": 0.8, "rms20": 0.32 },
+   "check": { "minMs": 600, "maxMs": 1500, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "slide_land": {
+   "role": "Feet hit the ground at the bottom of the slide: the game's ladder step-down sample, heavier",
+   "lengthMs": 300,
+   "maxLengthMs": 380,
+   "layers": [
+    { "type": "audio", "sound": "2109_SFX_OBJ_Traversal_Ladder_StepDown_01", "method": "impact", "carrierHz": 70, "releaseMs": 70, "maxMs": 280 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.4 },
+   "check": { "minMs": 40, "maxMs": 380, "rms20Min": 0.25, "btMinCorr": 0.5, "balance": "center" }
+  }
+ }
+}

@@ -1,0 +1,121 @@
+{
+  "enabled": true,
+  "title": "Новые HD-сцены: проверка доступного оружия",
+  "doneMark": "✓",
+  "todoMark": "○",
+  "tasks": [
+    {
+      "id": "scenes-test-1",
+      "text": "Достать: Двуручная булава",
+      "on": [
+        "rule:scene-81eb20bb75489b03",
+        "rule:scene-89c563a3a09d6321",
+        "rule:scene-6f609fb152f4d107"
+      ]
+    },
+    {
+      "id": "scenes-test-2",
+      "text": "Достать: Двуручный меч",
+      "on": [
+        "rule:scene-12ad871f7bf3112e",
+        "rule:scene-bdeee290f86a4129",
+        "rule:scene-8dc8e99d636049f5"
+      ]
+    },
+    {
+      "id": "scenes-test-3",
+      "text": "Достать: Двуручный топор",
+      "on": [
+        "rule:scene-9037331db6157e33",
+        "rule:scene-d867fc775d263823",
+        "rule:scene-9ee49fa7428f4418"
+      ]
+    },
+    {
+      "id": "scenes-test-4",
+      "text": "Достать: Одноручная булава",
+      "on": [
+        "rule:scene-19baf6d5e282c2b2",
+        "rule:scene-4636ad3559cffa9f"
+      ]
+    },
+    {
+      "id": "scenes-test-5",
+      "text": "Достать: Одноручный топор",
+      "on": [
+        "rule:scene-e9d77695dec0c8d5",
+        "rule:scene-b3150db5b61c2040",
+        "rule:scene-490f217a752def39"
+      ]
+    },
+    {
+      "id": "scenes-test-6",
+      "text": "Достать: Посох",
+      "on": [
+        "rule:scene-7b39c7312d9d16c0",
+        "rule:scene-9aa54c20d5de81ea",
+        "rule:scene-27599a2dc68ff6a0"
+      ]
+    },
+    {
+      "id": "scenes-test-7",
+      "text": "Извлечь и уложить стрелу: Лук, скрытное положение",
+      "on": [
+        "rule:scene-5cff2c6acef8161c"
+      ]
+    },
+    {
+      "id": "scenes-test-8",
+      "text": "Убрать: Двуручная булава",
+      "on": [
+        "rule:scene-317faac03b7f0f80",
+        "rule:scene-43d53cf5eaebcc3a",
+        "rule:scene-8594e1889785e14e"
+      ]
+    },
+    {
+      "id": "scenes-test-9",
+      "text": "Убрать: Двуручный меч",
+      "on": [
+        "rule:scene-0cae426bf51593e9",
+        "rule:scene-9fa0f6519a440b16",
+        "rule:scene-f61dd1b0355002aa"
+      ]
+    },
+    {
+      "id": "scenes-test-10",
+      "text": "Убрать: Двуручный топор",
+      "on": [
+        "rule:scene-364dce950c121597",
+        "rule:scene-17bd01db97bba1c6",
+        "rule:scene-ad2f8435623bcffe"
+      ]
+    },
+    {
+      "id": "scenes-test-11",
+      "text": "Убрать: Одноручная булава",
+      "on": [
+        "rule:scene-4cd8b6223a90db99",
+        "rule:scene-9d10202f3392fefe"
+      ]
+    },
+    {
+      "id": "scenes-test-12",
+      "text": "Убрать: Одноручный топор",
+      "on": [
+        "rule:scene-7aff46c3423a9046",
+        "rule:scene-5230448e1db22c55",
+        "rule:scene-62e2d81429c4ea96"
+      ]
+    },
+    {
+      "id": "scenes-test-13",
+      "text": "Убрать: Посох",
+      "on": [
+        "rule:scene-49b47814628245c3",
+        "rule:scene-0290a5990e297fe6",
+        "rule:scene-5e0e7499e740f115"
+      ]
+    }
+  ]
+}

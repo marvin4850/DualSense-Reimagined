@@ -1,0 +1,148 @@
+// World v48 (user 21.11.2026): swampweed by kind, the spell desk (lectern) and scroll creation, the winch of heavy gates,
+// the orc lever (insert + pull), the healing rune channel, landing of the ridden scavenger. Sources: the game's own sounds
+// (research/data/fmod/wav, gore audio extract) + synthetic layers. Rules: packs/96-world-v48.json.
+// BT rule (AGENTS §3.11): carriers <= 160 Hz, meaning in strength / rhythm / length, nothing important below 10 %.
+{
+ "bank": "world48",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.8 },
+  "check": { "maxSub": 0.3, "maxHigh": 0.04, "minCore": 0.5, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": { "A": { "label": "game sounds + synthetic, world v48", "vars": {} } },
+ "slots": {
+  "smoke_inhale": {
+   "role": "Drawing on the joint: a slow pull that swells (SFX_ACTION_Smoke_Inhale)",
+   "lengthMs": 1400, "maxLengthMs": 1500,
+   "layers": [
+    { "type": "audio", "sound": "3532_SFX_ACTION_Smoke_Inhale_L1_01", "method": "friction", "carrierHz": 80, "releaseMs": 120, "maxMs": 1400 },
+    { "type": "noise", "durMs": 1300, "freq": 70, "freqEnd": 95, "q": 1.3, "attackMs": 700, "releaseMs": 250, "gain": 0.5 }
+   ],
+   "normalize": { "peak": 0.75, "rms20": 0.3 },
+   "check": { "minMs": 700, "maxMs": 1500, "rms20Min": 0.15, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "smoke_exhale": {
+   "role": "Blowing the smoke out: a soft release that fades (SFX_ACTION_Smoke_Exhale)",
+   "lengthMs": 1100, "maxLengthMs": 1200,
+   "layers": [
+    { "type": "audio", "sound": "4045_SFX_ACTION_Smoke_Exhale_L1_01", "method": "texture", "carrierHz": 75, "releaseMs": 200, "am": 0.3, "maxMs": 1100 },
+    { "type": "noise", "durMs": 1000, "freq": 90, "freqEnd": 60, "q": 1.2, "attackMs": 30, "releaseMs": 600, "gain": 0.45 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.28 },
+   "check": { "minMs": 500, "maxMs": 1200, "rms20Min": 0.14, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "smoke_cough": {
+   "role": "The strongest weed: a short double cough after the exhale (SFX_ACTION_Cough)",
+   "lengthMs": 650, "maxLengthMs": 750,
+   "layers": [
+    { "type": "audio", "sound": "3843_SFX_ACTION_Cough_L1_01", "method": "impact", "grit": 0.2, "maxMs": 650 },
+    { "type": "modal", "f": 70, "attackMs": 2, "glide": 0.9, "modes": [[1, 1, 30]], "durMs": 120, "gain": 0.8, "at": 0 },
+    { "type": "modal", "f": 66, "attackMs": 2, "glide": 0.9, "modes": [[1, 1, 30]], "durMs": 120, "gain": 0.7, "at": 230 }
+   ],
+   "normalize": { "peak": 0.8, "rms20": 0.4 },
+   "check": { "minMs": 200, "maxMs": 750, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "high_wave": {
+   "role": "The weed takes effect: one slow warm swell (1.6 s), repeated / stretched by the weed's strength",
+   "lengthMs": 1600, "maxLengthMs": 1700,
+   "layers": [
+    { "type": "noise", "durMs": 1600, "freq": 55, "freqEnd": 70, "q": 1.2, "attackMs": 700, "releaseMs": 800, "gain": 0.8 },
+    { "type": "modal", "f": 48, "attackMs": 600, "glide": 1.0, "modes": [[1, 1, 800]], "durMs": 1500, "gain": 0.5, "at": 0 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 1000, "maxMs": 1700, "rms20Min": 0.12, "btMinCorr": 0.5, "balance": "center", "maxSub": 0.45 }
+  },
+  "heartbeat": {
+   "role": "Dream Call (strongest weed): a slow heavy heartbeat - lub-dub",
+   "lengthMs": 520, "maxLengthMs": 600,
+   "layers": [
+    { "type": "modal", "f": 52, "attackMs": 4, "glide": 0.85, "modes": [[1, 1, 70]], "durMs": 160, "gain": 1.0, "at": 0 },
+    { "type": "modal", "f": 48, "attackMs": 4, "glide": 0.85, "modes": [[1, 1, 60]], "durMs": 150, "gain": 0.7, "at": 230 }
+   ],
+   "normalize": { "peak": 0.8, "rms20": 0.4 },
+   "check": { "minMs": 200, "maxMs": 600, "rms20Min": 0.2, "btMinCorr": 0.5, "balance": "center", "maxSub": 0.45 }
+  },
+  "page_turn": {
+   "role": "Stepping up to the spell desk: the book's page is turned (SFX_OBJ_Book_PageTurn)",
+   "lengthMs": 500, "maxLengthMs": 600,
+   "layers": [
+    { "type": "audio", "sound": "3278_SFX_OBJ_Book_PageTurn_L1_01", "method": "friction", "carrierHz": 110, "releaseMs": 80, "maxMs": 500 },
+    { "type": "modal", "f": 95, "attackMs": 3, "glide": 0.9, "modes": [[1, 1, 25]], "durMs": 60, "gain": 0.6, "at": 0 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 150, "maxMs": 600, "rms20Min": 0.15, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "quill": {
+   "role": "The quill scratching over parchment (SFX_ACTION_Writing_QuillLoop): fine strokes in a rhythm",
+   "lengthMs": 1600, "maxLengthMs": 1700,
+   "layers": [
+    { "type": "audio", "sound": "5698_SFX_ACTION_Writing_QuillLoop_L1_01", "method": "texture", "carrierHz": 130, "releaseMs": 80, "am": 0.5, "maxMs": 1600 },
+    { "type": "noise", "durMs": 1600, "freq": 140, "freqEnd": 140, "q": 1.8, "amRate": 6, "amDepth": 0.7, "attackMs": 60, "releaseMs": 120, "gain": 0.35 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 800, "maxMs": 1700, "rms20Min": 0.14, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "scroll_magic": {
+   "role": "The spell flows into the finished scroll: a rising magic swell that blooms (SFX_OBJ_ScrollCreation_MagicAccent)",
+   "lengthMs": 1500, "maxLengthMs": 1600,
+   "layers": [
+    { "type": "audio", "sound": "219_SFX_OBJ_ScrollCreation_MagicAccent_L1_01", "method": "texture", "carrierHz": 90, "releaseMs": 300, "am": 0.35, "maxMs": 1500 },
+    { "type": "noise", "durMs": 1400, "freq": 60, "freqEnd": 120, "q": 1.4, "amRate": 11, "amDepth": 0.4, "attackMs": 600, "releaseMs": 500, "gain": 0.6 }
+   ],
+   "normalize": { "peak": 0.78, "rms20": 0.36 },
+   "check": { "minMs": 700, "maxMs": 1600, "rms20Min": 0.18, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "winch_turn": {
+   "role": "Turning the winch of a heavy gate: the ratchet clacks under load (SFX_OBJ_Mechanism_Winch_L_Rotate) - looped",
+   "lengthMs": 1900, "maxLengthMs": 2000,
+   "layers": [
+    { "type": "audio", "sound": "712_SFX_OBJ_Mechanism_Winch_L_Rotate_L1_01", "method": "impact", "grit": 0.35, "maxMs": 1900 },
+    { "type": "noise", "durMs": 1900, "freq": 60, "freqEnd": 60, "q": 1.1, "amRate": 2.1, "amDepth": 0.5, "attackMs": 80, "releaseMs": 80, "gain": 0.4 }
+   ],
+   "normalize": { "peak": 0.8, "rms20": 0.38 },
+   "check": { "minMs": 1200, "maxMs": 2000, "rms20Min": 0.18, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "lever_insert": {
+   "role": "The orc lever is pushed into the mechanism and locks with a heavy stone-metal clunk (SFX_OBJ_OrcPuzzleDoor_InsertItem)",
+   "lengthMs": 600, "maxLengthMs": 700,
+   "layers": [
+    { "type": "audio", "sound": "5754_SFX_OBJ_OrcPuzzleDoor_InsertItem_L1_01", "method": "impact", "grit": 0.3, "maxMs": 600 },
+    { "type": "modal", "f": 58, "attackMs": 2, "glide": 0.85, "modes": [[1, 1, 60]], "durMs": 200, "gain": 1.1, "at": 0 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.48 },
+   "check": { "minMs": 150, "maxMs": 700, "rms20Min": 0.25, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "lever_pull": {
+   "role": "Pulling the heavy ground lever: grinding resistance, then the lever drops into place (SFX_OBJ_Levers_Ground_Pull)",
+   "lengthMs": 1500, "maxLengthMs": 1600,
+   "layers": [
+    { "type": "audio", "sound": "82_SFX_OBJ_Levers_Ground_Pull_L1_01", "method": "friction", "carrierHz": 85, "releaseMs": 120, "maxMs": 1500 },
+    { "type": "modal", "f": 60, "attackMs": 2, "glide": 0.85, "modes": [[1, 1, 50]], "durMs": 180, "gain": 0.9, "at": 1100 }
+   ],
+   "normalize": { "peak": 0.82, "rms20": 0.36 },
+   "check": { "minMs": 600, "maxMs": 1600, "rms20Min": 0.18, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "heal_flow": {
+   "role": "Healing rune held: a calm warm pulse flowing through the hands, ~1.3 Hz (SFX_Magic_Heal_Cast) - looped while channelled",
+   "lengthMs": 2300, "maxLengthMs": 2400,
+   "layers": [
+    { "type": "audio", "sound": "3567_SFX_Magic_Heal_Cast_L1_01", "method": "texture", "carrierHz": 80, "releaseMs": 100, "am": 0.25, "maxMs": 2300 },
+    { "type": "noise", "durMs": 2300, "freq": 65, "freqEnd": 65, "q": 1.2, "amRate": 1.3, "amDepth": 0.75, "attackMs": 100, "releaseMs": 100, "gain": 0.6 }
+   ],
+   "normalize": { "peak": 0.7, "rms20": 0.3 },
+   "check": { "minMs": 1500, "maxMs": 2400, "rms20Min": 0.12, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "ride_land": {
+   "role": "The scavenger lands with the hero on its back: two heavy claw thuds and the body sagging under the rider",
+   "lengthMs": 420, "maxLengthMs": 500,
+   "layers": [
+    { "type": "modal", "f": 55, "attackMs": 2, "glide": 0.82, "modes": [[1, 1, 70]], "durMs": 200, "gain": 1.1, "at": 0 },
+    { "type": "modal", "f": 62, "attackMs": 2, "glide": 0.85, "modes": [[1, 1, 50]], "durMs": 160, "gain": 0.8, "at": 90 },
+    { "type": "noise", "durMs": 260, "freq": 80, "freqEnd": 50, "q": 1.2, "attackMs": 5, "releaseMs": 200, "gain": 0.4, "at": 0 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.5 },
+   "check": { "minMs": 150, "maxMs": 500, "rms20Min": 0.25, "btMinCorr": 0.5, "balance": "center", "maxSub": 0.4 }
+  }
+ }
+}

@@ -1,0 +1,33 @@
+// Pack 47-lockpick-links (v36, EXPERIMENTAL, user 15.11.2026): Trained "links" diagnostics. Switch it off on its own in
+// haptics.json ("enabled": false for packs/47-lockpick-links.json); nothing else depends on it.
+// The mod sends lp:update ph=links,k=1..4 right after a selection: how many plates a push of the selected plate moves
+// (itself included, 4 = 4 or more). It never says which plates, which direction or whether the move is useful.
+{
+  "pack": "lockpick-links",
+  "version": 1,
+  "description": "Trained (experimental): after the selector click, 1-4 strong countable pulses (220 ms apart) = how many plates the selected plate moves.",
+  "rules": [
+    {
+      "id": "lp-links",
+      "event": "lp:update",
+      "where": { "ph": "links" },
+      "priority": "normal",
+      "path": "hd",
+      "continuous": {
+        "loop": false,
+        "maxMs": 800,
+        "stopOn": [],
+        "stopWhen": ["lp:update", "lp:complete", "lp:cancel"],
+        "stopFadeMs": 6,
+        "stopIf": "ph == 'sel' || ph == 'navpress' || ph == 'press' || ph == 'links'"
+      },
+      "effect": {
+        "layers": [
+          { "preset": "Tick", "delayMs": 60, "count": "=min(max(k, 1), 4) - (goal == 1 ? 1 : 0)", "intervalMs": 130, "freqHz": 160, "ms": 40, "tauMs": 13, "attackMs": 1.5, "drive": 2.0, "intensity": 0.72 },
+          { "preset": "Tick", "delayMs": "=60 + (min(max(k, 1), 4) - 1) * 130", "freqHz": 210, "ms": 80, "tauMs": 30, "attackMs": 1.0, "drive": 1.5, "intensity": "=goal == 1 ? 0.62 : 0" }
+        ]
+      },
+      "note": "v37d (user: an extra pulse is too suspicious): the count always has k pulses (160 Hz, 40 ms, 130 ms apart from 60 ms); on the route's plate (goal=1) the LAST of them is the goal pulse instead (210 Hz, 80 ms, tau 30, a little softer) - an independent plate gives one goal pulse, a plate with two links two count pulses and a goal pulse third. Never the direction. A new selection / navigation press / move stops the rest."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+// Active HD variant per slot (forge bank). "legacy" = the pre-forge procedural effect. Written by hd-compare / by hand.
+// Variants of bank lp: A = brass, B = steel, C = wrought iron (haptics/bank/lp/report.md). Slots: lp.insert lp.guide lp.notch
+// lp.glide lp.cross lp.settle lp.strain lp.break lp.reset lp.unlock. Initial choice before the user's comparison: B.
+{
+  "default": "B",
+  "slots": {}
+}

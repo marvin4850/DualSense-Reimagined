@@ -1,0 +1,259 @@
+{
+  "bank": "crafting",
+  "recipe": "crafting.forge.json",
+  "generated": "2026-11-16 19:35",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "from game sounds",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "forge_blade_in",
+      "role": "Forge: iron rod pushed into the coal bed (SFX_OBJ_Forging_Draw). v2 (game96: felt like crackling fire): one dense push - contact thud + smooth low friction, no grain",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 564.4,
+          "peak": 0.85,
+          "rms20": 0.503,
+          "crest": 3.27,
+          "attackMs": 250.46,
+          "btCorr": 0.93,
+          "btRms20": 0.724,
+          "centroidHz": 75,
+          "dominantHz": 66,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "forge_blade_out",
+      "role": "Forge: blade pulled out / put away (SFX_OBJ_Forging_Shelve)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 337.5,
+          "peak": 0.85,
+          "rms20": 0.358,
+          "crest": 5.22,
+          "attackMs": 111.67,
+          "btCorr": 0.57,
+          "btRms20": 0.552,
+          "centroidHz": 209,
+          "dominantHz": 168,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.73,
+          "warnings": [
+            "Bluetooth: correlation only 0.57"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "forge_coal_move",
+      "role": "Forge: raking the coals (SFX_OBJ_Forging_CoalMove). v2: background slide, not a 24-tick rattle (read as crackling fire in game96)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 869.6,
+          "peak": 0.7,
+          "rms20": 0.431,
+          "crest": 3.45,
+          "attackMs": 764,
+          "btCorr": 0.93,
+          "btRms20": 0.668,
+          "centroidHz": 80,
+          "dominantHz": 72,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "forge_coal_poke",
+      "role": "Forge: poking the coals (SFX_OBJ_Forging_CoalPoke) - short knocks",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 287.2,
+          "peak": 0.85,
+          "rms20": 0.418,
+          "crest": 7.51,
+          "attackMs": 4.42,
+          "btCorr": 0.81,
+          "btRms20": 0.59,
+          "centroidHz": 129,
+          "dominantHz": 127,
+          "sub": 0.006,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.1,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "forge_bellows_press",
+      "role": "Forge: bellows pressed - air out + fire flare (SFX_OBJ_Forging_AirBellowsSmall_Out + AirBellows_Fire)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 472.2,
+          "peak": 0.85,
+          "rms20": 0.549,
+          "crest": 3.42,
+          "attackMs": 235.9,
+          "btCorr": 0.9,
+          "btRms20": 0.78,
+          "centroidHz": 87,
+          "dominantHz": 57,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "forge_bellows_draw",
+      "role": "Forge: bellows drawing air back in (SFX_OBJ_Forging_AirBellowsSmall_In) - softer",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 345.3,
+          "peak": 0.8,
+          "rms20": 0.483,
+          "crest": 3.8,
+          "attackMs": 157.29,
+          "btCorr": 0.95,
+          "btRms20": 0.706,
+          "centroidHz": 59,
+          "dominantHz": 51,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "forge_knuckles",
+      "role": "Forge idle breaker: cracking knuckles (SFX_ACTION_KnuckleCrack)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 113.2,
+          "peak": 0.8,
+          "rms20": 0.412,
+          "crest": 3.48,
+          "attackMs": 3.71,
+          "btCorr": 0.76,
+          "btRms20": 0.616,
+          "centroidHz": 152,
+          "dominantHz": 135,
+          "sub": 0,
+          "core": 0.985,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "torch_wave",
+      "role": "Torch extinguish: the hand sweep before the flame goes out (air swish, no game sound - shaped noise)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 249.4,
+          "peak": 0.75,
+          "rms20": 0.4,
+          "crest": 3.95,
+          "attackMs": 90.73,
+          "btCorr": 0.76,
+          "btRms20": 0.626,
+          "centroidHz": 152,
+          "dominantHz": 129,
+          "sub": 0,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "torch_puff",
+      "role": "Torch extinguish: the flame dies (SFX_OBJ_FireObjects_Extinguish)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 681.7,
+          "peak": 0.85,
+          "rms20": 0.48,
+          "crest": 5.29,
+          "attackMs": 75.44,
+          "btCorr": 0.94,
+          "btRms20": 0.696,
+          "centroidHz": 70,
+          "dominantHz": 60,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "torch_ignite",
+      "role": "Torch lit (16.11, user: the extinguish is great, lighting was a vague short rattle): the flame catches with a soft whoosh and crackles (SFX_OBJ_FireObjects_Ignite)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 833.5,
+          "peak": 0.85,
+          "rms20": 0.556,
+          "crest": 3.48,
+          "attackMs": 55.79,
+          "btCorr": 0.94,
+          "btRms20": 0.769,
+          "centroidHz": 66,
+          "dominantHz": 54,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

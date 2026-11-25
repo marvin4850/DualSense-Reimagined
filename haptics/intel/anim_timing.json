@@ -1,0 +1,1682 @@
+{
+ "assets": {
+  "A_Lockpicking_In": {
+   "kind": "sequence",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.836,
+     "notify": "AnimNotify_InsertLockPick"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_InsertLockPick"
+   ],
+   "sourceSha256": "e3f9ac26e1b08739b13c1db129bc4b16f6f62ab0758aceed8fe85b76c412829c"
+  },
+  "PT_NH_Interact_OpenLockedChest_Montage": {
+   "kind": "montage",
+   "length": 1.15,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_PlayLoopingFX"
+   ]
+  },
+  "Man_Bow_N_Equip": {
+   "kind": "montage",
+   "length": 2.4333,
+   "notifies": [
+    {
+     "time": 0.7737,
+     "animTime": 0.974,
+     "notify": "Notify?"
+    },
+    {
+     "time": 0.8711,
+     "animTime": 1.1074,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_AttachWeapon",
+    "Notify?"
+   ],
+   "sourceSha256": "d8614f6f668b837ea4fa29d4560dc9209fba85de9ab72619cf8874aec7e9c60c"
+  },
+  "Man_Bow_N_Unequip": {
+   "kind": "montage",
+   "length": 3.3333,
+   "notifies": [
+    {
+     "time": 1.1208,
+     "animTime": 1.2845,
+     "notify": "Notify?"
+    },
+    {
+     "time": 1.4104,
+     "animTime": 1.507,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "Notify?"
+   ]
+  },
+  "A_Man_Fists_Un_Draw": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": []
+  },
+  "A_Man_Fists_Un_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.3,
+   "notifies": [
+    {
+     "time": 0.1488,
+     "animTime": 0.1488,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon"
+   ],
+   "sourceSha256": "d32c78c2ae4163bf297e15f4c41333392db2e4501c7555481dd45f5c949080e1"
+  },
+  "A_Man_Fists_Un_Shelve": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": []
+  },
+  "A_Man_Fists_Un_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.5001,
+     "animTime": 0.5001,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon"
+   ],
+   "sourceSha256": "c77ffe4b1cfd6bf59c3ec9aab6d94232a5ba3aa751fb69cf315b55bf40bde669"
+  },
+  "A_Man_S1H_Un_Draw": {
+   "kind": "sequence",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.5143,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.7434,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX"
+   ]
+  },
+  "A_Man_S1H_Un_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.3,
+     "animTime": 0.3,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3994,
+     "animTime": 0.3994,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "eef2c6e02cfb5aaf5faa460bc308f2e0b474e039feacac2e07a3b60cb829357d"
+  },
+  "A_Man_S1H_Un_DrawBack": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": []
+  },
+  "A_Man_S1H_Un_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.5333,
+   "notifies": [
+    {
+     "time": 0.3969,
+     "animTime": 0.3969,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "50805460f796d163ee51befa3d3042ab077b72e499e07430ae12c5db0b8bd5b2"
+  },
+  "A_Man_S1H_Un_Shelve": {
+   "kind": "sequence",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2512,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.8633,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX"
+   ]
+  },
+  "A_Man_S1H_Un_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.3056,
+     "animTime": 0.3056,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "584609bd24df97acdd2adfd783bee626c6ec4a491d9a7dab19383fd9041feb1a"
+  },
+  "A_Man_S1H_Un_ShelveBack": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": []
+  },
+  "A_Man_S1H_Un_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.5509,
+     "animTime": 0.5509,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9002,
+     "animTime": 0.7154,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "1b603de13ceab1c69f08b098d84be36560e5d9d031b74df706feee8eaca0650f"
+  },
+  "Man_Bow_N_Reload_AnimMontage": {
+   "kind": "montage",
+   "length": 1.6667,
+   "notifies": [
+    {
+     "time": 0.5322,
+     "animTime": 0.5322,
+     "notify": "AnimNotify_HandToQuiver"
+    },
+    {
+     "time": 0.9118,
+     "animTime": 0.9799,
+     "notify": "AnimNotify_ArrowToBowOrCrossbow"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_ArrowToBowOrCrossbow",
+    "AnimNotify_HandToQuiver"
+   ],
+   "sourceSha256": "d456393c82e92963e9be5b717f900a24542ae94414eb96a2e5c384c4d2a98221"
+  },
+  "A_Man_Fists_Ma_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.5001,
+     "animTime": 0.5001,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon"
+   ],
+   "sourceSha256": "7f71435117666ab814ffa127630acdbd78cb8a02521bb912a6f42bc4143c193e"
+  },
+  "A_Man_Fists_Tr_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.5001,
+     "animTime": 0.5001,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon"
+   ],
+   "sourceSha256": "69a0f7c386f7878852534feff752c5daad7fcc787fba5f3f1c86c285493bf12a"
+  },
+  "A_Man_S1H_Ma_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.3,
+     "animTime": 0.3,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3938,
+     "animTime": 0.4392,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "29189226bd570856f330f7e5e08507c4ac94c164adaf9f5e233f9102141f515a"
+  },
+  "A_Man_S1H_Ma_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.5333,
+   "notifies": [
+    {
+     "time": 0.4316,
+     "animTime": 0.4316,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "ade18d99c9938f7d10011cbc7ceb6510882904e5bea383b7cc3f45713c1b7a36"
+  },
+  "A_Man_S1H_Tr_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.3,
+     "animTime": 0.3,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3288,
+     "animTime": 0.3288,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "1a820b3e0a379f81fca3c27c63cc44499d2f7f47213f1f829f1df6c712b3c539"
+  },
+  "A_Man_S1H_Tr_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.5333,
+   "notifies": [
+    {
+     "time": 0.3994,
+     "animTime": 0.3994,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "b6c273fb9b1c989214ccc7dec5b6f717c3a650508aa1f8998b9e799340b44443"
+  },
+  "A_Man_A1H_Ma_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3315,
+     "animTime": 0.3315,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "1b3022ec8382e3828df0bcd034c5e9fedb761e4284fefbb00933d11ee5cac1f4"
+  },
+  "A_Man_A1H_Ma_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_EarlyBlendout",
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "a083be976df14c736eebdba4fead0d283062c5df8235e4cebc5237313bd042d8"
+  },
+  "A_Man_A1H_Tr_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3328,
+     "animTime": 0.3328,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "783a4962a7e0648f971909363800b4064b8be3033f8f7c2a7c9a25675c2d4120"
+  },
+  "A_Man_A1H_Tr_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_EarlyBlendout",
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "8a5ed17843bed17b0b90ba3b55ebda536c57f635597d9f8044a29dae30b00678"
+  },
+  "A_Man_A1H_Un_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3315,
+     "animTime": 0.3315,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "4e2277abc940f631c9c256231ebcd1ea991385b8f731fd4b057a5b7c946e8005"
+  },
+  "A_Man_A1H_Un_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_EarlyBlendout",
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "8c7addb42f286f4b9760628faab14de060098336f77c51b2e0b8e2555a1ff60b"
+  },
+  "A_Man_A2H_Ma_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4004,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4042,
+     "animTime": 0.4042,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "2befb8229ead63c26ff0793ae04fa7af32238972fd68c17398fe0a749cd5f5b2"
+  },
+  "A_Man_A2H_Ma_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.8303,
+     "animTime": 0.8303,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "96e18f78510f76e2efb907ac11a359dea0aa5399e9de4b4a922cf4f36918f41a"
+  },
+  "A_Man_A2H_Tr_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3883,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4251,
+     "animTime": 0.4251,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "0e214a524611a15d9a7a0658faeebb5a2f1d8bce50c3f18803cd4daff9ea54d6"
+  },
+  "A_Man_A2H_Tr_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7459,
+     "animTime": 0.7459,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "d8b3b70d6fb23c9383582e7477b850a8fd764c45cbee502ace89043d03855371"
+  },
+  "A_Man_A2H_Un_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3761,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.5007,
+     "animTime": 0.5007,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "d3791deb4826acb10aabb79f2a246add38a554871c76294c08a0545d9a21f8db"
+  },
+  "A_Man_A2H_Un_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7037,
+     "animTime": 0.7037,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "3d339ac0f06339983c357e7c48382e98f20f0edd85a46e05b57ddd29dbd24b26"
+  },
+  "A_Man_Fists_Ma_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2667,
+   "notifies": [
+    {
+     "time": 0.2667,
+     "animTime": 0.2667,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon"
+   ],
+   "sourceSha256": "4ecd51c53bb23c240321ac0bf43c450150216a65f9da0707449c405a4943a2a2"
+  },
+  "A_Man_Fists_Tr_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.3373,
+     "animTime": 0.1488,
+     "notify": "AnimNotify_AttachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon"
+   ],
+   "sourceSha256": "74fd35bdde246dd374f940b14ddfac319d30ff21a3ca9bcf7fdb7536ad8543b7"
+  },
+  "A_Man_M1H_Ma_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3322,
+     "animTime": 0.3322,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "baa75cb320388486689913f2388cbdfa5b2ed2053bf5738d6066b81856592f49"
+  },
+  "A_Man_M1H_Ma_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "3841ac9b69faf87f5e415e35b7b1616f4792e4d7242d9346a04f6d8524edaee8"
+  },
+  "A_Man_M1H_Tr_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3322,
+     "animTime": 0.3322,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "410f14634eea5ebf099c397216a612a8502c831595dd9b07f09a6760256081b5"
+  },
+  "A_Man_M1H_Tr_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "df2151e9815aa37079a4ca279bf3c11ff68569d2fab4b2c2e3b9f1059dc36155"
+  },
+  "A_Man_M2H_Ma_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4333,
+     "animTime": 0.4333,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4603,
+     "animTime": 0.5265,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "c0d6e9e11899905f936cc18410e025a4e0c304ccc8c2cb92c8dd24e469dc4e6c"
+  },
+  "A_Man_M2H_Ma_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.5669,
+     "animTime": 0.5669,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "bf03906a6dcf4a215b332c9a8d884389d82ef1933c0d19ed085c2e5c702bc6f4"
+  },
+  "A_Man_M2H_Tr_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4137,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.463,
+     "animTime": 0.5265,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "764c1900a48db8f1d04525018c645fe221e5f8880e56659fa4b17932dfd7bf21"
+  },
+  "A_Man_M2H_Tr_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.58,
+     "animTime": 0.58,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "a317796f1db4ca06dad612a4d9051480757c6d8e64eff6b62f0dcb20738c8c8d"
+  },
+  "A_Man_M2H_Un_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3955,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4549,
+     "animTime": 0.5265,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "3c658d3107ad30ded6f5df357699e068e5b677e434c810e5b736d2fba2a1b46f"
+  },
+  "A_Man_M2H_Un_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.6804,
+     "animTime": 0.6804,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0025,
+     "animTime": 1.0321,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "3fbab936264a6d1969ca28efb517eaa4c55dd4f22fad132654789c60e11b5801"
+  },
+  "Man_Bow_STL_Reload_AnimMontage": {
+   "kind": "montage",
+   "length": 1.6667,
+   "notifies": [
+    {
+     "time": 0.4372,
+     "animTime": 0.4533,
+     "notify": "AnimNotify_HandToQuiver"
+    },
+    {
+     "time": 1.0804,
+     "animTime": 1.0804,
+     "notify": "AnimNotify_ArrowToBowOrCrossbow"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_ArrowToBowOrCrossbow",
+    "AnimNotify_HandToQuiver"
+   ],
+   "sourceSha256": "14ae5a099e81e6fd5ec8f4b7e7ed3fb1d2e1e7886560e89019751836700daa8d"
+  },
+  "A_Man_Sff2H_Ma_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "c2a19143b16b10f291909d796ddbc28a57dcc56d41739109e08affd942ddd5c6"
+  },
+  "A_Man_Sff2H_Ma_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7546,
+     "animTime": 0.7546,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "f35abeef5ba6beb4c241857b3657b830e4dfd84601784961a03ddce6ad674db1"
+  },
+  "A_Man_Sff2H_Tr_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "2a5829b85f6ddf22efcc7b58a79606dbc65aa3686a7bc0a284cf021bef3b1ff5"
+  },
+  "A_Man_Sff2H_Tr_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.759,
+     "animTime": 0.759,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "da551e3b23ea59a79979d96fa08eb8374cae02a2091fda9f332644dd861e196d"
+  },
+  "A_Man_Sff2H_Un_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.4348,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "905c66ec2c6ebe8fee4eae7cf61b725be52f8faf0edb8073586c7ce4f959222e"
+  },
+  "A_Man_Sff2H_Un_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7153,
+     "animTime": 0.7153,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 1.0,
+     "animTime": 1.0,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "db8372d845724e9ba8f72d0349f6f06122c828c0ee29115009bcd0a8b0f422b2"
+  },
+  "A_Man_S1H_Ma_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.2618,
+     "animTime": 0.2618,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "e10bb712c80ee48fee0bf3d02ef9677e6592191f71580462875357a9128f4e37"
+  },
+  "A_Man_S1H_Ma_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.4,
+   "notifies": [
+    {
+     "time": 0.6059,
+     "animTime": 0.6059,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9005,
+     "animTime": 0.7154,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "8937ab477d75a7e1a55955087f405bc5a3c3a837a7b945e8fc71e2f7d784d54d"
+  },
+  "A_Man_S1H_Tr_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.3044,
+     "animTime": 0.3044,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.5,
+     "animTime": 0.5,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "eec8863dcadc781ff79a52a8678766c90e95207a3c34c202736ac99dcb8e0acc"
+  },
+  "A_Man_S1H_Tr_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.4,
+   "notifies": [
+    {
+     "time": 0.6605,
+     "animTime": 0.6605,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9033,
+     "animTime": 0.9033,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "41bdb032785f07a8b573e2dcd66463969f1a488fcbd38bd8522353a3b3ba93fc"
+  },
+  "A_Man_S2H_Ma_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3854,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "ff1953726dbdf19baa4ccc3fb4fb06557e67525b62f28db84cc7560beaf4457f"
+  },
+  "A_Man_S2H_Ma_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7736,
+     "animTime": 0.7736,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9584,
+     "animTime": 0.7154,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "ff6a266307fc5fa5acea393b5f54dcaba9fad64edeb7156c8a0b91f3c0054272"
+  },
+  "A_Man_S2H_Tr_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3894,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "f832a3f37d3f4b6546e71f6f1a61d2cfe21f230a10b9ee6a4f310042b133d510"
+  },
+  "A_Man_S2H_Tr_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7343,
+     "animTime": 0.7343,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9545,
+     "animTime": 0.7154,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "9dfcaaed7b79844f7ea2938b36984be36a3adc7464ac6c2582df9a1d6e1b8dda"
+  },
+  "A_Man_S2H_Un_DrawBack_Montage": {
+   "kind": "montage",
+   "length": 1.8,
+   "notifies": [
+    {
+     "time": 0.3914,
+     "animTime": 0.4348,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.4679,
+     "animTime": 0.4679,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "5b3d427e988148dd0d68108ff973d62f3beade9823fe5cf84f0f8b600d82bdf0"
+  },
+  "A_Man_S2H_Un_ShelveBack_Montage": {
+   "kind": "montage",
+   "length": 2.3667,
+   "notifies": [
+    {
+     "time": 0.7867,
+     "animTime": 0.7867,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 0.9652,
+     "animTime": 0.7154,
+     "notify": "AnimNotify_DeattachWeapon"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayFX"
+   ],
+   "sourceSha256": "96b94216cb9db795e80d28525c4a627e7618bec33a976597d81b601169e68532"
+  },
+  "Man_Bow_STL_Equip": {
+   "kind": "montage",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon"
+   ],
+   "sourceSha256": "4fd3a74981a52c00c203f938bf06c646a70a7df27dae32d189892a00b16e268f",
+   "decodeStatus": "unsupported_layout_no_timing_used"
+  },
+  "Man_Bow_STL_Unequip": {
+   "kind": "montage",
+   "length": 0.0,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotify_DeattachWeapon"
+   ],
+   "sourceSha256": "817941dbec4f3cd94ffc4f6a913b02c2e799586def98977c67774d286d9ed09c",
+   "decodeStatus": "unsupported_layout_no_timing_used"
+  },
+  "A_Man_T1H_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.2333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.3342,
+     "animTime": 0.3342,
+     "notify": "AnimNotify_PlayCustomFX"
+    },
+    {
+     "time": 0.5574,
+     "animTime": 1.0,
+     "notify": "Notify?"
+    },
+    {
+     "time": 0.8226,
+     "animTime": 1.0,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayCustomFX",
+    "Notify?"
+   ],
+   "sourceSha256": "3ddb2678d18e8b8c9556d2485c330727b434af5c3b91fa5245c464a98153ca5f"
+  },
+  "A_Man_T1H_Shelve_Montage": {
+   "kind": "montage",
+   "length": 2.0,
+   "notifies": [
+    {
+     "time": 0.3942,
+     "animTime": 0.4835,
+     "notify": "AnimNotify_PlayCustomFX"
+    },
+    {
+     "time": 0.5001,
+     "animTime": 0.5001,
+     "notify": "AnimNotify_DeattachWeapon"
+    },
+    {
+     "time": 0.8696,
+     "animTime": 1.0,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayCustomFX",
+    "Notify?"
+   ],
+   "sourceSha256": "5d6c6a9160473a4abb4cd393c149b9dea2a9677df41bb9ce1bf1274cf7fea815"
+  },
+  "A_Man_T1H_STL_Draw_Montage": {
+   "kind": "montage",
+   "length": 1.3333,
+   "notifies": [
+    {
+     "time": 0.2655,
+     "animTime": 0.2655,
+     "notify": "AnimNotify_AttachWeapon"
+    },
+    {
+     "time": 0.432,
+     "animTime": 0.432,
+     "notify": "AnimNotify_PlayCustomFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayCustomFX"
+   ],
+   "sourceSha256": "ab7cdb45412ec932049059ecce8f48e27614fd338b6cc829a15b31c6256e0c13"
+  },
+  "G1R_Content_AnimLibrary_Humanoid_Man_Items_Torch1H_Draw_Man_T1H_Draw_IdlePose_Montage": {
+   "kind": "montage",
+   "length": 0.0,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_AttachWeapon",
+    "AnimNotify_PlayCustomFX"
+   ],
+   "sourceSha256": "5a6ea5292512738fa14ea8e4db4cac05bc123b4aa06c1d3e285b96adc80287a9",
+   "decodeStatus": "unsupported_layout_no_timing_used"
+  },
+  "G1R_Content_AnimLibrary_Humanoid_Man_Items_Torch1H_Draw_Man_T1H_Shelve_IdlePose_Montage": {
+   "kind": "montage",
+   "length": 0.0,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotifyState_ResetStates",
+    "AnimNotify_DeattachWeapon",
+    "AnimNotify_PlayCustomFX"
+   ],
+   "sourceSha256": "f46c2a385d496599e3718ce4c01790acf6004f45a75e5339ea0faea7c83c3167",
+   "decodeStatus": "unsupported_layout_no_timing_used"
+  },
+  "A_Man_Bow_STL_Draw_Relax": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "e4cd199a5e09124226b56f43f3c410a6eeaf015054bfb09489de8a05ba41b364"
+  },
+  "A_Man_Bow_STL_Shelve_Relax": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "a4fee6fbf11c20f6b8bec564d2bcc9277aa8922efac213c0fef616c4c51035c8"
+  },
+  "A_Man_T1H_Draw_IdlePose": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "33848f8037719d743bf46b65e2b63f18f4254bcb1ab95ba69f6131f2c266cd33"
+  },
+  "A_Man_T1H_Shelve_IdlePose": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "cad02a780fe1a4e31bad91c72be31b3aa69346af566b6160a8662a634c56d792"
+  },
+  "A_Man_Ladder_Left_Idle": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "75356a0f07932d34dcd0fd687ea15ecf3733cf3803643c872c4157274ed9f022"
+  },
+  "A_Man_Ladder_Right_Idle": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [],
+   "sourceSha256": "7a82266fe7bb030226d26090a07ed3f1c43c5863d0282e9256f0ae996f577bcb"
+  },
+  "A_Man_Ladder_UpEndLeft": {
+   "kind": "sequence",
+   "length": 2.6,
+   "notifies": [
+    {
+     "time": 1.8145,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 2.0578,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX",
+    "AnimNotify_Stance",
+    "Notify?"
+   ],
+   "sourceSha256": "f9716a211a6fc57585cddc46622038e332e7ab2e8812adf87f57bf879a979e66"
+  },
+  "A_Man_Ladder_UpEndRight": {
+   "kind": "sequence",
+   "length": 2.6,
+   "notifies": [
+    {
+     "time": 1.8086,
+     "notify": "AnimNotify_PlayFX"
+    },
+    {
+     "time": 2.0518,
+     "notify": "AnimNotify_PlayFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX",
+    "AnimNotify_Stance",
+    "Notify?"
+   ],
+   "sourceSha256": "580b489b0d6d7351f7a755c6ba9f64ff36d7f7f685625bd65c4af39597453c72"
+  },
+  "A_Man_LadderClimb_DownEndLeft": {
+   "kind": "sequence",
+   "length": 1.8667,
+   "notifies": [
+    {
+     "time": 0.2011,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX",
+    "AnimNotify_PlaySound",
+    "AnimNotify_Stance",
+    "Notify?"
+   ],
+   "sourceSha256": "48a77d369dd68fe9d2a3e4b3eda6c809f4ca164fce56f6d643e7f9ea9dd2b323"
+  },
+  "A_Man_LadderClimb_DownEndRight": {
+   "kind": "sequence",
+   "length": 1.8667,
+   "notifies": [
+    {
+     "time": 0.2011,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayFX",
+    "AnimNotify_PlaySound",
+    "AnimNotify_Stance",
+    "Notify?"
+   ],
+   "sourceSha256": "e106fed3d7576d9844e17f145ba2be764b684bc7cd71508d1f556b2fdb1eb171"
+  },
+  "A_Man_LadderClimb_DownStart": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotify_PlayFX",
+    "AnimNotify_PlaySound",
+    "Notify?"
+   ],
+   "sourceSha256": "c14897f000cbdd7b35b75c96243a0fa00c26eb1d02d47af5df2ce654f41680da"
+  },
+  "A_Man_LadderClimb_UpStart": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [
+    "Notify?"
+   ],
+   "sourceSha256": "158b34a37f1798041cff3a3bc1553687be3853ebd7d779ffd8ae42f43974cf01"
+  },
+  "A_Man_LadderLeftRight": {
+   "kind": "sequence",
+   "length": 0.4667,
+   "notifies": [
+    {
+     "time": 0.0539,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "Notify?"
+   ],
+   "sourceSha256": "624a7ad1ae562496344f7da9ec797e269ce727ce9b97ee5f7f7fc7cea4af2f60"
+  },
+  "A_Man_LadderLeftRightDown": {
+   "kind": "sequence",
+   "length": 0.4667,
+   "notifies": [
+    {
+     "time": 0.0399,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "Notify?"
+   ],
+   "sourceSha256": "102f191c2f87f029cf0683af92f0ea0fa8067a8ae9107114f1e97e8ea71f098d"
+  },
+  "A_Man_LadderRightLeft": {
+   "kind": "sequence",
+   "length": 0.4667,
+   "notifies": [
+    {
+     "time": 0.0521,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "Notify?"
+   ],
+   "sourceSha256": "2632312b4d6ee8418630605620d65c85fe4391542e1ca1343b047bf72db7014f"
+  },
+  "A_Man_LadderRightLeftDown": {
+   "kind": "sequence",
+   "length": 0.4667,
+   "notifies": [
+    {
+     "time": 0.0677,
+     "notify": "Notify?"
+    }
+   ],
+   "notifyClasses": [
+    "Notify?"
+   ],
+   "sourceSha256": "6e32e6419330796b2968dd031ea7ab50f5ca42dae210b81c6ba4467593463467"
+  },
+  "A_Man_LadderSlide": {
+   "kind": "sequence",
+   "length": 0.1333,
+   "notifies": [
+    {
+     "time": 0.0042,
+     "notify": "AnimNotify_PlayCustomFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayCustomFX"
+   ],
+   "sourceSha256": "1f4179556b6aaeeefd9752921e949624d85eb5d8ddb5c93362dfb4d0fe77b35e"
+  },
+  "A_Man_LadderSlide_Out_Extended": {
+   "kind": "sequence",
+   "length": null,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotify_PlayCustomFX",
+    "AnimNotify_PlayCustomLoopingFX",
+    "Notify?"
+   ],
+   "sourceSha256": "1d98a890b8f30247e3299a70924565ee956e4348e61235682bcd2c57b15e4f1d"
+  },
+  "A_Man_LadderSlide_to_RightIdle": {
+   "kind": "sequence",
+   "length": 0.7333,
+   "notifies": [
+    {
+     "time": 0.0029,
+     "notify": "AnimNotify_PlayCustomFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayCustomFX",
+    "AnimNotify_PlayCustomLoopingFX"
+   ],
+   "sourceSha256": "5d8dcbb5b72ec11e1dbdc9103d12ba1557cbb02ac01d47e78334af28f0fc80bf"
+  },
+  "A_Man_LadderSlideLeft_In": {
+   "kind": "sequence",
+   "length": 0.5333,
+   "notifies": [
+    {
+     "time": 0.0018,
+     "notify": "AnimNotify_PlayCustomFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayCustomFX",
+    "AnimNotify_PlayCustomLoopingFX"
+   ],
+   "sourceSha256": "efe7df873d32b14819f55479ea2aea94afa1d159323c8829f0200e43a457d21e"
+  },
+  "A_Man_LadderSlideRight_In": {
+   "kind": "sequence",
+   "length": 0.5333,
+   "notifies": [
+    {
+     "time": 0.0027,
+     "notify": "AnimNotify_PlayCustomFX"
+    }
+   ],
+   "notifyClasses": [
+    "AnimNotify_PlayCustomFX",
+    "AnimNotify_PlayCustomLoopingFX"
+   ],
+   "sourceSha256": "9d65d647c10072dd87203a84ac709a1589659064cf91a456ceb19d8a9ea6a4a6"
+  },
+  "G1R_Content_AnimLibrary_Humanoid_Man_Ladder_Man_Ladder_Locomotion": {
+   "kind": "montage",
+   "length": 0.0,
+   "notifies": [],
+   "notifyClasses": [
+    "AnimNotifyState_EarlyBlendout"
+   ],
+   "sourceSha256": "14ca643b4b383336435928335792f585b419d1be2f3ad955ec0032681d7e81dd"
+  }
+ },
+ "generated": "2026-11-16 15:26",
+ "method": "Input: raw .uasset files extracted read-only by research/tools/FfeReader (FFE_OUT) into research/data/anim_raw, and\nscript_objects.tsv (class hash -> name) from the same tool. No .usmap, so no full deserialisation: the export map gives each\nexport's class; the notify events are found by their cooked layout and validated:\n  AnimSequence: trigger time twice 14 bytes apart, the sequence length 10 bytes after the first, notify export (1-based) 12 bytes\n                before (A_Lockpicking_In InsertLockPick 0.836 s / 2.0 s - the insert moment confirmed in game, PROGRESS t.77);\n  AnimMontage:  notify export (1-based) 12 bytes before an animation time, then 12..21 bytes later the montage length and right\n                after it the MONTAGE time (= animation time / segment rate; e.g. Man_Bow_N_Equip AttachWeapon 1.107 s anim = 0.871 s montage).\nOnly events whose export is an AnimNotify class (or an unresolved small export, reported as \"Notify?\") are kept.",
+ "selfCheck": true
+}

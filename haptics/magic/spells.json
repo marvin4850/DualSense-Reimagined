@@ -1,0 +1,6729 @@
+{
+ "generated": "tools/magic_library.py",
+ "profiles": 46,
+ "entries": 50,
+ "samples": {
+  "SFX_CREA_Biter_Attack_L1_01": {
+   "index": 5768,
+   "seconds": 2.325,
+   "channels": 2
+  },
+  "SFX_CREA_Biter_Bite_L1_01": {
+   "index": 3125,
+   "seconds": 1.456,
+   "channels": 2
+  },
+  "SFX_CREA_Bloodfly_Accent_Short_L1_01": {
+   "index": 3021,
+   "seconds": 0.6,
+   "channels": 2
+  },
+  "SFX_CREA_Bloodfly_Wings_3s_LayerA_01": {
+   "index": 4843,
+   "seconds": 3.089,
+   "channels": 2
+  },
+  "SFX_CREA_Bloodhound_Growl_L1_01": {
+   "index": 3419,
+   "seconds": 1.791,
+   "channels": 2
+  },
+  "SFX_CREA_Bloodhound_ShakeBody_L1_01": {
+   "index": 5273,
+   "seconds": 2.0,
+   "channels": 1
+  },
+  "SFX_CREA_DemonLesser_Growl_L1_01": {
+   "index": 5738,
+   "seconds": 4.847,
+   "channels": 2
+  },
+  "SFX_CREA_Demon_Wings_L1_01": {
+   "index": 889,
+   "seconds": 1.453,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Ice_Collapse_L1_02": {
+   "index": 4703,
+   "seconds": 2.843,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Ice_L_Creak2s_L1_01": {
+   "index": 4777,
+   "seconds": 2.763,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Ice_L_Creak500ms_L1_01": {
+   "index": 4358,
+   "seconds": 0.832,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Stone_L_Boom_L1_01": {
+   "index": 1625,
+   "seconds": 1.584,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Stone_L_Grind1s_L1_01": {
+   "index": 2768,
+   "seconds": 1.035,
+   "channels": 2
+  },
+  "SFX_CREA_Golem_Stone_L_Grind2s_L1_01": {
+   "index": 1318,
+   "seconds": 2.59,
+   "channels": 2
+  },
+  "SFX_CREA_Harpy_Wings_L1_01": {
+   "index": 3307,
+   "seconds": 0.951,
+   "channels": 2
+  },
+  "SFX_CREA_Harpy_Wings_L1_02": {
+   "index": 5181,
+   "seconds": 1.03,
+   "channels": 2
+  },
+  "SFX_CREA_Lizard_Gutteral_L1_01": {
+   "index": 3580,
+   "seconds": 1.794,
+   "channels": 2
+  },
+  "SFX_CREA_Lizard_Taunt_Short_L1_01": {
+   "index": 6800,
+   "seconds": 1.332,
+   "channels": 1
+  },
+  "SFX_CREA_Lizard_Tongue_L1_01": {
+   "index": 2930,
+   "seconds": 0.931,
+   "channels": 1
+  },
+  "SFX_CREA_Lurker_Gargle_Loop_L2_01": {
+   "index": 6791,
+   "seconds": 5.291,
+   "channels": 2
+  },
+  "SFX_CREA_Lurker_Gargle_Soft_L1_01": {
+   "index": 3863,
+   "seconds": 1.216,
+   "channels": 2
+  },
+  "SFX_CREA_Meatbug_Idle_01": {
+   "index": 3768,
+   "seconds": 1.155,
+   "channels": 1
+  },
+  "SFX_CREA_Minecrawler_Ambient_L2_01": {
+   "index": 2090,
+   "seconds": 1.691,
+   "channels": 1
+  },
+  "SFX_CREA_Minecrawler_Attack_L1_01": {
+   "index": 2142,
+   "seconds": 1.167,
+   "channels": 1
+  },
+  "SFX_CREA_Minecrawler_WalkSmall_L1_01": {
+   "index": 6269,
+   "seconds": 1.218,
+   "channels": 1
+  },
+  "SFX_CREA_Molerat_Attack_01": {
+   "index": 537,
+   "seconds": 0.981,
+   "channels": 1
+  },
+  "SFX_CREA_Molerat_DigGround_DigSequence_01": {
+   "index": 478,
+   "seconds": 3.414,
+   "channels": 1
+  },
+  "SFX_CREA_Orcdog_Attack_L1_01": {
+   "index": 182,
+   "seconds": 0.797,
+   "channels": 2
+  },
+  "SFX_CREA_Orcdog_Growl_Loop_L1_01": {
+   "index": 3943,
+   "seconds": 3.52,
+   "channels": 2
+  },
+  "SFX_CREA_Razor_Attack_L1_01": {
+   "index": 6267,
+   "seconds": 0.689,
+   "channels": 2
+  },
+  "SFX_CREA_Razor_Grunt_L1_01": {
+   "index": 709,
+   "seconds": 0.856,
+   "channels": 2
+  },
+  "SFX_CREA_Razor_Transient_L1_01": {
+   "index": 6769,
+   "seconds": 0.39,
+   "channels": 2
+  },
+  "SFX_CREA_Scavenger_Attack_01": {
+   "index": 865,
+   "seconds": 0.598,
+   "channels": 1
+  },
+  "SFX_CREA_Scavenger_Scratch_Scratch_01": {
+   "index": 2255,
+   "seconds": 0.554,
+   "channels": 1
+  },
+  "SFX_CREA_Shadowbeast_Attack_LayerA_01": {
+   "index": 2311,
+   "seconds": 2.068,
+   "channels": 1
+  },
+  "SFX_CREA_Shadowbeast_Rumble2s_01": {
+   "index": 5577,
+   "seconds": 1.861,
+   "channels": 2
+  },
+  "SFX_CREA_Shadowbeast_Spikes_LayerA_01": {
+   "index": 6940,
+   "seconds": 1.553,
+   "channels": 2
+  },
+  "SFX_CREA_Skeleton_Bones_Intense_1s_01": {
+   "index": 4707,
+   "seconds": 1.218,
+   "channels": 1
+  },
+  "SFX_CREA_Skeleton_Bones_Move_3s_01": {
+   "index": 2544,
+   "seconds": 1.822,
+   "channels": 1
+  },
+  "SFX_CREA_Snapper_Chew_01": {
+   "index": 6483,
+   "seconds": 0.933,
+   "channels": 2
+  },
+  "SFX_CREA_Snapper_TauntShort_LayerA_01": {
+   "index": 5850,
+   "seconds": 1.061,
+   "channels": 2
+  },
+  "SFX_CREA_Snapper_Transform_2s_01": {
+   "index": 6101,
+   "seconds": 2.587,
+   "channels": 2
+  },
+  "SFX_CREA_Swampshark_MouthClose_L1_01": {
+   "index": 6886,
+   "seconds": 0.902,
+   "channels": 1
+  },
+  "SFX_CREA_Swampshark_MouthClose_L3_01": {
+   "index": 4104,
+   "seconds": 0.765,
+   "channels": 1
+  },
+  "SFX_CREA_Swampshark_Slide_L2_01": {
+   "index": 6175,
+   "seconds": 2.819,
+   "channels": 2
+  },
+  "SFX_CREA_Wolf_Gnarl_500ms_A_01": {
+   "index": 2455,
+   "seconds": 0.57,
+   "channels": 2
+  },
+  "SFX_CREA_Wolf_Shake_A_01": {
+   "index": 5320,
+   "seconds": 1.803,
+   "channels": 2
+  },
+  "SFX_CREA_Zombie_Accent_1s_L1_01": {
+   "index": 4382,
+   "seconds": 1.058,
+   "channels": 2
+  },
+  "SFX_Magic_BreathOfDeath_Exhale_L5_01": {
+   "index": 1502,
+   "seconds": 3.383,
+   "channels": 2
+  },
+  "SFX_Magic_BreathOfDeath_Inhale_L1_01": {
+   "index": 2307,
+   "seconds": 1.647,
+   "channels": 1
+  },
+  "SFX_Magic_Charm_Cast_L1_01": {
+   "index": 6120,
+   "seconds": 1.654,
+   "channels": 2
+  },
+  "SFX_Magic_Charm_Hold_L1_01": {
+   "index": 7108,
+   "seconds": 3.209,
+   "channels": 2
+  },
+  "SFX_Magic_Charm_Target_L1_01": {
+   "index": 1833,
+   "seconds": 2.399,
+   "channels": 2
+  },
+  "SFX_Magic_Control_Cast_L1_01": {
+   "index": 6113,
+   "seconds": 1.478,
+   "channels": 2
+  },
+  "SFX_Magic_Control_ControlEnd_L2_01": {
+   "index": 2819,
+   "seconds": 4.862,
+   "channels": 2
+  },
+  "SFX_Magic_Control_EnterEnd_L1_01": {
+   "index": 2271,
+   "seconds": 2.454,
+   "channels": 2
+  },
+  "SFX_Magic_Control_EnterLoop_L1_01": {
+   "index": 2755,
+   "seconds": 8.138,
+   "channels": 2
+  },
+  "SFX_Magic_DeathToTheUndead_Cast_L1_01": {
+   "index": 470,
+   "seconds": 4.518,
+   "channels": 2
+  },
+  "SFX_Magic_DeathToTheUndead_HitGround_L1_01": {
+   "index": 4736,
+   "seconds": 1.991,
+   "channels": 2
+  },
+  "SFX_Magic_Fear_Cast_L7_01": {
+   "index": 1918,
+   "seconds": 1.777,
+   "channels": 2
+  },
+  "SFX_Magic_Fear_Wave_L1_01": {
+   "index": 4623,
+   "seconds": 7.663,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Cast_ChargeL_LayerA_01": {
+   "index": 3131,
+   "seconds": 1.628,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Cast_ChargeM_LayerA_01": {
+   "index": 3354,
+   "seconds": 1.375,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Cast_ChargeS_LayerA_01": {
+   "index": 2669,
+   "seconds": 1.336,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Cast_In_LayerA_01": {
+   "index": 6472,
+   "seconds": 1.386,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Cast_Launch_LayerA_01": {
+   "index": 1111,
+   "seconds": 3.067,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Hold_LayerA_01": {
+   "index": 1581,
+   "seconds": 12.918,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Impact_LayerA_01": {
+   "index": 4330,
+   "seconds": 1.616,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Impact_LayerA_02": {
+   "index": 5544,
+   "seconds": 1.66,
+   "channels": 2
+  },
+  "SFX_Magic_FireBall_Impact_LayerB_01": {
+   "index": 4374,
+   "seconds": 4.82,
+   "channels": 2
+  },
+  "SFX_Magic_FireBolt_Shoot_L1_01": {
+   "index": 3196,
+   "seconds": 1.346,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_HitGround_LayerA_01": {
+   "index": 699,
+   "seconds": 3.947,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_HitGround_LayerB_01": {
+   "index": 4035,
+   "seconds": 4.111,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Lightning_LayerA_01": {
+   "index": 2850,
+   "seconds": 1.581,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Lightning_LayerA_02": {
+   "index": 5717,
+   "seconds": 1.476,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Lightning_LayerB_01": {
+   "index": 3801,
+   "seconds": 3.852,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Rain_LayerA_01": {
+   "index": 3737,
+   "seconds": 6.602,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Rain_LayerC_01": {
+   "index": 2541,
+   "seconds": 6.191,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Cast_Thunder_01": {
+   "index": 3792,
+   "seconds": 10.021,
+   "channels": 2
+  },
+  "SFX_Magic_FireRain_Gesture_01": {
+   "index": 60,
+   "seconds": 2.525,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_Cast_LayerA_01": {
+   "index": 4589,
+   "seconds": 7.544,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_Cast_LayerB_01": {
+   "index": 4418,
+   "seconds": 7.487,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_Cast_Rumble_01": {
+   "index": 5602,
+   "seconds": 7.465,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_End_01": {
+   "index": 2576,
+   "seconds": 5.121,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_Storm_LayerA_01": {
+   "index": 5790,
+   "seconds": 7.134,
+   "channels": 2
+  },
+  "SFX_Magic_FireStorm_Storm_LayerB_01": {
+   "index": 5430,
+   "seconds": 7.134,
+   "channels": 2
+  },
+  "SFX_Magic_Heal_Cast_L1_01": {
+   "index": 3567,
+   "seconds": 4.595,
+   "channels": 2
+  },
+  "SFX_Magic_Heal_Cast_L2_01": {
+   "index": 6092,
+   "seconds": 7.022,
+   "channels": 2
+  },
+  "SFX_Magic_IceBolt_Cast_In_LayerA_01": {
+   "index": 4553,
+   "seconds": 2.706,
+   "channels": 2
+  },
+  "SFX_Magic_IceBolt_Cast_Launch_LayerB_01": {
+   "index": 6034,
+   "seconds": 1.064,
+   "channels": 2
+  },
+  "SFX_Magic_IceBolt_Cast_Launch_LayerD_01": {
+   "index": 7098,
+   "seconds": 1.461,
+   "channels": 2
+  },
+  "SFX_Magic_IceWave_Cast_In_LayerA_01": {
+   "index": 6709,
+   "seconds": 4.859,
+   "channels": 2
+  },
+  "SFX_Magic_IceWave_Cast_Launch_LayerA_01": {
+   "index": 4096,
+   "seconds": 3.982,
+   "channels": 2
+  },
+  "SFX_Magic_Light_Cast_In_LayerB_01": {
+   "index": 1677,
+   "seconds": 4.908,
+   "channels": 2
+  },
+  "SFX_Magic_Light_Cast_Launch_LayerA_01": {
+   "index": 2334,
+   "seconds": 5.184,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Cast_L1_01": {
+   "index": 2764,
+   "seconds": 2.59,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Cast_L4_01": {
+   "index": 6488,
+   "seconds": 3.893,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_ChainLoop_L1_01": {
+   "index": 1770,
+   "seconds": 10.231,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_ChainPulse_L1_01": {
+   "index": 2392,
+   "seconds": 2.153,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Charge_L3_01": {
+   "index": 6968,
+   "seconds": 4.021,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L1_01": {
+   "index": 6786,
+   "seconds": 1.777,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L1_02": {
+   "index": 5782,
+   "seconds": 1.318,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L1_03": {
+   "index": 5001,
+   "seconds": 1.286,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L1_04": {
+   "index": 1782,
+   "seconds": 1.265,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L1_05": {
+   "index": 5043,
+   "seconds": 0.992,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Draw_L2_01": {
+   "index": 7211,
+   "seconds": 0.703,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Fizzle_L3_01": {
+   "index": 5290,
+   "seconds": 1.403,
+   "channels": 2
+  },
+  "SFX_Magic_Lightning_Impact_L2_01": {
+   "index": 6669,
+   "seconds": 1.994,
+   "channels": 2
+  },
+  "SFX_Magic_Pyrokinesis_BeamLoop_L1_01": {
+   "index": 5813,
+   "seconds": 9.883,
+   "channels": 2
+  },
+  "SFX_Magic_Pyrokinesis_Cast_L1_01": {
+   "index": 2335,
+   "seconds": 3.886,
+   "channels": 2
+  },
+  "SFX_Magic_Pyrokinesis_Cast_L2_01": {
+   "index": 3096,
+   "seconds": 2.317,
+   "channels": 2
+  },
+  "SFX_Magic_Pyrokinesis_Damage_L1_01": {
+   "index": 1261,
+   "seconds": 4.065,
+   "channels": 2
+  },
+  "SFX_Magic_Sleep_Cast_L1_01": {
+   "index": 362,
+   "seconds": 4.067,
+   "channels": 2
+  },
+  "SFX_Magic_Sleep_Drop_L1_01": {
+   "index": 4549,
+   "seconds": 4.046,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Charge_LayerA_01": {
+   "index": 1686,
+   "seconds": 5.838,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Charge_LayerB_01": {
+   "index": 1620,
+   "seconds": 8.436,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_HitGround_LayerA_01": {
+   "index": 3750,
+   "seconds": 3.32,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_HitGround_LayerA_02": {
+   "index": 2585,
+   "seconds": 2.918,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_In_01": {
+   "index": 1283,
+   "seconds": 2.267,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_In_02": {
+   "index": 5207,
+   "seconds": 1.944,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Launch_LayerA_01": {
+   "index": 4080,
+   "seconds": 3.698,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Launch_LayerC_01": {
+   "index": 2408,
+   "seconds": 8.511,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Zap_LayerA_01": {
+   "index": 1351,
+   "seconds": 3.722,
+   "channels": 2
+  },
+  "SFX_Magic_Summon_Cast_Zap_LayerB_01": {
+   "index": 3885,
+   "seconds": 3.418,
+   "channels": 2
+  },
+  "SFX_Magic_TargetEffect_Burning_LayerA_01": {
+   "index": 98,
+   "seconds": 16.701,
+   "channels": 2
+  },
+  "SFX_Magic_TargetEffect_Frozen_LayerB_01": {
+   "index": 4501,
+   "seconds": 7.206,
+   "channels": 2
+  },
+  "SFX_Magic_Telekinesis_BridgeLoop_L1_01": {
+   "index": 5653,
+   "seconds": 4.844,
+   "channels": 2
+  },
+  "SFX_Magic_Telekinesis_Cast_L1_01": {
+   "index": 4475,
+   "seconds": 4.065,
+   "channels": 2
+  },
+  "SFX_Magic_Teleport_Cast_L1_01": {
+   "index": 7039,
+   "seconds": 10.0,
+   "channels": 2
+  },
+  "SFX_Magic_Teleport_SwirlLoop_L1_01": {
+   "index": 3834,
+   "seconds": 15.13,
+   "channels": 2
+  },
+  "SFX_Magic_Teleport_SwirlOut_L1_01": {
+   "index": 1223,
+   "seconds": 7.159,
+   "channels": 2
+  },
+  "SFX_Magic_Teleport_Vanish_L1_01": {
+   "index": 3975,
+   "seconds": 6.097,
+   "channels": 2
+  },
+  "SFX_Magic_Transform_Cast_In_Bones_01": {
+   "index": 3324,
+   "seconds": 0.94,
+   "channels": 2
+  },
+  "SFX_Magic_Transform_Cast_In_Whoosh_02": {
+   "index": 2494,
+   "seconds": 4.494,
+   "channels": 2
+  },
+  "SFX_Magic_Transform_Cast_Launch_Thunder_01": {
+   "index": 6798,
+   "seconds": 3.792,
+   "channels": 2
+  },
+  "SFX_Magic_TrollShrink_Cast_L1_01": {
+   "index": 3886,
+   "seconds": 6.064,
+   "channels": 2
+  },
+  "SFX_Magic_TrollShrink_Troll_L1_01": {
+   "index": 582,
+   "seconds": 6.745,
+   "channels": 2
+  },
+  "SFX_Magic_WaveOfDeath_Cast_L1_01": {
+   "index": 4640,
+   "seconds": 5.874,
+   "channels": 2
+  },
+  "SFX_Magic_WaveOfDeath_Loop_L1_01": {
+   "index": 6229,
+   "seconds": 10.793,
+   "channels": 2
+  },
+  "SFX_Magic_WaveOfDeath_Wave_L3_01": {
+   "index": 561,
+   "seconds": 12.153,
+   "channels": 2
+  },
+  "SFX_Magic_WaveOfDeath_ZapLong_L1_01": {
+   "index": 5836,
+   "seconds": 3.834,
+   "channels": 2
+  },
+  "SFX_Magic_WaveOfDeath_ZapShort_L1_01": {
+   "index": 6990,
+   "seconds": 2.81,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Cast_Gesture_A-01": {
+   "index": 733,
+   "seconds": 2.202,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Debris_A-01": {
+   "index": 4708,
+   "seconds": 2.816,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Gust_A-01": {
+   "index": 2120,
+   "seconds": 2.879,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Gust_A-04": {
+   "index": 7155,
+   "seconds": 2.879,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Howl_A-01": {
+   "index": 2805,
+   "seconds": 6.766,
+   "channels": 2
+  },
+  "SFX_Magic_WindFist_Wind_A-01": {
+   "index": 6704,
+   "seconds": 6.336,
+   "channels": 2
+  }
+ },
+ "spells": [
+  {
+   "id": "firebolt",
+   "title": "Огненная стрела",
+   "school": "Огонь",
+   "ability": "GA_CastSpell_Firebolt",
+   "montage": "A_Man_Firebolt_Cast_Montage",
+   "concept": "Короткое потрескивающее зарождение, резкий выпуск, маленький огненный хлопок.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "firebolt",
+     "title": "Огненная стрела"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · зарождение пламени",
+     "kind": "oneshot",
+     "atMs": 10,
+     "anchor": "montage",
+     "ruleId": "magic-firebolt-cast",
+     "slot": "magic.firebolt_cast",
+     "fmodEvents": [
+      "Spells/Firebolt/SFX_Magic_FireBolt_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_In_LayerA_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Firebolt_Cast_Montage In+10"
+    },
+    {
+     "key": "release",
+     "label": "Release · резкий выпуск",
+     "kind": "oneshot",
+     "atMs": 1220,
+     "anchor": "montage",
+     "ruleId": "magic-firebolt-release",
+     "slot": "magic.firebolt_release",
+     "fmodEvents": [
+      "Spells/Firebolt/SFX_Magic_FireBolt_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBolt_Shoot_L1_01"
+     ],
+     "intensity": 0.8,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Firebolt_Cast_Montage Launch+1220"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · огненный хлопок",
+     "kind": "oneshot",
+     "atMs": 1650,
+     "anchor": "demo",
+     "ruleId": "magic-firebolt-impact",
+     "slot": "magic.firebolt_impact",
+     "fmodEvents": [],
+     "samples": [
+      "SFX_Magic_FireBall_Impact_LayerA_01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "попадание зависит от расстояния; 220 мс после LaunchSpell — пример",
+     "game": "hit FireBolt"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 13,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBolt_Cast_In_01"
+    },
+    {
+     "t": 264,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1216,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBolt_Cast_Launch_01"
+    },
+    {
+     "t": 1433,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "fireball",
+   "title": "Огненный шар",
+   "school": "Огонь",
+   "ability": "GA_CastSpell_Fireball",
+   "montage": "A_Man_Fireball_Cast_Montage",
+   "concept": "Плотное нарастающее горение (три ступени заряда), удержание, тяжёлый выброс и объёмный взрыв с затухающими вспышками.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "fireball",
+     "title": "Огненный шар"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · воспламенение",
+     "kind": "oneshot",
+     "atMs": 30,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-cast",
+     "slot": "magic.fireball_cast",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_In_LayerA_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fireball_Cast_Montage In+30"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · первая ступень",
+     "kind": "oneshot",
+     "atMs": 910,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-charge",
+     "slot": "magic.fireball_charge",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Cast_ChargeS_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_ChargeS_LayerA_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fireball_Cast_Montage In+910"
+    },
+    {
+     "key": "charge2",
+     "label": "Charge · вторая ступень",
+     "kind": "oneshot",
+     "atMs": 1550,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-charge2",
+     "slot": "magic.fireball_charge2",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Cast_ChargeM_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_ChargeM_LayerA_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fireball_Cast_Montage Transition1+1550"
+    },
+    {
+     "key": "charge3",
+     "label": "Charge · третья ступень",
+     "kind": "oneshot",
+     "atMs": 2540,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-charge3",
+     "slot": "magic.fireball_charge3",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Cast_ChargeL_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_ChargeL_LayerA_01"
+     ],
+     "intensity": 0.8,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fireball_Cast_Montage Transition2+2540"
+    },
+    {
+     "key": "hold",
+     "label": "Sustain · удержание заряда (петля)",
+     "kind": "loop",
+     "atMs": 3740,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-hold",
+     "slot": "magic.fireball_hold",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Hold_Loop_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Hold_LayerA_01"
+     ],
+     "intensity": 0.42,
+     "loopMs": 2400,
+     "note": "GA_CastSpell_Fireball: FX_Magic_Spell_FireBall_HoldLoop, пока игрок держит заряд",
+     "game": "A_Man_Fireball_Cast_Montage loop Charge3Loop"
+    },
+    {
+     "key": "release",
+     "label": "Release · тяжёлый выброс",
+     "kind": "oneshot",
+     "atMs": 3740,
+     "anchor": "montage",
+     "ruleId": "magic-fireball-release",
+     "slot": "magic.fireball_release",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_Cast_LaunchL_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Cast_Launch_LayerA_01"
+     ],
+     "intensity": 0.9,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fireball_Cast_Montage Launch+3740"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · объёмный взрыв",
+     "kind": "oneshot",
+     "atMs": 4300,
+     "anchor": "demo",
+     "ruleId": "magic-fireball-impact",
+     "slot": "magic.fireball_impact",
+     "fmodEvents": [
+      "Spells/FireBall/SFX_Magic_FireBall_ImpactL_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Impact_LayerB_01"
+     ],
+     "intensity": 1.0,
+     "loopMs": 0,
+     "note": "время полёта зависит от расстояния; 560 мс после выпуска — пример",
+     "game": "hit FireBall"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 32,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBall_Cast_In_01"
+    },
+    {
+     "t": 150,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 909,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBall_Cast_ChargeS_01"
+    },
+    {
+     "t": 1552,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBall_Cast_ChargeM_01"
+    },
+    {
+     "t": 2542,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireBall_Cast_ChargeL_01"
+    },
+    {
+     "t": 3738,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "firestorm",
+   "title": "Огненный шторм",
+   "school": "Огонь",
+   "ability": "GA_CastSpell_StormOfFire",
+   "montage": "A_Man_StormOfFire_Cast_Montage",
+   "concept": "Мощная хаотичная турбулентность, вспышки разной силы, вращение пламени между сторонами.",
+   "notes": "",
+   "hold": 3600,
+   "chain": null,
+   "entries": [
+    {
+     "id": "firestorm",
+     "title": "Огненный шторм"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · нагнетание",
+     "kind": "oneshot",
+     "atMs": 30,
+     "anchor": "montage",
+     "ruleId": "magic-firestorm-cast",
+     "slot": "magic.firestorm_cast",
+     "fmodEvents": [
+      "Spells/FireStorm/SFX_Magic_FireStorm_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireStorm_Cast_LayerA_01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_StormOfFire_Cast_Montage In+18"
+    },
+    {
+     "key": "release",
+     "label": "Release · выброс вихря",
+     "kind": "oneshot",
+     "atMs": 1390,
+     "anchor": "montage",
+     "ruleId": "magic-firestorm-release",
+     "slot": "magic.firestorm_release",
+     "fmodEvents": [
+      "Spells/FireStorm/SFX_Magic_FireStorm_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireStorm_Cast_LayerB_01",
+      "SFX_Magic_FireStorm_Cast_Rumble_01"
+     ],
+     "intensity": 0.88,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_StormOfFire_Cast_Montage Launch+1375"
+    },
+    {
+     "key": "storm",
+     "label": "Sustain · вращающееся пламя (петля)",
+     "kind": "loop",
+     "atMs": 2270,
+     "anchor": "montage",
+     "ruleId": "magic-firestorm-storm",
+     "slot": "magic.firestorm_storm",
+     "fmodEvents": [
+      "Spells/FireStorm/SFX_Magic_FireStorm_Storm_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireStorm_Storm_LayerA_01",
+      "SFX_Magic_FireStorm_Storm_LayerB_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 3200,
+     "note": "снаряд FireSpellProjectile 2270 мс; буря длится, пока существует",
+     "game": "A_Man_Scroll_StormOfFire_Cast_Montage Launch+2270"
+    },
+    {
+     "key": "end",
+     "label": "End · угасание бури",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-firestorm-end",
+     "slot": "magic.firestorm_end",
+     "fmodEvents": [
+      "Spells/FireStorm/SFX_Magic_FireStorm_StormEnd_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireStorm_End_01"
+     ],
+     "intensity": 0.55,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_StormOfFire_Cast_Montage End+8670"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 26,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireStorm_Cast_In_01"
+    },
+    {
+     "t": 130,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1389,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireStorm_Cast_Launch_01"
+    },
+    {
+     "t": 1667,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2271,
+     "notify": "FireSpellProjectile",
+     "sound": ""
+    },
+    {
+     "t": 2871,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "firerain",
+   "title": "Огненный дождь",
+   "school": "Огонь",
+   "ability": "GA_CastSpell_Firerain",
+   "montage": "A_Man_FireRain_Cast_Montage",
+   "concept": "Жест и гром, две вспышки молний, удар в землю, затем множество отдельных огненных падений и остаточное потрескивание.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "firerain",
+     "title": "Огненный дождь"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · жест",
+     "kind": "oneshot",
+     "atMs": 260,
+     "anchor": "montage",
+     "ruleId": "magic-firerain-cast",
+     "slot": "magic.firerain_cast",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Gesture_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Gesture_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FireRain_Cast_Montage In+23"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · гром и две молнии",
+     "kind": "oneshot",
+     "atMs": 1640,
+     "anchor": "montage",
+     "ruleId": "magic-firerain-charge",
+     "slot": "magic.firerain_charge",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Thunderclap_01",
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Lightnings_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_Lightning_LayerA_01",
+      "SFX_Magic_FireRain_Cast_Lightning_LayerA_02",
+      "SFX_Magic_FireRain_Cast_Thunder_01"
+     ],
+     "intensity": 0.8,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FireRain_Cast_Montage In+703"
+    },
+    {
+     "key": "release",
+     "label": "Release · удар в землю",
+     "kind": "oneshot",
+     "atMs": 4370,
+     "anchor": "montage",
+     "ruleId": "magic-firerain-release",
+     "slot": "magic.firerain_release",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_HitGround_LayerA_01"
+     ],
+     "intensity": 0.92,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FireRain_Cast_Montage Launch+4366"
+    },
+    {
+     "key": "rain",
+     "label": "Impact · огненный дождь (отдельные падения)",
+     "kind": "oneshot",
+     "atMs": 4630,
+     "anchor": "montage",
+     "ruleId": "magic-firerain-rain",
+     "slot": "magic.firerain_rain",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Rain_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_Rain_LayerA_01",
+      "SFX_Magic_FireRain_Cast_Rain_LayerC_01"
+     ],
+     "intensity": 0.78,
+     "loopMs": 0,
+     "note": "после LaunchSpell; дождь — отдельные удары по транзиентам звука",
+     "game": "A_Man_Scroll_FireRain_Cast_Montage Launch+4630"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 261,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Gesture_01"
+    },
+    {
+     "t": 295,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1645,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Thunderclap_01"
+    },
+    {
+     "t": 2058,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 2060,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Lightnings_01"
+    },
+    {
+     "t": 2080,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2735,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 2799,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Lightnings_01"
+    },
+    {
+     "t": 2824,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2926,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 4373,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_HitGround_01"
+    },
+    {
+     "t": 4633,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 4965,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "icebolt",
+   "title": "Ледяная стрела",
+   "school": "Лёд",
+   "ability": "GA_CastSpell_IceBolt",
+   "montage": "A_Man_Icebolt_Cast_Montage",
+   "concept": "Сухое образование острого кристалла, резкий выпуск, мелкое осколочное растрескивание.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "icebolt",
+     "title": "Ледяная стрела"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · рост кристалла",
+     "kind": "oneshot",
+     "atMs": 20,
+     "anchor": "montage",
+     "ruleId": "magic-icebolt-cast",
+     "slot": "magic.icebolt_cast",
+     "fmodEvents": [
+      "Spells/Icebolt/SFX_Magic_IceBolt_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_IceBolt_Cast_In_LayerA_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Icebolt_Cast_Montage In+20"
+    },
+    {
+     "key": "hold",
+     "label": "Sustain · удержание (петля)",
+     "kind": "loop",
+     "atMs": 1000,
+     "anchor": "montage",
+     "ruleId": "magic-icebolt-hold",
+     "slot": "magic.icebolt_hold",
+     "fmodEvents": [
+      "Spells/Icebolt/SFX_Magic_IceBolt_Hold_Loop_01"
+     ],
+     "samples": [
+      "SFX_Magic_TargetEffect_Frozen_LayerB_01"
+     ],
+     "intensity": 0.3,
+     "loopMs": 1600,
+     "note": "замена: сэмплов IceBolt_Hold в SFX.bank нет — фактура TargetEffect_Frozen",
+     "game": "A_Man_Icebolt_Cast_Montage loop ChargeLoop"
+    },
+    {
+     "key": "release",
+     "label": "Release · резкий выпуск",
+     "kind": "oneshot",
+     "atMs": 2160,
+     "anchor": "montage",
+     "ruleId": "magic-icebolt-release",
+     "slot": "magic.icebolt_release",
+     "fmodEvents": [
+      "Spells/Icebolt/SFX_Magic_IceBolt_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_IceBolt_Cast_Launch_LayerB_01"
+     ],
+     "intensity": 0.82,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Icebolt_Cast_Montage Launch+2160"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · осколки",
+     "kind": "oneshot",
+     "atMs": 2500,
+     "anchor": "demo",
+     "ruleId": "magic-icebolt-impact",
+     "slot": "magic.icebolt_impact",
+     "fmodEvents": [],
+     "samples": [
+      "SFX_Magic_IceBolt_Cast_Launch_LayerD_01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "замена: событие IceBolt_Impact без сэмпла в SFX.bank — осколочный слой выпуска",
+     "game": "hit IceBolt"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 20,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceBolt_Cast_In_01"
+    },
+    {
+     "t": 335,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 417,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 505,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1940,
+     "notify": "GameplayCueEvent",
+     "sound": ""
+    },
+    {
+     "t": 2160,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceBolt_Cast_Launch_01"
+    },
+    {
+     "t": 2164,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "iceblock",
+   "title": "Ледяная глыба",
+   "school": "Лёд",
+   "ability": "GA_CastSpell_IceBlock",
+   "montage": "A_Man_IceBlock_Cast_Montage",
+   "concept": "Постепенное уплотнение льда, несколько тяжёлых хрустов, мощное завершающее растрескивание.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "iceblock",
+     "title": "Ледяная глыба"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · уплотнение льда",
+     "kind": "oneshot",
+     "atMs": 40,
+     "anchor": "montage",
+     "ruleId": "magic-iceblock-cast",
+     "slot": "magic.iceblock_cast",
+     "fmodEvents": [
+      "Spells/IceBlock/SFX_Magic_IceBlock_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_CREA_Golem_Ice_L_Creak2s_L1_01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "замена: сэмплов IceBlock в SFX.bank нет — скрип ледяного голема",
+     "game": "A_Man_Scroll_IceBlock_Cast_Montage In+61"
+    },
+    {
+     "key": "release",
+     "label": "Release · тяжёлые хрусты",
+     "kind": "oneshot",
+     "atMs": 2110,
+     "anchor": "montage",
+     "ruleId": "magic-iceblock-release",
+     "slot": "magic.iceblock_release",
+     "fmodEvents": [
+      "Spells/IceBlock/SFX_Magic_IceBlock_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_CREA_Golem_Ice_L_Creak500ms_L1_01"
+     ],
+     "intensity": 0.88,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_IceBlock_Cast_Montage Launch+2130"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · завершающее растрескивание",
+     "kind": "oneshot",
+     "atMs": 2700,
+     "anchor": "demo",
+     "ruleId": "magic-iceblock-impact",
+     "slot": "magic.iceblock_impact",
+     "fmodEvents": [
+      "Spells/IceBlock/SFX_Magic_IceBlock_Block_01"
+     ],
+     "samples": [
+      "SFX_CREA_Golem_Ice_Collapse_L1_02"
+     ],
+     "intensity": 0.95,
+     "loopMs": 0,
+     "note": "замена: событие IceBlock_Block без сэмпла — обрушение ледяного голема",
+     "game": "hit IceBlock"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 36,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceBlock_Cast_In_01"
+    },
+    {
+     "t": 320,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 340,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 344,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1370,
+     "notify": "ExecuteCue",
+     "sound": ""
+    },
+    {
+     "t": 2113,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceBlock_Cast_Launch_01"
+    },
+    {
+     "t": 2280,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2280,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2427,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "icewave",
+   "title": "Ледяная волна",
+   "school": "Лёд",
+   "ability": "GA_CastSpell_IceWave",
+   "montage": "A_Man_IceWave_Cast_Montage",
+   "concept": "Распространяющаяся волна множества хрупких щелчков, быстрое охлаждение и редкие остаточные трески.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "icewave",
+     "title": "Ледяная волна"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · холод собирается",
+     "kind": "oneshot",
+     "atMs": 10,
+     "anchor": "montage",
+     "ruleId": "magic-icewave-cast",
+     "slot": "magic.icewave_cast",
+     "fmodEvents": [
+      "Spells/Icewave/SFX_Magic_IceWave_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_IceWave_Cast_In_LayerA_01"
+     ],
+     "intensity": 0.45,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_IceWave_Cast_Montage In+48"
+    },
+    {
+     "key": "release",
+     "label": "Release · волна хрупких щелчков",
+     "kind": "oneshot",
+     "atMs": 2160,
+     "anchor": "montage",
+     "ruleId": "magic-icewave-release",
+     "slot": "magic.icewave_release",
+     "fmodEvents": [
+      "Spells/Icewave/SFX_Magic_IceWave_Cast_Launch_01",
+      "Spells/Icewave/SFX_Magic_IceWave_Wave_01"
+     ],
+     "samples": [
+      "SFX_Magic_IceWave_Cast_Launch_LayerA_01"
+     ],
+     "intensity": 0.82,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_IceWave_Cast_Montage Launch+2198"
+    },
+    {
+     "key": "end",
+     "label": "End · остаточные трески",
+     "kind": "oneshot",
+     "atMs": 4800,
+     "anchor": "demo",
+     "ruleId": "magic-icewave-end",
+     "slot": "magic.icewave_end",
+     "fmodEvents": [],
+     "samples": [],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_IceWave_Cast_Montage End+4800"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 14,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceWave_Cast_In_01"
+    },
+    {
+     "t": 243,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 2158,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_IceWave_Cast_Launch_01"
+    },
+    {
+     "t": 2361,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 3128,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "balllightning",
+   "title": "Шаровая молния",
+   "school": "Электричество",
+   "ability": "GA_CastSpell_BallLightning",
+   "montage": "A_Man_BallLightning_Cast_Montage",
+   "concept": "Нестабильные быстрые разряды пяти петель заряда, накопление энергии, резкий выпуск и плотная вспышка.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "balllightning",
+     "title": "Шаровая молния"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · первый разряд",
+     "kind": "oneshot",
+     "atMs": 560,
+     "anchor": "montage",
+     "ruleId": "magic-balllightning-cast",
+     "slot": "magic.balllightning_cast",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Draw_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Draw_L1_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_BallLightning_Cast_Montage In+560"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · накопление (4 разряда по анимации)",
+     "kind": "oneshot",
+     "atMs": 2120,
+     "anchor": "montage",
+     "ruleId": "magic-balllightning-charge",
+     "slot": "magic.balllightning_charge",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Draw_01",
+      "Spells/Lightning/SFX_Magic_Lightning_ChargeLoop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Charge_L3_01",
+      "SFX_Magic_Lightning_Draw_L1_02",
+      "SFX_Magic_Lightning_Draw_L1_03",
+      "SFX_Magic_Lightning_Draw_L1_04",
+      "SFX_Magic_Lightning_Draw_L1_05"
+     ],
+     "intensity": 0.72,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_BallLightning_Cast_Montage ChargeLoop1+2120"
+    },
+    {
+     "key": "release",
+     "label": "Release · резкий выпуск",
+     "kind": "oneshot",
+     "atMs": 6510,
+     "anchor": "montage",
+     "ruleId": "magic-balllightning-release",
+     "slot": "magic.balllightning_release",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Cast_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_BallLightning_Cast_Montage Launch+6510"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · плотная вспышка",
+     "kind": "oneshot",
+     "atMs": 7300,
+     "anchor": "demo",
+     "ruleId": "magic-balllightning-impact",
+     "slot": "magic.balllightning_impact",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_ImpactL_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Impact_L2_01"
+     ],
+     "intensity": 0.95,
+     "loopMs": 0,
+     "note": "",
+     "game": "hit BallLightning"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 183,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 561,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 2119,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 3123,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 4140,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 5187,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 6513,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Cast_01"
+    },
+    {
+     "t": 6778,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "chainlightning",
+   "title": "Молния (цепная)",
+   "school": "Электричество",
+   "ability": "GA_CastSpell_ChainLightning",
+   "montage": "A_Man_ChainLightning_Cast_Montage",
+   "concept": "Мощный первый разряд и серия отдельных быстрых пробоев; в демонстрации — цепочка из четырёх переходов слева направо.",
+   "notes": "",
+   "hold": 2400,
+   "chain": {
+    "part": "jump",
+    "times": [
+     1700,
+     2150,
+     2480,
+     2950
+    ],
+    "pans": [
+     -80,
+     -25,
+     30,
+     85
+    ]
+   },
+   "entries": [
+    {
+     "id": "chainlightning",
+     "title": "Молния (цепная)"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · искра",
+     "kind": "oneshot",
+     "atMs": 100,
+     "anchor": "montage",
+     "ruleId": "magic-chainlightning-cast",
+     "slot": "magic.chainlightning_cast",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Draw_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Draw_L2_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_ChainLightning_Cast_Montage In+100"
+    },
+    {
+     "key": "release",
+     "label": "Release · мощный первый разряд",
+     "kind": "oneshot",
+     "atMs": 1090,
+     "anchor": "montage",
+     "ruleId": "magic-chainlightning-release",
+     "slot": "magic.chainlightning_release",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Cast_L4_01"
+     ],
+     "intensity": 0.95,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_ChainLightning_Cast_Montage Launch+1090"
+    },
+    {
+     "key": "chain",
+     "label": "Sustain · пробой цели (петля)",
+     "kind": "loop",
+     "atMs": 1470,
+     "anchor": "montage",
+     "ruleId": "magic-chainlightning-chain",
+     "slot": "magic.chainlightning_chain",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_ChainLoop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_ChainLoop_L1_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 1200,
+     "note": "GA_Spell_ChainLightning: FX_Magic_Ray_Lightning, пока луч держится",
+     "game": "montage A_Man_ChainLightning_Launch_Montage"
+    },
+    {
+     "key": "jump",
+     "label": "Impact · пробой следующей цели",
+     "kind": "chain",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-chainlightning-jump",
+     "slot": "magic.chainlightning_jump",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_ChainPulse_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_ChainPulse_L1_01"
+     ],
+     "intensity": 0.8,
+     "loopMs": 0,
+     "note": "",
+     "game": "hit ChainLightning"
+    },
+    {
+     "key": "end",
+     "label": "End · угасание",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-chainlightning-end",
+     "slot": "magic.chainlightning_end",
+     "fmodEvents": [
+      "Spells/Lightning/SFX_Magic_Lightning_Fizzle_01"
+     ],
+     "samples": [
+      "SFX_Magic_Lightning_Fizzle_L3_01"
+     ],
+     "intensity": 0.45,
+     "loopMs": 0,
+     "note": "",
+     "game": "montage A_Man_ChainLightning_Launch_End_Montage,A_Man_Scroll_ChainLightning_Launch_End_Montage"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 102,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Draw_01"
+    },
+    {
+     "t": 314,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1087,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Lightning_Cast_01"
+    },
+    {
+     "t": 1472,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "fistofwind",
+   "title": "Кулак ветра",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_FistOfWind",
+   "montage": "A_Man_FistOfWind_Cast_Montage",
+   "concept": "Плавное сжатие воздушного давления, мощный короткий толчок, быстрое рассеивание.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "fistofwind",
+     "title": "Кулак ветра"
+    }
+   ],
+   "components": [
+    {
+     "key": "charge",
+     "label": "Charge · сжатие давления",
+     "kind": "oneshot",
+     "atMs": 20,
+     "anchor": "montage",
+     "ruleId": "magic-fistofwind-charge",
+     "slot": "magic.fistofwind_charge",
+     "fmodEvents": [
+      "Spells/WindFist/SFX_Magic_WindFist_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_WindFist_Cast_Gesture_A-01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FistOfWind_Cast_Montage In+11"
+    },
+    {
+     "key": "release",
+     "label": "Release · короткий толчок",
+     "kind": "oneshot",
+     "atMs": 960,
+     "anchor": "montage",
+     "ruleId": "magic-fistofwind-release",
+     "slot": "magic.fistofwind_release",
+     "fmodEvents": [
+      "Spells/WindFist/SFX_Magic_WindFist_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_WindFist_Gust_A-01"
+     ],
+     "intensity": 0.92,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FistOfWind_Cast_Montage Launch+971"
+    },
+    {
+     "key": "end",
+     "label": "End · рассеивание",
+     "kind": "oneshot",
+     "atMs": 1460,
+     "anchor": "montage",
+     "ruleId": "magic-fistofwind-end",
+     "slot": "magic.fistofwind_end",
+     "fmodEvents": [],
+     "samples": [
+      "SFX_Magic_WindFist_Wind_A-01"
+     ],
+     "intensity": 0.4,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_FistOfWind_Cast_Montage End+1471"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 20,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_WindFist_Cast_In_01"
+    },
+    {
+     "t": 179,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 896,
+     "notify": "ExecuteCue",
+     "sound": ""
+    },
+    {
+     "t": 956,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 1509,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "stormfist",
+   "title": "Кулак бури",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_StormFist",
+   "montage": "A_Man_StormFist_Cast_Montage",
+   "concept": "Тяжёлый воздушный удар, нестабильные порывы, несколько затухающих вихревых колебаний.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "stormfist",
+     "title": "Кулак бури"
+    }
+   ],
+   "components": [
+    {
+     "key": "charge",
+     "label": "Charge · завывание",
+     "kind": "oneshot",
+     "atMs": 180,
+     "anchor": "montage",
+     "ruleId": "magic-stormfist-charge",
+     "slot": "magic.stormfist_charge",
+     "fmodEvents": [
+      "Spells/StormFist/SFX_Magic_StormFist_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_WindFist_Howl_A-01"
+     ],
+     "intensity": 0.66,
+     "loopMs": 0,
+     "note": "замена: сэмплов StormFist в SFX.bank нет — вой WindFist",
+     "game": "A_Man_Scroll_StormFist_Cast_Montage In+180"
+    },
+    {
+     "key": "release",
+     "label": "Release · тяжёлый удар воздуха",
+     "kind": "oneshot",
+     "atMs": 1190,
+     "anchor": "montage",
+     "ruleId": "magic-stormfist-release",
+     "slot": "magic.stormfist_release",
+     "fmodEvents": [
+      "Spells/StormFist/SFX_Magic_StormFist_Cast_Launch_01",
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_HitGround_01 (свиток)"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_HitGround_LayerB_01",
+      "SFX_Magic_WindFist_Gust_A-04"
+     ],
+     "intensity": 1.0,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_StormFist_Cast_Montage Launch+1190"
+    },
+    {
+     "key": "end",
+     "label": "End · затухающие вихри",
+     "kind": "oneshot",
+     "atMs": 1440,
+     "anchor": "montage",
+     "ruleId": "magic-stormfist-end",
+     "slot": "magic.stormfist_end",
+     "fmodEvents": [],
+     "samples": [
+      "SFX_Magic_WindFist_Debris_A-01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_StormFist_Cast_Montage Launch+1329"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 24,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 122,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 183,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_StormFist_Cast_In_01"
+    },
+    {
+     "t": 441,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1194,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_StormFist_Cast_Launch_01"
+    },
+    {
+     "t": 1438,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 1439,
+     "notify": "ExecuteCue",
+     "sound": ""
+    },
+    {
+     "t": 1951,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "pyrokinesis",
+   "title": "Пирокинез",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Pyrokinesis",
+   "montage": "A_Man_Pyrokinesis_Cast_Montage",
+   "concept": "Быстрое воспламенение и продолжительное неровное горение; отдельная петля удерживаемого пламени.",
+   "notes": "",
+   "hold": 3000,
+   "chain": null,
+   "entries": [
+    {
+     "id": "pyrokinesis",
+     "title": "Пирокинез"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · воспламенение",
+     "kind": "oneshot",
+     "atMs": 20,
+     "anchor": "montage",
+     "ruleId": "magic-pyrokinesis-cast",
+     "slot": "magic.pyrokinesis_cast",
+     "fmodEvents": [
+      "Spells/Pyrokinesis/SFX_Magic_Pyrokinesis_Cast_01",
+      "Spells/FireStorm/SFX_Magic_FireStorm_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_Pyrokinesis_Cast_L2_01"
+     ],
+     "intensity": 0.72,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Pyrokinesis_Cast_Montage In+20"
+    },
+    {
+     "key": "burn",
+     "label": "Sustain · удерживаемое пламя (петля)",
+     "kind": "loop",
+     "atMs": 1460,
+     "anchor": "montage",
+     "ruleId": "magic-pyrokinesis-burn",
+     "slot": "magic.pyrokinesis_burn",
+     "fmodEvents": [
+      "Spells/Pyrokinesis/SFX_Magic_Pyrokinesis_BeamLoop_01",
+      "Spells/Pyrokinesis/SFX_Magic_Pyrokinesis_Damage_01"
+     ],
+     "samples": [
+      "SFX_Magic_Pyrokinesis_BeamLoop_L1_01",
+      "SFX_Magic_Pyrokinesis_Damage_L1_01"
+     ],
+     "intensity": 0.48,
+     "loopMs": 2100,
+     "note": "",
+     "game": "montage A_Man_Pyrokinesis_Launch_Montage"
+    },
+    {
+     "key": "end",
+     "label": "End · отпускание",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-pyrokinesis-end",
+     "slot": "magic.pyrokinesis_end",
+     "fmodEvents": [],
+     "samples": [
+      "SFX_Magic_Pyrokinesis_Cast_L1_01"
+     ],
+     "intensity": 0.4,
+     "loopMs": 0,
+     "note": "",
+     "game": "montage A_Man_Pyrokinesis_Launch_End_Montage,A_Man_Scroll_Pyrokinesis_Launch_End_Montage"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 7,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireStorm_Cast_In_01"
+    },
+    {
+     "t": 21,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Pyrokinesis_Cast_01"
+    },
+    {
+     "t": 170,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 671,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 736,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1461,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "sleep",
+   "title": "Сон",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Sleep",
+   "montage": "A_Man_Sleep_Cast_Montage",
+   "concept": "Мягкие медленные импульсы, которые постепенно замедляются и исчезают.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "sleep",
+     "title": "Сон"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · убаюкивание",
+     "kind": "oneshot",
+     "atMs": 50,
+     "anchor": "montage",
+     "ruleId": "magic-sleep-cast",
+     "slot": "magic.sleep_cast",
+     "fmodEvents": [
+      "Spells/Sleep/SFX_Magic_Sleep_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Sleep_Cast_L1_01"
+     ],
+     "intensity": 0.48,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Sleep_Cast_Montage In+50"
+    },
+    {
+     "key": "release",
+     "label": "Release · угасающие импульсы",
+     "kind": "oneshot",
+     "atMs": 2490,
+     "anchor": "montage",
+     "ruleId": "magic-sleep-release",
+     "slot": "magic.sleep_release",
+     "fmodEvents": [
+      "Spells/Sleep/SFX_Magic_Sleep_Sleep_01",
+      "Spells/Sleep/SFX_Magic_Sleep_Drop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Sleep_Drop_L1_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Sleep_Cast_Montage Launch+2490"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 54,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Sleep_Cast_01"
+    },
+    {
+     "t": 194,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 2492,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Sleep_Sleep_01"
+    },
+    {
+     "t": 2636,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2738,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3560,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "charm",
+   "title": "Чары",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Charm",
+   "montage": "A_Man_Charm_Cast_Montage",
+   "concept": "Две тонкие ритмичные пульсации (левая и правая) постепенно сходятся в одну гармоничную волну.",
+   "notes": "",
+   "hold": 660,
+   "chain": null,
+   "entries": [
+    {
+     "id": "charm",
+     "title": "Чары"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · две пульсации",
+     "kind": "oneshot",
+     "atMs": 670,
+     "anchor": "montage",
+     "ruleId": "magic-charm-cast",
+     "slot": "magic.charm_cast",
+     "fmodEvents": [
+      "Spells/Charm/SFX_Magic_Charm_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Charm_Cast_L1_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Charm_Cast_Montage In+670"
+    },
+    {
+     "key": "hold",
+     "label": "Sustain · сближение (петля)",
+     "kind": "loop",
+     "atMs": 1400,
+     "anchor": "montage",
+     "ruleId": "magic-charm-hold",
+     "slot": "magic.charm_hold",
+     "fmodEvents": [
+      "Spells/Charm/SFX_Magic_Charm_Hold_01"
+     ],
+     "samples": [
+      "SFX_Magic_Charm_Hold_L1_01"
+     ],
+     "intensity": 0.42,
+     "loopMs": 2000,
+     "note": "",
+     "game": "A_Man_Charm_Cast_Montage loop Launch"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · гармоничная волна на цели",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-charm-impact",
+     "slot": "magic.charm_impact",
+     "fmodEvents": [
+      "Spells/Charm/SFX_Magic_Charm_Target_01"
+     ],
+     "samples": [
+      "SFX_Magic_Charm_Target_L1_01"
+     ],
+     "intensity": 0.52,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Charm_Cast_Montage Launch+2060"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 316,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 665,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Charm_Cast_01"
+    },
+    {
+     "t": 802,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1400,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Charm_Hold_01"
+    },
+    {
+     "t": 2061,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2593,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "fear",
+   "title": "Страх",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Fear",
+   "montage": "A_Man_Fear_Cast_Montage",
+   "concept": "Внезапный короткий импульс, затем сбивчивое тревожное сердцебиение.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "fear",
+     "title": "Страх"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · внезапный импульс",
+     "kind": "oneshot",
+     "atMs": 30,
+     "anchor": "montage",
+     "ruleId": "magic-fear-cast",
+     "slot": "magic.fear_cast",
+     "fmodEvents": [
+      "Spells/Fear/SFX_Magic_Fear_Cast_01",
+      "Spells/Fear/SFX_Magic_Fear_Mutations_01"
+     ],
+     "samples": [
+      "SFX_Magic_Fear_Cast_L7_01"
+     ],
+     "intensity": 0.9,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fear_Cast_Montage In+30"
+    },
+    {
+     "key": "wave",
+     "label": "Release · тревожное сердцебиение",
+     "kind": "oneshot",
+     "atMs": 650,
+     "anchor": "montage",
+     "ruleId": "magic-fear-wave",
+     "slot": "magic.fear_wave",
+     "fmodEvents": [
+      "Spells/Fear/SFX_Magic_Fear_Wave_01"
+     ],
+     "samples": [
+      "SFX_Magic_Fear_Wave_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Fear_Cast_Montage Launch+650"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 20,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Fear_Mutations_01"
+    },
+    {
+     "t": 34,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Fear_Cast_01"
+    },
+    {
+     "t": 108,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 650,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Fear_Wave_01"
+    },
+    {
+     "t": 1093,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 1104,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2518,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "control",
+   "title": "Контроль",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Control",
+   "montage": "A_Man_Control_Cast_Montage",
+   "concept": "Тяжёлая строгая пульсация, сжатие ритма и выразительный импульс подчинения.",
+   "notes": "",
+   "hold": 4750,
+   "chain": null,
+   "entries": [
+    {
+     "id": "control",
+     "title": "Контроль"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · захват",
+     "kind": "oneshot",
+     "atMs": 640,
+     "anchor": "montage",
+     "ruleId": "magic-control-cast",
+     "slot": "magic.control_cast",
+     "fmodEvents": [
+      "Spells/Control/SFX_Magic_Control_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Control_Cast_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Control_Cast_Montage In+640"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · строгая пульсация (петля)",
+     "kind": "loop",
+     "atMs": 1560,
+     "anchor": "montage",
+     "ruleId": "magic-control-charge",
+     "slot": "magic.control_charge",
+     "fmodEvents": [
+      "Spells/Control/SFX_Magic_Control_EnterStart_01",
+      "Spells/Control/SFX_Magic_Control_EnterLoop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Control_EnterLoop_L1_01"
+     ],
+     "intensity": 0.55,
+     "loopMs": 2000,
+     "note": "секция ChargeLoop 1667–6133 мс повторяется",
+     "game": "A_Man_Control_Cast_Montage loop ChargeLoop"
+    },
+    {
+     "key": "release",
+     "label": "Release · сжатие ритма и подчинение",
+     "kind": "oneshot",
+     "atMs": 6310,
+     "anchor": "montage",
+     "ruleId": "magic-control-release",
+     "slot": "magic.control_release",
+     "fmodEvents": [
+      "Spells/Control/SFX_Magic_Control_EnterEnd_01"
+     ],
+     "samples": [
+      "SFX_Magic_Control_EnterEnd_L1_01"
+     ],
+     "intensity": 0.95,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Control_Cast_Montage Launch+6310"
+    },
+    {
+     "key": "end",
+     "label": "End · контроль отпущен",
+     "kind": "oneshot",
+     "atMs": 8700,
+     "anchor": "demo",
+     "ruleId": "magic-control-end",
+     "slot": "magic.control_end",
+     "fmodEvents": [
+      "Spells/Control/SFX_Magic_Control_ControlEnd_01"
+     ],
+     "samples": [
+      "SFX_Magic_Control_ControlEnd_L2_01"
+     ],
+     "intensity": 0.4,
+     "loopMs": 0,
+     "note": "конец подчинения зависит от игры; пример — 2,4 с после выпуска",
+     "game": "montage A_Man_Control_Launch_End_Montage,A_Man_Scroll_Control_Launch_End_Montage"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 185,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 636,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Control_Cast_01"
+    },
+    {
+     "t": 1562,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Control_EnterStart_01"
+    },
+    {
+     "t": 6315,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Control_EnterEnd_01"
+    },
+    {
+     "t": 6577,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 6755,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "telekinesis",
+   "title": "Телекинез",
+   "school": "Магия Гуру",
+   "ability": "GA_CastSpell_Telekinesis",
+   "montage": "A_Man_Telekinesis_Cast_Montage",
+   "concept": "Захват невидимой силой, слабое устойчивое напряжение при удержании, мягкое освобождение.",
+   "notes": "",
+   "hold": 2600,
+   "chain": null,
+   "entries": [
+    {
+     "id": "telekinesis",
+     "title": "Телекинез"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · захват",
+     "kind": "oneshot",
+     "atMs": 40,
+     "anchor": "montage",
+     "ruleId": "magic-telekinesis-cast",
+     "slot": "magic.telekinesis_cast",
+     "fmodEvents": [
+      "Spells/Telekinesis/SFX_Magic_Telekinesis_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Telekinesis_Cast_L1_01"
+     ],
+     "intensity": 0.58,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Telekinesis_Cast_Montage In+40"
+    },
+    {
+     "key": "hold",
+     "label": "Sustain · удержание предмета (петля)",
+     "kind": "loop",
+     "atMs": 1750,
+     "anchor": "montage",
+     "ruleId": "magic-telekinesis-hold",
+     "slot": "magic.telekinesis_hold",
+     "fmodEvents": [
+      "Spells/Telekinesis/SFX_Magic_Telekinesis_BeamLoop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Telekinesis_BridgeLoop_L1_01"
+     ],
+     "intensity": 0.32,
+     "loopMs": 2100,
+     "note": "",
+     "game": "montage A_Man_Telekinesis_Launch_Montage"
+    },
+    {
+     "key": "end",
+     "label": "End · мягкое освобождение",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-telekinesis-end",
+     "slot": "magic.telekinesis_end",
+     "fmodEvents": [
+      "Spells/Telekinesis/SFX_Magic_Telekinesis_End_01"
+     ],
+     "samples": [],
+     "intensity": 0.35,
+     "loopMs": 0,
+     "note": "синтез: сэмплов Telekinesis_End в SFX.bank нет",
+     "game": "montage A_Man_Telekinesis_Launch_End_Montage,A_Man_Telekinesis_Launch_PickUp_End_Montage"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 40,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Telekinesis_Cast_01"
+    },
+    {
+     "t": 373,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1754,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 1760,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "summonskeletons",
+   "title": "Призыв скелетов",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_Summon_Skeletons",
+   "montage": "A_Man_Summon_Skeletons_Cast_Montage",
+   "concept": "Мрачная пульсация, серия сухих костяных щелчков, короткое оживление.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "summonskeletons",
+     "title": "Призыв скелетов"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · мрачная пульсация",
+     "kind": "oneshot",
+     "atMs": 80,
+     "anchor": "montage",
+     "ruleId": "magic-summonskeletons-cast",
+     "slot": "magic.summonskeletons_cast",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_In_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Skeletons_Cast_Montage In+80"
+    },
+    {
+     "key": "release",
+     "label": "Release · удар в землю",
+     "kind": "oneshot",
+     "atMs": 1940,
+     "anchor": "montage",
+     "ruleId": "magic-summonskeletons-release",
+     "slot": "magic.summonskeletons_release",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Launch_01",
+      "Spells/Summon/SFX_Magic_Summon_Cast_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_HitGround_LayerA_01"
+     ],
+     "intensity": 0.82,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Skeletons_Cast_Montage In+1940"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · кости собираются",
+     "kind": "oneshot",
+     "atMs": 3150,
+     "anchor": "montage",
+     "ruleId": "magic-summonskeletons-charge",
+     "slot": "magic.summonskeletons_charge",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Charge_01"
+     ],
+     "samples": [
+      "SFX_CREA_Skeleton_Bones_Move_3s_01",
+      "SFX_Magic_Summon_Cast_Charge_LayerA_01"
+     ],
+     "intensity": 0.66,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Skeletons_Cast_Montage In+3150"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · короткое оживление",
+     "kind": "oneshot",
+     "atMs": 5980,
+     "anchor": "montage",
+     "ruleId": "magic-summonskeletons-impact",
+     "slot": "magic.summonskeletons_impact",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_CREA_Skeleton_Bones_Intense_1s_01",
+      "SFX_Magic_Summon_Cast_Launch_LayerA_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Skeletons_Cast_Montage Launch+5980"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 84,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_In_01"
+    },
+    {
+     "t": 182,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1943,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 2176,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_HitGround_01"
+    },
+    {
+     "t": 2507,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3150,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Charge_01"
+    },
+    {
+     "t": 5867,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5900,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 5983,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 9918,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "summongolem",
+   "title": "Призыв голема",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_Summon_Golem",
+   "montage": "A_Man_Summon_Golem_Cast_Montage",
+   "concept": "Глубокое нарастание, тяжёлые смещения камня, мощный завершающий удар.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "summongolem",
+     "title": "Призыв голема"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · глубокое нарастание",
+     "kind": "oneshot",
+     "atMs": 80,
+     "anchor": "montage",
+     "ruleId": "magic-summongolem-cast",
+     "slot": "magic.summongolem_cast",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_In_01"
+     ],
+     "intensity": 0.66,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Golem_Cast_Montage In+80"
+    },
+    {
+     "key": "release",
+     "label": "Release · удар в землю",
+     "kind": "oneshot",
+     "atMs": 1940,
+     "anchor": "montage",
+     "ruleId": "magic-summongolem-release",
+     "slot": "magic.summongolem_release",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_HitGround_LayerA_01"
+     ],
+     "intensity": 0.86,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Golem_Cast_Montage In+1940"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · смещения камня",
+     "kind": "oneshot",
+     "atMs": 2510,
+     "anchor": "montage",
+     "ruleId": "magic-summongolem-charge",
+     "slot": "magic.summongolem_charge",
+     "fmodEvents": [
+      "SFX_CREA_Golem_Stone (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Golem_Stone_L_Grind1s_L1_01",
+      "SFX_CREA_Golem_Stone_L_Grind2s_L1_01"
+     ],
+     "intensity": 0.75,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Golem_Cast_Montage In+2510"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · завершающий удар",
+     "kind": "oneshot",
+     "atMs": 5980,
+     "anchor": "montage",
+     "ruleId": "magic-summongolem-impact",
+     "slot": "magic.summongolem_impact",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_CREA_Golem_Stone_L_Boom_L1_01"
+     ],
+     "intensity": 1.0,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Golem_Cast_Montage Launch+5980"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 84,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_In_01"
+    },
+    {
+     "t": 182,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1943,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 2176,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_HitGround_01"
+    },
+    {
+     "t": 2507,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5867,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5900,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 5983,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 9918,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "summondemon",
+   "title": "Призыв демона",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_Summon_Demon",
+   "montage": "A_Man_Summon_Demon_Cast_Montage",
+   "concept": "Нестабильная чужеродная энергия, разрыв пространства, тяжёлый многослойный импульс появления.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "summondemon",
+     "title": "Призыв демона"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · чужеродная энергия",
+     "kind": "oneshot",
+     "atMs": 120,
+     "anchor": "montage",
+     "ruleId": "magic-summondemon-cast",
+     "slot": "magic.summondemon_cast",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_In_01",
+      "Spells/Summon/SFX_Magic_Summon_Cast_Zap_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_Zap_LayerA_01"
+     ],
+     "intensity": 0.66,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Demon_Cast_Montage In+120"
+    },
+    {
+     "key": "release",
+     "label": "Release · удар в землю",
+     "kind": "oneshot",
+     "atMs": 1980,
+     "anchor": "montage",
+     "ruleId": "magic-summondemon-release",
+     "slot": "magic.summondemon_release",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_HitGround_LayerA_02"
+     ],
+     "intensity": 0.84,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Demon_Cast_Montage In+1980"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · разрыв пространства",
+     "kind": "oneshot",
+     "atMs": 3170,
+     "anchor": "montage",
+     "ruleId": "magic-summondemon-charge",
+     "slot": "magic.summondemon_charge",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Charge_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_Charge_LayerB_01",
+      "SFX_Magic_Summon_Cast_Zap_LayerB_01"
+     ],
+     "intensity": 0.78,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Demon_Cast_Montage In+3170"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · многослойное появление",
+     "kind": "oneshot",
+     "atMs": 6020,
+     "anchor": "montage",
+     "ruleId": "magic-summondemon-impact",
+     "slot": "magic.summondemon_impact",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Launch_01",
+      "SFX_CREA_DemonLesser / Demon_Wings (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_DemonLesser_Growl_L1_01",
+      "SFX_CREA_Demon_Wings_L1_01"
+     ],
+     "intensity": 1.0,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_Demon_Cast_Montage Launch+6020"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 123,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_In_01"
+    },
+    {
+     "t": 182,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1982,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 2215,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_HitGround_01"
+    },
+    {
+     "t": 2507,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3168,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Charge_01"
+    },
+    {
+     "t": 5867,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5900,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 6022,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 9918,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "armyofdarkness",
+   "title": "Армия тьмы",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_Summon_ArmyOfDarkness",
+   "montage": "A_Man_Summon_ArmyOfDarkness_Cast_Montage",
+   "concept": "Широкая тёмная волна и множество разнесённых импульсов пробуждения мёртвых.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "armyofdarkness",
+     "title": "Армия тьмы"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · тьма сгущается",
+     "kind": "oneshot",
+     "atMs": 90,
+     "anchor": "montage",
+     "ruleId": "magic-armyofdarkness-cast",
+     "slot": "magic.armyofdarkness_cast",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_In_02"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_ArmyOfDarkness_Cast_Montage In+90"
+    },
+    {
+     "key": "release",
+     "label": "Release · широкая тёмная волна",
+     "kind": "oneshot",
+     "atMs": 2000,
+     "anchor": "montage",
+     "ruleId": "magic-armyofdarkness-release",
+     "slot": "magic.armyofdarkness_release",
+     "fmodEvents": [
+      "Spells/Summon/SFX_Magic_Summon_Cast_Launch_01",
+      "Spells/Summon/SFX_Magic_Summon_Cast_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_Summon_Cast_Launch_LayerC_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_ArmyOfDarkness_Cast_Montage In+2000"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · пробуждение мёртвых",
+     "kind": "oneshot",
+     "atMs": 5900,
+     "anchor": "montage",
+     "ruleId": "magic-armyofdarkness-impact",
+     "slot": "magic.armyofdarkness_impact",
+     "fmodEvents": [
+      "SFX_CREA_Zombie / Skeleton (существа)"
+     ],
+     "samples": [
+      "SFX_CREA_Zombie_Accent_1s_L1_01"
+     ],
+     "intensity": 0.84,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Summon_ArmyOfDarkness_Cast_Montage Launch+5900"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 90,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_In_01"
+    },
+    {
+     "t": 182,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 2001,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 2234,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_HitGround_01"
+    },
+    {
+     "t": 2507,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5867,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 5900,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 5952,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Summon_Cast_Launch_01"
+    },
+    {
+     "t": 9918,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "deathtoundead",
+   "title": "Уничтожение нежити",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_DeathToTheUndead",
+   "montage": "A_Man_DeathToTheUndead_Cast_Montage",
+   "concept": "Плотное начало, резкий перелом магической структуры, хрупкое разрушение, внезапная тишина.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "deathtoundead",
+     "title": "Уничтожение нежити"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · плотное начало",
+     "kind": "oneshot",
+     "atMs": 630,
+     "anchor": "montage",
+     "ruleId": "magic-deathtoundead-cast",
+     "slot": "magic.deathtoundead_cast",
+     "fmodEvents": [
+      "Spells/DeathToTheUndead/SFX_Magic_DeathToTheUndead_Gesture_01"
+     ],
+     "samples": [
+      "SFX_Magic_DeathToTheUndead_Cast_L1_01"
+     ],
+     "intensity": 0.72,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_DeathToTheUndead_Cast_Montage In+630"
+    },
+    {
+     "key": "release",
+     "label": "Release · перелом структуры",
+     "kind": "oneshot",
+     "atMs": 1050,
+     "anchor": "montage",
+     "ruleId": "magic-deathtoundead-release",
+     "slot": "magic.deathtoundead_release",
+     "fmodEvents": [
+      "Spells/DeathToTheUndead/SFX_Magic_DeathToTheUndead_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_DeathToTheUndead_Cast_L1_01"
+     ],
+     "intensity": 0.95,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_DeathToTheUndead_Cast_Montage Launch+1050"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · хрупкое разрушение и тишина",
+     "kind": "oneshot",
+     "atMs": 1320,
+     "anchor": "montage",
+     "ruleId": "magic-deathtoundead-impact",
+     "slot": "magic.deathtoundead_impact",
+     "fmodEvents": [
+      "Spells/DeathToTheUndead/SFX_Magic_DeathToTheUndead_HitGround_01"
+     ],
+     "samples": [
+      "SFX_Magic_DeathToTheUndead_HitGround_L1_01"
+     ],
+     "intensity": 0.9,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_DeathToTheUndead_Cast_Montage Launch+1320"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 260,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 633,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_DeathToTheUndead_Gesture_01"
+    },
+    {
+     "t": 1051,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_DeathToTheUndead_Cast_01"
+    },
+    {
+     "t": 1320,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_DeathToTheUndead_HitGround_01"
+    },
+    {
+     "t": 1343,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1368,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 1388,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1406,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1522,
+     "notify": "ExecuteCue",
+     "sound": ""
+    },
+    {
+     "t": 3240,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "breathofdeath",
+   "title": "Дыхание смерти",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_BreathOfDeath",
+   "montage": "A_Man_BreathOfDeath_Cast_Montage",
+   "concept": "Протяжённая неровная волна смертоносной энергии с тяжёлыми редкими импульсами и медленным затуханием.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "breathofdeath",
+     "title": "Дыхание смерти"
+    }
+   ],
+   "components": [
+    {
+     "key": "charge",
+     "label": "Charge · вдох",
+     "kind": "oneshot",
+     "atMs": 30,
+     "anchor": "montage",
+     "ruleId": "magic-breathofdeath-charge",
+     "slot": "magic.breathofdeath_charge",
+     "fmodEvents": [
+      "Spells/BreathOfDeath/SFX_Magic_BreathOfDeath_Inhale_01"
+     ],
+     "samples": [
+      "SFX_Magic_BreathOfDeath_Inhale_L1_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_BreathOfDeath_Cast_Montage In+30"
+    },
+    {
+     "key": "release",
+     "label": "Release · смертоносная волна",
+     "kind": "oneshot",
+     "atMs": 1730,
+     "anchor": "montage",
+     "ruleId": "magic-breathofdeath-release",
+     "slot": "magic.breathofdeath_release",
+     "fmodEvents": [
+      "Spells/BreathOfDeath/SFX_Magic_BreathOfDeath_Exhale_01"
+     ],
+     "samples": [
+      "SFX_Magic_BreathOfDeath_Exhale_L5_01"
+     ],
+     "intensity": 0.88,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_BreathOfDeath_Cast_Montage Launch+1730"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 28,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_BreathOfDeath_Inhale_01"
+    },
+    {
+     "t": 403,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1196,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1677,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1678,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1702,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1706,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1709,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1727,
+     "notify": "ExecuteCue",
+     "sound": ""
+    },
+    {
+     "t": 1735,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2496,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "wavedeath",
+   "title": "Волна смерти Уризеля",
+   "school": "Тьма и призыв",
+   "ability": "GA_CastSpell_UrizielWaveOfDeath",
+   "montage": "A_Man_UrizielWaveOfDeath_Cast_Montage",
+   "concept": "Колоссальное нарастание, мощный широкий выброс, многослойное распространение и глубокое затухание — один из самых масштабных эффектов.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "wavedeath",
+     "title": "Волна смерти Уризеля"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · колоссальное нарастание",
+     "kind": "oneshot",
+     "atMs": 40,
+     "anchor": "montage",
+     "ruleId": "magic-wavedeath-cast",
+     "slot": "magic.wavedeath_cast",
+     "fmodEvents": [
+      "Spells/WaveOfDeath/SFX_Magic_WaveOfDeath_Cast_01",
+      "Spells/WaveOfDeath/SFX_Magic_WaveOfDeath_ZapLong_01",
+      "Spells/WaveOfDeath/SFX_Magic_WaveOfDeath_ZapShort_01"
+     ],
+     "samples": [
+      "SFX_Magic_WaveOfDeath_Cast_L1_01",
+      "SFX_Magic_WaveOfDeath_ZapLong_L1_01",
+      "SFX_Magic_WaveOfDeath_ZapShort_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_UrizielWaveOfDeath_Cast_Montage In+40"
+    },
+    {
+     "key": "release",
+     "label": "Release · широкий выброс и распространение",
+     "kind": "oneshot",
+     "atMs": 2140,
+     "anchor": "montage",
+     "ruleId": "magic-wavedeath-release",
+     "slot": "magic.wavedeath_release",
+     "fmodEvents": [
+      "Spells/WaveOfDeath/SFX_Magic_WaveOfDeath_Wave_01"
+     ],
+     "samples": [
+      "SFX_Magic_WaveOfDeath_Wave_L3_01"
+     ],
+     "intensity": 1.0,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_UrizielWaveOfDeath_Cast_Montage Launch+2140"
+    },
+    {
+     "key": "end",
+     "label": "End · глубокое затухание",
+     "kind": "end",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-wavedeath-end",
+     "slot": "magic.wavedeath_end",
+     "fmodEvents": [
+      "Spells/WaveOfDeath/SFX_Magic_WaveOfDeath_TurnOff_01"
+     ],
+     "samples": [
+      "SFX_Magic_WaveOfDeath_Loop_L1_01"
+     ],
+     "intensity": 0.55,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_UrizielWaveOfDeath_Cast_Montage Launch+3960"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 40,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_WaveOfDeath_Cast_01"
+    },
+    {
+     "t": 177,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 466,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 700,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 730,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_WaveOfDeath_ZapLong_01"
+    },
+    {
+     "t": 1347,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1387,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_WaveOfDeath_ZapShort_01"
+    },
+    {
+     "t": 2136,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_WaveOfDeath_Wave_01"
+    },
+    {
+     "t": 2827,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2842,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2992,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2998,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 3008,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3017,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3960,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "light",
+   "title": "Свет",
+   "school": "Свет и поддержка",
+   "ability": "GA_CastSpell_Light",
+   "montage": "A_Man_Light_Cast_Montage",
+   "concept": "Мягкая чистая волна возникновения света и лёгкий завершающий импульс; пока источник светит — тишина.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "light",
+     "title": "Свет"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · свет рождается",
+     "kind": "oneshot",
+     "atMs": 10,
+     "anchor": "montage",
+     "ruleId": "magic-light-cast",
+     "slot": "magic.light_cast",
+     "fmodEvents": [
+      "Spells/Light/SFX_Magic_Light_Cast_In_01"
+     ],
+     "samples": [
+      "SFX_Magic_Light_Cast_In_LayerB_01"
+     ],
+     "intensity": 0.45,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_Light_Cast_Montage In+32"
+    },
+    {
+     "key": "release",
+     "label": "Release · лёгкий импульс",
+     "kind": "oneshot",
+     "atMs": 2030,
+     "anchor": "montage",
+     "ruleId": "magic-light-release",
+     "slot": "magic.light_release",
+     "fmodEvents": [
+      "Spells/Light/SFX_Magic_Light_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Light_Cast_Launch_LayerA_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_Light_Cast_Montage Launch+2051"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 14,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Light_Cast_In_01"
+    },
+    {
+     "t": 206,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1178,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2034,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Light_Cast_Launch_01"
+    },
+    {
+     "t": 2332,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2467,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "heal",
+   "title": "Исцеление",
+   "school": "Свет и поддержка",
+   "ability": "GA_CastSpell_Heal",
+   "montage": "A_Man_Heal_Cast_Montage",
+   "concept": "Плавные спокойные равномерные пульсации восстановления, мягкое объединённое затухание.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "heal",
+     "title": "Исцеление"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · спокойные пульсации",
+     "kind": "oneshot",
+     "atMs": 10,
+     "anchor": "montage",
+     "ruleId": "magic-heal-cast",
+     "slot": "magic.heal_cast",
+     "fmodEvents": [
+      "Spells/Heal/SFX_Magic_Heal_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Heal_Cast_L1_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Heal_Cast_Montage In+10"
+    },
+    {
+     "key": "release",
+     "label": "Release · объединённое затухание",
+     "kind": "oneshot",
+     "atMs": 1110,
+     "anchor": "montage",
+     "ruleId": "magic-heal-release",
+     "slot": "magic.heal_release",
+     "fmodEvents": [
+      "Spells/Heal/SFX_Magic_Heal_Effect_01"
+     ],
+     "samples": [
+      "SFX_Magic_Heal_Cast_L2_01"
+     ],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Heal_Cast_Montage Launch+1110"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 12,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Heal_Cast_01"
+    },
+    {
+     "t": 221,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1112,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Heal_Effect_01"
+    },
+    {
+     "t": 1149,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "shrink",
+   "title": "Уменьшение тролля",
+   "school": "Свет и поддержка",
+   "ability": "GA_CastSpell_Shrink",
+   "montage": "A_Man_Shrink_Cast_Montage",
+   "concept": "Плотное первое воздействие, стремительное сжатие масштаба колебаний (цель уменьшается) и маленький завершающий щелчок.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "shrink",
+     "title": "Уменьшение тролля"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · плотное воздействие",
+     "kind": "oneshot",
+     "atMs": 300,
+     "anchor": "montage",
+     "ruleId": "magic-shrink-cast",
+     "slot": "magic.shrink_cast",
+     "fmodEvents": [
+      "Spells/TrollShrink/SFX_Magic_TrollShrink_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_TrollShrink_Cast_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Shrink_Cast_Montage In+300"
+    },
+    {
+     "key": "impact",
+     "label": "Impact · сжатие масштаба",
+     "kind": "oneshot",
+     "atMs": 2050,
+     "anchor": "montage",
+     "ruleId": "magic-shrink-impact",
+     "slot": "magic.shrink_impact",
+     "fmodEvents": [
+      "Spells/TrollShrink/SFX_Magic_TrollShrink_GroundSpot_01",
+      "SFX_Magic_TrollShrink_Troll"
+     ],
+     "samples": [
+      "SFX_Magic_TrollShrink_Troll_L1_01"
+     ],
+     "intensity": 0.78,
+     "loopMs": 0,
+     "note": "сжатие длится до EndCastSpell (6600 мс)",
+     "game": "A_Man_Shrink_Cast_Montage In+2050"
+    },
+    {
+     "key": "end",
+     "label": "End · маленький щелчок",
+     "kind": "oneshot",
+     "atMs": 6600,
+     "anchor": "montage",
+     "ruleId": "magic-shrink-end",
+     "slot": "magic.shrink_end",
+     "fmodEvents": [],
+     "samples": [],
+     "intensity": 0.5,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Shrink_Cast_Montage In+6600"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 304,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_TrollShrink_Cast_01"
+    },
+    {
+     "t": 766,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1531,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1544,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 2047,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 6600,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "innospray",
+   "title": "Молитва Инносу",
+   "school": "Свет и поддержка",
+   "ability": "GA_CastSpell_InnosPray",
+   "montage": "A_Man_Scroll_InnosPray_Cast_Montage",
+   "concept": "Торжественная чистая постепенно расширяющаяся пульсация с несколькими согласованными волнами и мягким выразительным финалом.",
+   "notes": "Анимация молитвы (A_Man_Scroll_InnosPray_Cast) в игре проигрывает звуки огненного дождя; собственных звуков Innos в SFX.bank нет. Взяты их моменты и энергия, отдача — плавные аккорды, без ударов и без эффекта бонуса или лечения.",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "innospray",
+     "title": "Молитва Инносу"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · первая волна",
+     "kind": "oneshot",
+     "atMs": 1380,
+     "anchor": "montage",
+     "ruleId": "magic-innospray-cast",
+     "slot": "magic.innospray_cast",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Thunderclap_01 (анимация молитвы)"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_Thunder_01"
+     ],
+     "intensity": 0.55,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_InnosPray_Cast_Montage In+1380"
+    },
+    {
+     "key": "charge",
+     "label": "Charge · согласованные волны",
+     "kind": "oneshot",
+     "atMs": 1800,
+     "anchor": "montage",
+     "ruleId": "magic-innospray-charge",
+     "slot": "magic.innospray_charge",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Lightnings_01 (анимация молитвы)",
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_Gesture_01 (анимация молитвы)"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_Lightning_LayerB_01"
+     ],
+     "intensity": 0.62,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_InnosPray_Cast_Montage In+1800"
+    },
+    {
+     "key": "release",
+     "label": "Release · мягкий выразительный финал",
+     "kind": "oneshot",
+     "atMs": 4410,
+     "anchor": "montage",
+     "ruleId": "magic-innospray-release",
+     "slot": "magic.innospray_release",
+     "fmodEvents": [
+      "Spells/FireRain/SFX_Magic_FireRain_Cast_HitGround_01 (анимация молитвы)"
+     ],
+     "samples": [
+      "SFX_Magic_FireRain_Cast_HitGround_LayerB_01"
+     ],
+     "intensity": 0.78,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Scroll_InnosPray_Cast_Montage Launch+4410"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 295,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 1384,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Thunderclap_01"
+    },
+    {
+     "t": 1799,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Lightnings_01"
+    },
+    {
+     "t": 2058,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 2539,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Lightnings_01"
+    },
+    {
+     "t": 2735,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 2926,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 3000,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_Gesture_01"
+    },
+    {
+     "t": 4413,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_FireRain_Cast_HitGround_01"
+    },
+    {
+     "t": 4633,
+     "notify": "LaunchSpell",
+     "sound": ""
+    },
+    {
+     "t": 4965,
+     "notify": "EndCastSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-biter",
+   "title": "Превращение: Кусач",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Biter",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Резкие короткие костяные щелчки, агрессивная перестройка, быстрый финальный импульс.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-biter",
+     "title": "Превращение: Кусач"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-biter-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-biter-restructure",
+     "slot": "magic.tr_biter_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Biter (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Biter_Attack_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-biter-release",
+     "slot": "magic.tr_biter_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Biter_Bite_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-bloodfly",
+   "title": "Превращение: Шершень",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Bloodfly",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Тонкая учащённая дрожь, появление крыльев, быстрые колебания.",
+   "notes": "старое название: «кровосос»",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-bloodfly",
+     "title": "Превращение: Шершень"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodfly-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodfly-restructure",
+     "slot": "magic.tr_bloodfly_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Bloodfly (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Bloodfly_Wings_3s_LayerA_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodfly-release",
+     "slot": "magic.tr_bloodfly_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Bloodfly_Accent_Short_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-bloodhound",
+   "title": "Превращение: Ищейка",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Bloodhound",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Плотная мышечная перестройка, ритмичные костяные импульсы, приземлённое завершение.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-bloodhound",
+     "title": "Превращение: Ищейка"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodhound-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodhound-restructure",
+     "slot": "magic.tr_bloodhound_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Bloodhound (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Bloodhound_ShakeBody_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-bloodhound-release",
+     "slot": "magic.tr_bloodhound_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Bloodhound_Growl_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-firelizard",
+   "title": "Превращение: Огненный ящер",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_FireLizard",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Органическая трансформация с нарастающим огненным потрескиванием.",
+   "notes": "своих звуков FireLizard в SFX.bank нет: голос ящера + треск горения",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-firelizard",
+     "title": "Превращение: Огненный ящер"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-firelizard-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-firelizard-restructure",
+     "slot": "magic.tr_firelizard_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_FireLizard (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Lizard_Gutteral_L1_01",
+      "SFX_Magic_TargetEffect_Burning_LayerA_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-firelizard-release",
+     "slot": "magic.tr_firelizard_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_Magic_FireBall_Impact_LayerA_02"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-harpy",
+   "title": "Превращение: Гарпия",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Harpy",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Резкие костяные изменения, расправление крыльев, лёгкая быстро колеблющаяся фактура.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-harpy",
+     "title": "Превращение: Гарпия"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-harpy-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-harpy-restructure",
+     "slot": "magic.tr_harpy_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Harpy (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Harpy_Wings_L1_01",
+      "SFX_Magic_Transform_Cast_In_Bones_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-harpy-release",
+     "slot": "magic.tr_harpy_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Harpy_Wings_L1_02"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-lizard",
+   "title": "Превращение: Ящер",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Lizard",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Последовательные сухие органические щелчки, перестройка чешуйчатого тела.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-lizard",
+     "title": "Превращение: Ящер"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lizard-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lizard-restructure",
+     "slot": "magic.tr_lizard_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Lizard (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Lizard_Tongue_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lizard-release",
+     "slot": "magic.tr_lizard_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Lizard_Taunt_Short_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-lurker",
+   "title": "Превращение: Шныг",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Lurker",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Влажные вязкие колебания, низкая органическая волна, мягкое завершающее смещение.",
+   "notes": "старое название: «подглядывающий» (Lurker)",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-lurker",
+     "title": "Превращение: Шныг"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lurker-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lurker-restructure",
+     "slot": "magic.tr_lurker_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Lurker (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Lurker_Gargle_Loop_L2_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-lurker-release",
+     "slot": "magic.tr_lurker_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Lurker_Gargle_Soft_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-meatbug",
+   "title": "Превращение: Мясной жук",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Meatbug",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Множество крошечных быстрых импульсов, уменьшение масштаба ощущений, маленький щелчок.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-meatbug",
+     "title": "Превращение: Мясной жук"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-meatbug-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-meatbug-restructure",
+     "slot": "magic.tr_meatbug_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Meatbug (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Meatbug_Idle_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-meatbug-release",
+     "slot": "magic.tr_meatbug_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-minecrawler",
+   "title": "Превращение: Ползун",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Minecrawler",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Частые сухие щелчки сочленений, многослойное дребезжание, жёсткий финальный импульс.",
+   "notes": "старое название: «шахтный ползун»",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-minecrawler",
+     "title": "Превращение: Ползун"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-minecrawler-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-minecrawler-restructure",
+     "slot": "magic.tr_minecrawler_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Minecrawler (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Minecrawler_Ambient_L2_01",
+      "SFX_CREA_Minecrawler_WalkSmall_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-minecrawler-release",
+     "slot": "magic.tr_minecrawler_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Minecrawler_Attack_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-molerat",
+   "title": "Превращение: Кротокрыс",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Molerat",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Медленная плотная перестройка, приглушённые костяные импульсы, короткое тяжёлое завершение.",
+   "notes": "старое название: «крот»",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-molerat",
+     "title": "Превращение: Кротокрыс"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-molerat-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-molerat-restructure",
+     "slot": "magic.tr_molerat_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Molerat (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Molerat_DigGround_DigSequence_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-molerat-release",
+     "slot": "magic.tr_molerat_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Molerat_Attack_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-orcdog",
+   "title": "Превращение: Орочья гончая",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_OrcDog",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Грубые костяные смещения, плотные низкие пульсации, агрессивный завершающий толчок.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-orcdog",
+     "title": "Превращение: Орочья гончая"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-orcdog-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-orcdog-restructure",
+     "slot": "magic.tr_orcdog_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_OrcDog (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Orcdog_Growl_Loop_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-orcdog-release",
+     "slot": "magic.tr_orcdog_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Orcdog_Attack_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-razor",
+   "title": "Превращение: Бритвозуб",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Razor",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Быстрая хищная перестройка, резкие костяные щелчки, отчётливый финальный импульс.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-razor",
+     "title": "Превращение: Бритвозуб"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-razor-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-razor-restructure",
+     "slot": "magic.tr_razor_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Razor (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Razor_Grunt_L1_01",
+      "SFX_CREA_Razor_Transient_L1_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-razor-release",
+     "slot": "magic.tr_razor_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Razor_Attack_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-scavenger",
+   "title": "Превращение: Падальщик",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Scavenger",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Лёгкие быстрые перестройки конечностей, нервный ритм, короткое завершение.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-scavenger",
+     "title": "Превращение: Падальщик"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-scavenger-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-scavenger-restructure",
+     "slot": "magic.tr_scavenger_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Scavenger (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Scavenger_Scratch_Scratch_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-scavenger-release",
+     "slot": "magic.tr_scavenger_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Scavenger_Attack_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-shadowbeast",
+   "title": "Превращение: Мракорис",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Shadowbeast",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Медленные мощные органические волны, тяжёлая перестройка массивного тела, глубокий завершающий удар.",
+   "notes": "старое название: «теневой зверь»",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-shadowbeast",
+     "title": "Превращение: Мракорис"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-shadowbeast-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-shadowbeast-restructure",
+     "slot": "magic.tr_shadowbeast_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Shadowbeast (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Shadowbeast_Rumble2s_01",
+      "SFX_CREA_Shadowbeast_Spikes_LayerA_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-shadowbeast-release",
+     "slot": "magic.tr_shadowbeast_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Shadowbeast_Attack_LayerA_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-snapper",
+   "title": "Превращение: Глорх",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Snapper",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Несколько резких жёстких импульсов перестройки челюстей, стремительное завершение.",
+   "notes": "старое название: «щелкун»; у Snapper есть собственный сэмпл Transform_2s",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-snapper",
+     "title": "Превращение: Глорх"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-snapper-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-snapper-restructure",
+     "slot": "magic.tr_snapper_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Snapper (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Snapper_Chew_01",
+      "SFX_CREA_Snapper_Transform_2s_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-snapper-release",
+     "slot": "magic.tr_snapper_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Snapper_TauntShort_LayerA_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-swampshark",
+   "title": "Превращение: Болотожор",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Swampshark",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Тяжёлая вязкая органическая текстура, медленные волны и глухие смещения.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-swampshark",
+     "title": "Превращение: Болотожор"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-swampshark-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-swampshark-restructure",
+     "slot": "magic.tr_swampshark_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Swampshark (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Swampshark_MouthClose_L3_01",
+      "SFX_CREA_Swampshark_Slide_L2_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-swampshark-release",
+     "slot": "magic.tr_swampshark_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Swampshark_MouthClose_L1_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "tr-wolf",
+   "title": "Превращение: Волк",
+   "school": "Превращения",
+   "ability": "GA_CastSpell_Transform_Wolf",
+   "montage": "A_Man_Transform_Cast_Montage",
+   "concept": "Гибкая ритмичная перестройка мышц и костей, сильный органический финальный толчок.",
+   "notes": "",
+   "hold": 0,
+   "chain": null,
+   "entries": [
+    {
+     "id": "tr-wolf",
+     "title": "Превращение: Волк"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · магическая активация",
+     "kind": "oneshot",
+     "atMs": 60,
+     "anchor": "montage",
+     "ruleId": "magic-tr-wolf-cast",
+     "slot": "magic.transform_activation",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_In_01",
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_01"
+     ],
+     "samples": [
+      "SFX_Magic_Transform_Cast_In_Whoosh_02",
+      "SFX_Magic_Transform_Cast_Launch_Thunder_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage In+60"
+    },
+    {
+     "key": "restructure",
+     "label": "Charge · органическая перестройка",
+     "kind": "oneshot",
+     "atMs": 3780,
+     "anchor": "montage",
+     "ruleId": "magic-tr-wolf-restructure",
+     "slot": "magic.tr_wolf_restructure",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01",
+      "SFX_CREA_Wolf (существо)"
+     ],
+     "samples": [
+      "SFX_CREA_Wolf_Shake_A_01"
+     ],
+     "intensity": 0.7,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+3780"
+    },
+    {
+     "key": "release",
+     "label": "Release · завершающий импульс",
+     "kind": "oneshot",
+     "atMs": 6170,
+     "anchor": "montage",
+     "ruleId": "magic-tr-wolf-release",
+     "slot": "magic.tr_wolf_release",
+     "fmodEvents": [
+      "Spells/Transform/SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+     ],
+     "samples": [
+      "SFX_CREA_Wolf_Gnarl_500ms_A_01"
+     ],
+     "intensity": 0.85,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Transform_Cast_Montage Launch+6170"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 47,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 60,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_In_01"
+    },
+    {
+     "t": 1000,
+     "notify": "GameplayTagEvent",
+     "sound": ""
+    },
+    {
+     "t": 1056,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1064,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_01"
+    },
+    {
+     "t": 1188,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1290,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 1990,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 2129,
+     "notify": "PlayNiagaraEffect",
+     "sound": ""
+    },
+    {
+     "t": 3777,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BodyFall_01"
+    },
+    {
+     "t": 6048,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Transform_Cast_Launch_BubbleForm_01"
+    },
+    {
+     "t": 6167,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  },
+  {
+   "id": "teleport",
+   "title": "Телепортация",
+   "school": "Телепортация",
+   "ability": "GA_CastSpell_Teleport",
+   "montage": "A_Man_Teleport_Cast_Montage",
+   "concept": "Пространство сжимается вокруг героя, энергия нарастает, резкий обрыв при исчезновении; при прибытии — мягкий импульс материализации.",
+   "notes": "Пять направлений — один общий профиль. Пауза загрузки между исчезновением и прибытием в демонстрации условная (1,5 с).",
+   "hold": 4060,
+   "chain": null,
+   "entries": [
+    {
+     "id": "teleport-sunkentower",
+     "title": "Телепортация в затопленную башню",
+     "ability": "GA_CastSpell_TeleportToSunkenTower"
+    },
+    {
+     "id": "teleport-firemages",
+     "title": "Телепортация к магам огня",
+     "ability": "GA_CastSpell_TeleportToMagiciansOfFire"
+    },
+    {
+     "id": "teleport-necromancer",
+     "title": "Телепортация к некроманту",
+     "ability": "GA_CastSpell_TeleportToNecromancer"
+    },
+    {
+     "id": "teleport-swampcamp",
+     "title": "Телепортация в Болотный лагерь",
+     "ability": "GA_CastSpell_TeleportToSwampCamp"
+    },
+    {
+     "id": "teleport-watermages",
+     "title": "Телепортация к магам воды",
+     "ability": "GA_CastSpell_TeleportToMagiciansOfWater"
+    }
+   ],
+   "components": [
+    {
+     "key": "cast",
+     "label": "Cast · пространство сжимается",
+     "kind": "oneshot",
+     "atMs": 330,
+     "anchor": "montage",
+     "ruleId": "magic-teleport-cast",
+     "slot": "magic.teleport_cast",
+     "fmodEvents": [
+      "Spells/Teleport/SFX_Magic_Teleport_Cast_01"
+     ],
+     "samples": [
+      "SFX_Magic_Teleport_Cast_L1_01"
+     ],
+     "intensity": 0.6,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Teleport_Cast_Montage In+330"
+    },
+    {
+     "key": "charge",
+     "label": "Sustain · вихрь энергии (петля)",
+     "kind": "loop",
+     "atMs": 1000,
+     "anchor": "montage",
+     "ruleId": "magic-teleport-charge",
+     "slot": "magic.teleport_charge",
+     "fmodEvents": [
+      "Spells/Teleport/SFX_Magic_Teleport_SwirlLoop_01"
+     ],
+     "samples": [
+      "SFX_Magic_Teleport_SwirlLoop_L1_01"
+     ],
+     "intensity": 0.48,
+     "loopMs": 2000,
+     "note": "секция Charge 1000–5000 мс",
+     "game": "A_Man_Teleport_Cast_Montage loop Charge"
+    },
+    {
+     "key": "vanish",
+     "label": "Release · исчезновение (резкий обрыв)",
+     "kind": "vanish",
+     "atMs": 5060,
+     "anchor": "montage",
+     "ruleId": "magic-teleport-vanish",
+     "slot": "magic.teleport_vanish",
+     "fmodEvents": [
+      "Spells/Teleport/SFX_Magic_Teleport_Vanish_01"
+     ],
+     "samples": [
+      "SFX_Magic_Teleport_Vanish_L1_01"
+     ],
+     "intensity": 0.92,
+     "loopMs": 0,
+     "note": "",
+     "game": "A_Man_Teleport_Cast_Montage Launch+5060"
+    },
+    {
+     "key": "arrive",
+     "label": "End · материализация",
+     "kind": "arrive",
+     "atMs": 0,
+     "anchor": "montage",
+     "ruleId": "magic-teleport-arrive",
+     "slot": "magic.teleport_arrive",
+     "fmodEvents": [
+      "Spells/Teleport/SFX_Magic_Teleport_SwirlEnd_01",
+      "Spells/Teleport/SFX_Magic_Teleport_Appear_01"
+     ],
+     "samples": [
+      "SFX_Magic_Teleport_SwirlOut_L1_01"
+     ],
+     "intensity": 0.58,
+     "loopMs": 0,
+     "note": "A_Man_Teleport_Launch_End: SwirlEnd 50 мс, Appear 2070 мс после загрузки места",
+     "game": "montage A_Man_Teleport_Launch_End_Montage"
+    }
+   ],
+   "montageAnchors": [
+    {
+     "t": 325,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Teleport_Cast_01"
+    },
+    {
+     "t": 906,
+     "notify": "ThrowRuneScroll",
+     "sound": ""
+    },
+    {
+     "t": 5058,
+     "notify": "PlayCustomFX",
+     "sound": "SFX_Magic_Teleport_Vanish_01"
+    },
+    {
+     "t": 5207,
+     "notify": "LaunchSpell",
+     "sound": ""
+    }
+   ]
+  }
+ ]
+}

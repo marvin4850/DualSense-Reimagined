@@ -1,0 +1,191 @@
+// Pack 30-lockpick, v2 = Tactile Lockpicking 2.0 (TACTILE_LOCKPICKING_2_DESIGN_SPEC.md, LOCKPICK.md). Mod v16 events "lp".
+// The DualSense SPEAKER is never used. path auto = HD on USB (ch3/4) + a simpler motor version for Bluetooth;
+// path hd = micro-detail that is skipped on Bluetooth (BT gets <= 2-3 big events per move: settle / strain / unlock).
+//
+// Four meaning channels (spec §2):
+//   A. navigation  ph=guide kind=sel   -> wrong plate: ONE side click toward the button (right = R1 up, left = L1 down)
+//                  ph=guide kind=plate -> right plate: ONE centre click (both halves), then (Master, +300 ms) ONE side click = push L2/R2.
+//      side clicks: the opposite actuator plays inverted at 50 % (rocking, better localisation); centre: both in phase. Novice: none.
+//      identical every time (no jitter), once per stable state, never during motion; 420 Hz, ~1 ms attack (user design 14.11.2026).
+//   B. direction   trigger clicks under the finger: click_ok (Master: right way, crisp) / click_soft (safe, duller) / wall (strains the pick)
+//   C. physics     press (contact) -> motion start (sparse glide) -> cross (plates passing half way, observed) -> settle (detent)
+//                  more plates = denser / longer / wider, NOT louder (intensity ~ 1/sqrt(ch)); opposite links = paired dry
+//                  transients on the other side
+//   D. danger / result  strain (predicted, conf=derived: short, not a "broken" verdict), break, one 3-phase unlock
+// All values are first experimental presets (spec: calibrate on the real pad: `lp-bench`).
+//
+// v3 (14.11.2026, forge): the HD timbre comes from the forge bank haptics/bank/lp (recipe haptics/forge/lockpick.forge.json,
+// DSP ported from DualSense Haptic Designer, MIT). Every rule plays a "Sample" layer of its slot (lp.insert, lp.guide, lp.notch,
+// lp.glide, lp.cross, lp.settle, lp.strain, lp.break, lp.reset, lp.unlock) in the variant chosen in haptics/bank/selection.json
+// (A brass / B steel / C wrought iron / legacy). The previous procedural layers stay, marked "ifVariant": "<slot>:legacy":
+// they play only when that slot is set to "legacy" (exact pre-forge behaviour). Rule logic, timing, grammar, triggers and the
+// Bluetooth motor versions are unchanged. Compare on the pad: `hd-compare`.
+{
+  "pack": "lockpick",
+  "version": 3,
+  "description": "Tactile Lockpicking 2.0: Master navigation for L1/R1/L2/R2, physics during the plate animation, step triggers, single unlock",
+  "padIdleResetMs": 15000,
+  "disableRules": ["auto-lockpick", "auto-latch"],
+  "triggerProfiles": {
+    // Trigger clicks (user request 14.11.2026): the click is the pad's own trigger mechanism, felt under the finger at the
+    // point where the move fires (the mod fires at FirePoint just past the click: DsLp_Lockpick.ini, calibrated by lp-bench).
+    // click_ok and click_soft break at the SAME zone (5) so they are alike and fire alike; they differ in hardness and spring.
+    // Experimental starting values - compare variants on lp-bench (key v) and calibrate (key c).
+    "off":          { "mode": "off" },
+    "click_ok":     { "mode": "bow",    "pos": 3, "end": 5, "str": 8, "snap": 8, "note": "right direction (Master): crisp click with a short spring after it" },
+    // v32b (user: Novice wall / warn / click felt the same): a move fires at 0.58 (~zone 5.8) and the tail replaces the profile 5 ms later,
+    // so ONLY zones 0..5 are ever felt. Old click_soft (2->5/5) and wall (from 2, 7) both resisted from zone 2 at a similar force there.
+    // Now they differ from the very start of the travel, like Master's path / offpath: free -> click | medium from 0 | maximum from 0.
+    "click_soft":   { "mode": "weapon", "pos": 4, "end": 5, "str": 7, "note": "safe direction / no information: free travel to zone 4, then a dry click (like path, a little weaker)" },
+    "wall":         { "mode": "feedback", "pos": 0, "str": 8, "note": "dangerous direction: the pad's maximum from the very start (= offpath). Novice: only on the pick's last life" },
+    "warn":         { "mode": "feedback", "pos": 0, "str": 4, "note": "Novice: dangerous direction while the pick takes 2+ strains - medium resistance from the very start, freely pressable" },
+    // v25 (user decision 14.11.2026, Master): the direction of the ONE planned path = light resistance; every other
+    // direction (wrong plate, wrong way, a strain) = strong, clearly felt resistance from early in the travel, still pressable.
+    // v26 (user: stronger contrast): path = no resistance at all, offpath = the pad's maximum from the very start of the travel.
+    // v29 (user's final choice on Codex's stand, haptics/experiments/trigger-click-selection.json): "Сухой спуск" = Weapon 4->5 / 8
+    // (mode 0x25: hardware resistance between zones 4 and 5, then a sharp drop of force; no snap for Weapon). The move fires at 0.58,
+    // re-arm below 0.20; the vibration tail "tail" comes from lp-press-tail. offpath stays the max feedback; wall stays separate.
+    "path":         { "mode": "weapon", "pos": 4, "end": 5, "str": 8, "note": "Master: the planned move - 'Сухой спуск': resistance 4->5, then a dry release" },
+    "offpath":      { "mode": "feedback", "pos": 0, "str": 8, "note": "Master: not the planned move (or a strain) - maximum resistance from the start" },
+    "tail":         { "mode": "vibration", "pos": 0, "amp": 3, "hz": 40, "note": "v29: 'Сухой спуск' vibration tail on the pulled trigger: 5 ms after the fire point, 150 ms, always plays to the end (lp-press-tail)" },
+    "knock":        { "mode": "vibration", "pos": 0, "amp": 3, "hz": 40, "note": "Master: one knock on both triggers with the step-end body cue (pad.pulse of lp-step-end, 65 ms, DsBridge ends it)" },
+    "click_ok_w":   { "mode": "weapon", "pos": 3, "end": 5, "str": 8, "note": "A/B variant of click_ok without the spring" },
+    "click_ok_b":   { "mode": "bow",    "pos": 4, "end": 5, "str": 8, "snap": 8, "note": "A/B variant of click_ok: narrower and harder" },
+    "click_soft_b": { "mode": "weapon", "pos": 3, "end": 5, "str": 4, "note": "A/B variant of click_soft: as narrow as click_ok, only weaker" },
+    "wall_hard":    { "mode": "feedback", "pos": 2, "str": 8, "note": "A/B variant of wall: maximum" },
+    "tension":      { "mode": "feedback", "pos": 3, "str": 2, "note": "v2 idle tension (kept for comparison)" },
+    "load1":        { "mode": "feedback", "pos": 3, "str": 3, "note": "during motion, one plate" },
+    "loadn":        { "mode": "feedback", "pos": 3, "str": 4, "note": "during motion, several plates" },
+    "loadopp":      { "mode": "zones", "zones": [0, 0, 0, 3, 5, 3, 5, 3, 5, 3], "note": "during motion, plates linked in opposite directions" }
+  },
+  "rules": [
+    // ---------------- session ----------------
+    { "id": "lp-insert", "event": "lp:update", "where": { "ph": "insert" }, "priority": "high",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "insert", "slot": "lp.insert" },
+          { "preset": "Tick", "ifVariant": "lp.insert:legacy", "count": 2, "intervalMs": 45, "freqHz": 280, "ms": 12, "drive": 1.5, "tauMs": 6, "attackMs": 1.0, "intensity": 0.921 } ],
+        "motor": { "preset": "Rumble", "steps": [[0, 255, 0, 35], [55, 255, 0, 30]] } },
+      "note": "the pick goes in: two dry ticks at the game's own insert moment (AnimNotify_InsertLockPick of A_Lockpicking_In, 0.836 s on the animation clock after State.PickLock)" },
+
+    { "id": "lp-ready", "event": "lp:update", "where": { "ph": "ready" }, "pad": { "l2": "click_soft", "r2": "click_soft" },
+      "note": "the minigame accepts input (2 s readiness check, NOT the insert moment): triggers only, no vibration" },
+
+    { "id": "lp-trig", "event": "lp:update", "where": { "ph": "trig" }, "pad": { "l2": "=l", "r2": "=r" },
+      "note": "trigger profiles from the mod (path | offpath | click_soft | warn | wall | load1 | loadn | loadopp), only on change" },
+
+    { "id": "lp-device", "event": "lp:update", "where": { "ph": "device" }, "pad": { "l2": "click_soft", "r2": "click_soft" } },
+
+    // ---------------- A. navigation (Master: all four commands; Trained: only plate selection) ----------------
+    { "id": "lp-guide-sel", "event": "lp:update", "where": { "ph": "guide", "kind": "sel" }, "priority": "high",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "guide", "slot": "lp.guide", "panFrom": "=side == 'L' ? -1 : 1", "cross": 0.5 },
+          { "preset": "Tick", "ifVariant": "lp.guide:legacy", "freqHz": 300, "ms": 35, "attackMs": 0.3, "tauMs": 12, "partial": 2.76, "partialGain": 0.35, "partialTauMs": 4, "drive": 2.5, "intensity": 0.88, "panFrom": "=side == 'L' ? -1 : 1", "cross": 0.5 } ],
+        "motor": { "preset": "Rumble", "steps": [[0, "=side == 'R' ? 240 : 0", "=side == 'L' ? 240 : 0", 35]] } },
+      "note": "wrong plate: ONE side click toward the button to press - right handle = R1 (plate up), left handle = L1 (plate down). The opposite actuator plays it inverted at 50 % (cross) so the pad rocks toward the side instead of shaking as a whole" },
+
+    { "id": "lp-guide-plate", "event": "lp:update", "where": { "ph": "guide", "kind": "plate" }, "priority": "high",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "guide", "slot": "lp.guide" },
+          { "preset": "Sample", "name": "guide", "slot": "lp.guide", "gain": "=side == '-' ? 0 : 1", "delayMs": 300, "panFrom": "=side == 'L' ? -1 : 1", "cross": 0.5 },
+          { "preset": "Tick", "ifVariant": "lp.guide:legacy", "freqHz": 300, "ms": 35, "attackMs": 0.3, "tauMs": 12, "partial": 2.76, "partialGain": 0.35, "partialTauMs": 4, "drive": 2.5, "intensity": 0.88 },
+          { "preset": "Tick", "ifVariant": "lp.guide:legacy", "gain": "=side == '-' ? 0 : 1", "freqHz": 300, "ms": 35, "attackMs": 0.3, "tauMs": 12, "partial": 2.76, "partialGain": 0.35, "partialTauMs": 4, "drive": 2.5, "intensity": 0.88,
+            "delayMs": 300, "panFrom": "=side == 'L' ? -1 : 1", "cross": 0.5 } ],
+        "motor": { "layers": [
+          { "preset": "Rumble", "steps": [[0, 220, 220, 30]] },
+          { "preset": "Rumble", "steps": [[300, "=side == 'R' ? 240 : 0", "=side == 'L' ? 240 : 0", 35]] } ] } },
+      "note": "right plate: ONE centre click (both halves in phase) = 'this plate'; Master: 300 ms later ONE side click (opposite side inverted, cross 0.5) = push with L2 (left) / R2 (right). Trained: centre only" },
+
+    // ---------------- C. physics ----------------
+    { "id": "lp-select", "event": "lp:update", "where": { "ph": "sel" }, "priority": "low", "cooldownMs": 40, "path": "hd",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "notch", "slot": "lp.notch" },
+          { "preset": "Tick", "ifVariant": "lp.notch:legacy", "freqHz": 140, "ms": 14, "attackMs": 2.5, "decay": 0.4, "intensity": 0.3 } ] },
+      "note": "the pick slides to another plate: a faint, low, centred notch (physics only). Deliberately weak: it sounds on EVERY L1/R1 press, so it must never be read as a hint; the navigation is the bright 300 Hz click of lp-guide-plate" },
+
+    { "id": "lp-press", "enabled": false, "event": "lp:update", "where": { "ph": "press", "valid": ["1", "unknown"] }, "priority": "normal", "path": "hd",
+      "effect": { "preset": "Tick", "freqHz": 270, "ms": 12, "attackMs": 1.0, "intensity": 0.18, "pan": "=dir == 'L' ? -0.5 : 0.5" },
+      "note": "OFF since the trigger click (14.11.2026): the press is felt by the trigger itself, HD stays for the inner parts" },
+
+    { "id": "lp-motion", "event": "lp:update", "where": { "ph": "motion", "stage": "start" }, "priority": "normal", "path": "hd",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "glide", "slot": "lp.glide", "durationMs": "=min(700, max(120, est * 0.85))", "fadeMs": 40,
+            "rate": "=1 + 0.05 * min(max(ch, 1) - 1, 4)", "intensity": 1.1,
+            "panFrom": "=dir == 'L' ? -0.5 : 0.5", "panTo": "=ch >= 3 ? (dir == 'L' ? 0.5 : -0.5) : (dir == 'L' ? -0.2 : 0.2)" },
+          { "preset": "Sample", "name": "glide_opp", "slot": "lp.glide", "gain": "=opp > 0 ? 1 : 0", "durationMs": "=min(600, max(100, est * 0.7))", "fadeMs": 40,
+            "delayMs": 40, "panFrom": "=dir == 'L' ? 0.7 : -0.7" },
+          { "preset": "Grain", "ifVariant": "lp.glide:legacy", "durationMs": "=min(700, max(120, est * 0.85))", "packetMs": 10, "gapMs": "=max(3, 8 - ch)", "shape": "sharp", "accentMs": 45, "accentGain": 1.5,
+            "freqLo": 150, "freqHi": 260, "fadeMs": 20, "intensity": "=(0.36 + 0.04 * min(ch, 4)) * 0.92",
+            "panFrom": "=dir == 'L' ? -0.5 : 0.5", "panTo": "=ch >= 3 ? (dir == 'L' ? 0.5 : -0.5) : (dir == 'L' ? -0.2 : 0.2)" },
+          { "preset": "Grain", "ifVariant": "lp.glide:legacy", "gain": "=opp > 0 ? 1 : 0", "durationMs": "=min(600, max(100, est * 0.7))", "packetMs": 7, "gapMs": 9, "shape": "sharp",
+            "freqLo": 200, "freqHi": 320, "fadeMs": 20, "intensity": 0.3, "delayMs": 40, "seed": 41,
+            "panFrom": "=dir == 'L' ? 0.7 : -0.7" } ] },
+      "note": "observed motion started: stick-slip friction for the expected duration; more plates = denser (playback rate) and rolling to the other handle; opposite links add a drier counter-texture on the other side" },
+
+    { "id": "lp-cross", "event": "lp:update", "where": { "ph": "cross" }, "priority": "normal", "path": "hd",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "detent", "slot": "lp.cross", "gain": "=same > 0 ? 1 : 0", "count": "=min(max(same, 1), 5)", "intervalMs": "=ch >= 5 ? 20 : 26",
+            "rateStep": -0.04, "intensity": "=(0.72 + 0.2 / sqrt(max(1, ch))) * (same >= 2 ? 0.8 : 1)",
+            "panFrom": "=dir == 'L' ? -0.6 : 0.6", "panTo": "=k >= 2 ? (dir == 'L' ? 0.5 : -0.5) : (dir == 'L' ? -0.6 : 0.6)" },
+          { "preset": "Sample", "name": "counter", "slot": "lp.cross", "gain": "=opp > 0 ? 1 : 0", "count": "=min(max(opp, 1), 3)", "intervalMs": 30, "delayMs": 15, "intensity": 0.6,
+            "panFrom": "=dir == 'L' ? 0.7 : -0.7" },
+          { "preset": "Tick", "ifVariant": "lp.cross:legacy", "gain": "=same > 0 ? 1 : 0", "count": "=min(max(same, 1), 5)", "intervalMs": "=ch >= 5 ? 20 : 26",
+            "freqHz": 185, "freqStep": -0.05, "ms": 14, "drive": 1.5, "tauMs": 6, "intensity": "=((((0.42 + 0.2 / sqrt(max(1, ch))) * 2.18) * 1.081) * 0.85) * 0.86",
+            "panFrom": "=dir == 'L' ? -0.6 : 0.6", "panTo": "=k >= 2 ? (dir == 'L' ? 0.5 : -0.5) : (dir == 'L' ? -0.6 : 0.6)" },
+          { "preset": "Tick", "ifVariant": "lp.cross:legacy", "gain": "=opp > 0 ? 1 : 0", "count": "=min(opp, 3)", "intervalMs": 30, "pairGapMs": 18,
+            "freqHz": 240, "ms": 10, "intensity": "=((((0.36 + 0.14 / sqrt(max(1, ch))) * 2.18) * 1.081) * 0.85) * 0.86", "delayMs": 15, "pan": "=dir == 'L' ? 0.7 : -0.7" } ] },
+      "note": "plates observed passing half way to their hole: one detent per plate moving with the push (cascade rolling across), a paired dry transient on the other side per plate moving against it; at most 5 accents" },
+
+    { "id": "lp-settle", "event": "lp:update", "where": { "ph": "settle", "status": "accepted" }, "when": "ctr < n", "priority": "normal",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "detent", "slot": "lp.settle", "count": "=min(unx, 4)", "intervalMs": 20, "rateStep": -0.04, "intensity": 0.6,
+            "panFrom": "=dir == 'L' ? -0.4 : (dir == 'R' ? 0.4 : 0)" },
+          { "preset": "Sample", "name": "=cin > 0 ? 'settle_center' : (cout > 0 ? 'release' : 'settle')", "slot": "lp.settle", "delayMs": "=20 * min(unx, 4)",
+            "panFrom": "=dir == 'L' ? -0.35 : (dir == 'R' ? 0.35 : 0)" },
+          { "preset": "Tick", "ifVariant": "lp.settle:legacy", "count": "=min(unx, 4)", "intervalMs": 20, "freqHz": 185, "freqStep": -0.05, "ms": 12, "intensity": 0.444,
+            "pan": "=dir == 'L' ? -0.4 : (dir == 'R' ? 0.4 : 0)" },
+          { "preset": "Tick", "ifVariant": "lp.settle:legacy", "ms": "=cin > 0 ? 24 : 18", "freqHz": "=cin > 0 ? 125 : (cout > 0 ? 240 : 165)", "drive": 1.5, "tauMs": "=cin > 0 ? 10 : 7",
+            "intensity": "=(((cin > 0 ? 0.68 : (cout > 0 ? 0.38 : 0.55)) * 1.49) * 1.094) * 0.85", "delayMs": "=20 * min(unx, 4)",
+            "pan": "=dir == 'L' ? -0.35 : (dir == 'R' ? 0.35 : 0)" } ],
+        "motor": { "preset": "Rumble", "steps": [[0, "=ch >= 2 ? 0 : 130", "=ch >= 2 ? 90 + 15 * min(ch, 5) : 0", "=ch >= 2 ? 70 : 35"],
+                                                 ["=ch >= 2 ? 80 : 45", "=cin > 0 ? 150 : 90", 0, 30]] } },
+      "note": "the move settled (observed): one final detent near the pushed side; denser when a plate reached the centre, a light release when one left it; plates whose crossing was not observed are filled in quickly first (fallback). The last plate (ctr == n) hands over to lp-unlock" },
+
+    // ---------------- D. danger and result ----------------
+    { "id": "lp-strain", "event": "lp:update", "where": { "ph": "strain" }, "priority": "high", "cooldownMs": 150,
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "strain", "slot": "lp.strain", "intensity": 1.05, "panFrom": "=dir == 'L' ? -0.5 : 0.5" },
+          { "preset": "Tick", "ifVariant": "lp.strain:legacy", "ms": 45, "freqHz": 140, "decay": 0.5, "attackMs": 1.0, "intensity": 1.007, "pan": "=dir == 'L' ? -0.5 : 0.5" },
+          { "preset": "Tick", "ifVariant": "lp.strain:legacy", "count": 2, "intervalMs": 22, "freqHz": 300, "ms": 9, "intensity": 0.403, "delayMs": 45, "pan": "=dir == 'L' ? -0.5 : 0.5" } ],
+        "motor": { "preset": "Rumble", "steps": [[0, 247, 247, 60], [80, 117, 0, 40]] } },
+      "note": "predicted strain (conf=derived): one rough short hit + two tiny shards; no white noise, no 'broken' verdict" },
+
+    { "id": "lp-break", "event": "lp:update", "where": { "ph": "settle", "status": "break", "anim": ["!1"] }, "priority": "high",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "snap", "slot": "lp.break", "intensity": 1.05 },
+          { "preset": "Sample", "name": "ratchet", "slot": "lp.break", "count": "=min(max(2, ch), 4)", "intervalMs": 45, "rateStep": -0.06, "intensity": 0.6, "delayMs": 200 },
+          { "preset": "Tick", "ifVariant": "lp.break:legacy", "ms": 28, "freqHz": 320, "decay": 0.25, "attackMs": 0.5, "intensity": 1.033 },
+          { "preset": "Tick", "ifVariant": "lp.break:legacy", "count": "=min(max(2, ch), 4)", "intervalMs": 45, "freqHz": 150, "freqStep": -0.06, "ms": 12, "intensity": 0.516, "delayMs": 120 } ],
+        "motor": { "preset": "Rumble", "steps": [[0, 255, 0, 45], [140, 0, 175, 160]] } },
+      "note": "the lock went back to its start right after a strain (heuristic): a brittle snap, then the plates fall back. v34: only a fallback - skipped when the mod already sent lp_break:start for this break (anim=1, pack 45 plays the scene ~1.9 s earlier)" },
+
+    { "id": "lp-reset", "event": "lp:update", "where": { "ph": "settle", "status": "reset" }, "priority": "normal",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "ratchet", "slot": "lp.reset", "count": "=min(max(2, ch), 6)", "intervalMs": 42, "rateStep": -0.03, "intensity": 1.05 },
+          { "preset": "Tick", "ifVariant": "lp.reset:legacy", "count": "=min(max(2, ch), 6)", "intervalMs": 42, "freqHz": 200, "freqStep": -0.03, "ms": 10, "intensity": 1.404 } ],
+        "motor": { "preset": "Rumble", "steps": [[0, 0, 255, 200]] } },
+      "note": "manual reset: the plates ratchet back" },
+
+    { "id": "lp-unlock", "event": "lp:complete", "where": { "res": "open" }, "priority": "critical",
+      "effect": { "layers": [
+          { "preset": "Sample", "name": "unlock", "slot": "lp.unlock", "intensity": 1.05 },
+          { "preset": "Tick", "ifVariant": "lp.unlock:legacy", "count": 2, "intervalMs": 40, "freqHz": 150, "ms": 18, "attackMs": 2, "intensity": 0.692 },
+          { "preset": "Tick", "ifVariant": "lp.unlock:legacy", "count": 3, "intervalMs": 50, "freqHz": 260, "freqStep": -0.12, "ms": 12, "intensity": 0.761, "delayMs": 90, "panFrom": -0.5, "panTo": 0.5 },
+          { "preset": "Impact", "ifVariant": "lp.unlock:legacy", "freqHz": 70, "durationMs": 120, "decayTauMs": 40, "weight": 0.9, "edgeHz": 160, "edge": 0.2, "intensity": 1.107, "delayMs": 250 } ],
+        "motor": { "preset": "Rumble", "steps": [[0, 0, 161, 60], [90, 147, 0, 30], [140, 147, 0, 30], [190, 147, 0, 30], [250, 255, 255, 120]] } },
+      "pad": { "reset": true },
+      "note": "ONE composition: muffled grab of the last plates (0-90 ms) -> release of the latches high to lower (90-240 ms) -> one bolt throw with a short dense decay (250-420 ms); triggers off" },
+
+    { "id": "lp-close", "event": "lp:complete", "pad": { "reset": true },
+      "note": "minigame closed (any reason): triggers off at once" }
+  ]
+}

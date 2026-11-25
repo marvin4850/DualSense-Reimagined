@@ -1,0 +1,74 @@
+// Correlated game actions (DsBridge Haptics/Actions.cs). An action opens on "start", collects "steps" ONLY while it is open,
+// and closes on "end" / "interrupt" (or at maxMs as a safety net). Steps outside an open action are counted as orphans
+// (never attached by time proximity). Events get fields act_<id> (start|step|end|interrupt|orphan), act_<id>_n, act_<id>_ms,
+// act_<id>_step, act_<id>_prev and act (first action) - rules can use them in where / when / let.
+// The same event may close one action and open another (e.g. swim:start ends a jump and starts a water entry).
+{
+  "actions": [
+    { "id": "jump",
+      "start": "air:start",
+      "steps": [],
+      "end": ["air:complete", "swim:start"],
+      "maxMs": 15000, "expectTimeout": true,
+      "note": "the game sometimes sets State.Falling without State.Landing (small drops, after hits): a timeout is normal here. take-off -> (fall) -> landing on ground (air:complete) or in water (swim:start)" },
+
+    { "id": "swing",
+      "start": "attack:start", "onRestart": "ignore",
+      "steps": ["attack:start", "attack:update", "dmgcaused:start"],
+      "end": ["attack:complete"],
+      "interrupt": ["attack:interrupt", "hitreact:start", "dodge:start", "roll:start", "knockback:start", "dead:start"],
+      "maxMs": 8000,
+      "note": "one attack sequence (State.Attack held): swings (attack:start) -> contact / deflect (attack:update) -> end; parried / hit / dodge interrupts" },
+
+    { "id": "draw",
+      "start": "bowdraw:start",
+      "steps": [],
+      "end": ["bowdraw:complete", { "event": "montage:start", "where": { "m": "~Shoot" } }],
+      // strain warning ~1.5 s before the game's own limit, learned from the last bowtire (held = full-draw time); 3.5 s until seen
+      "overtimeMs": "=has(last_bowtire_held) ? clamp(last_bowtire_held - 1500, 1000, 12000) : 3500", "maxMs": 60000,
+      "note": "bow string drawn (R2) -> shot / release / game resistance limit (bowtire); held near the limit -> overtime (strain effect)" },
+
+    { "id": "water",
+      "start": "swim:start",
+      "steps": ["dive:start", "dive:complete"],
+      "end": ["swim:complete"],
+      "maxMs": 1800000,
+      "note": "in water: entry (walk or fall) -> dives / surfacings -> leaving the water" },
+
+    { "id": "dive",
+      "start": "dive:start",
+      "end": ["dive:complete", "swim:complete"],
+      "maxMs": 600000 },
+
+    { "id": "guard",
+      "start": "block:start",
+      "steps": ["hurt:start", "parry:start", "attack:interrupt", "knockback:start"],
+      "end": ["block:complete"],
+      "maxMs": 60000,
+      "note": "block held -> impacts while blocking (hurt / parry / knockback) -> released" },
+
+    { "id": "unlockdoor",
+      "start": { "event": "lp:complete", "where": { "res": "open" } },
+      "steps": [ { "event": "montage:start", "where": { "m": "Man_OpenDoor_Montage" } } ],
+      "end": [ { "event": "montage:complete", "where": { "m": "Man_OpenDoor_Montage" } } ],
+      "interrupt": ["lp:start", "dead:start"],
+      "maxMs": 10000, "expectTimeout": true,
+      "note": "user 18.11.2026: lock picked (lp:complete res=open) -> the hero pushes the door open (Man_OpenDoor_Montage ~2.5 s later in game 17-18.11); chests never open a door, so a timeout is normal" },
+
+    { "id": "drown",
+      "start": "oxygen:start",
+      "steps": ["hurt:start"],
+      "end": ["oxygen:complete", "drowning:complete", "swim:complete", "dive:complete"],
+      "interrupt": ["dead:start"],
+      "maxMs": 180000,
+      "note": "user 18-19.11.2026: out of air. v47: opened by the mod's oxygen probe (below the critical level = red warning); damage ticks while it is open are drowning ticks, not a hit" },
+
+    { "id": "fight",
+      "start": "combat:start",
+      "steps": ["attack:start", "hurt:start", "hitreact:start", "dodge:start", "block:start"],
+      "end": ["combat:complete"],
+      "interrupt": ["dead:start"],
+      "maxMs": 3600000,
+      "note": "combat stance (State.Combat) as context for everything inside it" }
+  ]
+}

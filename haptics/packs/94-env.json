@@ -1,0 +1,62 @@
+{
+ "pack": "env",
+ "description": "User 18.11.2026: door opened after a successful lockpick, out-of-air pulses synced to the drowning damage ticks (red flash), waterfall loop (mod v46 waterfall:start/complete). Bank env (haptics/forge/env.forge.json). Candidates until confirmed in game.",
+ "rules": [
+  {
+   "id": "door-unlocked-open",
+   "event": "montage:start",
+   "where": { "m": "Man_OpenDoor_Montage", "act_unlockdoor": "step" },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "layers": [
+     { "preset": "Sample", "bank": "env", "name": "door_latch", "slot": "env.door_latch", "variant": "A", "intensity": 0.6, "delayMs": 220 },
+     { "preset": "Sample", "bank": "env", "name": "door_swing", "slot": "env.door_swing", "variant": "A", "intensity": 0.7, "delayMs": 420 }
+    ]
+   },
+   "continuous": { "loop": false, "maxMs": 2300, "stopOn": [], "stopWhen": ["hitreact:start", "dead:start"], "stopFadeMs": 120 },
+   "note": "Only after lp:complete res=open (action unlockdoor): latch gives at 0.22 s, the door swings 0.42-1.8 s of the 2.1 s push animation (montage has no notifies: timing [Г], tune from the game)"
+  },
+  {
+   "id": "auto-drowning",
+   "event": "drowning:start",
+   "effect": { "preset": "Continuous", "loop": 1, "intensity": 0.32, "durationMs": 1000, "freqHz": 40, "noise": 0.2, "pulseHz": 1.0, "depth": 0.95 },
+   "priority": "high",
+   "continuous": { "stopOn": ["complete"], "stopWhen": ["hurt:start", "swim:complete", "dive:complete", "dead:start"], "maxMs": 60000, "loop": true, "fadeMs": 150 },
+   "note": "18.11: replaces the generic auto 'choking'. Fallback 1 Hz throb ONLY until the first drowning damage tick; from then on drown-pulse plays each tick in sync with the red flash"
+  },
+  {
+   "id": "oxygen-beat",
+   "event": "oxygen:update",
+   "where": { "src": "beat" },
+   "path": "hd",
+   "priority": "high",
+   "situation": "air",
+   "situationMs": 400,
+   "effect": { "preset": "Sample", "bank": "env", "name": "air_pulse", "slot": "env.air_pulse", "variant": "A",
+               "intensity": "=has(empty) && empty == 1 ? 0.9 : clamp(0.5 + 0.35 * (1 - o / crit), 0.5, 0.85)" },
+   "note": "19.11 (game: the screen flashed red, nothing was felt - v46 waited for damage that had not come yet): mod v47 reads the hero's oxygen; below the critical level (red warning) one choking beat per oxygen:update src=beat, 1.1 s at the critical level -> 0.5 s when empty, stronger as the air runs out. Sync with the flash [Г]"
+  },
+  {
+   "id": "drown-pulse",
+   "event": "hurt:start",
+   "where": { "act_drown": "step" },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 150,
+   "situation": "air",
+   "situationMs": 400,
+   "effect": { "preset": "Sample", "bank": "env", "name": "air_pulse", "slot": "env.air_pulse", "variant": "A", "intensity": 0.9 },
+   "note": "Out of air: a drowning damage tick (action drown open = below the critical oxygen level) = one choking throb; a beat and a tick closer than 400 ms play once - whichever comes first (situation air, same priority); combat-take-hit skips these ticks"
+  },
+  {
+   "id": "waterfall",
+   "event": "waterfall:start",
+   "path": "hd",
+   "priority": "low",
+   "effect": { "preset": "Sample", "bank": "env", "name": "waterfall_loop", "slot": "env.waterfall_loop", "variant": "A", "intensity": "=has(k) ? clamp(0.75 * k / 100, 0.3, 0.65) : 0.5" },
+   "continuous": { "loop": true, "fadeMs": 300, "stopOn": ["complete"], "stopWhen": ["dead:start"], "maxMs": 600000, "stopFadeMs": 400 },
+   "note": "Under a waterfall (mod: hero inside the splash zone of an FMOD waterfall emitter): water pounding on the shoulders, looped until he steps out; k = strength 40..85 by waterfall size. 19.11.2026 level map (reports/levels.md): x0.75 (rms20 0.31 -> ~0.23) - a background loop was louder than everyday interactions (median 0.26), the user wants ambient quiet (game96)"
+  }
+ ]
+}

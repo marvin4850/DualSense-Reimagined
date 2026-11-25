@@ -1,0 +1,34 @@
+{
+  "pack": "trigger-click-hd",
+  "version": 1,
+  "rules": [
+    {
+      "id": "preview-dry-trigger-hd",
+      "event": "lp:update",
+      "where": {
+        "ph": "triggerclick",
+        "variant": "2"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Сухой спуск: короткий высокочастотный металлический HD-щелчок вместе с триггерным хвостом",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 360,
+            "ms": 40,
+            "intensity": 0.45,
+            "attackMs": 0.6,
+            "tauMs": 9,
+            "partial": 2.76,
+            "partialGain": 0.16,
+            "partialTauMs": 3,
+            "drive": 1.25,
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

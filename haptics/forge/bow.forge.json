@@ -1,0 +1,29 @@
+// Bow (16.11.2026, user: "the special sound that should vibrate when the bow is fully charged"): the game's own
+// string-hold creak SFX_COMBAT_Ranged_Bow_Hold (LayerB = wood/string creak with low body, ~13 creaks/s) turned into
+// HD creak ticks. Played by 90-bow-full at the full-draw moment, under the double tick. Candidate until confirmed in game.
+{
+ "bank": "bow",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.85 },
+  "check": { "maxSub": 0.12, "maxHigh": 0.04, "minCore": 0.6, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": {
+  "A": { "label": "from the game's bow-hold sound", "vars": {} }
+ },
+ "slots": {
+  "hold_creak": {
+   "role": "Full draw held: the bow limbs and string creak under tension (SFX_COMBAT_Ranged_Bow_Hold_LayerB_01)",
+   "lengthMs": 1500, "maxLengthMs": 1650,
+   "layers": [
+    { "type": "audio", "sound": "1143_SFX_COMBAT_Ranged_Bow_Hold_LayerB_01", "method": "rattle", "at": 0, "maxMs": 1500,
+      "carrierHz": 110, "tauMs": 12, "threshold": 0.15, "maxHits": 24, "dynamics": 0.8 },
+    { "type": "audio", "sound": "5884_SFX_COMBAT_Ranged_Bow_Hold_LayerA_01", "method": "rattle", "at": 0, "maxMs": 1300,
+      "carrierHz": 170, "tauMs": 6, "threshold": 0.2, "maxHits": 10, "dynamics": 0.8, "gain": 0.5 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.34 },
+   "check": { "minMs": 300, "maxMs": 1650, "rms20Min": 0.26, "btMinCorr": 0.5, "balance": "center" }
+  }
+ }
+}

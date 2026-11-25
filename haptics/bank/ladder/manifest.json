@@ -1,0 +1,89 @@
+{
+  "bank": "ladder",
+  "recipe": "ladder.forge.json",
+  "generated": "2026-11-17 11:10",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "procedural rails + game step",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "slide_in",
+      "role": "Grip loosens and the body drops onto the rails: short rising friction swell",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 291.1,
+          "peak": 0.8,
+          "rms20": 0.479,
+          "crest": 3.19,
+          "attackMs": 175.15,
+          "btCorr": 0.85,
+          "btRms20": 0.691,
+          "centroidHz": 119,
+          "dominantHz": 120,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "slide_loop",
+      "role": "Palms and boots sliding down the rails: steady friction pulsed by passing rungs",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1397.4,
+          "peak": 0.8,
+          "rms20": 0.412,
+          "crest": 3.44,
+          "attackMs": 880.5,
+          "btCorr": 0.92,
+          "btRms20": 0.619,
+          "centroidHz": 85,
+          "dominantHz": 66,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "slide_land",
+      "role": "Feet hit the ground at the bottom of the slide: the game's ladder step-down sample, heavier",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 273.2,
+          "peak": 0.85,
+          "rms20": 0.491,
+          "crest": 6.26,
+          "attackMs": 1.52,
+          "btCorr": 0.91,
+          "btRms20": 0.69,
+          "centroidHz": 80,
+          "dominantHz": 64,
+          "sub": 0.046,
+          "core": 0.953,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

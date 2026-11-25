@@ -1,0 +1,143 @@
+{
+  "pack": "breadth-equipment",
+  "description": "Specific user-reported equipment/search gaps. OFF pending live test. Approved sword/bow N/lockpick unchanged.",
+  "rules": [
+    {
+      "id": "breadth-equipment-nonblade-start",
+      "event": "equipmentfx:start",
+      "where": {
+        "family": [
+          "m1h",
+          "m2h",
+          "a1h",
+          "a2h",
+          "staff",
+          "torch",
+          "crossbow"
+        ]
+      },
+      "path": "hd",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "cooldownMs": 80,
+      "note": "Реальный тип предмета из UItemDefinition.GetItemType; перенос веса без скольжения клинка. Контакт нативного FX."
+    },
+    {
+      "id": "breadth-equipment-nonblade-complete",
+      "event": "equipmentfx:complete",
+      "where": {
+        "family": [
+          "m1h",
+          "m2h",
+          "a1h",
+          "a2h",
+          "staff",
+          "torch",
+          "crossbow"
+        ]
+      },
+      "path": "hd",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.65,
+        "freqHz": 125,
+        "ms": 85,
+        "tauMs": 26,
+        "partialGain": 0.18
+      },
+      "cooldownMs": 80,
+      "note": "Реальный тип предмета из UItemDefinition.GetItemType; перенос веса без скольжения клинка. Контакт нативного FX."
+    },
+    {
+      "id": "breadth-bow-stl-start",
+      "event": "equipmentfx:start",
+      "where": {
+        "family": "bow"
+      },
+      "when": "crouch == 1",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "draw_bow",
+        "variant": "A",
+        "slot": "pilot.draw_bow",
+        "intensity": 1
+      },
+      "cooldownMs": 80,
+      "note": "Тот же одобренный материал лука, точка FX скрытной анимации; не повторяет обычную N."
+    },
+    {
+      "id": "breadth-bow-stl-complete",
+      "event": "equipmentfx:complete",
+      "where": {
+        "family": "bow"
+      },
+      "when": "crouch == 1",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "sheathe_bow",
+        "variant": "A",
+        "slot": "pilot.sheathe_bow",
+        "intensity": 1
+      },
+      "cooldownMs": 80,
+      "note": "Тот же одобренный материал лука, точка FX скрытной анимации; не повторяет обычную N."
+    },
+    {
+      "id": "breadth-suppress-nonblade-scrape",
+      "event": "montage:start",
+      "where": {
+        "mc": [
+          "weapon_draw",
+          "weapon_sheathe"
+        ],
+        "wf": [
+          "m1h",
+          "m2h",
+          "a1h",
+          "a2h",
+          "staff",
+          "torch",
+          "crossbow"
+        ]
+      },
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0,
+        "ms": 1
+      },
+      "note": "Explicit silent routing guard: consumes old blade montage route ONLY for actual non-blade item; its exact FX plays instead."
+    },
+    {
+      "id": "breadth-body-search",
+      "event": "loot:start",
+      "path": "hd",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.46,
+            "durationMs": 220,
+            "packetMs": 18,
+            "gapMs": 9,
+            "freqLo": 70,
+            "freqHi": 170,
+            "fadeMs": 30
+          }
+        ]
+      },
+      "cooldownMs": 300,
+      "note": "Начало ощупывания одежды тела. Только общий старт; фазовые контакты пока не подтверждены."
+    }
+  ]
+}

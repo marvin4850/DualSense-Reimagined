@@ -1,0 +1,273 @@
+{
+  "pack": "height-confirm",
+  "version": 1,
+  "description": "Correct selected plate found for next action; not lock opened or plate physically centered; USB HD, no trigger cues",
+  "rules": [
+    {
+      "id": "height-found-1",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "1"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Посадка штифта — чёткий контакт и короткое оседание",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 240,
+            "ms": 30,
+            "attackMs": 0.4,
+            "tauMs": 9,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.58,
+            "delayMs": 0
+          },
+          {
+            "preset": "Impact",
+            "freqHz": 105,
+            "durationMs": 80,
+            "attackMs": 2,
+            "decayTauMs": 18,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.28,
+            "delayMs": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "height-found-2",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "2"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Плотный паз — округлый контакт и точная засечка",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "freqHz": 115,
+            "durationMs": 95,
+            "attackMs": 2,
+            "decayTauMs": 22,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.37,
+            "delayMs": 0
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 260,
+            "ms": 40,
+            "attackMs": 0.4,
+            "tauMs": 10,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.56,
+            "delayMs": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "height-found-3",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "3"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Схождение пластин — короткое стягивание и общий зацеп",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Charge",
+            "f0": 120,
+            "f1": 190,
+            "durationMs": 35,
+            "curve": 0.7,
+            "noise": 0,
+            "intensity": 0.55
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 230,
+            "ms": 45,
+            "attackMs": 0.4,
+            "tauMs": 12,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.62,
+            "delayMs": 36
+          },
+          {
+            "preset": "Impact",
+            "freqHz": 105,
+            "durationMs": 60,
+            "attackMs": 2,
+            "decayTauMs": 18,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.19,
+            "delayMs": 42
+          }
+        ]
+      }
+    },
+    {
+      "id": "height-found-4",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "4"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Мягкая фиксация — гладкое касание с металлическим ядром",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Continuous",
+            "freqHz": 140,
+            "durationMs": 105,
+            "intensity": 0.3,
+            "noise": 0,
+            "pulseHz": 0,
+            "depth": 0,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 260,
+            "ms": 45,
+            "attackMs": 0.4,
+            "tauMs": 10,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.51,
+            "delayMs": 18
+          }
+        ]
+      }
+    },
+    {
+      "id": "height-found-5",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "5"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Глубокая посадка — весомое оседание и глухой зацеп",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "freqHz": 85,
+            "durationMs": 125,
+            "attackMs": 2,
+            "decayTauMs": 25,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.43,
+            "delayMs": 0
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 200,
+            "ms": 40,
+            "attackMs": 0.4,
+            "tauMs": 10,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.57,
+            "delayMs": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "height-found-6",
+      "event": "lp:update",
+      "where": {
+        "ph": "heightgallery",
+        "dir": "found",
+        "variant": "6"
+      },
+      "path": "hd",
+      "priority": "high",
+      "note": "Стальной паз — быстрый контакт и сцепленный отскок",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Tick",
+            "freqHz": 320,
+            "ms": 35,
+            "attackMs": 0.4,
+            "tauMs": 9,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.65,
+            "delayMs": 0
+          },
+          {
+            "preset": "Tick",
+            "freqHz": 210,
+            "ms": 45,
+            "attackMs": 0.4,
+            "tauMs": 12,
+            "partial": 2.76,
+            "partialGain": 0.3,
+            "partialTauMs": 5,
+            "drive": 1.7,
+            "intensity": 0.4,
+            "delayMs": 28
+          },
+          {
+            "preset": "Impact",
+            "freqHz": 120,
+            "durationMs": 75,
+            "attackMs": 2,
+            "decayTauMs": 18,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "intensity": 0.28,
+            "delayMs": 35
+          }
+        ]
+      }
+    }
+  ]
+}

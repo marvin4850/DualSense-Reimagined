@@ -1,0 +1,5 @@
+{
+  "pack": "scenes-approved",
+  "description": "Explicit scene/family approvals with matching semantic signatures only.",
+  "rules": []
+}

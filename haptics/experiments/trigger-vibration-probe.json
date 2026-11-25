@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Проверка чистой вибрации: 40 Гц / 6 из 8 / до 800 мс",
+    "mode": "weapon",
+    "pos": 4,
+    "end": 5,
+    "strength": 8,
+    "snap": 8,
+    "pulseAmp": 6,
+    "pulseHz": 40,
+    "pulseMs": 800,
+    "delayMs": 0,
+    "fire": 0.3
+  }
+]

@@ -1,0 +1,1282 @@
+{
+  "schema": 1,
+  "situations": [
+    {
+      "id": "craft.hammer.strike",
+      "category": "Ремёсла",
+      "title": "Удар молотком",
+      "pattern": "ACTION_Hammer_L|Forging_Anvil_Hit$",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_ACTION_Hammer_L1",
+        "SFX_ACTION_Hammer_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "ACTION_Hammer_L|Forging_Anvil_Hit$|SFX_OBJ_Hammer_Hit(?:Hard|Soft)?$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Hammer/SFX_OBJ_Hammer_Hit.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Hammer/SFX_OBJ_Hammer_HitSoft.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Hammer/SFX_OBJ_Hammer_HitHard.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.hammer.rebound",
+      "category": "Ремёсла",
+      "title": "Отскок молотка от наковальни",
+      "pattern": "Anvil_HitBounce",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_Forging_Anvil_HitBounce_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Anvil_HitBounce",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Forging/SFX_OBJ_Forging_Anvil_HitBounce_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.workpiece.place",
+      "category": "Ремёсла",
+      "title": "Положить заготовку на наковальню",
+      "pattern": "Anvil_Place",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_OBJ_Forging_Anvil_Place_L1",
+        "SFX_OBJ_Forging_Anvil_Place_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Anvil_Place",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Forging/SFX_OBJ_Forging_Anvil_PlaceOrc.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Forging/SFX_OBJ_Forging_Anvil_Place.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.blade.sharpen",
+      "category": "Ремёсла",
+      "title": "Провести клинком по точильному камню",
+      "pattern": "SharpenBlade_(Detail|Scrape)",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_ACTION_SharpenBlade_Detail_L1",
+        "SFX_ACTION_SharpenBlade_Scrape_L1",
+        "SFX_ACTION_SharpenBlade_Scrape_L2",
+        "SFX_ACTION_SharpenBlade_Scrape_L3"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SharpenBlade_(Detail|Scrape)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/SharpenBlade/SFX_ACTION_SharpenBlade_Scrape.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/SharpenBlade/SFX_ACTION_SharpenBlade_Detail.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.grindstone.start",
+      "category": "Ремёсла",
+      "title": "Привести точило в движение",
+      "pattern": "Grindstone_Start",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Forging_Grindstone_Start_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Grindstone_Start",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Forging/SFX_OBJ_Forging_Grindstone_Start.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.grindstone.stop",
+      "category": "Ремёсла",
+      "title": "Остановить точило",
+      "pattern": "Grindstone_End",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Forging_Grindstone_End_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Grindstone_End",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Forging/SFX_OBJ_Forging_Grindstone_End.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.wood.grasp",
+      "category": "Ремёсла",
+      "title": "Взять полено",
+      "pattern": "WoodChopSpot_Grab",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Crafting_WoodChopSpot_Grab_L1",
+        "SFX_OBJ_Crafting_WoodChopSpot_Grab_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "WoodChopSpot_Grab",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/SFX_OBJ_Crafting_WoodChopSpot_Grab.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Grab_L2.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Grab_L1.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.wood.place",
+      "category": "Ремёсла",
+      "title": "Поставить полено",
+      "pattern": "WoodChopSpot_Place",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Crafting_WoodChopSpot_Place_L1",
+        "SFX_OBJ_Crafting_WoodChopSpot_Place_L2",
+        "SFX_OBJ_Crafting_WoodChopSpot_Place_L3"
+      ],
+      "fxClasses": [],
+      "eventPattern": "WoodChopSpot_Place",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/SFX_OBJ_Crafting_WoodChopSpot_Place.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Place_L2.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Place_L1.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Place_L3.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.wood.split",
+      "category": "Ремёсла",
+      "title": "Расколоть дерево",
+      "pattern": "WoodChopSpot_Split",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L1",
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L2",
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L3",
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L4",
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L5",
+        "SFX_OBJ_Crafting_WoodChopSpot_Split_L6"
+      ],
+      "fxClasses": [],
+      "eventPattern": "WoodChopSpot_Split",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/SFX_OBJ_Crafting_WoodChopSpot_Split.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L5.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L6.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L4.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L2.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L3.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_Split_L1.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.axe.extract",
+      "category": "Ремёсла",
+      "title": "Выдернуть топор из дерева",
+      "pattern": "WoodChopSpot_PullAxe",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_Crafting_WoodChopSpot_PullAxe_L1",
+        "SFX_OBJ_Crafting_WoodChopSpot_PullAxe_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "WoodChopSpot_PullAxe",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/SFX_OBJ_Crafting_WoodChopSpot_PullAxe.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_PullAxe_L2.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Elements/SFX_OBJ_Crafting_WoodChopSpot_PullAxe_L1.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.mill.bucket.lift",
+      "category": "Ремёсла",
+      "title": "Поднять ведро мельницы",
+      "pattern": "GrindingMill_Bucket_Pickup",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMill_Bucket_Pickup_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMill_Bucket_Pickup",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMill/SFX_OBJ_GrindingMill_Bucket_PickUp.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.mill.bucket.place",
+      "category": "Ремёсла",
+      "title": "Поставить ведро мельницы",
+      "pattern": "GrindingMill_Bucket_PutDown",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMill_Bucket_PutDown_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMill_Bucket_PutDown",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMill/SFX_OBJ_GrindingMill_Bucket_PutDown.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.mill.grind",
+      "category": "Ремёсла",
+      "title": "Провернуть ручную мельницу",
+      "pattern": "GrindingMill_Grind_L",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMill_Grind_L1",
+        "SFX_OBJ_GrindingMill_Grind_L2",
+        "SFX_OBJ_GrindingMill_Grind_L3",
+        "SFX_OBJ_GrindingMill_Grind_L4",
+        "SFX_OBJ_GrindingMill_Grind_L5",
+        "SFX_OBJ_GrindingMill_Grind_L6"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMill_Grind_L",
+      "eventAssets": [],
+      "sourceStatus": "unresolved_source"
+    },
+    {
+      "id": "craft.mill.stomp",
+      "category": "Ремёсла",
+      "title": "Нажать привод мельницы ногой",
+      "pattern": "GrindingMachine_Stomp",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMachine_Stomp_L1",
+        "SFX_OBJ_GrindingMachine_Stomp_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMachine_Stomp",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMachine/SFX_OBJ_GrindingMachine_Stomp_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.mill.arm",
+      "category": "Ремёсла",
+      "title": "Взвести привод мельницы",
+      "pattern": "GrindingMachine_Arm",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMachine_Arm_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMachine_Arm",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMachine/SFX_OBJ_GrindingMachine_Arm_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.mill.chain",
+      "category": "Ремёсла",
+      "title": "Натянуть / освободить цепь привода",
+      "pattern": "GrindingMachine_Chain(Pre|Post)",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_OBJ_GrindingMachine_ChainPost_L1",
+        "SFX_OBJ_GrindingMachine_ChainPre_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "GrindingMachine_Chain(Pre|Post)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMachine/SFX_OBJ_GrindingMachine_ChainPost_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/GrindingMachine/SFX_OBJ_GrindingMachine_ChainPre_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.herbs.grind",
+      "category": "Ремёсла",
+      "title": "Растереть травы",
+      "pattern": "HerbSmashing_GrindStones",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_HerbSmashing_GrindStones_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "HerbSmashing_GrindStones|SFX_OBJ_HerbSmashing_Grind$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/HerbSmashing/SFX_OBJ_HerbSmashing_Grind.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.leather.scrape",
+      "category": "Ремёсла",
+      "title": "Обработать кожу",
+      "pattern": "LeatherTanning_Slide",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_LeatherTanning_SlideShort_L1",
+        "SFX_OBJ_LeatherTanning_Slide_L1",
+        "SFX_OBJ_LeatherTanning_Slide_L2",
+        "SFX_OBJ_LeatherTanning_Slide_L3"
+      ],
+      "fxClasses": [],
+      "eventPattern": "LeatherTanning_Slide",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/LeatherTanning/SFX_OBJ_LeatherTanning_SlideShort.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/LeatherTanning/SFX_OBJ_LeatherTanning_Slide.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.ore.strike",
+      "category": "Ремёсла",
+      "title": "Ударить киркой по руде",
+      "pattern": "Mining_PickRock",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_Mining_PickRock_L1",
+        "SFX_OBJ_Mining_PickRock_L2",
+        "SFX_OBJ_Mining_PickRock_L3"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Mining_PickRock",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Mining/SFX_OBJ_Mining_PickRock.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Mining/Elements/SFX_OBJ_Mining_PickRock_L2.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Mining/Elements/SFX_OBJ_Mining_PickRock_L1.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.saw.stroke",
+      "category": "Ремёсла",
+      "title": "Провести пилой",
+      "pattern": "SawMill_Saw_(Up|Down)",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_SawMill_Saw_Down_L1",
+        "SFX_OBJ_SawMill_Saw_Up_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SawMill_Saw_(Up|Down)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SawMill/SFX_OBJ_SawMill_Saw_Up_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SawMill/SFX_OBJ_SawMill_Saw_DownUp_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SawMill/SFX_OBJ_SawMill_Saw_Down_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.carving.grasp",
+      "category": "Ремёсла",
+      "title": "Взять инструмент для резьбы",
+      "pattern": "Carving_ToolPick",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_Carving_ToolPick_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Carving_ToolPick|SFX_OBJ_CarveToolPick$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Carving/SFX_OBJ_CarveToolPick.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.alchemy.ingredient",
+      "category": "Ремёсла",
+      "title": "Взять реагент",
+      "pattern": "Alchemy_IngredientPick",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_Alchemy_IngredientPick_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Alchemy_IngredientPick",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Alchemy/SFX_OBJ_Alchemy_IngredientPick.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.alchemy.stir",
+      "category": "Ремёсла",
+      "title": "Размешать зелье",
+      "pattern": "Alchemy_Stir",
+      "profile": "fluid",
+      "soundGroups": [
+        "SFX_OBJ_Alchemy_Stir_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Alchemy_Stir",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/Alchemy/SFX_OBJ_Alchemy_Stir.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.cooking.smash",
+      "category": "Ремёсла",
+      "title": "Размять пищу в котле",
+      "pattern": "Cooking_Couldron_Smash",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Cooking_Couldron_Smash_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cooking_Couldron_Smash",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/SFX_OBJ_Cooking_Couldron_Smash.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.cooking.stir",
+      "category": "Ремёсла",
+      "title": "Помешать в котле",
+      "pattern": "Cooking_Couldron_Stir",
+      "profile": "fluid",
+      "soundGroups": [
+        "SFX_OBJ_Cooking_Couldron_Stir_L1",
+        "SFX_OBJ_Cooking_Couldron_Stir_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cooking_Couldron_Stir",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/SFX_OBJ_Cooking_Couldron_StirHeavy.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/SFX_OBJ_Cooking_Couldron_Stir.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.cooking.spice",
+      "category": "Ремёсла",
+      "title": "Добавить приправу",
+      "pattern": "Cooking_Pan_AddSpices",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_Cooking_Pan_AddSpices_L1",
+        "SFX_OBJ_Cooking_Pan_AddSpices_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cooking_Pan_AddSpices|SFX_OBJ_Cooking_Pan_AddSpice$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/SFX_OBJ_Cooking_Pan_AddSpice.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.cooking.shake",
+      "category": "Ремёсла",
+      "title": "Встряхнуть еду на сковороде",
+      "pattern": "Cooking_Pan_ShakeFood",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_Cooking_Pan_ShakeFood_Food"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cooking_Pan_ShakeFood",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/SFX_OBJ_Cooking_Pan_ShakeFood.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/Elements/SFX_OBJ_Cooking_Pan_ShakeFood_Food.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.cooking.toss",
+      "category": "Ремёсла",
+      "title": "Подбросить еду на сковороде",
+      "pattern": "Cooking_Pan_TossFood_Food",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Cooking_Pan_TossFood_Food"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cooking_Pan_TossFood_Food",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cooking/Elements/SFX_OBJ_Cooking_Pan_TossFood_Food.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "craft.scroll.inscribe",
+      "category": "Ремёсла",
+      "title": "Магический контакт при создании свитка",
+      "pattern": "ScrollCreation_MagicAccent",
+      "profile": "energy",
+      "soundGroups": [
+        "SFX_OBJ_ScrollCreation_MagicAccent_L1",
+        "SFX_OBJ_ScrollCreation_MagicAccent_L2",
+        "SFX_OBJ_ScrollCreation_MagicAccent_L3",
+        "SFX_OBJ_ScrollCreation_MagicAccent_L4"
+      ],
+      "fxClasses": [],
+      "eventPattern": "ScrollCreation_MagicAccent",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Crafting/ScrollCreation/SFX_OBJ_ScrollCreation_MagicAccent.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.door.unlock",
+      "category": "Взаимодействия",
+      "title": "Отпереть дверную защёлку",
+      "pattern": "OBJ_Door_Unlock",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Door_Unlock_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "OBJ_Door_Unlock",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Doors/SFX_OBJ_Door_Unlock.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.stone.door.stop",
+      "category": "Взаимодействия",
+      "title": "Каменная дверь дошла до упора",
+      "pattern": "StoneDoor_.*End",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_StoneDoor_SlideEnd_L1",
+        "SFX_OBJ_StoneDoor_SlideEnd_L2",
+        "SFX_OBJ_StoneDoor_SlideEnd_L3",
+        "SFX_OBJ_StoneDoor_SlideEnd_L4",
+        "SFX_OBJ_StoneDoor_SlideEnd_L5",
+        "SFX_OBJ_StoneDoor_SlideEnd_L6",
+        "SFX_OBJ_StoneDoor_SlideEnd_L7"
+      ],
+      "fxClasses": [],
+      "eventPattern": "StoneDoor_.*End|SFX_OBJ_StoneDoor_[SML]_SlideEnd",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/StoneDoor/SFX_OBJ_StoneDoor_L_SlideEnd_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/StoneDoor/SFX_OBJ_StoneDoor_M_SlideEnd_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/StoneDoor/SFX_OBJ_StoneDoor_S_SlideEnd_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.lever.pull",
+      "category": "Взаимодействия",
+      "title": "Потянуть рычаг",
+      "pattern": "Levers_.*Pull|Mechanism_Lever_Pull",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Levers_Ground_Pull_L1",
+        "SFX_OBJ_Levers_Ground_Pull_L2",
+        "SFX_OBJ_Levers_Ground_Pull_L4",
+        "SFX_OBJ_Levers_Wall_Pull_L1",
+        "SFX_OBJ_Levers_Wall_Pull_L2",
+        "SFX_OBJ_Mechanism_Lever_Pull_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Levers_.*Pull|Mechanism_Lever_Pull|SFX_OBJ_Lever_(Ground|Wall)_Pull",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Mechanisms/SFX_OBJ_Mechanism_Lever_Pull_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Levers/SFX_OBJ_Lever_Wall_Pull_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Levers/SFX_OBJ_Lever_Ground_Pull_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.lever.reset",
+      "category": "Взаимодействия",
+      "title": "Возврат рычага",
+      "pattern": "Levers_.*Reset",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Levers_Ground_Reset_L1",
+        "SFX_OBJ_Levers_Ground_Reset_L2",
+        "SFX_OBJ_Levers_Ground_Reset_L3",
+        "SFX_OBJ_Levers_Wall_Reset_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Levers_.*Reset|SFX_OBJ_Lever_(Ground|Wall)_Reset",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Levers/SFX_OBJ_Lever_Ground_Reset_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Levers/SFX_OBJ_Lever_Wall_Reset_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.winch.rotate",
+      "category": "Взаимодействия",
+      "title": "Провернуть лебёдку",
+      "pattern": "Mechanism_Winch_L_Rotate",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_Mechanism_Winch_L_Rotate_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Mechanism_Winch_L_Rotate",
+      "eventAssets": [],
+      "sourceStatus": "unresolved_source"
+    },
+    {
+      "id": "interact.puzzle.insert",
+      "category": "Взаимодействия",
+      "title": "Вставить предмет в механизм",
+      "pattern": "OrcPuzzleDoor_InsertItem|AbandonedMineStoneDoor_PlaceItem",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_AbandonedMineStoneDoor_PlaceItem_L1",
+        "SFX_OBJ_OrcPuzzleDoor_InsertItem_L1",
+        "SFX_OBJ_OrcPuzzleDoor_InsertItem_L2"
+      ],
+      "fxClasses": [],
+      "eventPattern": "OrcPuzzleDoor_InsertItem|AbandonedMineStoneDoor_PlaceItem",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/AbandonedMineStoneDoor/SFX_OBJ_AbandonedMineStoneDoor_PlaceItem_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/OrcPuzzleDoor/SFX_OBJ_OrcPuzzleDoor_InsertItem_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/OrcPuzzleDoor/SFX_OBJ_OrcPuzzleDoor_InsertItem_02.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.puzzle.slide",
+      "category": "Взаимодействия",
+      "title": "Сдвинуть элемент головоломки",
+      "pattern": "OrcPuzzleDoor_SlideElement",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_OBJ_OrcPuzzleDoor_SlideElement_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "OrcPuzzleDoor_SlideElement",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/OrcPuzzleDoor/SFX_OBJ_OrcPuzzleDoor_SlideElement_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.puzzle.spin",
+      "category": "Взаимодействия",
+      "title": "Повернуть элемент головоломки",
+      "pattern": "OrcPuzzleDoor_SpinElement",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_OrcPuzzleDoor_SpinElement_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "OrcPuzzleDoor_SpinElement",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/OrcPuzzleDoor/SFX_OBJ_OrcPuzzleDoor_SpinElement_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.puzzle.lock",
+      "category": "Взаимодействия",
+      "title": "Повернуть замок головоломки",
+      "pattern": "OrcPuzzleDoor_SpinLock",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_OBJ_OrcPuzzleDoor_SpinLock_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "OrcPuzzleDoor_SpinLock",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/OrcPuzzleDoor/SFX_OBJ_OrcPuzzleDoor_SpinLock_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.focus.grasp",
+      "category": "Взаимодействия",
+      "title": "Взять фокус",
+      "pattern": "FocusStone_?PickUp",
+      "profile": "energy",
+      "soundGroups": [
+        "SFX_OBJ_FocusStone_PickUp_L1"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_Obj_FocusStone_PickUp"
+      ],
+      "eventPattern": "FocusStone_?PickUp",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/FocusStone/SFX_OBJ_FocusStone_PickUp.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.uriziel.grasp",
+      "category": "Взаимодействия",
+      "title": "Взять Уризель",
+      "pattern": "Uriziel_?PickUp",
+      "profile": "energy",
+      "soundGroups": [
+        "SFX_WORLD_Uriziel_PickUp_L1"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_Obj_Uriziel_PickUp"
+      ],
+      "eventPattern": "Uriziel_?PickUp",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Uriziel/SFX_OBJ_Uriziel_PickUp.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.cargo.lift",
+      "category": "Взаимодействия",
+      "title": "Поднять груз",
+      "pattern": "Cargo_(OreSack_Pickup|Plank_PickUp)",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Cargo_OreSack_Pickup_L1",
+        "SFX_OBJ_Cargo_Plank_PickUp_L1",
+        "SFX_OBJ_Cargo_Plank_PickUp_L2",
+        "SFX_OBJ_Cargo_Plank_PickUp_L3"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Cargo_(OreSack_Pickup|Plank_PickUp)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cargo/SFX_OBJ_Cargo_OreSack_Pickup.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Cargo/SFX_OBJ_Cargo_Plank_Pickup.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.waterpipe.grasp",
+      "category": "Взаимодействия",
+      "title": "Взять мундштук",
+      "pattern": "WaterPipe_Mouthpiece_PickUp",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_OBJ_WaterPipe_Mouthpiece_PickUp_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "WaterPipe_Mouthpiece_PickUp",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/WaterPipe/SFX_OBJ_WaterPipe_Mouthpiece_PickUp.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.flame.extinguish",
+      "category": "Окружение и механизмы",
+      "title": "Погасить пламя предмета",
+      "pattern": "Flame_Extinguish",
+      "profile": "release",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Flame_Extinguish_Small",
+        "UGothicFXDefinition_Flame_Extinguish_Medium",
+        "UGothicFXDefinition_Flame_Extinguish_Large"
+      ],
+      "eventPattern": "Flame_Extinguish",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.flame.ignite",
+      "category": "Окружение и механизмы",
+      "title": "Зажечь предмет",
+      "pattern": "Flame_Lit",
+      "profile": "energy",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Flame_Lit_Small",
+        "UGothicFXDefinition_Flame_Lit_Medium",
+        "UGothicFXDefinition_Flame_Lit_Large"
+      ],
+      "eventPattern": "Flame_Lit",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.ice.melt",
+      "category": "Окружение и механизмы",
+      "title": "Разрушить ледяное препятствие нагревом",
+      "pattern": "Ice_Melting",
+      "profile": "release",
+      "soundGroups": [
+        "SFX_OBJ_Ice_MeltingByFire_L1",
+        "SFX_OBJ_Ice_Melting_L1",
+        "SFX_OBJ_Ice_Melting_L2",
+        "SFX_OBJ_Ice_Melting_L3",
+        "SFX_OBJ_Ice_Melting_L4",
+        "SFX_OBJ_Ice_Melting_L5"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_Ice_Melting",
+        "UGothicFXDefinition_Ice_MeltingByFire"
+      ],
+      "eventPattern": "Ice_Melting",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Ice/SFX_OBJ_Ice_MeltingByFire_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Ice/SFX_OBJ_Ice_Melting_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.trap.arm",
+      "category": "Окружение и механизмы",
+      "title": "Взвести шипованную ловушку",
+      "pattern": "SpikeTrap_?Arm",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_SpikeTrap_Arm_L1"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_SFX_OBJ_SpikeTrap_Arm"
+      ],
+      "eventPattern": "SpikeTrap_?Arm",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SpikeTrap/SFX_OBJ_SpikeTrap_Arm.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.trap.disarm",
+      "category": "Окружение и механизмы",
+      "title": "Обезвредить ловушку",
+      "pattern": "SpikeTrap_?Disarm",
+      "profile": "mechanism",
+      "soundGroups": [
+        "SFX_OBJ_SpikeTrap_Disarm_L1"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_SFX_OBJ_SpikeTrap_Disarm_01"
+      ],
+      "eventPattern": "SpikeTrap_?Disarm",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SpikeTrap/SFX_OBJ_SpikeTrap_Disarm_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.trap.trigger",
+      "category": "Окружение и механизмы",
+      "title": "Срабатывание ловушки",
+      "pattern": "SpikeTrap_?Trigger",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_SpikeTrap_Trigger_L1",
+        "SFX_OBJ_SpikeTrap_Trigger_L2",
+        "SFX_OBJ_SpikeTrap_Trigger_L3",
+        "SFX_OBJ_SpikeTrap_Trigger_L4",
+        "SFX_OBJ_SpikeTrap_Trigger_L5",
+        "SFX_OBJ_SpikeTrap_Trigger_L6"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SpikeTrap_?Trigger",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SpikeTrap/SFX_OBJ_SpikeTrap_Trigger_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.barrier.collapse",
+      "category": "Окружение и механизмы",
+      "title": "Разрушить магический барьер",
+      "pattern": "Barrier_?Collapse",
+      "profile": "energy",
+      "soundGroups": [
+        "SFX_OBJ_FocusStone_BarrierCollapse_L1",
+        "SFX_OBJ_FocusStone_BarrierCollapse_L2"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_Obj_FocusStone_Barrier_Collapse"
+      ],
+      "eventPattern": "Barrier_?Collapse",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/FocusStone/SFX_OBJ_FocusStone_BarrierCollapse.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.skull.jaw",
+      "category": "Окружение и механизмы",
+      "title": "Привести в движение челюсть ворот",
+      "pattern": "SkullDoor_JawDown",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_SkullDoor_JawDownFull_L1",
+        "SFX_OBJ_SkullDoor_JawDownFull_L2",
+        "SFX_OBJ_SkullDoor_JawDownFull_L3",
+        "SFX_OBJ_SkullDoor_JawDownFull_L4",
+        "SFX_OBJ_SkullDoor_JawDownHalf_L1",
+        "SFX_OBJ_SkullDoor_JawDownHalf_L2",
+        "SFX_OBJ_SkullDoor_JawDownHalf_L3",
+        "SFX_OBJ_SkullDoor_JawDownHalf_L4",
+        "SFX_OBJ_SkullDoor_JawDownHalf_L5"
+      ],
+      "fxClasses": [
+        "UGothicFXDefinition_MonasteryRuins_SkullDoor_JawDown"
+      ],
+      "eventPattern": "SkullDoor_JawDown",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_JawDownHalf_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_JawDownFull_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.skull.chain",
+      "category": "Окружение и механизмы",
+      "title": "Падение цепи ворот",
+      "pattern": "SkullDoor_ChainFall",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_OBJ_SkullDoor_ChainFallLeft_L1",
+        "SFX_OBJ_SkullDoor_ChainFallLeft_L2",
+        "SFX_OBJ_SkullDoor_ChainFallLeft_L3",
+        "SFX_OBJ_SkullDoor_ChainFallLeft_L4",
+        "SFX_OBJ_SkullDoor_ChainFallRight_L1",
+        "SFX_OBJ_SkullDoor_ChainFallRight_L2",
+        "SFX_OBJ_SkullDoor_ChainFallRight_L3",
+        "SFX_OBJ_SkullDoor_ChainFallRight_L4",
+        "SFX_OBJ_SkullDoor_ChainFallRight_L5"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SkullDoor_ChainFall",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_ChainFallLeft_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_ChainFallRight_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "env.skull.target",
+      "category": "Окружение и механизмы",
+      "title": "Контакт с мишенью ворот",
+      "pattern": "SkullDoor_Target",
+      "profile": "stone",
+      "soundGroups": [
+        "SFX_OBJ_SkullDoor_TargetLeft_L1",
+        "SFX_OBJ_SkullDoor_TargetLeft_L2",
+        "SFX_OBJ_SkullDoor_TargetLeft_L3",
+        "SFX_OBJ_SkullDoor_TargetLeft_L4",
+        "SFX_OBJ_SkullDoor_TargetLeft_L5",
+        "SFX_OBJ_SkullDoor_TargetLeft_L6",
+        "SFX_OBJ_SkullDoor_TargetLeft_L7",
+        "SFX_OBJ_SkullDoor_TargetRight_L1",
+        "SFX_OBJ_SkullDoor_TargetRight_L2",
+        "SFX_OBJ_SkullDoor_TargetRight_L3",
+        "SFX_OBJ_SkullDoor_TargetRight_L4",
+        "SFX_OBJ_SkullDoor_TargetRight_L5",
+        "SFX_OBJ_SkullDoor_TargetRight_L6"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SkullDoor_Target",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_TargetLeft_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SkullDoor/SFX_OBJ_SkullDoor_TargetRight_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.bottle.handle",
+      "category": "Предметы",
+      "title": "Взять бутылку для питья",
+      "pattern": "Potions_Drink_Bottle",
+      "profile": "contact",
+      "soundGroups": [
+        "SFX_ITEMS_Consumables_Potions_Drink_Bottle"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Potions_Drink_Bottle",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Bottle.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.drink",
+      "category": "Предметы",
+      "title": "Глоток напитка",
+      "pattern": "Potions_Drink_(Slurp|Swallow)",
+      "profile": "fluid",
+      "soundGroups": [
+        "SFX_ITEMS_Consumables_Potions_Drink_Slurp",
+        "SFX_ITEMS_Consumables_Potions_Drink_Swallow"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Potions_Drink_(Slurp|Swallow)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Swallow.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Potions_Drink_Slurp.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.bite",
+      "category": "Предметы",
+      "title": "Откусить пищу",
+      "pattern": "Eat_(Bite|Munch|Squish)",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_CREA_Molerat_Eat_Bite",
+        "SFX_CREA_Molerat_Eat_Munch",
+        "SFX_CREA_Scavenger_Eat_Munch_L1",
+        "SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Bite",
+        "SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Squish",
+        "SFX_ITEMS_Consumables_Plants_Shrubs_Eat_Munch"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Eat_(Bite|Munch|Squish)",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Bite.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Squish.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Consumables/Elements/SFX_ITEMS_Consumables_Plants_Shrubs_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Lizard/SFX_CREA_Lizard_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Harpy/SFX_CREA_Harpy_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Lurker/SFX_CREA_Lurker_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Shadowbeast/SFX_CREA_Shadowbeast_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Shadowbeast/SFX_CREA_Shadowbeast_Eat_Bite.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Scavenger/SFX_CREA_Scavenger_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Molerat/SFX_CREA_Molerat_Eat_Bite.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Molerat/SFX_CREA_Molerat_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Snapper/SFX_CREA_Snapper_Eat_Munch.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Snapper/SFX_CREA_Snapper_Eat_Bite.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Creatures/Wolf/SFX_CREA_Wolf_Eat_Munch.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.pickup",
+      "category": "Предметы",
+      "title": "Взять предмет",
+      "pattern": "FOLEY_Item_PickUp|ITEMS_Misc_Medium_PickUp",
+      "profile": "light",
+      "soundGroups": [
+        "SFX_FOLEY_Item_PickUp_L1",
+        "SFX_FOLEY_Item_PickUp_L2",
+        "SFX_FOLEY_Item_PickUp_L3",
+        "SFX_ITEMS_Misc_Medium_PickUp_Clothes",
+        "SFX_ITEMS_Misc_Medium_PickUp_Garnish",
+        "SFX_ITEMS_Misc_Medium_PickUp_Whoosh"
+      ],
+      "fxClasses": [],
+      "eventPattern": "FOLEY_Item_PickUp|ITEMS_Misc_Medium_PickUp",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Misc/SFX_ITEMS_Misc_Medium_PickUp.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Misc/Elements/SFX_ITEMS_Misc_Medium_PickUp_Garnish.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Misc/Elements/SFX_ITEMS_Misc_Medium_PickUp_Clothes.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Items/Misc/Elements/SFX_ITEMS_Misc_Medium_PickUp_Whoosh.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.teleport.vanish",
+      "category": "Магия и особые механики",
+      "title": "Растворение тела при телепортации",
+      "pattern": "Teleport_Vanish",
+      "profile": "release",
+      "soundGroups": [
+        "SFX_Magic_Teleport_Vanish_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Teleport_Vanish",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Magic/Spells/Teleport/SFX_Magic_Teleport_Vanish_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/SleeperVisions/SFX_VISION_Teleport_Vanish.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.teleport.appear",
+      "category": "Магия и особые механики",
+      "title": "Появление тела после телепортации",
+      "pattern": "Teleport_Appear",
+      "profile": "energy",
+      "soundGroups": [
+        "SFX_Magic_Teleport_Appear_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Teleport_Appear",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Magic/Spells/Teleport/SFX_Magic_Teleport_Appear_01.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/SleeperVisions/SFX_VISION_Teleport_Appear.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.transform.begin",
+      "category": "Магия и особые механики",
+      "title": "Начало физического превращения тела",
+      "pattern": "Transform_Cast_In_Bones",
+      "profile": "scrape",
+      "soundGroups": [
+        "SFX_Magic_Transform_Cast_In_Bones"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Transform_Cast_In_Bones|SFX_Magic_Transform_Cast_In_01$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Magic/Spells/Transform/SFX_Magic_Transform_Cast_In_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.transform.land",
+      "category": "Магия и особые механики",
+      "title": "Опора нового тела после превращения",
+      "pattern": "Transform_Cast_Launch_BodyFall",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_Magic_Transform_Cast_Launch_BodyFall"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Transform_Cast_Launch_BodyFall",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Magic/Spells/Transform/SFX_Magic_Transform_Cast_Launch_BodyFall_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.untransform",
+      "category": "Магия и особые механики",
+      "title": "Возврат из превращения",
+      "pattern": "Spell_Untransform",
+      "profile": "release",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Human_Spell_Untransform"
+      ],
+      "eventPattern": "Spell_Untransform",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.control.enter",
+      "category": "Магия и особые механики",
+      "title": "Установить ментальный контакт",
+      "pattern": "Spell_ControlStart",
+      "profile": "energy",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Human_Spell_ControlStart"
+      ],
+      "eventPattern": "Spell_ControlStart",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "magic.control.release",
+      "category": "Магия и особые механики",
+      "title": "Освободить ментальный контакт",
+      "pattern": "Spell_ControlEnd",
+      "profile": "release",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Human_Spell_ControlEnd"
+      ],
+      "eventPattern": "Spell_ControlEnd",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "special.bridge.pull",
+      "category": "Магия и особые механики",
+      "title": "Начать тянуть мост телекинезом",
+      "pattern": "TelekinesisBridge_Pull_Start",
+      "profile": "mechanism",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_TelekinesisBridge_Pull_Start"
+      ],
+      "eventPattern": "TelekinesisBridge_Pull_Start",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "special.bridge.release",
+      "category": "Магия и особые механики",
+      "title": "Отпустить телекинетический мост",
+      "pattern": "TelekinesisBridge_Pull_Stop",
+      "profile": "release",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_TelekinesisBridge_Pull_Stop"
+      ],
+      "eventPattern": "TelekinesisBridge_Pull_Stop",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "special.altar.heart",
+      "category": "Магия и особые механики",
+      "title": "Разрушить сердце у алтаря",
+      "pattern": "SleeperAltar_DestroyHeart",
+      "profile": "metal",
+      "soundGroups": [
+        "SFX_OBJ_SleeperAltar_DestroyHeart_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "SleeperAltar_DestroyHeart",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/SleeperAltar/SFX_OBJ_SleeperAltar_DestroyHeart_01.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "special.stonehenge.arm",
+      "category": "Магия и особые механики",
+      "title": "Контакт рычага Стоунхенджа",
+      "pattern": "Stonehenge_Arm_Hit",
+      "profile": "stone",
+      "soundGroups": [],
+      "fxClasses": [
+        "UGothicFXDefinition_Stonehenge_Arm_Hit"
+      ],
+      "eventPattern": "Stonehenge_Arm_Hit",
+      "eventAssets": [],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "interact.bench.sit",
+      "category": "Взаимодействия",
+      "title": "Принять вес тела при посадке на скамью",
+      "pattern": "Furniture_Bench_SitDown_WoodCreak",
+      "profile": "wood",
+      "soundGroups": [
+        "SFX_OBJ_Furniture_Bench_SitDown_WoodCreak"
+      ],
+      "fxClasses": [],
+      "eventPattern": "Furniture_Bench_SitDown_WoodCreak",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Objects/Furniture/Elements/SFX_OBJ_Furniture_Bench_SitDown_WoodCreak.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.smoke.inhale",
+      "category": "Предметы",
+      "title": "Затяжка курительной трубки",
+      "pattern": "ACTION_Smoke_Inhale",
+      "profile": "fluid",
+      "soundGroups": [
+        "SFX_ACTION_Smoke_Inhale_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "ACTION_Smoke_Inhale|SFX_ACTIONS_Smoke_In$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Smoke/SFX_ACTIONS_Smoke_In.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    },
+    {
+      "id": "item.smoke.exhale",
+      "category": "Предметы",
+      "title": "Выдох после затяжки",
+      "pattern": "ACTION_Smoke_Exhale",
+      "profile": "release",
+      "soundGroups": [
+        "SFX_ACTION_Smoke_Exhale_L1"
+      ],
+      "fxClasses": [],
+      "eventPattern": "ACTION_Smoke_Exhale|SFX_ACTIONS_Smoke_Out(?:_Short)?$",
+      "eventAssets": [
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Smoke/SFX_ACTIONS_Smoke_Out_Short.uasset",
+        "../../../G1R/Content/FMOD/Events/SFX/Actions/Smoke/SFX_ACTIONS_Smoke_Out.uasset"
+      ],
+      "sourceStatus": "exact_class_or_event_asset"
+    }
+  ]
+}

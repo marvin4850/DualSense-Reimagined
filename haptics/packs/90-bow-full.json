@@ -1,0 +1,34 @@
+// Bow: a clear "the shot is fully charged" signal (user request 16.11.2026: the draw vibration is liked, but nothing says
+// the draw is complete). Source: mod v45 bow:update full=1 = UBipedRangedCombatAnimInstance.m_DrawingStringAlpha >= 0.98 while
+// m_IsDrawing (the game's own string draw progress). The existing draw / hold vibration (20-auto bow-draw) is unchanged.
+// HD: a crisp bright double tick (190 Hz, 75 ms apart) over the low 72 Hz hold - different by pitch, rhythm and strength
+// (AGENTS.md 3.11: survives Bluetooth). R2: light string tension while drawing; at full draw one knock and a firmer stop,
+// released when the draw ends (shot, cancel, the game's resistance limit). Candidate until the user confirms it in the game.
+// v2 (16.11, user: "no trigger felt, add the special sound"): firmer draw resistance, R2 trembles while fully drawn,
+// + the game's own bow-hold creak (bank bow, haptics/forge/bow.forge.json) after the double tick.
+{
+  "pack": "bow-full",
+  "description": "Bow full-draw signal (mod v45): double tick + R2 knock and firmer stop; R2 string tension while drawing",
+  "triggerProfiles": {
+    "bow_pull":  { "mode": "feedback", "pos": 1, "str": 5, "note": "string tension on R2 while the hero draws (v2: firmer, user 16.11 felt nothing)" },
+    "bow_full":  { "mode": "vibration", "pos": 1, "amp": 3, "hz": 28, "note": "fully drawn: the string trembles under the finger while holding (v2)" },
+    "bow_knock": { "mode": "vibration", "pos": 0, "amp": 7, "hz": 40, "note": "one knock on R2 at the full-draw moment" }
+  },
+  "rules": [
+    { "id": "bow-full", "event": "bow:update", "where": { "full": "1" }, "when": "=prev_bow_full != 1 && last_pad_r2 == 1",
+      "path": "hd", "priority": "high", "also": true,
+      "effect": { "layers": [
+        { "preset": "Tick", "intensity": 0.85, "freqHz": 190, "tauMs": 9, "count": 2, "intervalMs": 75, "attackMs": 0.5 },
+        { "preset": "Impact", "intensity": 0.35, "durationMs": 160, "freqHz": 62, "decayTauMs": 55, "delayMs": 4 },
+        { "preset": "Sample", "bank": "bow", "name": "hold_creak", "slot": "bow.hold_creak", "variant": "A", "intensity": 0.7, "delayMs": 150 } ] },
+      "pad": { "r2": "bow_full", "pulse": "bow_knock", "pulseMs": 120, "pulseSide": "r" },
+      "note": "the shot is fully charged: double tick + R2 knock, then a firmer R2 stop while holding" },
+    { "id": "bow-pull-trigger", "event": "bowdraw:start", "also": true, "pad": { "r2": "bow_pull" },
+      "note": "R2 string tension while drawing (the HD draw effect of 20-auto plays as before)" },
+    { "id": "bow-tire-trigger", "event": "bowtire:update", "also": true, "pad": { "r2": "bow_pull" },
+      "note": "the arm gives out (game resistance limit): the full stop goes back to tension until the next full draw" },
+    { "id": "bow-trigger-reset", "event": "bowdraw:complete", "also": true, "pad": { "reset": true },
+      "when": "=last_weapon_fam == 'archery' || last_weapon_fam == 'bow' || last_weapon_fam == 'crossbow'",
+      "note": "shot / cancel / leaving the ready stance: R2 free again. Only in the bow stance: bowdraw:complete also fires on any R2 release (the lockpick triggers must stay)" }
+  ]
+}

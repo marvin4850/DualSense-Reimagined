@@ -1,0 +1,8 @@
+{
+  "name": "G1R_DualSenseBridge",
+  "title": "DualSense Reimagined",
+  "author": "Marvin2242",
+  "description": "DualSense Reimagined - Full DualSense Integration: HD haptics, adaptive triggers, lightbar, touchpad and microphone. Start the game with GothicDualSense\\GothicDualSense.exe. No gameplay changes.",
+  "modVersion": "1.0.51",
+  "loadOrder": "late"
+}

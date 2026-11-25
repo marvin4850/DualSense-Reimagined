@@ -1,0 +1,46 @@
+// Landing v2 (16.11.2026, after game100: a fall WITH health loss felt like extinguishing a wall torch).
+// Game landing sounds (SFX_Move_Land_Human_*) as the time/texture source, kept LOW: grit low, carriers 45-70 Hz body modes.
+// Three clearly separated tiers by height (packs/78-landing.json): light hop / heavy landing / damaging fall.
+{
+ "bank": "landing",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": { "peak": 0.85 },
+  "check": { "maxSub": 0.2, "maxHigh": 0.04, "minCore": 0.5, "balance": "center", "btMinCorr": 0.5 }
+ },
+ "variants": { "A": { "label": "game landing sounds, low body", "vars": {} } },
+ "slots": {
+  "land_light": {
+   "role": "Hop / small drop: a short dull tap of the feet (Land_Human_Stone)",
+   "lengthMs": 260, "maxLengthMs": 320,
+   "layers": [
+    { "type": "audio", "sound": "6953_SFX_Move_Land_Human_Stone_01", "method": "impact", "grit": 0.1, "maxMs": 220 },
+    { "type": "modal", "f": 75, "attackMs": 2, "glide": 0.95, "modes": [[1, 1, 18]], "durMs": 90, "gain": 0.6, "at": 0 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.4 },
+   "check": { "minMs": 60, "maxMs": 320, "rms20Min": 0.3, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "land_heavy": {
+   "role": "Heavy landing (the game plays LandHeavyStep): earth thump + low body resonance (Land_Human_Soil)",
+   "lengthMs": 520, "maxLengthMs": 600,
+   "layers": [
+    { "type": "audio", "sound": "539_SFX_Move_Land_Human_Soil_01", "method": "impact", "grit": 0.12, "maxMs": 420 },
+    { "type": "modal", "f": 60, "attackMs": 2, "glide": 0.9, "modes": [[1, 1, 60], [1.9, 0.18, 14]], "durMs": 260, "gain": 1.1, "at": 0 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.5 },
+   "check": { "minMs": 150, "maxMs": 600, "rms20Min": 0.4, "btMinCorr": 0.5, "balance": "center" }
+  },
+  "land_crash": {
+   "role": "Damaging fall: full-force earth impact, long low body hit, then the body settling (second low knock)",
+   "lengthMs": 900, "maxLengthMs": 1000,
+   "layers": [
+    { "type": "audio", "sound": "539_SFX_Move_Land_Human_Soil_01", "method": "impact", "grit": 0.15, "maxMs": 600, "gain": 1.1 },
+    { "type": "modal", "f": 48, "attackMs": 1.5, "glide": 0.85, "modes": [[1, 1, 140], [1.7, 0.25, 30]], "durMs": 520, "gain": 1.3, "at": 0 },
+    { "type": "modal", "f": 65, "attackMs": 4, "glide": 0.9, "modes": [[1, 1, 45]], "durMs": 200, "gain": 0.7, "at": 230 }
+   ],
+   "normalize": { "peak": 0.85, "rms20": 0.56 },
+   "check": { "minMs": 300, "maxMs": 1000, "rms20Min": 0.48, "btMinCorr": 0.5, "balance": "center" }
+  }
+ }
+}

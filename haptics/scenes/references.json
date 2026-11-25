@@ -1,0 +1,595 @@
+{
+  "basis": "Explicit approvals through session_game91; crouch textures and eight variations revised at the explicit user request 2026-11-16, pending subjective re-test. References protect authorized edits; no new perceptual approval is inferred.",
+  "files": {
+    "haptics\\bank\\pilot\\draw_s1h.A.wav": "7f2621c78fd68812bb8af6fddf001a8f55ceaaf4fd348fa346d5ba0161da6810",
+    "haptics\\bank\\pilot\\sheathe_s1h.A.wav": "49e4ea7d93849b707115f8744bfca94a6bcd88171cf6c247fa014607d4605e28",
+    "haptics\\bank\\pilot\\contact_s1h.A.wav": "b1a4ec1155f5f703df88a394b74861ffde4ff6353105a4bed50a9c01bc4c0c71",
+    "haptics\\bank\\pilot\\contact_fist.A.wav": "97e96eb649cd5902725e05c7969d40a4c7a2800f7c49be83d7c1a7fb36a84f6c",
+    "haptics\\bank\\pilot\\chest_open.A.wav": "fd7720a3dcd4c7e4dedf1f886b0042da0de093893067c42826834a25498620d6",
+    "haptics\\bank\\pilot\\draw_bow.A.wav": "40d9d636cfffc9b074b3e524352e00a15c543042833ce66b8849bc644d0181a7",
+    "haptics\\bank\\pilot\\sheathe_bow.A.wav": "33bbc34ddfd0c4d35faac6c2f317c1b11414b3f0f9e23a53fb7d2e98097698e4",
+    "haptics\\bank\\pilot\\fists_ready.A.wav": "b3df50850077cae760884d436abd2dadc4de9a691c98f8204a61f1469394d38f",
+    "haptics\\bank\\pilot\\fists_relax.A.wav": "830bf7aa39538f2d4e6c988b33e398f49586a890eb48ad34005a5a854889aa06",
+    "haptics\\bank\\pilot\\reload_bow.A.wav": "d791027ab4e1436bbe863a3ad02393517abf8c00092ab2f66bb14d6d0c07f38b",
+    "haptics\\bank\\pilot\\chest_close.A.wav": "6f11a498bcd4924fc9d88eb95e043258c182ba408a5828a17ba6cd657cf6b275",
+    "haptics\\bank\\pilot\\step_stone_crouch.A.wav": "5f2868a208f25d70cecca586825ac7936f1a1d42225324040b8e6ffead2147bb",
+    "haptics\\bank\\pilot\\step_gravel_crouch.A.wav": "ef6686a8e59eb5a17d8322631fee2d34b1c9b6920b18509d53eba2f8f0274e4a",
+    "haptics\\bank\\pilot\\step_woodbridge_crouch.A.wav": "cadf1ca0b1533f42918617aa33f34e084c92ded67c2f6d4c5c4f24c8d9a6932e",
+    "haptics\\bank\\pilot\\step_woodfloor_crouch.A.wav": "ada4579f696cbed279ae879cc527ec8731e32834b6921eec162aef546c919a47",
+    "haptics\\bank\\pilot\\step_sand_crouch.A.wav": "81645c815ad58f777b1cfcef819847111dd3c4473045b010ee7012092f9aa13a",
+    "haptics\\bank\\pilot\\step_layermud_crouch.A.wav": "123f6e9d628c6e1760f6703d253012deb5d5d58c43f5c4df878bf83d43c20059",
+    "haptics\\bank\\pilot\\step_layerwater_crouch.A.wav": "b93da5db586f8dee51927d4cc26b6f5d4c7aa2c30639ed847bf9879e49310c3c",
+    "haptics\\bank\\pilot\\step_grass_crouch.A.wav": "5d351c7c82f4873c4d625007f4f77734f5a78cf28b5436dfbb42d8edc2d9375e",
+    "haptics\\bank\\pilot\\step_foliage_crouch.A.wav": "6e9cc2b22578158292e09abc10a9079ac76021dff03edb75e7cdddd30eb1440c",
+    "haptics\\bank\\pilot\\step_soil_crouch.A.wav": "db14855c20a5ef6a6e18f4de91f8757a69a061ed2212e6e48db801680913d0f5",
+    "haptics\\experiments\\failure-animation-sync.json": "a1d4509d2033f9c71bf6fe15c9679599187c650bb4fa701e3bf852ba6bb38d91",
+    "haptics\\packs\\45-lockpick-failure.json": "72c86f37cfe5b4f1348c652a2754d18a5b49ab3d80c01f47528d20554bd901fe"
+  },
+  "rules": {
+    "gen-weapon-draw-draw-s1h": {
+      "id": "gen-weapon-draw-draw-s1h",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "draw_s1h",
+        "variant": "A",
+        "slot": "pilot.draw_s1h",
+        "intensity": 1.0,
+        "delayMs": "=m == 'A_Man_S1H_Un_Draw_Montage' ? 399 : (m == 'A_Man_S1H_Un_DrawBack_Montage' ? 397 : (m == 'A_Man_S1H_Tr_Draw_Montage' ? 329 : (m == 'A_Man_S1H_Tr_DrawBack_Montage' ? 399 : (m == 'A_Man_S1H_Ma_Draw_Montage' ? 394 : (432)))))"
+      },
+      "note": "Достать меч (1H) | source montage (native PlayFX for each of 6 S1H draw montages; unchanged approved material) | sound SFX_COMBAT_Melee_Draw_1HMetalBlade_L1_01 [high] | method scrape | APPROVED by the user 2026-11-15 (session_game86): \"очень понравилась вибрация доставания оружия\"",
+      "where": {
+        "mc": "weapon_draw",
+        "mw": "s1h",
+        "m": [
+          "A_Man_S1H_Un_Draw_Montage",
+          "A_Man_S1H_Un_DrawBack_Montage",
+          "A_Man_S1H_Tr_Draw_Montage",
+          "A_Man_S1H_Tr_DrawBack_Montage",
+          "A_Man_S1H_Ma_Draw_Montage",
+          "A_Man_S1H_Ma_DrawBack_Montage"
+        ]
+      },
+      "continuous": {
+        "loop": false,
+        "maxMs": 1500,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "mc == 'weapon_draw' && mw == 's1h'",
+        "stopFadeMs": 8
+      }
+    },
+    "gen-weapon-sheathe-sheathe-s1h": {
+      "id": "gen-weapon-sheathe-sheathe-s1h",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "sheathe_s1h",
+        "variant": "A",
+        "slot": "pilot.sheathe_s1h",
+        "intensity": 1.0
+      },
+      "note": "Убрать меч (1H) | source montage (approx) | sound SFX_COMBAT_Melee_Undraw_1HMetalBlade_L1_01 [high] | method scrape | APPROVED by the user 2026-11-15 (session_game86): \"очень понравилось то, как он его обратно ложит в ножны\"",
+      "where": {
+        "mc": "weapon_sheathe",
+        "mw": "s1h"
+      }
+    },
+    "gen-melee-contact-contact-s1h": {
+      "id": "gen-melee-contact-contact-s1h",
+      "event": "attack:update",
+      "priority": "high",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "contact_s1h",
+        "variant": "A",
+        "slot": "pilot.contact_s1h",
+        "intensity": 1.0
+      },
+      "note": "Контакт меча с целью | source attack (exact) | sound SFX_PHYSICS_Impacts_T_1HBlade_L1_01 [high] | method impact | APPROVED by the user 2026-11-15 (session_game88): \"в целом всё работает (4 удара мечом по противнику)\"",
+      "where": {
+        "res": "contact"
+      },
+      "when": "last_weapon_fam == 's1h'",
+      "situation": "melee.contact"
+    },
+    "gen-melee-contact-contact-fist": {
+      "id": "gen-melee-contact-contact-fist",
+      "event": "attack:update",
+      "priority": "high",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "contact_fist",
+        "variant": "A",
+        "slot": "pilot.contact_fist",
+        "intensity": 1.0
+      },
+      "note": "Удар кулаком достиг цели | source attack (exact) | sound SFX_PHYSICS_Impacts_Melee_LowPunch_L1_01 [medium] | method impact | APPROVED by the user 2026-11-15 (session_game86): \"кулаки рабочие, тоже норм\"",
+      "where": {
+        "res": "contact"
+      },
+      "when": "last_weapon_fam == 'fist'",
+      "situation": "melee.contact"
+    },
+    "gen-interact-container-chest-open": {
+      "id": "gen-interact-container-chest-open",
+      "event": "picklock:complete",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "chest_open",
+        "variant": "A",
+        "slot": "pilot.chest_open",
+        "intensity": 1.0
+      },
+      "note": "Открыть незапертый сундук (защёлка + скрип крышки) | source picklock (exact) | sound SFX_OBJ_Containers_Chest_Open_Decoration_01 [high] | method click | APPROVED by the user 2026-11-15 (session_game88): \"в целом всё работает (сундук v2 по моменту открытия; просьба: добавить закрывание)\" | State.PickLock on/off in one instant with no lockpicking = the game opens an unlocked chest (correlator action \"chestopen\")",
+      "where": {
+        "act_chestopen": "end",
+        "act_chestopen_prev": "picklock_start"
+      },
+      "when": "act_chestopen_ms < 400"
+    },
+    "gen-weapon-draw-draw-bow": {
+      "id": "gen-weapon-draw-draw-bow",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "draw_bow",
+        "variant": "A",
+        "slot": "pilot.draw_bow",
+        "intensity": 1.0,
+        "delayMs": 774
+      },
+      "note": "Достать лук: освобождение крепления и перехват | source montage (Equip sound notify 0.7737 s, soft grip at AttachWeapon 0.8711 s; independent approved arrow scene follows) | sound None [synth] | method synth | APPROVED by the user 2026-11-15 (session_game91): \"Даа, отлично. Очень хорошо.\"",
+      "where": {
+        "m": "Man_Bow_N_Equip"
+      },
+      "continuous": {
+        "loop": false,
+        "maxMs": 1200,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'Man_Bow_N_Equip'",
+        "stopFadeMs": 8
+      }
+    },
+    "gen-weapon-sheathe-sheathe-bow": {
+      "id": "gen-weapon-sheathe-sheathe-bow",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "sheathe_bow",
+        "variant": "A",
+        "slot": "pilot.sheathe_bow",
+        "intensity": 1.0,
+        "delayMs": 1121
+      },
+      "note": "Убрать лук (по анимации) | source montage (exact (notify)) | sound SFX_COMBAT_Ranged_Bow_Draw_01 [medium] | method scrape | APPROVED by the user 2026-11-15 (session_game91): \"Даа, отлично. Очень хорошо.\"",
+      "where": {
+        "mc": "weapon_sheathe",
+        "mw": "bow"
+      }
+    },
+    "gen-weapon-draw-fists-ready": {
+      "id": "gen-weapon-draw-fists-ready",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "fists_ready",
+        "variant": "A",
+        "slot": "pilot.fists_ready",
+        "intensity": 1.0
+      },
+      "note": "Кулаки к бою (по анимации) | source montage (exact (notify)) | sound None [synth] | method synth | APPROVED by the user 2026-11-15 (session_game91): \"Даа, отлично. Очень хорошо.\"",
+      "where": {
+        "mc": "weapon_draw",
+        "mw": "fists"
+      }
+    },
+    "gen-weapon-sheathe-fists-relax": {
+      "id": "gen-weapon-sheathe-fists-relax",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "fists_relax",
+        "variant": "A",
+        "slot": "pilot.fists_relax",
+        "intensity": 1.0,
+        "delayMs": "=m == 'A_Man_Fists_Un_Shelve_Montage' ? 500 : (m == 'A_Man_Fists_Tr_Shelve_Montage' ? 500 : (500))"
+      },
+      "note": "Кулаки: мягко выйти из боевой готовности | source montage (native DeattachWeapon 0.5001 s in all three Fists Shelve montages; intentionally light) | sound None [synth] | method synth | APPROVED by the user 2026-11-15 (session_game91): \"Даа, отлично. Очень хорошо.\"",
+      "where": {
+        "mc": "weapon_sheathe",
+        "mw": "fists",
+        "m": [
+          "A_Man_Fists_Un_Shelve_Montage",
+          "A_Man_Fists_Tr_Shelve_Montage",
+          "A_Man_Fists_Ma_Shelve_Montage"
+        ]
+      },
+      "continuous": {
+        "loop": false,
+        "maxMs": 1000,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "mc == 'weapon_sheathe' && mw == 'fists'",
+        "stopFadeMs": 8
+      }
+    },
+    "gen-weapon-draw-reload-bow": {
+      "id": "gen-weapon-draw-reload-bow",
+      "event": "montage:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "reload_bow",
+        "variant": "A",
+        "slot": "pilot.reload_bow",
+        "intensity": 1.0,
+        "delayMs": 532
+      },
+      "note": "Стрела: извлечь из колчана и уложить на лук | source montage (exact (HandToQuiver 0.5322 s, ArrowToBowOrCrossbow 0.9118 s, separate reload montage)) | sound SFX_COMBAT_Ranged_Bow_Reload_PullArrow_01 [high] | method scrape | APPROVED by the user 2026-11-15 (session_game90): \"теперь всё хорошо\" | Equip material unchanged; reload is a separate scene, including actual later reloads. Interrupted reload cancels the delayed arrow contact.",
+      "where": {
+        "m": "Man_Bow_N_Reload_AnimMontage"
+      },
+      "continuous": {
+        "loop": false,
+        "maxMs": 1500,
+        "stopOn": [],
+        "stopWhen": [
+          "montage:complete"
+        ],
+        "stopIf": "m == 'Man_Bow_N_Reload_AnimMontage'",
+        "stopFadeMs": 8
+      }
+    },
+    "gen-interact-container-chest-close": {
+      "id": "gen-interact-container-chest-close",
+      "event": "containerlid:start",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "pilot",
+        "name": "chest_close",
+        "variant": "A",
+        "slot": "pilot.chest_close",
+        "intensity": 1.0
+      },
+      "note": "Закрыть сундук (от начала Out, опускание + удар крышки) | source containerlid (observed montage section Out begins (30 ms poll); unchanged material/lid hit +0.40 s needs visual validation) | sound SFX_OBJ_Containers_Chest_Close_Lower_01 [high] | method scrape | APPROVED by the user 2026-11-15 (session_game90): \"теперь всё хорошо, особенно мне очень понравилось закрытие сундука\" | User liked this material in game89. Only the start anchor changes; no late interacting:complete fallback or duplicate.",
+      "where": {
+        "kind": "close"
+      },
+      "continuous": {
+        "loop": false,
+        "maxMs": 1000,
+        "stopOn": [
+          "cancel"
+        ],
+        "stopWhen": [],
+        "stopFadeMs": 8
+      }
+    },
+    "gen-move-steps-step-stone-crouch": {
+      "id": "gen-move-steps-step-stone-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_stone_crouch",
+        "variant": "A",
+        "slot": "feedback.step_stone_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Stone | source step (exact) | sound SFX_MOVE_Footsteps_Human_Stone_Sneak_01 [high] | method impact | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Stone"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-gravel-crouch": {
+      "id": "gen-move-steps-step-gravel-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_gravel_crouch",
+        "variant": "A",
+        "slot": "feedback.step_gravel_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Gravel | source step (exact) | sound SFX_MOVE_Footsteps_Human_Gravel_Sneak_01 [high] | method rattle | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Gravel"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-woodbridge-crouch": {
+      "id": "gen-move-steps-step-woodbridge-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_woodbridge_crouch",
+        "variant": "A",
+        "slot": "feedback.step_woodbridge_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: WoodBridge | source step (exact) | sound SFX_MOVE_Footsteps_Human_WoodBridge_Sneak_01 [high] | method impact | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Bridge"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-woodfloor-crouch": {
+      "id": "gen-move-steps-step-woodfloor-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_woodfloor_crouch",
+        "variant": "A",
+        "slot": "feedback.step_woodfloor_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: WoodFloor | source step (exact) | sound SFX_MOVE_Footsteps_Human_WoodFloor_Sneak_01 [high] | method impact | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Wood"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-sand-crouch": {
+      "id": "gen-move-steps-step-sand-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_sand_crouch",
+        "variant": "A",
+        "slot": "feedback.step_sand_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Sand | source step (exact) | sound SFX_MOVE_Footsteps_Human_Sand_Sneak_01 [high] | method scrape | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Sand"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-layermud-crouch": {
+      "id": "gen-move-steps-step-layermud-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_layermud_crouch",
+        "variant": "A",
+        "slot": "feedback.step_layermud_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: LayerMud | source step (exact) | sound SFX_MOVE_Footsteps_Human_LayerMud_Sneak_01 [high] | method friction | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Mud"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-layerwater-crouch": {
+      "id": "gen-move-steps-step-layerwater-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_layerwater_crouch",
+        "variant": "A",
+        "slot": "feedback.step_layerwater_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: LayerWater | source step (exact) | sound SFX_MOVE_Footsteps_Human_LayerWater_Sneak_01 [high] | method texture | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Water"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-grass-crouch": {
+      "id": "gen-move-steps-step-grass-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_grass_crouch",
+        "variant": "A",
+        "slot": "feedback.step_grass_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Grass | source step (exact) | sound SFX_MOVE_Footsteps_Human_Grass_Sneak_01 [high] | method friction | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Grass"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-foliage-crouch": {
+      "id": "gen-move-steps-step-foliage-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_foliage_crouch",
+        "variant": "A",
+        "slot": "feedback.step_foliage_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Foliage | source step (exact) | sound SFX_MOVE_Footsteps_Human_Foliage_Sneak_01 [high] | method friction | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch",
+        "mat": "~Foliage"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    },
+    "gen-move-steps-step-soil-crouch": {
+      "id": "gen-move-steps-step-soil-crouch",
+      "event": "step:update",
+      "priority": "normal",
+      "path": "hd",
+      "effect": {
+        "preset": "Sample",
+        "bank": "feedback",
+        "name": "step_soil_crouch",
+        "variant": "A",
+        "slot": "feedback.step_soil_crouch",
+        "intensity": "=(0.65) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+        "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+        "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+      },
+      "note": "Шаг крадучись: Soil (и любой другой материал) | source step (exact) | sound SFX_MOVE_Footsteps_Human_Soil_Sneak_01 [high] | method impact | APPROVED by the user 2026-11-15 (session_game86): \"ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише\"",
+      "where": {
+        "gait": "crouch"
+      },
+      "situation": "move.step",
+      "situationMs": 120,
+      "variation": {
+        "mode": "cycle",
+        "count": 8,
+        "group": "crouch_steps",
+        "scope": "event"
+      }
+    }
+  }
+}

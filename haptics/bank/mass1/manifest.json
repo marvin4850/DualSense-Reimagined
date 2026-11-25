@@ -1,0 +1,3861 @@
+{
+  "bank": "mass1",
+  "recipe": "mass1.forge.json",
+  "generated": "2026-11-16 00:40",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "from game sounds (taxonomy v3)",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "actions_scratch",
+      "role": "own body contact: SFX_ACTIONS_Scratch (SFX_ACTION_Scratch_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 282.5,
+          "peak": 0.85,
+          "rms20": 0.428,
+          "crest": 4.92,
+          "attackMs": 42.65,
+          "btCorr": 0.64,
+          "btRms20": 0.645,
+          "centroidHz": 189,
+          "dominantHz": 185,
+          "sub": 0.002,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "actions_scratchback",
+      "role": "own body contact: SFX_ACTIONS_ScratchBack (SFX_ACTION_Scratch_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 282.4,
+          "peak": 0.85,
+          "rms20": 0.435,
+          "crest": 4.87,
+          "attackMs": 42.62,
+          "btCorr": 0.64,
+          "btRms20": 0.652,
+          "centroidHz": 190,
+          "dominantHz": 185,
+          "sub": 0.002,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_draw",
+      "role": "handling an object: SFX_ACTION_Bowl_Draw (SFX_ACTION_Bowl_Draw_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 264.6,
+          "peak": 0.85,
+          "rms20": 0.368,
+          "crest": 5.43,
+          "attackMs": 62.33,
+          "btCorr": 0.83,
+          "btRms20": 0.529,
+          "centroidHz": 125,
+          "dominantHz": 139,
+          "sub": 0.016,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_shelve",
+      "role": "set down / land: SFX_ACTION_Bowl_Shelve (SFX_ACTION_Bowl_Shelve_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 42.6,
+          "peak": 0.85,
+          "rms20": 0.363,
+          "crest": 3.41,
+          "attackMs": 4.56,
+          "btCorr": 0.82,
+          "btRms20": 0.524,
+          "centroidHz": 126,
+          "dominantHz": 129,
+          "sub": 0.009,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_slurp",
+      "role": "drinking: SFX_ACTION_Bowl_Slurp (SFX_ACTION_Bowl_Slurp_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 459,
+          "peak": 0.85,
+          "rms20": 0.447,
+          "crest": 4.64,
+          "attackMs": 56.81,
+          "btCorr": 0.65,
+          "btRms20": 0.663,
+          "centroidHz": 190,
+          "dominantHz": 195,
+          "sub": 0.003,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_spill",
+      "role": "drinking: SFX_ACTION_Bowl_Spill (SFX_ACTION_Bowl_Draw_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 265,
+          "peak": 0.85,
+          "rms20": 0.364,
+          "crest": 5.53,
+          "attackMs": 62.33,
+          "btCorr": 0.83,
+          "btRms20": 0.525,
+          "centroidHz": 125,
+          "dominantHz": 139,
+          "sub": 0.016,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_spoon",
+      "role": "small separate hits: SFX_ACTION_Bowl_Spoon (SFX_ACTION_Bowl_Spoon_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 255.7,
+          "peak": 0.85,
+          "rms20": 0.488,
+          "crest": 4.54,
+          "attackMs": 116.12,
+          "btCorr": 0.71,
+          "btRms20": 0.696,
+          "centroidHz": 169,
+          "dominantHz": 155,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_spoonrim",
+      "role": "small separate hits: SFX_ACTION_Bowl_SpoonRim (SFX_ACTION_Bowl_SpoonRim_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 325.6,
+          "peak": 0.85,
+          "rms20": 0.367,
+          "crest": 7.64,
+          "attackMs": 288.23,
+          "btCorr": 0.71,
+          "btRms20": 0.545,
+          "centroidHz": 168,
+          "dominantHz": 158,
+          "sub": 0,
+          "core": 0.981,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_spoonrimsingle",
+      "role": "small separate hits: SFX_ACTION_Bowl_SpoonRimSingle (SFX_ACTION_Bowl_SpoonRimSingle_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 41.8,
+          "peak": 0.85,
+          "rms20": 0.402,
+          "crest": 3.03,
+          "attackMs": 3.5,
+          "btCorr": 0.74,
+          "btRms20": 0.59,
+          "centroidHz": 157,
+          "dominantHz": 141,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_bowl_swallow",
+      "role": "drinking: SFX_ACTION_Bowl_Swallow (SFX_ACTION_Bowl_Swallow_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 290.1,
+          "peak": 0.85,
+          "rms20": 0.368,
+          "crest": 5.07,
+          "attackMs": 41.02,
+          "btCorr": 0.83,
+          "btRms20": 0.528,
+          "centroidHz": 126,
+          "dominantHz": 113,
+          "sub": 0.013,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_cheer_drink_slurp",
+      "role": "drinking: SFX_ACTION_Cheer_Drink_Slurp (SFX_ACTION_Cheer_Drink_Slurp_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 341.1,
+          "peak": 0.85,
+          "rms20": 0.416,
+          "crest": 5.81,
+          "attackMs": 190.71,
+          "btCorr": 0.64,
+          "btRms20": 0.631,
+          "centroidHz": 191,
+          "dominantHz": 192,
+          "sub": 0.002,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_clap_multi",
+      "role": "own body contact: SFX_ACTION_Clap_Multi (SFX_ACTION_Clap_Multi_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 362.7,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 7.69,
+          "attackMs": 3.62,
+          "btCorr": 0.69,
+          "btRms20": 0.513,
+          "centroidHz": 171,
+          "dominantHz": 183,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.32,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_clap_single",
+      "role": "own body contact: SFX_ACTION_Clap_Single (SFX_ACTION_Clap_Single_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 40.3,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 3.38,
+          "attackMs": 3.6,
+          "btCorr": 0.69,
+          "btRms20": 0.512,
+          "centroidHz": 171,
+          "dominantHz": 188,
+          "sub": 0.003,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.24,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_baghandle",
+      "role": "handling an object: SFX_ACTION_CountOre_BagHandle (SFX_ACTION_CountOre_BagHandle_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 375.5,
+          "peak": 0.85,
+          "rms20": 0.48,
+          "crest": 4.45,
+          "attackMs": 130,
+          "btCorr": 0.63,
+          "btRms20": 0.692,
+          "centroidHz": 197,
+          "dominantHz": 198,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_baghandlelong",
+      "role": "handling an object: SFX_ACTION_CountOre_BagHandleLong (SFX_ACTION_CountOre_BagHandleLong_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 273.7,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 8.7,
+          "attackMs": 94.88,
+          "btCorr": 0.68,
+          "btRms20": 0.511,
+          "centroidHz": 173,
+          "dominantHz": 190,
+          "sub": 0.003,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.35,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_bagopen",
+      "role": "handling an object: SFX_ACTION_CountOre_BagOpen (SFX_ACTION_CountOre_BagOpen_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 390.5,
+          "peak": 0.85,
+          "rms20": 0.472,
+          "crest": 3.44,
+          "attackMs": 122.12,
+          "btCorr": 0.64,
+          "btRms20": 0.685,
+          "centroidHz": 195,
+          "dominantHz": 193,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_bagshake",
+      "role": "small separate hits: SFX_ACTION_CountOre_BagShake (SFX_ACTION_CountOre_BagShake_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 71.9,
+          "peak": 0.85,
+          "rms20": 0.382,
+          "crest": 3.58,
+          "attackMs": 35.46,
+          "btCorr": 0.73,
+          "btRms20": 0.565,
+          "centroidHz": 162,
+          "dominantHz": 157,
+          "sub": 0,
+          "core": 0.98,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_orehandle",
+      "role": "small separate hits: SFX_ACTION_CountOre_OreHandle (SFX_ACTION_CountOre_OreHandle_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 461.2,
+          "peak": 0.85,
+          "rms20": 0.452,
+          "crest": 5.3,
+          "attackMs": 16.15,
+          "btCorr": 0.71,
+          "btRms20": 0.667,
+          "centroidHz": 170,
+          "dominantHz": 145,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_orehandlelong",
+      "role": "small separate hits: SFX_ACTION_CountOre_OreHandleLong (SFX_ACTION_CountOre_OreHandleLong_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 148.4,
+          "peak": 0.85,
+          "rms20": 0.427,
+          "crest": 2.59,
+          "attackMs": 31.79,
+          "btCorr": 0.71,
+          "btRms20": 0.653,
+          "centroidHz": 171,
+          "dominantHz": 188,
+          "sub": 0,
+          "core": 0.977,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_orehandleshort",
+      "role": "small separate hits: SFX_ACTION_CountOre_OreHandleShort (SFX_ACTION_CountOre_OreHandleShort_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 258.1,
+          "peak": 0.85,
+          "rms20": 0.478,
+          "crest": 5.64,
+          "attackMs": 3.88,
+          "btCorr": 0.74,
+          "btRms20": 0.685,
+          "centroidHz": 156,
+          "dominantHz": 142,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_countore_tossnugget",
+      "role": "small separate hits: SFX_ACTION_CountOre_TossNugget (SFX_ACTION_CountOre_TossNugget_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 58.4,
+          "peak": 0.85,
+          "rms20": 0.492,
+          "crest": 2.57,
+          "attackMs": 3.52,
+          "btCorr": 0.74,
+          "btRms20": 0.686,
+          "centroidHz": 157,
+          "dominantHz": 141,
+          "sub": 0,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_drunk_bottle_move",
+      "role": "drinking: SFX_ACTION_Drunk_Bottle_Move (SFX_ACTION_Drunk_BottleSound_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 260.1,
+          "peak": 0.85,
+          "rms20": 0.487,
+          "crest": 4.2,
+          "attackMs": 94.44,
+          "btCorr": 0.82,
+          "btRms20": 0.702,
+          "centroidHz": 131,
+          "dominantHz": 139,
+          "sub": 0.004,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_drunk_bottle_shake",
+      "role": "small separate hits: SFX_ACTION_Drunk_Bottle_Shake (SFX_ACTION_Drunk_BottleShake_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 393.7,
+          "peak": 0.85,
+          "rms20": 0.442,
+          "crest": 6.81,
+          "attackMs": 35.77,
+          "btCorr": 0.72,
+          "btRms20": 0.652,
+          "centroidHz": 165,
+          "dominantHz": 158,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_drunk_drink",
+      "role": "drinking: SFX_ACTION_Drunk_Drink (SFX_ACTION_Drunk_Burb_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 414.2,
+          "peak": 0.85,
+          "rms20": 0.502,
+          "crest": 3.97,
+          "attackMs": 121.33,
+          "btCorr": 0.81,
+          "btRms20": 0.719,
+          "centroidHz": 136,
+          "dominantHz": 135,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_knucklecrack",
+      "role": "own body contact: SFX_ACTION_KnuckleCrack (SFX_ACTION_KnuckleCrack_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 104.7,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 4.18,
+          "attackMs": 3.6,
+          "btCorr": 0.69,
+          "btRms20": 0.511,
+          "centroidHz": 170,
+          "dominantHz": 193,
+          "sub": 0.002,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.36,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_playknife_catch",
+      "role": "handling an object: SFX_ACTION_PlayKnife_Catch (SFX_ACTION_PlayStone_Catch_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 78.9,
+          "peak": 0.85,
+          "rms20": 0.355,
+          "crest": 4.74,
+          "attackMs": 3.58,
+          "btCorr": 0.69,
+          "btRms20": 0.505,
+          "centroidHz": 172,
+          "dominantHz": 188,
+          "sub": 0.003,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.56,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_playknife_throw",
+      "role": "air / swing: SFX_ACTION_PlayKnife_Throw (SFX_ACTION_PlayKnife_Throw_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 480.6,
+          "peak": 0.85,
+          "rms20": 0.515,
+          "crest": 3.12,
+          "attackMs": 61.12,
+          "btCorr": 0.95,
+          "btRms20": 0.719,
+          "centroidHz": 61,
+          "dominantHz": 54,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_playstone_catch",
+      "role": "handling an object: SFX_ACTION_PlayStone_Catch (SFX_ACTION_PlayStone_Catch_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 69.8,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 4.45,
+          "attackMs": 3.6,
+          "btCorr": 0.68,
+          "btRms20": 0.512,
+          "centroidHz": 174,
+          "dominantHz": 188,
+          "sub": 0.003,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.29,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_playstone_catchsoft",
+      "role": "handling an object: SFX_ACTION_PlayStone_CatchSoft (SFX_ACTION_PlayStone_Catch_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 59.1,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 4.1,
+          "attackMs": 3.6,
+          "btCorr": 0.69,
+          "btRms20": 0.51,
+          "centroidHz": 172,
+          "dominantHz": 188,
+          "sub": 0.003,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.35,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_scrubfloor",
+      "role": "rub / slide / water: SFX_ACTION_ScrubFloor (SFX_ACTION_ScrubFloor_ScrubShort_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 231.8,
+          "peak": 0.85,
+          "rms20": 0.488,
+          "crest": 3.03,
+          "attackMs": 58.44,
+          "btCorr": 0.93,
+          "btRms20": 0.703,
+          "centroidHz": 78,
+          "dominantHz": 70,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_scrubfloorhand",
+      "role": "rub / slide / water: SFX_ACTION_ScrubFloorHand (SFX_ACTION_ScrubFloor_Scrub_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 336.8,
+          "peak": 0.85,
+          "rms20": 0.524,
+          "crest": 2.71,
+          "attackMs": 94.33,
+          "btCorr": 0.93,
+          "btRms20": 0.733,
+          "centroidHz": 79,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_scrubfloorshort",
+      "role": "rub / slide / water: SFX_ACTION_ScrubFloorShort (SFX_ACTION_ScrubFloor_ScrubShort_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 229.5,
+          "peak": 0.85,
+          "rms20": 0.523,
+          "crest": 2.96,
+          "attackMs": 58.15,
+          "btCorr": 0.93,
+          "btRms20": 0.732,
+          "centroidHz": 76,
+          "dominantHz": 70,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_scrubfloortriple",
+      "role": "rub / slide / water: SFX_ACTION_ScrubFloorTriple (SFX_ACTION_ScrubFloor_ScrubTriple_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 713.9,
+          "peak": 0.85,
+          "rms20": 0.547,
+          "crest": 2.85,
+          "attackMs": 208.9,
+          "btCorr": 0.93,
+          "btRms20": 0.754,
+          "centroidHz": 76,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_sharpenblade_detail",
+      "role": "hard grind / cut: SFX_ACTION_SharpenBlade_Detail (SFX_ACTION_SharpenBlade_Detail_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 698.7,
+          "peak": 0.85,
+          "rms20": 0.361,
+          "crest": 6.53,
+          "attackMs": 92.73,
+          "btCorr": 0.59,
+          "btRms20": 0.538,
+          "centroidHz": 204,
+          "dominantHz": 186,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.29,
+          "warnings": [
+            "Bluetooth: correlation only 0.59"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "action_sharpenblade_scrape",
+      "role": "hard grind / cut: SFX_ACTION_SharpenBlade_Scrape (SFX_ACTION_SharpenBlade_Scrape_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 682.6,
+          "peak": 0.85,
+          "rms20": 0.367,
+          "crest": 4.97,
+          "attackMs": 472.08,
+          "btCorr": 0.61,
+          "btRms20": 0.541,
+          "centroidHz": 200,
+          "dominantHz": 151,
+          "sub": 0,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_sweat_swipe",
+      "role": "own body contact: SFX_ACTION_Sweat_Swipe (SFX_ACTION_Hammer_Swipe_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 382.5,
+          "peak": 0.85,
+          "rms20": 0.447,
+          "crest": 5.05,
+          "attackMs": 3.58,
+          "btCorr": 0.63,
+          "btRms20": 0.663,
+          "centroidHz": 195,
+          "dominantHz": 192,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_throwapple_catch",
+      "role": "air / swing: SFX_ACTION_ThrowApple_Catch (SFX_ACTION_ThrowApple_Catch_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 297.5,
+          "peak": 0.85,
+          "rms20": 0.525,
+          "crest": 4.04,
+          "attackMs": 26.02,
+          "btCorr": 0.94,
+          "btRms20": 0.738,
+          "centroidHz": 66,
+          "dominantHz": 53,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_throwash_throw",
+      "role": "air / swing: SFX_ACTION_ThrowAsh_Throw (SFX_ACTION_PlayKnife_Throw_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 477.7,
+          "peak": 0.85,
+          "rms20": 0.542,
+          "crest": 3.06,
+          "attackMs": 37.15,
+          "btCorr": 0.95,
+          "btRms20": 0.762,
+          "centroidHz": 63,
+          "dominantHz": 54,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "action_writing_paperhandle",
+      "role": "handling an object: SFX_ACTION_Writing_PaperHandle (SFX_ACTION_Writing_QuillLoop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 328,
+          "peak": 0.85,
+          "rms20": 0.374,
+          "crest": 7.87,
+          "attackMs": 56.15,
+          "btCorr": 0.82,
+          "btRms20": 0.535,
+          "centroidHz": 126,
+          "dominantHz": 135,
+          "sub": 0.012,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_demonlord_appear_green_boom_01",
+      "role": "story / magic event: SFX_CREA_DemonLord_Appear_Green_Boom_01 (SFX_CREA_DemonLord_GreenBoom_L2_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 846.7,
+          "peak": 0.85,
+          "rms20": 0.502,
+          "crest": 4.15,
+          "attackMs": 135.58,
+          "btCorr": 0.82,
+          "btRms20": 0.713,
+          "centroidHz": 126,
+          "dominantHz": 119,
+          "sub": 0.002,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_demonlord_urizieldraw",
+      "role": "story / magic event: SFX_CREA_DemonLord_UrizielDraw (SFX_CREA_DemonLord_Death_UrizielPush_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 729.5,
+          "peak": 0.85,
+          "rms20": 0.412,
+          "crest": 5.88,
+          "attackMs": 117.9,
+          "btCorr": 0.82,
+          "btRms20": 0.622,
+          "centroidHz": 127,
+          "dominantHz": 141,
+          "sub": 0.004,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_demonlord_urizielshelve",
+      "role": "story / magic event: SFX_CREA_DemonLord_UrizielShelve (SFX_CREA_DemonLord_Death_UrizielPush_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 779.5,
+          "peak": 0.85,
+          "rms20": 0.374,
+          "crest": 6.17,
+          "attackMs": 90.15,
+          "btCorr": 0.81,
+          "btRms20": 0.559,
+          "centroidHz": 132,
+          "dominantHz": 125,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_scavenger_pet",
+      "role": "fur stroke: SFX_CREA_Scavenger_Pet (SFX_CREA_Scavenger_Pet_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 709.9,
+          "peak": 0.85,
+          "rms20": 0.502,
+          "crest": 3.73,
+          "attackMs": 358.56,
+          "btCorr": 0.94,
+          "btRms20": 0.731,
+          "centroidHz": 68,
+          "dominantHz": 60,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_scavenger_petsingle",
+      "role": "fur stroke: SFX_CREA_Scavenger_PetSingle (SFX_CREA_Scavenger_PetSingle_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 710.3,
+          "peak": 0.85,
+          "rms20": 0.495,
+          "crest": 2.71,
+          "attackMs": 257.94,
+          "btCorr": 0.94,
+          "btRms20": 0.726,
+          "centroidHz": 68,
+          "dominantHz": 60,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_scavenger_petsinglereaction",
+      "role": "fur stroke: SFX_CREA_Scavenger_PetSingleReaction (SFX_CREA_Scavenger_PetSingle_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 707.7,
+          "peak": 0.85,
+          "rms20": 0.474,
+          "crest": 2.99,
+          "attackMs": 199.33,
+          "btCorr": 0.94,
+          "btRms20": 0.7,
+          "centroidHz": 69,
+          "dominantHz": 60,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crea_wolf_pet",
+      "role": "fur stroke: SFX_CREA_Wolf_Pet (SFX_CREA_Wolf_Pet_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 569.4,
+          "peak": 0.85,
+          "rms20": 0.436,
+          "crest": 4.86,
+          "attackMs": 99.48,
+          "btCorr": 0.94,
+          "btRms20": 0.659,
+          "centroidHz": 72,
+          "dominantHz": 60,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_beer_openbottle_pop",
+      "role": "handling an object: SFX_ITEMS_Consumables_Beer_OpenBottle_Pop (SFX_ITEMS_Consumables_Beer_OpenBottle_A_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 338.8,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 7.64,
+          "attackMs": 214.06,
+          "btCorr": 0.69,
+          "btRms20": 0.51,
+          "centroidHz": 172,
+          "dominantHz": 190,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.35,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_beer_openbottle_unscrew",
+      "role": "small separate hits: SFX_ITEMS_Consumables_Beer_OpenBottle_Unscrew (SFX_ITEMS_Consumables_Beer_OpenBottle_B_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 52.8,
+          "peak": 0.85,
+          "rms20": 0.461,
+          "crest": 2.89,
+          "attackMs": 3.5,
+          "btCorr": 0.72,
+          "btRms20": 0.674,
+          "centroidHz": 163,
+          "dominantHz": 123,
+          "sub": 0,
+          "core": 0.971,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_beer_slurpend",
+      "role": "drinking: SFX_ITEMS_Consumables_Beer_SlurpEnd (SFX_ITEMS_Consumables_Beer_SlurpEnd_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 339.9,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 5.9,
+          "attackMs": 208.08,
+          "btCorr": 0.67,
+          "btRms20": 0.563,
+          "centroidHz": 180,
+          "dominantHz": 190,
+          "sub": 0.004,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_beer_slurpstart",
+      "role": "drinking: SFX_ITEMS_Consumables_Beer_SlurpStart (SFX_ITEMS_Consumables_Beer_SlurpStart_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 463.5,
+          "peak": 0.85,
+          "rms20": 0.424,
+          "crest": 4.65,
+          "attackMs": 44.65,
+          "btCorr": 0.65,
+          "btRms20": 0.639,
+          "centroidHz": 189,
+          "dominantHz": 193,
+          "sub": 0.003,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_food_hard_consume",
+      "role": "eating: SFX_ITEMS_Consumables_Food_Hard_Consume (SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Bite_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 500.6,
+          "peak": 0.85,
+          "rms20": 0.358,
+          "crest": 6.63,
+          "attackMs": 332.12,
+          "btCorr": 0.67,
+          "btRms20": 0.579,
+          "centroidHz": 182,
+          "dominantHz": 192,
+          "sub": 0.004,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.94,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_plants_mushrooms_eat_squish",
+      "role": "eating: SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Squish (SFX_ITEMS_Consumables_Plants_Mushrooms_Eat_Squish_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 191.3,
+          "peak": 0.85,
+          "rms20": 0.364,
+          "crest": 5.19,
+          "attackMs": 74.25,
+          "btCorr": 0.66,
+          "btRms20": 0.562,
+          "centroidHz": 185,
+          "dominantHz": 190,
+          "sub": 0.004,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_plants_shrubs_eat_rustle",
+      "role": "eating: SFX_ITEMS_Consumables_Plants_Shrubs_Eat_Rustle (SFX_ITEMS_Consumables_Plants_Shrubs_Eat_Rustle_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 390.9,
+          "peak": 0.85,
+          "rms20": 0.455,
+          "crest": 4.62,
+          "attackMs": 142.67,
+          "btCorr": 0.64,
+          "btRms20": 0.669,
+          "centroidHz": 192,
+          "dominantHz": 193,
+          "sub": 0.002,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_potions_consume",
+      "role": "drinking: SFX_ITEMS_Consumables_Potions_Consume (SFX_ITEMS_Consumables_Potions_Drink_Slurp_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 470.9,
+          "peak": 0.85,
+          "rms20": 0.494,
+          "crest": 5.42,
+          "attackMs": 177.33,
+          "btCorr": 0.93,
+          "btRms20": 0.726,
+          "centroidHz": 76,
+          "dominantHz": 73,
+          "sub": 0.018,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_potions_drink_bottle",
+      "role": "drinking: SFX_ITEMS_Consumables_Potions_Drink_Bottle (SFX_ITEMS_Consumables_Potions_Drink_Bottle_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 127.7,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 5.99,
+          "attackMs": 3.58,
+          "btCorr": 0.69,
+          "btRms20": 0.508,
+          "centroidHz": 173,
+          "dominantHz": 185,
+          "sub": 0.003,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.44,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_potions_drink_slurp",
+      "role": "drinking: SFX_ITEMS_Consumables_Potions_Drink_Slurp (SFX_ITEMS_Consumables_Potions_Drink_Slurp_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 470.9,
+          "peak": 0.85,
+          "rms20": 0.496,
+          "crest": 5.39,
+          "attackMs": 177.29,
+          "btCorr": 0.93,
+          "btRms20": 0.728,
+          "centroidHz": 76,
+          "dominantHz": 73,
+          "sub": 0.018,
+          "core": 0.982,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_consumables_potions_drink_swallow",
+      "role": "drinking: SFX_ITEMS_Consumables_Potions_Drink_Swallow (SFX_ITEMS_Consumables_Potions_Drink_Swallow_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 323.7,
+          "peak": 0.85,
+          "rms20": 0.373,
+          "crest": 4.71,
+          "attackMs": 42.21,
+          "btCorr": 0.82,
+          "btRms20": 0.534,
+          "centroidHz": 126,
+          "dominantHz": 113,
+          "sub": 0.012,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_draw",
+      "role": "handling an object: SFX_ITEMS_Draw (SFX_ITEMS_Misc_Medium_PickUp_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 410.7,
+          "peak": 0.85,
+          "rms20": 0.506,
+          "crest": 5.39,
+          "attackMs": 4.85,
+          "btCorr": 0.81,
+          "btRms20": 0.72,
+          "centroidHz": 134,
+          "dominantHz": 138,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_drop",
+      "role": "set down / land: SFX_ITEMS_Drop (SFX_ITEMS_Misc_Medium_Drop_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 317.2,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 9.29,
+          "attackMs": 27.71,
+          "btCorr": 0.69,
+          "btRms20": 0.515,
+          "centroidHz": 171,
+          "dominantHz": 199,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.26,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_pickup",
+      "role": "handling an object: SFX_ITEMS_PickUp (SFX_ITEMS_Misc_Medium_PickUp_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 442.2,
+          "peak": 0.85,
+          "rms20": 0.499,
+          "crest": 5.69,
+          "attackMs": 4.73,
+          "btCorr": 0.81,
+          "btRms20": 0.713,
+          "centroidHz": 134,
+          "dominantHz": 136,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_shelve",
+      "role": "handling an object: SFX_ITEMS_Shelve (SFX_ITEMS_Misc_Medium_PickUp_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 406.6,
+          "peak": 0.85,
+          "rms20": 0.479,
+          "crest": 5.66,
+          "attackMs": 22.56,
+          "btCorr": 0.81,
+          "btRms20": 0.696,
+          "centroidHz": 135,
+          "dominantHz": 138,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "magic_env_battlearenawall_open_01",
+      "role": "story / magic event: SFX_MAGIC_ENV_BattleArenaWall_Open_01 (SFX_MAGIC_ENV_BattleArenaWall_Open_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 891,
+          "peak": 0.85,
+          "rms20": 0.443,
+          "crest": 4.09,
+          "attackMs": 275.77,
+          "btCorr": 0.81,
+          "btRms20": 0.673,
+          "centroidHz": 134,
+          "dominantHz": 137,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "magic_training_explode",
+      "role": "story / magic event: SFX_MAGIC_Training_Explode (SFX_MAGIC_Training_Explode_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 861.5,
+          "peak": 0.85,
+          "rms20": 0.451,
+          "crest": 3.7,
+          "attackMs": 207.33,
+          "btCorr": 0.81,
+          "btRms20": 0.656,
+          "centroidHz": 132,
+          "dominantHz": 118,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "magic_training_gesture",
+      "role": "air / swing: SFX_MAGIC_Training_Gesture (SFX_MAGIC_Training_Loop_L3_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 526,
+          "peak": 0.85,
+          "rms20": 0.518,
+          "crest": 2.67,
+          "attackMs": 423.29,
+          "btCorr": 0.95,
+          "btRms20": 0.735,
+          "centroidHz": 62,
+          "dominantHz": 54,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "magic_training_whoosh",
+      "role": "air / swing: SFX_MAGIC_Training_Whoosh (SFX_MAGIC_Training_Whoosh_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 505.1,
+          "peak": 0.85,
+          "rms20": 0.539,
+          "crest": 2.81,
+          "attackMs": 419.75,
+          "btCorr": 0.95,
+          "btRms20": 0.763,
+          "centroidHz": 62,
+          "dominantHz": 54,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_climb_human_rock",
+      "role": "body effort: SFX_MOVE_Climb_Human_Rock (SFX_MOVE_Climb_Human_Rock_Clothes_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 694.8,
+          "peak": 0.85,
+          "rms20": 0.498,
+          "crest": 4.2,
+          "attackMs": 406.38,
+          "btCorr": 0.93,
+          "btRms20": 0.711,
+          "centroidHz": 79,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_climb_human_wall_body",
+      "role": "body effort: SFX_MOVE_Climb_Human_Wall_Body (SFX_MOVE_Climb_Human_Wall_Impact_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 594.5,
+          "peak": 0.85,
+          "rms20": 0.458,
+          "crest": 6.37,
+          "attackMs": 46.19,
+          "btCorr": 0.92,
+          "btRms20": 0.652,
+          "centroidHz": 81,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_climb_human_wall_foot",
+      "role": "climb grip: SFX_MOVE_Climb_Human_Wall_Foot (SFX_MOVE_Climb_Human_Wall_Decoration_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 313.8,
+          "peak": 0.85,
+          "rms20": 0.355,
+          "crest": 4.82,
+          "attackMs": 40.58,
+          "btCorr": 0.69,
+          "btRms20": 0.507,
+          "centroidHz": 171,
+          "dominantHz": 195,
+          "sub": 0.006,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.36,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_climb_human_wall_hand",
+      "role": "climb grip: SFX_MOVE_Climb_Human_Wall_Hand (SFX_MOVE_Climb_Human_Wall_Impact_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 135,
+          "peak": 0.85,
+          "rms20": 0.362,
+          "crest": 6.08,
+          "attackMs": 4.52,
+          "btCorr": 0.83,
+          "btRms20": 0.522,
+          "centroidHz": 125,
+          "dominantHz": 126,
+          "sub": 0.009,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_land_human_water",
+      "role": "set down / land: SFX_MOVE_Land_Human_Water (SFX_MOVE_Land_Human_Water_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 448.1,
+          "peak": 0.85,
+          "rms20": 0.534,
+          "crest": 3.97,
+          "attackMs": 62.08,
+          "btCorr": 0.81,
+          "btRms20": 0.743,
+          "centroidHz": 137,
+          "dominantHz": 133,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_special_call",
+      "role": "air / swing: SFX_MOVE_Special_Call (SFX_MOVE_Special_Call_L2_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 491.5,
+          "peak": 0.85,
+          "rms20": 0.504,
+          "crest": 2.65,
+          "attackMs": 398.6,
+          "btCorr": 0.95,
+          "btRms20": 0.738,
+          "centroidHz": 62,
+          "dominantHz": 54,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_special_landsaddle",
+      "role": "set down / land: SFX_MOVE_Special_LandSaddle (SFX_Move_Land_Human_Mud_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 209.8,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 5.73,
+          "attackMs": 3.81,
+          "btCorr": 0.69,
+          "btRms20": 0.508,
+          "centroidHz": 171,
+          "dominantHz": 188,
+          "sub": 0.003,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.49,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_special_mount",
+      "role": "body effort: SFX_MOVE_Special_Mount (SFX_MOVE_Special_Mount_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 677.6,
+          "peak": 0.85,
+          "rms20": 0.539,
+          "crest": 4.49,
+          "attackMs": 188.9,
+          "btCorr": 0.93,
+          "btRms20": 0.751,
+          "centroidHz": 77,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_special_unmount",
+      "role": "body effort: SFX_MOVE_Special_Unmount (SFX_MOVE_Special_Unmount_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 678,
+          "peak": 0.85,
+          "rms20": 0.49,
+          "crest": 3.41,
+          "attackMs": 385.04,
+          "btCorr": 0.93,
+          "btRms20": 0.704,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "move_water_human_crawl",
+      "role": "rub / slide / water: SFX_MOVE_Water_Human_Crawl (SFX_MOVE_Footsteps_Human_Water_Crawl_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 708,
+          "peak": 0.85,
+          "rms20": 0.485,
+          "crest": 2.94,
+          "attackMs": 99.29,
+          "btCorr": 0.93,
+          "btRms20": 0.702,
+          "centroidHz": 77,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "magic_light_cast_in_01",
+      "role": "air / swing: SFX_Magic_Light_Cast_In_01 (SFX_Magic_Light_Cast_In_LayerB_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 515,
+          "peak": 0.85,
+          "rms20": 0.547,
+          "crest": 3.54,
+          "attackMs": 361.31,
+          "btCorr": 0.95,
+          "btRms20": 0.772,
+          "centroidHz": 64,
+          "dominantHz": 54,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_abandonedminestonedoor_placeitem_01",
+      "role": "mechanism: SFX_OBJ_AbandonedMineStoneDoor_PlaceItem_01 (SFX_OBJ_AbandonedMineStoneDoor_PlaceItem_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 141.1,
+          "peak": 0.85,
+          "rms20": 0.376,
+          "crest": 5.98,
+          "attackMs": 4.35,
+          "btCorr": 0.82,
+          "btRms20": 0.532,
+          "centroidHz": 126,
+          "dominantHz": 129,
+          "sub": 0.01,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_alchemy_ingredienteffect",
+      "role": "sizzle / sparkle: SFX_OBJ_Alchemy_IngredientEffect (SFX_OBJ_Alchemy_IngredientEffect_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 883.1,
+          "peak": 0.85,
+          "rms20": 0.456,
+          "crest": 6.67,
+          "attackMs": 53.73,
+          "btCorr": 0.82,
+          "btRms20": 0.652,
+          "centroidHz": 127,
+          "dominantHz": 141,
+          "sub": 0.003,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_alchemy_stir",
+      "role": "rub / slide / water: SFX_OBJ_Alchemy_Stir (SFX_OBJ_Alchemy_Stir_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 697.4,
+          "peak": 0.85,
+          "rms20": 0.546,
+          "crest": 4.29,
+          "attackMs": 202.1,
+          "btCorr": 0.92,
+          "btRms20": 0.74,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_bathtub_splashsoft",
+      "role": "rub / slide / water: SFX_OBJ_BathTub_SplashSoft (SFX_OBJ_BathTub_Splash_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 629.4,
+          "peak": 0.85,
+          "rms20": 0.51,
+          "crest": 3.22,
+          "attackMs": 187,
+          "btCorr": 0.93,
+          "btRms20": 0.717,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_book_close_01",
+      "role": "set down / land: SFX_OBJ_Book_Close_01 (SFX_OBJ_Book_Close_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 53.5,
+          "peak": 0.85,
+          "rms20": 0.363,
+          "crest": 3.82,
+          "attackMs": 4.54,
+          "btCorr": 0.83,
+          "btRms20": 0.524,
+          "centroidHz": 124,
+          "dominantHz": 127,
+          "sub": 0.01,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_book_open_01",
+      "role": "handling an object: SFX_OBJ_Book_Open_01 (SFX_OBJ_Book_Open_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 185.3,
+          "peak": 0.85,
+          "rms20": 0.371,
+          "crest": 6.94,
+          "attackMs": 4.48,
+          "btCorr": 0.83,
+          "btRms20": 0.529,
+          "centroidHz": 126,
+          "dominantHz": 129,
+          "sub": 0.01,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_book_turnpage_01",
+      "role": "handling an object: SFX_OBJ_Book_TurnPage_01 (SFX_OBJ_Book_PageTurn_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 269.2,
+          "peak": 0.85,
+          "rms20": 0.359,
+          "crest": 6.25,
+          "attackMs": 178.44,
+          "btCorr": 0.68,
+          "btRms20": 0.546,
+          "centroidHz": 176,
+          "dominantHz": 195,
+          "sub": 0.004,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.65,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_brushwood_drop",
+      "role": "rub / slide / water: SFX_OBJ_Cargo_Brushwood_Drop (SFX_OBJ_Cargo_Brushwood_Drop_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 574.2,
+          "peak": 0.85,
+          "rms20": 0.482,
+          "crest": 4.82,
+          "attackMs": 332.48,
+          "btCorr": 0.93,
+          "btRms20": 0.699,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_brushwood_handle",
+      "role": "rub / slide / water: SFX_OBJ_Cargo_Brushwood_Handle (SFX_OBJ_Cargo_Brushwood_Handle_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 708.5,
+          "peak": 0.85,
+          "rms20": 0.491,
+          "crest": 3.2,
+          "attackMs": 652.25,
+          "btCorr": 0.93,
+          "btRms20": 0.711,
+          "centroidHz": 76,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_brushwood_pickup",
+      "role": "rub / slide / water: SFX_OBJ_Cargo_Brushwood_Pickup (SFX_OBJ_Cargo_Brushwood_Drop_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 560.4,
+          "peak": 0.85,
+          "rms20": 0.464,
+          "crest": 4.97,
+          "attackMs": 356.33,
+          "btCorr": 0.93,
+          "btRms20": 0.687,
+          "centroidHz": 77,
+          "dominantHz": 69,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_crate_drop",
+      "role": "set down / land: SFX_OBJ_Cargo_Crate_Drop (SFX_OBJ_Cargo_Sack_Drop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 266.1,
+          "peak": 0.85,
+          "rms20": 0.416,
+          "crest": 3.74,
+          "attackMs": 139.85,
+          "btCorr": 0.64,
+          "btRms20": 0.631,
+          "centroidHz": 194,
+          "dominantHz": 196,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_crate_handle",
+      "role": "handling an object: SFX_OBJ_Cargo_Crate_Handle (SFX_OBJ_Cargo_Sack_Handle_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 433.5,
+          "peak": 0.85,
+          "rms20": 0.452,
+          "crest": 5.48,
+          "attackMs": 208.69,
+          "btCorr": 0.64,
+          "btRms20": 0.667,
+          "centroidHz": 194,
+          "dominantHz": 193,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_crate_handlelong",
+      "role": "handling an object: SFX_OBJ_Cargo_Crate_HandleLong (SFX_OBJ_Cargo_Sack_HandleLong_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 304.2,
+          "peak": 0.85,
+          "rms20": 0.492,
+          "crest": 3.83,
+          "attackMs": 53.62,
+          "btCorr": 0.63,
+          "btRms20": 0.702,
+          "centroidHz": 197,
+          "dominantHz": 198,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_crate_pickup",
+      "role": "handling an object: SFX_OBJ_Cargo_Crate_Pickup (SFX_OBJ_Cargo_OreSack_Pickup_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 452.8,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 6.04,
+          "attackMs": 3.67,
+          "btCorr": 0.66,
+          "btRms20": 0.522,
+          "centroidHz": 181,
+          "dominantHz": 196,
+          "sub": 0.002,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.32,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_plank_drop",
+      "role": "set down / land: SFX_OBJ_Cargo_Plank_Drop (SFX_OBJ_Cargo_Plank_Drop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 238.3,
+          "peak": 0.85,
+          "rms20": 0.484,
+          "crest": 5.98,
+          "attackMs": 1.5,
+          "btCorr": 0.91,
+          "btRms20": 0.678,
+          "centroidHz": 81,
+          "dominantHz": 66,
+          "sub": 0.042,
+          "core": 0.957,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_plank_handle",
+      "role": "handling an object: SFX_OBJ_Cargo_Plank_Handle (SFX_OBJ_Cargo_Plank_Drop_L3_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 303.7,
+          "peak": 0.85,
+          "rms20": 0.378,
+          "crest": 7.16,
+          "attackMs": 255.62,
+          "btCorr": 0.82,
+          "btRms20": 0.538,
+          "centroidHz": 125,
+          "dominantHz": 116,
+          "sub": 0.01,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_plank_handlelong",
+      "role": "handling an object: SFX_OBJ_Cargo_Plank_HandleLong (SFX_OBJ_Cargo_Sack_HandleLong_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 304.2,
+          "peak": 0.85,
+          "rms20": 0.488,
+          "crest": 3.86,
+          "attackMs": 53.58,
+          "btCorr": 0.63,
+          "btRms20": 0.7,
+          "centroidHz": 197,
+          "dominantHz": 198,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_plank_pickup",
+      "role": "handling an object: SFX_OBJ_Cargo_Plank_Pickup (SFX_OBJ_Cargo_Plank_PickUp_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 342.2,
+          "peak": 0.85,
+          "rms20": 0.375,
+          "crest": 9.02,
+          "attackMs": 63.54,
+          "btCorr": 0.82,
+          "btRms20": 0.534,
+          "centroidHz": 127,
+          "dominantHz": 135,
+          "sub": 0.01,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_sack_drop",
+      "role": "set down / land: SFX_OBJ_Cargo_Sack_Drop (SFX_OBJ_Cargo_Sack_Drop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 266.4,
+          "peak": 0.85,
+          "rms20": 0.409,
+          "crest": 3.77,
+          "attackMs": 139.85,
+          "btCorr": 0.64,
+          "btRms20": 0.623,
+          "centroidHz": 194,
+          "dominantHz": 196,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_sack_handle",
+      "role": "handling an object: SFX_OBJ_Cargo_Sack_Handle (SFX_OBJ_Cargo_Sack_Handle_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 436.2,
+          "peak": 0.85,
+          "rms20": 0.462,
+          "crest": 5.38,
+          "attackMs": 208.71,
+          "btCorr": 0.64,
+          "btRms20": 0.676,
+          "centroidHz": 194,
+          "dominantHz": 193,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_sack_handlelong",
+      "role": "handling an object: SFX_OBJ_Cargo_Sack_HandleLong (SFX_OBJ_Cargo_Sack_HandleLong_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 304.1,
+          "peak": 0.85,
+          "rms20": 0.487,
+          "crest": 3.88,
+          "attackMs": 53.56,
+          "btCorr": 0.63,
+          "btRms20": 0.698,
+          "centroidHz": 197,
+          "dominantHz": 198,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_sack_pickup",
+      "role": "handling an object: SFX_OBJ_Cargo_Sack_Pickup (SFX_OBJ_Cargo_OreSack_Pickup_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 454.5,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 6.04,
+          "attackMs": 3.69,
+          "btCorr": 0.66,
+          "btRms20": 0.519,
+          "centroidHz": 181,
+          "dominantHz": 196,
+          "sub": 0.002,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.34,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cargo_sack_shoulder",
+      "role": "handling an object: SFX_OBJ_Cargo_Sack_Shoulder (SFX_OBJ_Cargo_Sack_Drop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 265.8,
+          "peak": 0.85,
+          "rms20": 0.414,
+          "crest": 3.81,
+          "attackMs": 139.81,
+          "btCorr": 0.64,
+          "btRms20": 0.629,
+          "centroidHz": 194,
+          "dominantHz": 196,
+          "sub": 0.001,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_carve",
+      "role": "hard grind / cut: SFX_OBJ_Carve (SFX_OBJ_Carving_L3_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 317.2,
+          "peak": 0.85,
+          "rms20": 0.405,
+          "crest": 6.05,
+          "attackMs": 77.6,
+          "btCorr": 0.57,
+          "btRms20": 0.591,
+          "centroidHz": 212,
+          "dominantHz": 208,
+          "sub": 0,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.57"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "obj_carveblow",
+      "role": "hard grind / cut: SFX_OBJ_CarveBlow (SFX_OBJ_Carving_Blow_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 686,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 5.11,
+          "attackMs": 256.83,
+          "btCorr": 0.61,
+          "btRms20": 0.548,
+          "centroidHz": 201,
+          "dominantHz": 173,
+          "sub": 0,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.12,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_carvebrush",
+      "role": "hard grind / cut: SFX_OBJ_CarveBrush (SFX_OBJ_Carving_L3_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 308.8,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 7.09,
+          "attackMs": 99.29,
+          "btCorr": 0.6,
+          "btRms20": 0.541,
+          "centroidHz": 200,
+          "dominantHz": 208,
+          "sub": 0,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.34,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_carvedetail",
+      "role": "hard grind / cut: SFX_OBJ_CarveDetail (SFX_OBJ_Carving_L3_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 336.4,
+          "peak": 0.85,
+          "rms20": 0.387,
+          "crest": 6.87,
+          "attackMs": 91.79,
+          "btCorr": 0.62,
+          "btRms20": 0.57,
+          "centroidHz": 196,
+          "dominantHz": 208,
+          "sub": 0,
+          "core": 0.985,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_carvetoolpick",
+      "role": "handling an object: SFX_OBJ_CarveToolPick (SFX_OBJ_Carving_ToolPick_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 410.7,
+          "peak": 0.85,
+          "rms20": 0.382,
+          "crest": 7.12,
+          "attackMs": 3.5,
+          "btCorr": 0.65,
+          "btRms20": 0.598,
+          "centroidHz": 185,
+          "dominantHz": 192,
+          "sub": 0.003,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_carvetoolplace",
+      "role": "handling an object: SFX_OBJ_CarveToolPlace (SFX_OBJ_Carving_ToolPlace_L2_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 190.9,
+          "peak": 0.85,
+          "rms20": 0.371,
+          "crest": 7.04,
+          "attackMs": 4.5,
+          "btCorr": 0.83,
+          "btRms20": 0.531,
+          "centroidHz": 125,
+          "dominantHz": 126,
+          "sub": 0.009,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_couldron_smash",
+      "role": "tool strike: SFX_OBJ_Cooking_Couldron_Smash (SFX_OBJ_Cooking_Couldron_Smash_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 288.2,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 5.53,
+          "attackMs": 3.58,
+          "btCorr": 0.67,
+          "btRms20": 0.507,
+          "centroidHz": 176,
+          "dominantHz": 195,
+          "sub": 0.005,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.43,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_couldron_stir",
+      "role": "rub / slide / water: SFX_OBJ_Cooking_Couldron_Stir (SFX_OBJ_Cooking_Couldron_Stir_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 678.3,
+          "peak": 0.85,
+          "rms20": 0.496,
+          "crest": 3.14,
+          "attackMs": 296.54,
+          "btCorr": 0.93,
+          "btRms20": 0.695,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_couldron_stirheavy",
+      "role": "rub / slide / water: SFX_OBJ_Cooking_Couldron_StirHeavy (SFX_OBJ_Cooking_Couldron_Stir_L2_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 681,
+          "peak": 0.85,
+          "rms20": 0.497,
+          "crest": 2.96,
+          "attackMs": 187.27,
+          "btCorr": 0.93,
+          "btRms20": 0.717,
+          "centroidHz": 77,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_pan_addspice",
+      "role": "small separate hits: SFX_OBJ_Cooking_Pan_AddSpice (SFX_OBJ_Cooking_Pan_AddSpices_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 270.1,
+          "peak": 0.85,
+          "rms20": 0.477,
+          "crest": 4.8,
+          "attackMs": 167.38,
+          "btCorr": 0.71,
+          "btRms20": 0.689,
+          "centroidHz": 170,
+          "dominantHz": 161,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_pan_fryend",
+      "role": "sizzle / sparkle: SFX_OBJ_Cooking_Pan_FryEnd (SFX_OBJ_Cooking_Pan_FryEnd_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 496.9,
+          "peak": 0.85,
+          "rms20": 0.454,
+          "crest": 6.01,
+          "attackMs": 227.85,
+          "btCorr": 0.81,
+          "btRms20": 0.674,
+          "centroidHz": 134,
+          "dominantHz": 125,
+          "sub": 0.002,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_pan_frystart",
+      "role": "sizzle / sparkle: SFX_OBJ_Cooking_Pan_FryStart (SFX_OBJ_Cooking_Pan_FryStart_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 694.6,
+          "peak": 0.85,
+          "rms20": 0.5,
+          "crest": 4.8,
+          "attackMs": 147.35,
+          "btCorr": 0.82,
+          "btRms20": 0.709,
+          "centroidHz": 130,
+          "dominantHz": 113,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_pan_shakefood",
+      "role": "rub / slide / water: SFX_OBJ_Cooking_Pan_ShakeFood (SFX_OBJ_Cooking_Pan_ShakeFood_Food_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 668.1,
+          "peak": 0.85,
+          "rms20": 0.519,
+          "crest": 4.6,
+          "attackMs": 239.56,
+          "btCorr": 0.92,
+          "btRms20": 0.725,
+          "centroidHz": 79,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_pan_tossfood",
+      "role": "set down / land: SFX_OBJ_Cooking_Pan_TossFood (SFX_OBJ_Cooking_Pan_TossFood_Food_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 385.2,
+          "peak": 0.85,
+          "rms20": 0.5,
+          "crest": 4.62,
+          "attackMs": 238.35,
+          "btCorr": 0.82,
+          "btRms20": 0.714,
+          "centroidHz": 132,
+          "dominantHz": 133,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_tryfood_finger",
+      "role": "eating: SFX_OBJ_Cooking_TryFood_Finger (SFX_OBJ_Cooking_TryFood_Finger_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 434,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 10.07,
+          "attackMs": 292.92,
+          "btCorr": 0.67,
+          "btRms20": 0.511,
+          "centroidHz": 176,
+          "dominantHz": 193,
+          "sub": 0.004,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.3,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_cooking_tryfood_tongue",
+      "role": "eating: SFX_OBJ_Cooking_TryFood_Tongue (SFX_OBJ_Cooking_TryFood_Tongue_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 426.5,
+          "peak": 0.85,
+          "rms20": 0.358,
+          "crest": 7.33,
+          "attackMs": 159.29,
+          "btCorr": 0.68,
+          "btRms20": 0.504,
+          "centroidHz": 172,
+          "dominantHz": 174,
+          "sub": 0.003,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.89,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_crafting_woodchopspot_grab",
+      "role": "handling an object: SFX_OBJ_Crafting_WoodChopSpot_Grab (SFX_OBJ_Crafting_WoodChopSpot_Grab_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 337.6,
+          "peak": 0.85,
+          "rms20": 0.521,
+          "crest": 3.83,
+          "attackMs": 130.02,
+          "btCorr": 0.93,
+          "btRms20": 0.742,
+          "centroidHz": 76,
+          "dominantHz": 72,
+          "sub": 0.011,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_crafting_woodchopspot_place",
+      "role": "set down / land: SFX_OBJ_Crafting_WoodChopSpot_Place (SFX_OBJ_Crafting_WoodChopSpot_Place_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 100.6,
+          "peak": 0.85,
+          "rms20": 0.38,
+          "crest": 3.65,
+          "attackMs": 4.42,
+          "btCorr": 0.83,
+          "btRms20": 0.543,
+          "centroidHz": 125,
+          "dominantHz": 129,
+          "sub": 0.009,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_crafting_woodchopspot_pullaxe",
+      "role": "set down / land: SFX_OBJ_Crafting_WoodChopSpot_PullAxe (SFX_OBJ_Crafting_WoodChopSpot_PullAxe_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.8,
+          "peak": 0.85,
+          "rms20": 0.355,
+          "crest": 5.27,
+          "attackMs": 166.23,
+          "btCorr": 0.69,
+          "btRms20": 0.505,
+          "centroidHz": 171,
+          "dominantHz": 196,
+          "sub": 0.003,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.61,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_crafting_woodchopspot_split",
+      "role": "tool strike: SFX_OBJ_Crafting_WoodChopSpot_Split (SFX_OBJ_Crafting_WoodChopSpot_Split_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 84.1,
+          "peak": 0.85,
+          "rms20": 0.355,
+          "crest": 4.88,
+          "attackMs": 3.65,
+          "btCorr": 0.69,
+          "btRms20": 0.507,
+          "centroidHz": 171,
+          "dominantHz": 190,
+          "sub": 0.003,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.73,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_crafting_woodchopspot_stick",
+      "role": "tool strike: SFX_OBJ_Crafting_WoodChopSpot_Stick (SFX_OBJ_Crafting_WoodChopSpot_Grab_L2_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 482.9,
+          "peak": 0.85,
+          "rms20": 0.43,
+          "crest": 6.11,
+          "attackMs": 29.85,
+          "btCorr": 0.82,
+          "btRms20": 0.647,
+          "centroidHz": 132,
+          "dominantHz": 136,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_fire_blow",
+      "role": "air / swing: SFX_OBJ_Fire_Blow (SFX_OBJ_Carving_Blow_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 500.3,
+          "peak": 0.85,
+          "rms20": 0.479,
+          "crest": 3.42,
+          "attackMs": 56.27,
+          "btCorr": 0.95,
+          "btRms20": 0.711,
+          "centroidHz": 63,
+          "dominantHz": 54,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_focusdoor_focuscast_01",
+      "role": "story / magic event: SFX_OBJ_FocusDoor_FocusCast_01 (SFX_OBJ_FocusDoor_RumbleLoop_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 915.2,
+          "peak": 0.85,
+          "rms20": 0.553,
+          "crest": 3.3,
+          "attackMs": 484.6,
+          "btCorr": 0.83,
+          "btRms20": 0.758,
+          "centroidHz": 124,
+          "dominantHz": 111,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_focusdoor_focusdraw_01",
+      "role": "story / magic event: SFX_OBJ_FocusDoor_FocusDraw_01 (SFX_OBJ_FocusDoor_RumbleLoop_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 915.9,
+          "peak": 0.85,
+          "rms20": 0.383,
+          "crest": 4.01,
+          "attackMs": 730.46,
+          "btCorr": 0.84,
+          "btRms20": 0.581,
+          "centroidHz": 121,
+          "dominantHz": 78,
+          "sub": 0.002,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_focusstone_barriercollapse",
+      "role": "story / magic event: SFX_OBJ_FocusStone_BarrierCollapse (SFX_OBJ_FocusStone_BarrierCollapse_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 879.2,
+          "peak": 0.85,
+          "rms20": 0.514,
+          "crest": 4.84,
+          "attackMs": 183.27,
+          "btCorr": 0.83,
+          "btRms20": 0.727,
+          "centroidHz": 122,
+          "dominantHz": 100,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_furniture_bed_standup",
+      "role": "body effort: SFX_OBJ_Furniture_Bed_StandUp (SFX_OBJ_Furniture_Bench_StandUp_Clothes_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 699.6,
+          "peak": 0.85,
+          "rms20": 0.513,
+          "crest": 4.72,
+          "attackMs": 196.94,
+          "btCorr": 0.93,
+          "btRms20": 0.729,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_hammer_hit",
+      "role": "tool strike: SFX_OBJ_Hammer_Hit (SFX_ACTION_Hammer_L2_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 91.9,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 5.1,
+          "attackMs": 3.62,
+          "btCorr": 0.69,
+          "btRms20": 0.51,
+          "centroidHz": 171,
+          "dominantHz": 182,
+          "sub": 0.003,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.37,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_hammer_swipe",
+      "role": "air / swing: SFX_OBJ_Hammer_Swipe (SFX_ACTION_Hammer_Swipe_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 485.2,
+          "peak": 0.85,
+          "rms20": 0.503,
+          "crest": 3.16,
+          "attackMs": 202.54,
+          "btCorr": 0.95,
+          "btRms20": 0.729,
+          "centroidHz": 63,
+          "dominantHz": 54,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_herbstomper_down",
+      "role": "tool strike: SFX_OBJ_HerbStomper_Down (SFX_OBJ_HerbStomper_Down_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 429.9,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 10.52,
+          "attackMs": 92.42,
+          "btCorr": 0.67,
+          "btRms20": 0.514,
+          "centroidHz": 175,
+          "dominantHz": 180,
+          "sub": 0.003,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.25,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_herbstomper_handle",
+      "role": "rub / slide / water: SFX_OBJ_HerbStomper_Handle (SFX_OBJ_HerbStomper_Handle_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 694.4,
+          "peak": 0.85,
+          "rms20": 0.401,
+          "crest": 4.28,
+          "attackMs": 339.96,
+          "btCorr": 0.93,
+          "btRms20": 0.609,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_herbstomper_up",
+      "role": "rub / slide / water: SFX_OBJ_HerbStomper_Up (SFX_OBJ_HerbStomper_Up_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 663.2,
+          "peak": 0.85,
+          "rms20": 0.518,
+          "crest": 3.07,
+          "attackMs": 187.35,
+          "btCorr": 0.93,
+          "btRms20": 0.738,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_leathertanning_slide",
+      "role": "rub / slide / water: SFX_OBJ_LeatherTanning_Slide (SFX_OBJ_LeatherTanning_Slide_L1_03), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 415.5,
+          "peak": 0.85,
+          "rms20": 0.524,
+          "crest": 4.67,
+          "attackMs": 71.52,
+          "btCorr": 0.93,
+          "btRms20": 0.737,
+          "centroidHz": 75,
+          "dominantHz": 69,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_leathertanning_slideshort",
+      "role": "rub / slide / water: SFX_OBJ_LeatherTanning_SlideShort (SFX_OBJ_LeatherTanning_SlideShort_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 314.2,
+          "peak": 0.85,
+          "rms20": 0.501,
+          "crest": 3.3,
+          "attackMs": 117.38,
+          "btCorr": 0.93,
+          "btRms20": 0.742,
+          "centroidHz": 79,
+          "dominantHz": 70,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_lever_ground_pull_01",
+      "role": "mechanism: SFX_OBJ_Lever_Ground_Pull_01 (SFX_OBJ_Levers_Ground_Pull_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 420.9,
+          "peak": 0.85,
+          "rms20": 0.387,
+          "crest": 7.7,
+          "attackMs": 295.29,
+          "btCorr": 0.82,
+          "btRms20": 0.549,
+          "centroidHz": 128,
+          "dominantHz": 116,
+          "sub": 0.013,
+          "core": 0.985,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_lever_ground_reset_01",
+      "role": "mechanism: SFX_OBJ_Lever_Ground_Reset_01 (SFX_OBJ_Levers_Ground_Reset_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 406.1,
+          "peak": 0.85,
+          "rms20": 0.379,
+          "crest": 9.7,
+          "attackMs": 329.46,
+          "btCorr": 0.78,
+          "btRms20": 0.54,
+          "centroidHz": 135,
+          "dominantHz": 132,
+          "sub": 0.01,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_lever_wall_pull_01",
+      "role": "mechanism: SFX_OBJ_Lever_Wall_Pull_01 (SFX_OBJ_Levers_Wall_Pull_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 344.8,
+          "peak": 0.85,
+          "rms20": 0.508,
+          "crest": 4.73,
+          "attackMs": 144.31,
+          "btCorr": 0.93,
+          "btRms20": 0.738,
+          "centroidHz": 76,
+          "dominantHz": 75,
+          "sub": 0.017,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_lever_wall_reset_01",
+      "role": "mechanism: SFX_OBJ_Lever_Wall_Reset_01 (SFX_OBJ_Levers_Wall_Reset_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 392.5,
+          "peak": 0.85,
+          "rms20": 0.431,
+          "crest": 3.76,
+          "attackMs": 103.54,
+          "btCorr": 0.82,
+          "btRms20": 0.657,
+          "centroidHz": 133,
+          "dominantHz": 133,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_mechanism_clank_distant_01",
+      "role": "mechanism: SFX_OBJ_Mechanism_Clank_Distant_01 (SFX_OBJ_Mechanism_Clank_L_Distant_L2_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 489.8,
+          "peak": 0.85,
+          "rms20": 0.517,
+          "crest": 3.87,
+          "attackMs": 59.06,
+          "btCorr": 0.93,
+          "btRms20": 0.734,
+          "centroidHz": 76,
+          "dominantHz": 72,
+          "sub": 0.01,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_mechanism_detail_l_01",
+      "role": "mechanism: SFX_OBJ_Mechanism_Detail_L_01 (SFX_OBJ_Mechanism_Detail_L_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 447.1,
+          "peak": 0.85,
+          "rms20": 0.585,
+          "crest": 3.64,
+          "attackMs": 159.62,
+          "btCorr": 0.93,
+          "btRms20": 0.787,
+          "centroidHz": 76,
+          "dominantHz": 72,
+          "sub": 0.009,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_mechanism_detail_l_02",
+      "role": "mechanism: SFX_OBJ_Mechanism_Detail_L_02 (SFX_OBJ_Mechanism_Detail_L_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 434.9,
+          "peak": 0.85,
+          "rms20": 0.56,
+          "crest": 3.76,
+          "attackMs": 156.94,
+          "btCorr": 0.93,
+          "btRms20": 0.766,
+          "centroidHz": 76,
+          "dominantHz": 72,
+          "sub": 0.009,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_mechanism_detail_m_05",
+      "role": "mechanism: SFX_OBJ_Mechanism_Detail_M_05 (SFX_OBJ_Mechanism_Detail_M_L5_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 385.6,
+          "peak": 0.85,
+          "rms20": 0.402,
+          "crest": 6.69,
+          "attackMs": 4.52,
+          "btCorr": 0.79,
+          "btRms20": 0.56,
+          "centroidHz": 133,
+          "dominantHz": 129,
+          "sub": 0.009,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_mechanism_detail_s_01",
+      "role": "mechanism: SFX_OBJ_Mechanism_Detail_S_01 (SFX_OBJ_Mechanism_Detail_S_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 535.6,
+          "peak": 0.85,
+          "rms20": 0.508,
+          "crest": 3.57,
+          "attackMs": 71.23,
+          "btCorr": 0.81,
+          "btRms20": 0.728,
+          "centroidHz": 137,
+          "dominantHz": 135,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_orcpuzzledoor_insertitem_01",
+      "role": "mechanism: SFX_OBJ_OrcPuzzleDoor_InsertItem_01 (SFX_OBJ_OrcPuzzleDoor_InsertItem_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 305.1,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 7.04,
+          "attackMs": 256.21,
+          "btCorr": 0.69,
+          "btRms20": 0.508,
+          "centroidHz": 172,
+          "dominantHz": 186,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.45,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_bunch_cut",
+      "role": "hard grind / cut: SFX_OBJ_Rice_Bunch_Cut (SFX_OBJ_Rice_Bunch_Cut_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 695.7,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 8.2,
+          "attackMs": 22.88,
+          "btCorr": 0.64,
+          "btRms20": 0.524,
+          "centroidHz": 190,
+          "dominantHz": 180,
+          "sub": 0,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.64,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_bunch_handle",
+      "role": "handling an object: SFX_OBJ_Rice_Bunch_Handle (SFX_OBJ_Rice_Bunch_RustleLoop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 355.9,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 9.62,
+          "attackMs": 3.58,
+          "btCorr": 0.66,
+          "btRms20": 0.51,
+          "centroidHz": 176,
+          "dominantHz": 189,
+          "sub": 0.004,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.4,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_bunch_pick",
+      "role": "rub / slide / water: SFX_OBJ_Rice_Bunch_Pick (SFX_OBJ_Rice_Bunch_Rip_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 579.5,
+          "peak": 0.85,
+          "rms20": 0.459,
+          "crest": 3.47,
+          "attackMs": 90.02,
+          "btCorr": 0.93,
+          "btRms20": 0.683,
+          "centroidHz": 80,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_bunch_rip",
+      "role": "rub / slide / water: SFX_OBJ_Rice_Bunch_Rip (SFX_OBJ_Rice_Bunch_Rip_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 567.3,
+          "peak": 0.85,
+          "rms20": 0.493,
+          "crest": 3.27,
+          "attackMs": 102.25,
+          "btCorr": 0.93,
+          "btRms20": 0.707,
+          "centroidHz": 77,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_bunch_throw",
+      "role": "air / swing: SFX_OBJ_Rice_Bunch_Throw (SFX_OBJ_Rice_Bunch_Rip_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 505.8,
+          "peak": 0.85,
+          "rms20": 0.495,
+          "crest": 3.09,
+          "attackMs": 91.06,
+          "btCorr": 0.95,
+          "btRms20": 0.719,
+          "centroidHz": 64,
+          "dominantHz": 54,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_seeds_grab",
+      "role": "small separate hits: SFX_OBJ_Rice_Seeds_Grab (SFX_OBJ_Rice_Seeds_Splash_L1_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 173.1,
+          "peak": 0.85,
+          "rms20": 0.45,
+          "crest": 2.93,
+          "attackMs": 18.77,
+          "btCorr": 0.72,
+          "btRms20": 0.663,
+          "centroidHz": 166,
+          "dominantHz": 155,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0.001,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rice_seeds_throw",
+      "role": "small separate hits: SFX_OBJ_Rice_Seeds_Throw (SFX_OBJ_Rice_Seeds_Splash_L3_01), method rattle",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 204.3,
+          "peak": 0.85,
+          "rms20": 0.435,
+          "crest": 3.53,
+          "attackMs": 60.54,
+          "btCorr": 0.72,
+          "btRms20": 0.649,
+          "centroidHz": 166,
+          "dominantHz": 151,
+          "sub": 0,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_rotisserie_revolve_start",
+      "role": "mechanism: SFX_OBJ_Rotisserie_Revolve_Start (SFX_OBJ_Rotisserie_Revolve_Start_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 518.6,
+          "peak": 0.85,
+          "rms20": 0.528,
+          "crest": 3.84,
+          "attackMs": 88.44,
+          "btCorr": 0.81,
+          "btRms20": 0.738,
+          "centroidHz": 136,
+          "dominantHz": 138,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_stonedoor_s_slideend_01",
+      "role": "hard grind / cut: SFX_OBJ_StoneDoor_S_SlideEnd_01 (SFX_OBJ_StoneDoor_SlideEnd_L7_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 696.5,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 8.64,
+          "attackMs": 61.75,
+          "btCorr": 0.62,
+          "btRms20": 0.543,
+          "centroidHz": 199,
+          "dominantHz": 152,
+          "sub": 0,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.51,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_sunkentoweraltair_activate_01",
+      "role": "mechanism: SFX_OBJ_SunkenTowerAltair_Activate_01 (SFX_OBJ_SunkenTowerAltair_PlaceItem_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 146.4,
+          "peak": 0.85,
+          "rms20": 0.369,
+          "crest": 6.19,
+          "attackMs": 4.4,
+          "btCorr": 0.82,
+          "btRms20": 0.528,
+          "centroidHz": 126,
+          "dominantHz": 130,
+          "sub": 0.01,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_sweep_move",
+      "role": "rub / slide / water: SFX_OBJ_Sweep_Move (SFX_ACTION_Sweep_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 715.4,
+          "peak": 0.85,
+          "rms20": 0.539,
+          "crest": 3.24,
+          "attackMs": 269.25,
+          "btCorr": 0.93,
+          "btRms20": 0.735,
+          "centroidHz": 80,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_sweep_stompbroom",
+      "role": "tool strike: SFX_OBJ_Sweep_StompBroom (SFX_ACTION_Sweep_BroomStomp_L1_01), method impact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 250.8,
+          "peak": 0.85,
+          "rms20": 0.356,
+          "crest": 8.23,
+          "attackMs": 3.65,
+          "btCorr": 0.68,
+          "btRms20": 0.52,
+          "centroidHz": 172,
+          "dominantHz": 176,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.24,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_sweep_swing",
+      "role": "rub / slide / water: SFX_OBJ_Sweep_Swing (SFX_ACTION_Sweep_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 714.6,
+          "peak": 0.85,
+          "rms20": 0.521,
+          "crest": 3.08,
+          "attackMs": 337.79,
+          "btCorr": 0.93,
+          "btRms20": 0.726,
+          "centroidHz": 78,
+          "dominantHz": 69,
+          "sub": 0,
+          "core": 1,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_uriziel_draw",
+      "role": "story / magic event: SFX_OBJ_Uriziel_Draw (SFX_OBJ_UrizielLightBridge_Accent_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 887.4,
+          "peak": 0.85,
+          "rms20": 0.411,
+          "crest": 6.61,
+          "attackMs": 209.35,
+          "btCorr": 0.83,
+          "btRms20": 0.619,
+          "centroidHz": 125,
+          "dominantHz": 125,
+          "sub": 0.001,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_uriziel_pickup",
+      "role": "story / magic event: SFX_OBJ_Uriziel_PickUp (SFX_WORLD_Uriziel_PickUp_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 834,
+          "peak": 0.85,
+          "rms20": 0.419,
+          "crest": 4.25,
+          "attackMs": 324.5,
+          "btCorr": 0.83,
+          "btRms20": 0.643,
+          "centroidHz": 123,
+          "dominantHz": 96,
+          "sub": 0.002,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_uriziel_shelve",
+      "role": "story / magic event: SFX_OBJ_Uriziel_Shelve (SFX_OBJ_UrizielLightBridge_Accent_L1_01), method texture",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 888.1,
+          "peak": 0.85,
+          "rms20": 0.369,
+          "crest": 6.85,
+          "attackMs": 222.85,
+          "btCorr": 0.82,
+          "btRms20": 0.558,
+          "centroidHz": 127,
+          "dominantHz": 71,
+          "sub": 0.001,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "obj_waterpipe_mouthpiece_putdown",
+      "role": "set down / land: SFX_OBJ_WaterPipe_Mouthpiece_PutDown (SFX_OBJ_WaterPipe_Mouthpiece_PutDown_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 152.7,
+          "peak": 0.85,
+          "rms20": 0.383,
+          "crest": 4.92,
+          "attackMs": 73.65,
+          "btCorr": 0.83,
+          "btRms20": 0.546,
+          "centroidHz": 125,
+          "dominantHz": 129,
+          "sub": 0.006,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "sit_down",
+      "role": "sit down on bench / chair: section effect (SFX_OBJ_Furniture_Bench_SitDown_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 388,
+          "peak": 0.85,
+          "rms20": 0.359,
+          "crest": 5.62,
+          "attackMs": 95.17,
+          "btCorr": 0.66,
+          "btRms20": 0.57,
+          "centroidHz": 186,
+          "dominantHz": 196,
+          "sub": 0.002,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.55,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

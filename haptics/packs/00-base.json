@@ -1,0 +1,81 @@
+// Pack 00-base: the effects approved by the user on 13.11.2026 (state before the pipeline), expressed as rules.
+// Must sound exactly like the hard-coded table (selftest compares the renderings).
+// path: auto = HD on USB (if available), motors otherwise; rumble = always motors (user choice for dodge/attacks/take-off).
+{
+  "pack": "base",
+  "description": "Approved effects: landing by height (HD), water (HD), hit (HD), take-off / attacks / dodge / roll (motors)",
+  "rules": [
+    // ---------------- movement ----------------
+    { "id": "takeoff", "event": "air:start", "path": "rumble",
+      "effect": { "preset": "Rumble", "steps": [[0, 110, 0, 55]] },
+      "note": "light right pulse on leaving the ground" },
+
+    { "id": "land", "event": "air:complete",
+      "let": {
+        "eff": "round(has(net) ? net + 0.3 * max(0, drop - net) : drop)",
+        "k":   "sqrt(clamp(eff / 800, 0, 1))"
+      },
+      "effect": {
+        "preset": "Impact", "intensity": "=0.06 + 0.64 * k", "durationMs": "=60 + 200 * k", "tail": "=eff >= 250 ? 1 : 0", "gainR": 0.9,
+        "motor": { "layers": [
+          { "preset": "Rumble", "steps": [[0, "=45 + 175 * k", "=45 + 175 * k", "=50 + 230 * k"]] },
+          { "preset": "Rumble", "steps": [["=50 + 230 * k", 0, "=eff >= 250 ? (45 + 175 * k) * 2 / 3 : 0", "=50 + 230 * k"]] }
+        ] }
+      },
+      "note": "height: net drop dominates, the jump arc adds 30 %; strength ~ sqrt(height) (impact speed)" },
+
+    // ---------------- combat (motors by user choice) ----------------
+    // situation melee.swing (19.11.2026): a Trained/Master combo blow (packs/95-combo.json) owns the swing - its HD beat at the strike
+    // replaces this motor swing; untrained / non-combo attacks unchanged. Disable pack combo -> swings back as approved.
+    { "id": "attack-top",    "event": "attack:start", "where": { "dir": "top" },    "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 70, 0, 40], [120, 255, 255, 120]] } },
+    { "id": "attack-bottom", "event": "attack:start", "where": { "dir": "bottom" }, "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 0, 200, 60], [60, 160, 120, 90]] } },
+    { "id": "attack-left",   "event": "attack:start", "where": { "dir": "left" },   "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 0, 230, 110]] } },
+    { "id": "attack-right",  "event": "attack:start", "where": { "dir": "right" },  "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 230, 0, 110]] } },
+    { "id": "attack-kick",   "event": "attack:start", "where": { "dir": "kick" },   "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 255, 255, 60]] } },
+    { "id": "attack-other",  "event": "attack:start", "path": "rumble", "situation": "melee.swing", "situationMs": 900, "situationCheckOnly": true,
+      "effect": { "preset": "Rumble", "steps": [[0, 255, 0, 90]] }, "note": "direction unknown" },
+
+    { "id": "dodge", "event": "dodge:start", "path": "rumble",
+      "effect": { "preset": "Rumble", "steps": [[0, 0, 220, 70], [150, 0, 220, 70]] } },
+    { "id": "roll",  "event": "roll:start",  "path": "rumble",
+      "effect": { "preset": "Rumble", "steps": [[0, 0, 110, 100], [100, 0, 170, 100], [200, 0, 240, 120]] } },
+
+    { "id": "hit", "event": "hitreact:start", "priority": "high", "cooldownMs": 100,
+      "effect": { "preset": "Rumble", "steps": [[0, 255, 255, 160], [160, 0, 180, 220]] },
+      "note": "on USB rendered to HD from the motor pattern (60 / 170 Hz)" },
+
+    // ---------------- water ----------------
+    { "id": "dive", "event": "dive:start", "group": "water",
+      "effect": { "preset": "FluidMotion", "style": "dive",
+                  "motor": { "preset": "MotorWave", "ms": 1100, "peakLeft": 200, "peakRight": 150, "lagMs": 220 } },
+      "note": "approved by the user: power and character; bubbles removed" },
+
+    { "id": "surface", "event": "dive:complete", "group": "water",
+      "effect": { "preset": "FluidMotion", "style": "surface",
+                  "motor": { "layers": [
+                    { "preset": "MotorWave", "ms": 600, "peakLeft": 90, "peakRight": 140, "lagMs": -120 },
+                    { "preset": "Rumble", "steps": [[800, 0, 70, 140]] } ] } } },
+
+    { "id": "splash", "event": "swim:start", "where": { "entry": "fall" }, "group": "water",
+      "let": { "k": "sqrt(clamp(drop / 800, 0, 1))" },
+      "effect": {
+        "layers": [
+          { "preset": "Impact", "intensity": "=0.45 + 0.5 * k", "durationMs": 120, "freqHz": 90, "weight": 0.6, "edge": 0,
+            "noise": 0.6, "attackMs": 0, "decayTauMs": 28.571, "lengthMs": 120, "seed": 11 },
+          { "preset": "FluidMotion", "style": "dive", "gain": 0.6, "delayMs": 60 }
+        ],
+        "motor": { "layers": [
+          { "preset": "Rumble", "steps": [[0, "=45 + 175 * k", "=45 + 175 * k", 70]] },
+          { "preset": "MotorWave", "scale": 0.6, "startMs": 60 } ] }
+      } },
+
+    { "id": "wade", "event": "swim:start", "group": "water",
+      "effect": { "preset": "FluidMotion", "style": "wade",
+                  "motor": { "preset": "MotorWave", "ms": 500, "peakLeft": 70, "peakRight": 120, "lagMs": 50 } } }
+  ]
+}

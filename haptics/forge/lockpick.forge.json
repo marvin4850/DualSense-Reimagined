@@ -1,0 +1,189 @@
+// Forge recipe: Tactile Lockpicking HD bank "lp" (DsBridge `forge`, Haptics/Forge.cs; DSP from DualSense Haptic Designer, MIT).
+// Output: haptics/bank/lp/<slot>.<variant>.wav, played by the "Sample" preset of packs/30-lockpick.json.
+// The speaker is NEVER used: everything is actuator signal (USB ch3/ch4) mixed by the existing HD engine.
+//
+// One recipe, several MATERIALS (variants). A variant only sets the vars below; every slot is built from the same
+// grammar, so variants differ in timbre, not in meaning:
+//   guide  = bright navigation click (must stay distinct from the physics notch / detent: checked by "contrast")
+//   notch  = faint low notch of plate selection (never read as a hint)
+//   detent / counter / settle* / ratchet = parts of the mechanism; glide = friction of moving plates; unlock = 3 phases
+// Units: Hz, ms. "=expr" = expression of the variant's vars (and the slot's "let").
+// Checks (defaults below, overridable per slot): no clipping, peak <= target, |DC| small, no hard edges, duration,
+// attack, energy rms20 (felt strength), spectral shares (<40 Hz wasted, >700 Hz audible), left/right balance.
+{
+  "bank": "lp",
+  "rate": 48000,
+  "defaults": {
+    "eq": { "hpf": 30, "lpf": 650 },                 // actuator band; above ~700 Hz the pad is heard, not felt
+    "normalize": { "peak": 0.85 },                   // below the mixer limiter knee (0.855): the sample plays unchanged
+    "check": { "maxSub": 0.10, "maxHigh": 0.04, "minCore": 0.65, "balance": "center", "balanceTolDb": 1.0 }
+  },
+  "variants": {
+    "A": { "label": "Латунь", "note": "тёплый звонкий металл, средний звон, мягкое трение",
+           "vars": { "f0": 240, "tau": 11, "p2": 0.35, "p3": 0.12, "nz": 0.30, "nzHz": 480, "guideHz": 300, "notchHz": 150,
+                     "body": 120, "bodyG": 0.55, "bodyTau": 14, "glide": 0.97, "fric": 170, "fricQ": 1.6, "stick": 38, "grit": 0.55 } },
+    "B": { "label": "Сталь", "note": "яркие короткие сухие щелчки, жёсткое трение",
+           "vars": { "f0": 310, "tau": 8, "p2": 0.50, "p3": 0.22, "nz": 0.45, "nzHz": 560, "guideHz": 340, "notchHz": 170,
+                     "body": 150, "bodyG": 0.35, "bodyTau": 9, "glide": 0.985, "fric": 230, "fricQ": 2.2, "stick": 55, "grit": 0.75 } },
+    "C": { "label": "Кованое железо", "note": "тяжёлый массивный механизм: глухой удар + короткий звон, грубое трение",
+           "vars": { "f0": 200, "tau": 7, "p2": 0.25, "p3": 0.08, "nz": 0.30, "nzHz": 380, "guideHz": 285, "notchHz": 130,
+                     "body": 85, "bodyG": 0.85, "bodyTau": 18, "glide": 0.94, "fric": 125, "fricQ": 1.3, "stick": 26, "grit": 0.5 } }
+  },
+  "slots": {
+    // ---------------- A. navigation ----------------
+    "guide": {
+      "role": "навигация: яркий щелчок (центр = верная пластина; сторона - через pan/cross правила)",
+      "lengthMs": 45,
+      "layers": [
+        { "type": "modal", "f": "=guideHz", "attackMs": 0.3, "glide": 0.99, "noise": "=nz", "noiseHz": "=nzHz", "noiseMs": 1.5,
+          "modes": [[1, 1, "=tau * 1.4"], [2.756, "=p2", 4], [5.404, "=p3", 1.5]] }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.50 },
+      "check": { "minMs": 20, "maxMs": 70, "attackMaxMs": 3.0, "rms20Min": 0.45, "centroidMin": 220,
+                 "contrast": [ { "slot": "notch", "minDistance": 0.35, "minCentroidRatio": 1.4 },
+                               { "slot": "detent", "minDistance": 0.15, "minCentroidRatio": 1.08 } ] }
+    },
+    "notch": {
+      "role": "выбор пластины: слабая низкая засечка (физика, не подсказка)",
+      "lengthMs": 30,
+      "layers": [ { "type": "modal", "f": "=notchHz", "attackMs": 2.0, "noise": 0.08, "noiseHz": 300, "modes": [[1, 1, 6], [2.0, 0.15, 2.5]] } ],
+      "normalize": { "peak": 0.50 },
+      "check": { "maxMs": 45, "rms20Max": 0.25, "centroidMax": 260 }
+    },
+
+    // ---------------- C. physics ----------------
+    "insert": {
+      "role": "вставка отмычки: короткий скрежет входа + два касания штифтов",
+      "lengthMs": 140,
+      "layers": [
+        { "type": "noise", "durMs": 70, "freq": "=fric * 1.2", "freqEnd": "=fric", "q": "=fricQ", "amRate": "=stick", "amDepth": 0.5, "attackMs": 8, "releaseMs": 30, "gain": 0.45 },
+        { "type": "modal", "at": 55, "f": "=f0 * 1.1", "attackMs": 0.4, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 1, "=tau * 0.6"], [2.756, "=p2", 2.5]], "durMs": 40, "gain": 0.8 },
+        { "type": "modal", "at": 100, "f": "=f0", "attackMs": 0.4, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 1, "=tau * 0.7"], [2.756, "=p2", 2.5]], "durMs": 40 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.38 },
+      "check": { "minMs": 110, "maxMs": 170, "rms20Min": 0.33 }
+    },
+    "glide": {
+      "role": "движение пластин: трение со «схватыванием» (stick-slip), 900 мс, правило обрезает по ожидаемой длительности",
+      "lengthMs": 900,
+      "layers": [
+        { "type": "noise", "durMs": 900, "freq": "=fric", "freqEnd": "=fric * 0.9", "q": "=fricQ", "amRate": "=stick * 0.5", "amDepth": 0.45, "attackMs": 25, "releaseMs": 40, "gain": 0.55 },
+        { "type": "pulses", "durMs": 900, "rate": "=stick", "rateEnd": "=stick * 0.85", "jitter": 0.6, "ampJitter": 0.5, "accentEvery": 4, "accentGain": 1.6,
+          "attackMs": 20, "releaseMs": 40, "gain": "=grit",
+          "pulse": { "freq": "=fric * 1.3", "freqEnd": "=fric * 1.1", "durMs": 10, "decayMs": 2.5, "attackMs": 0.4, "noise": 0.3 } }
+      ],
+      "normalize": { "peak": 0.62, "rms20": 0.30 },
+      "check": { "minMs": 820, "maxMs": 950, "rms20Min": 0.26, "rms20Max": 0.45, "centroidMin": 90, "centroidMax": 400, "balanceTolDb": 1.5 }
+    },
+    "glide_opp": {
+      "role": "встречные пластины: суше и выше, на другой стороне (сторону задаёт правило)",
+      "lengthMs": 700,
+      "layers": [
+        { "type": "noise", "durMs": 700, "freq": "=fric * 1.4", "q": "=fricQ * 1.5", "amRate": "=stick * 0.7", "amDepth": 0.6, "attackMs": 20, "releaseMs": 40, "gain": 0.4 },
+        { "type": "pulses", "durMs": 700, "rate": "=stick * 1.4", "jitter": 0.7, "ampJitter": 0.6, "attackMs": 15, "releaseMs": 40, "gain": "=grit",
+          "pulse": { "freq": "=fric * 1.7", "durMs": 8, "decayMs": 1.8, "attackMs": 0.3, "noise": 0.4 } }
+      ],
+      "normalize": { "peak": 0.45, "rms20": 0.20 },
+      "check": { "minMs": 620, "maxMs": 760, "rms20Min": 0.16, "rms20Max": 0.32, "balanceTolDb": 1.5 }
+    },
+    "detent": {
+      "role": "пластина проходит/западает в лунку: металлический щелчок + пружинка корпуса",
+      "lengthMs": 40,
+      "layers": [
+        { "type": "modal", "f": "=f0", "attackMs": 0.4, "glide": "=glide", "noise": "=nz", "noiseHz": "=nzHz", "noiseMs": 1.8,
+          "modes": [[1, 1, "=tau"], [2.756, "=p2", 3], [5.404, "=p3", 1.2]] },
+        { "type": "modal", "at": 2.5, "f": "=body", "attackMs": 1.0, "modes": [[1, "=min(bodyG, 0.45)", "=bodyTau * 0.6"]], "durMs": 35 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.42 },
+      "check": { "minMs": 18, "maxMs": 60, "attackMaxMs": 3.0, "rms20Min": 0.38 }
+    },
+    "counter": {
+      "role": "пластина, идущая против толчка: парный сухой транзиент",
+      "lengthMs": 40,
+      "layers": [
+        { "type": "modal", "f": "=f0 * 1.25", "attackMs": 0.2, "noise": "=nz * 1.3", "noiseHz": "=nzHz", "noiseMs": 1.2, "modes": [[1, 1, 3], [2.756, "=p2", 1.5]], "durMs": 15 },
+        { "type": "modal", "at": 16, "f": "=f0 * 1.35", "attackMs": 0.2, "noise": "=nz * 1.3", "noiseHz": "=nzHz", "noiseMs": 1.2, "modes": [[1, 0.75, 3], [2.756, "=p2", 1.5]], "durMs": 15 }
+      ],
+      "normalize": { "peak": 0.72, "rms20": 0.24 },
+      "check": { "minMs": 22, "maxMs": 45, "rms20Min": 0.20, "minCore": 0.55 }
+    },
+    "settle": {
+      "role": "ход закончен: пластины сели - глухой удар корпуса + щелчок",
+      "lengthMs": 70,
+      "layers": [
+        { "type": "modal", "f": "=body * 1.1", "attackMs": 1.0, "glide": 0.85, "modes": [[1, "=bodyG + 0.3", "=bodyTau * 1.2"], [2.0, 0.15, 6]] },
+        { "type": "modal", "at": 2, "f": "=f0 * 0.85", "attackMs": 0.4, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 0.8, "=tau"], [2.756, "=p2", 3]], "durMs": 40 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.50 },
+      "check": { "minMs": 35, "maxMs": 100, "rms20Min": 0.45, "centroidMax": 330 }
+    },
+    "settle_center": {
+      "role": "пластина встала в центр: двухступенчатая фиксация «чк-тук» (щелчок, затем глубокая посадка)",
+      "lengthMs": 100,
+      "layers": [
+        { "type": "modal", "f": "=f0 * 1.05", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 1, "=tau * 0.8"], [2.756, "=p2", 3], [5.404, "=p3", 1.2]], "durMs": 35 },
+        { "type": "modal", "at": 30, "f": "=body * 0.9", "attackMs": 1.2, "glide": 0.8, "modes": [[1, "=bodyG + 0.45", "=bodyTau * 1.6"], [2.0, 0.2, 7]], "durMs": 70 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.55 },
+      "check": { "minMs": 70, "maxMs": 130, "rms20Min": 0.50,
+                 "contrast": { "slot": "settle", "minDistance": 0.10, "minCentroidRatio": 0 } }
+    },
+    "release": {
+      "role": "пластина ушла из центра: лёгкий высокий отщёлк",
+      "lengthMs": 30,
+      "layers": [ { "type": "modal", "f": "=f0 * 1.2", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "noiseMs": 1.2, "modes": [[1, 1, 4], [2.756, "=p2", 2]] } ],
+      "normalize": { "peak": 0.60, "rms20": 0.22 },
+      "check": { "minMs": 12, "maxMs": 40, "rms20Min": 0.18 }
+    },
+
+    // ---------------- D. danger / result ----------------
+    "strain": {
+      "role": "надрыв: отмычка гнётся - скрип с ускоряющимся «скрежетом» и напряжённым тоном",
+      "lengthMs": 150,
+      "layers": [
+        { "type": "pulses", "durMs": 140, "rate": 60, "rateEnd": 150, "jitter": 0.3, "ampJitter": 0.3, "gain": 1.0, "releaseMs": 30,
+          "pulse": { "freq": "=f0 * 0.6", "freqEnd": "=f0 * 0.5", "durMs": 9, "decayMs": 2.2, "attackMs": 0.3, "noise": 0.5 } },
+        { "type": "tone", "durMs": 140, "freq": "=body * 1.1", "freqEnd": "=body * 1.6", "attackMs": 20, "releaseMs": 40, "gain": 0.35 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.50 },
+      "check": { "minMs": 120, "maxMs": 180, "rms20Min": 0.45 }
+    },
+    "snap": {
+      "role": "поломка: хрупкий излом + осыпание обломков",
+      "lengthMs": 240,
+      "layers": [
+        { "type": "modal", "f": "=min(f0 * 1.05, 320)", "attackMs": 0.1, "noise": 0.9, "noiseHz": "=nzHz", "noiseMs": 3, "modes": [[1, 1, 5], [2.756, 0.6, 2], [5.404, 0.3, 1]], "durMs": 40 },
+        { "type": "pulses", "at": 45, "durMs": 180, "rate": 30, "rateEnd": 14, "jitter": 0.8, "ampJitter": 0.6, "gain": 0.55, "releaseMs": 120, "releaseCurve": 2,
+          "pulse": { "freq": "=min(f0 * 1.1, 300)", "freqEnd": "=min(f0 * 0.9, 250)", "durMs": 10, "decayMs": 2, "attackMs": 0.2, "noise": 0.35 } }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.40 },
+      "check": { "minMs": 150, "maxMs": 260, "rms20Min": 0.36, "attackMaxMs": 3.0, "balanceTolDb": 1.5 }
+    },
+    "ratchet": {
+      "role": "сброс: один зуб храповика (правило повторяет по числу пластин)",
+      "lengthMs": 32,
+      "layers": [
+        { "type": "modal", "f": "=f0 * 0.9", "attackMs": 0.3, "noise": "=nz * 1.2", "noiseHz": "=nzHz", "noiseMs": 1.5, "modes": [[1, 1, 4.5], [2.756, "=p2", 2]], "durMs": 25 },
+        { "type": "modal", "at": 1.5, "f": "=body * 1.3", "attackMs": 0.8, "modes": [[1, "=bodyG * 0.6", 6]], "durMs": 25 }
+      ],
+      "normalize": { "peak": 0.80, "rms20": 0.30 },
+      "check": { "minMs": 15, "maxMs": 40, "rms20Min": 0.26 }
+    },
+    "unlock": {
+      "role": "открытие: захват последних пластин -> отпускание защёлок (сверху вниз) -> удар засова со скольжением",
+      "lengthMs": 480,
+      "layers": [
+        { "type": "modal", "at": 0,  "f": "=body * 1.2", "attackMs": 1.5, "modes": [[1, 0.7, 10], [2.0, 0.15, 4]], "durMs": 40 },
+        { "type": "modal", "at": 40, "f": "=body * 1.2", "attackMs": 1.5, "modes": [[1, 0.7, 10], [2.0, 0.15, 4]], "durMs": 40 },
+        { "type": "modal", "at": 95,  "f": "=f0 * 1.10", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 0.85, "=tau * 0.8"], [2.756, "=p2", 3]], "durMs": 40, "pan": -0.5 },
+        { "type": "modal", "at": 145, "f": "=f0 * 1.00", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 0.85, "=tau * 0.8"], [2.756, "=p2", 3]], "durMs": 40, "pan": 0 },
+        { "type": "modal", "at": 195, "f": "=f0 * 0.88", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 0.85, "=tau * 0.8"], [2.756, "=p2", 3]], "durMs": 40, "pan": 0.5 },
+        { "type": "noise", "at": 235, "durMs": 45, "freq": "=fric", "freqEnd": "=fric * 0.7", "q": "=fricQ", "attackMs": 10, "releaseMs": 20, "gain": 0.35 },
+        { "type": "modal", "at": 260, "f": "=body * 0.75", "attackMs": 1.0, "glide": 0.7, "modes": [[1, 1.3, 30], [2.0, 0.25, 8]], "durMs": 200 },
+        { "type": "modal", "at": 262, "f": "=f0 * 0.8", "attackMs": 0.3, "noise": "=nz", "noiseHz": "=nzHz", "modes": [[1, 0.6, "=tau"], [2.756, "=p2", 3]], "durMs": 40 }
+      ],
+      "normalize": { "peak": 0.85, "rms20": 0.55 },
+      "check": { "minMs": 340, "maxMs": 600, "rms20Min": 0.50, "balanceTolDb": 2.0 }
+    }
+  }
+}

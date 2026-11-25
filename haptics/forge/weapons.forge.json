@@ -1,0 +1,175 @@
+// Weapon equipment wave (16.11.2026): put-away sounds for the families that had none. Draws reuse bank mass2
+// (wood / axe / 2H blade) and the approved pilot.draw_s1h; timing = the game's own draw/undraw FX (event weaponfx).
+{
+ "bank": "weapons",
+ "rate": 48000,
+ "audioDir": "../../../research/data/fmod/wav",
+ "defaults": {
+  "normalize": {
+   "peak": 0.85
+  },
+  "check": {
+   "maxSub": 0.12,
+   "maxHigh": 0.04,
+   "minCore": 0.6,
+   "balance": "center",
+   "btMinCorr": 0.5
+  }
+ },
+ "variants": {
+  "A": {
+   "label": "from game sounds",
+   "vars": {}
+  }
+ },
+ "slots": {
+  "undraw_axe": {
+   "role": "Axe back on the belt / back (SFX_COMBAT_Melee_Undraw_1HAxe)",
+   "lengthMs": 650,
+   "maxLengthMs": 750,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "651_SFX_COMBAT_Melee_Undraw_1HAxe_L1_01",
+     "method": "scrape",
+     "carrierHz": 130,
+     "compress": 0.55,
+     "stick": 0.85,
+     "maxMs": 600
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.36
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 750,
+    "rms20Min": 0.28,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "undraw_2hblade": {
+   "role": "Two-handed blade back into the scabbard (SFX_COMBAT_Melee_Undraw_2HMetalBlade)",
+   "lengthMs": 750,
+   "maxLengthMs": 850,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "6301_SFX_COMBAT_Melee_Undraw_2HMetalBlade_L1_01",
+     "method": "scrape",
+     "carrierHz": 170,
+     "compress": 0.55,
+     "stick": 0.85,
+     "maxMs": 700
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.36
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 850,
+    "rms20Min": 0.28,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "draw_club": {
+   "role": "1H club / staff off the belt: light wood friction + a short grip knock, sword-weight (game106: felt like a huge 2H hammer)",
+   "lengthMs": 420,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "2381_SFX_COMBAT_Melee_Draw_1HWood_L1_02",
+     "method": "friction",
+     "carrierHz": 205,
+     "releaseMs": 40,
+     "maxMs": 380
+    },
+    {
+     "type": "modal",
+     "f": 210,
+     "attackMs": 1.0,
+     "glide": 0.97,
+     "modes": [
+      [
+       1,
+       1,
+       14
+      ],
+      [
+       2.2,
+       0.3,
+       6
+      ]
+     ],
+     "durMs": 60,
+     "gain": 0.7,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.33
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 500,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  },
+  "undraw_club": {
+   "role": "1H club / staff back on the belt: light wood friction + a short seat knock",
+   "lengthMs": 420,
+   "maxLengthMs": 500,
+   "layers": [
+    {
+     "type": "audio",
+     "sound": "4070_SFX_COMBAT_Melee_Undraw_1HWood_L1_01",
+     "method": "friction",
+     "carrierHz": 205,
+     "releaseMs": 40,
+     "maxMs": 380
+    },
+    {
+     "type": "modal",
+     "f": 210,
+     "attackMs": 1.0,
+     "glide": 0.97,
+     "modes": [
+      [
+       1,
+       1,
+       14
+      ],
+      [
+       2.2,
+       0.3,
+       6
+      ]
+     ],
+     "durMs": 60,
+     "gain": 0.6,
+     "at": 0
+    }
+   ],
+   "normalize": {
+    "peak": 0.85,
+    "rms20": 0.33
+   },
+   "check": {
+    "minMs": 80,
+    "maxMs": 500,
+    "rms20Min": 0.26,
+    "btMinCorr": 0.5,
+    "balance": "center"
+   }
+  }
+ }
+}

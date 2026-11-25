@@ -1,0 +1,37 @@
+// Bench-only v2: mechanical gestures. Identical grip channels; NO trigger vibration.
+// Both directions: contact -> material motion -> catch -> body resonance. Direction is texture, never pulse count.
+{
+  "pack": "bench-metal-guide", "version": 2,
+  "description": "Contact, friction/loading, catch and resonance; dry latch versus elastic spring; grips only",
+  "rules": [
+    {
+      "id": "bench-metal-left", "event": "lp:update", "where": { "ph": "metalguide", "side": "L" }, "path": "hd", "priority": "high",
+      "effect": { "layers": [
+        { "preset": "Tick", "freqHz": 240, "ms": 14, "attackMs": 0.4, "tauMs": 4,
+          "partial": 2.76, "partialGain": 0.25, "drive": 1.4, "intensity": 0.28 },
+        { "preset": "Grain", "delayMs": 8, "durationMs": "=shoulder == 1 ? 50 : 80", "packetMs": 12, "gapMs": 2,
+          "freqLo": 160, "freqHi": 240, "shape": "sharp", "fadeMs": 4, "accentMs": 18, "accentGain": 1.25,
+          "intensity": "=shoulder == 1 ? 0.34 : 0.44", "seed": 21 },
+        { "preset": "Tick", "delayMs": "=shoulder == 1 ? 62 : 96", "freqHz": 190, "ms": 45, "attackMs": 0.4, "tauMs": 9,
+          "partial": 2.76, "partialGain": 0.35, "partialTauMs": 4, "drive": 2.7, "intensity": "=shoulder == 1 ? 0.62 : 0.72" },
+        { "preset": "Impact", "delayMs": "=shoulder == 1 ? 66 : 100", "freqHz": 80, "durationMs": 35,
+          "attackMs": 2, "decayTauMs": 12, "weight": 1, "edge": 0, "noise": 0, "intensity": 0.15 }
+      ] }
+    },
+    {
+      "id": "bench-metal-right", "event": "lp:update", "where": { "ph": "metalguide", "side": "R" }, "path": "hd", "priority": "high",
+      "effect": { "layers": [
+        { "preset": "Tick", "freqHz": 310, "ms": 14, "attackMs": 0.4, "tauMs": 4,
+          "partial": 2.76, "partialGain": 0.35, "drive": 1.2, "intensity": 0.28 },
+        { "preset": "Charge", "delayMs": 8, "durationMs": "=shoulder == 1 ? 55 : 85", "f0": 160, "f1": 310,
+          "curve": 0.8, "noise": 0, "intensity": "=shoulder == 1 ? 0.42 : 0.54" },
+        { "preset": "Grain", "delayMs": 16, "durationMs": "=shoulder == 1 ? 40 : 70", "packetMs": 5, "gapMs": 1,
+          "freqLo": 260, "freqHi": 360, "shape": "sharp", "fadeMs": 5, "intensity": 0.13, "seed": 32 },
+        { "preset": "Tick", "delayMs": "=shoulder == 1 ? 66 : 100", "freqHz": 280, "ms": 85, "attackMs": 0.4, "tauMs": 22,
+          "partial": 2.76, "partialGain": 0.45, "partialTauMs": 14, "drive": 1.6, "intensity": "=shoulder == 1 ? 0.62 : 0.70" },
+        { "preset": "Impact", "delayMs": "=shoulder == 1 ? 70 : 104", "freqHz": 110, "durationMs": 35,
+          "attackMs": 2, "decayTauMs": 12, "weight": 1, "edge": 0, "noise": 0, "intensity": 0.12 }
+      ] }
+    }
+  ]
+}

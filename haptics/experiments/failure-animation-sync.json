@@ -1,0 +1,660 @@
+{
+  "pack": "failure-preview",
+  "version": 1,
+  "title": "ПОЛОМКА ПО АНИМАЦИИ — один прототип, 2400 мс",
+  "durationMs": 2400,
+  "phaseMarkers": {
+    "breakMs": 336.3003730773926,
+    "removeMs": 1501.8194913864136,
+    "clipEndMs": 2400
+  },
+  "auditionOnlyPadding": true,
+  "motionMapping": {
+    "sampleRate": 30,
+    "source": "Decoded ACL: 3 tracks ×73 samples, identity track-map at export offset168, native hash validation OK",
+    "loadBone": "pick_1",
+    "recoilAndWithdrawBone": "pick_2",
+    "knots": [
+      {
+        "stage": "load",
+        "frame": 1,
+        "timeMs": 33.333333333333336,
+        "amplitude": 0.02014
+      },
+      {
+        "stage": "load",
+        "frame": 2,
+        "timeMs": 66.66666666666667,
+        "amplitude": 0.069527
+      },
+      {
+        "stage": "load",
+        "frame": 3,
+        "timeMs": 100.0,
+        "amplitude": 0.134101
+      },
+      {
+        "stage": "load",
+        "frame": 4,
+        "timeMs": 133.33333333333334,
+        "amplitude": 0.199604
+      },
+      {
+        "stage": "load",
+        "frame": 5,
+        "timeMs": 166.66666666666669,
+        "amplitude": 0.250246
+      },
+      {
+        "stage": "load",
+        "frame": 6,
+        "timeMs": 200.0,
+        "amplitude": 0.27
+      },
+      {
+        "stage": "load",
+        "frame": 7,
+        "timeMs": 233.33333333333334,
+        "amplitude": 0.26535
+      },
+      {
+        "stage": "load",
+        "frame": 8,
+        "timeMs": 266.6666666666667,
+        "amplitude": 0.252325
+      },
+      {
+        "stage": "load",
+        "frame": 9,
+        "timeMs": 300.0,
+        "amplitude": 0.231376
+      },
+      {
+        "stage": "recoil",
+        "frame": 12,
+        "timeMs": 400.0,
+        "amplitude": 0.113944
+      },
+      {
+        "stage": "recoil",
+        "frame": 13,
+        "timeMs": 433.33333333333337,
+        "amplitude": 0.119749
+      },
+      {
+        "stage": "recoil",
+        "frame": 14,
+        "timeMs": 466.6666666666667,
+        "amplitude": 0.124444
+      },
+      {
+        "stage": "recoil",
+        "frame": 15,
+        "timeMs": 500.00000000000006,
+        "amplitude": 0.105521
+      },
+      {
+        "stage": "recoil",
+        "frame": 16,
+        "timeMs": 533.3333333333334,
+        "amplitude": 0.073105
+      },
+      {
+        "stage": "recoil",
+        "frame": 17,
+        "timeMs": 566.6666666666667,
+        "amplitude": 0.035666
+      },
+      {
+        "stage": "recoil",
+        "frame": 18,
+        "timeMs": 600.0,
+        "amplitude": 0.008633
+      },
+      {
+        "stage": "recoil",
+        "frame": 19,
+        "timeMs": 633.3333333333334,
+        "amplitude": 0.001393
+      },
+      {
+        "stage": "recoil",
+        "frame": 20,
+        "timeMs": 666.6666666666667,
+        "amplitude": 0.01313
+      },
+      {
+        "stage": "recoil",
+        "frame": 21,
+        "timeMs": 700.0,
+        "amplitude": 0.022585
+      },
+      {
+        "stage": "recoil",
+        "frame": 22,
+        "timeMs": 733.3333333333334,
+        "amplitude": 0.02278
+      },
+      {
+        "stage": "recoil",
+        "frame": 23,
+        "timeMs": 766.6666666666667,
+        "amplitude": 0.021457
+      },
+      {
+        "stage": "recoil",
+        "frame": 24,
+        "timeMs": 800.0,
+        "amplitude": 0.01359
+      },
+      {
+        "stage": "recoil",
+        "frame": 25,
+        "timeMs": 833.3333333333334,
+        "amplitude": 0.00762
+      },
+      {
+        "stage": "recoil",
+        "frame": 26,
+        "timeMs": 866.6666666666667,
+        "amplitude": 0.005807
+      },
+      {
+        "stage": "recoil",
+        "frame": 27,
+        "timeMs": 900.0000000000001,
+        "amplitude": 0.003989
+      },
+      {
+        "stage": "recoil",
+        "frame": 28,
+        "timeMs": 933.3333333333334,
+        "amplitude": 0.00228
+      },
+      {
+        "stage": "recoil",
+        "frame": 29,
+        "timeMs": 966.6666666666667,
+        "amplitude": 0.000892
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 37,
+        "timeMs": 1233.3333333333335,
+        "amplitude": 0.025155
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 38,
+        "timeMs": 1266.6666666666667,
+        "amplitude": 0.053633
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 39,
+        "timeMs": 1300.0,
+        "amplitude": 0.073286
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 40,
+        "timeMs": 1333.3333333333335,
+        "amplitude": 0.091343
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 41,
+        "timeMs": 1366.6666666666667,
+        "amplitude": 0.10775
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 42,
+        "timeMs": 1400.0,
+        "amplitude": 0.121465
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 43,
+        "timeMs": 1433.3333333333335,
+        "amplitude": 0.132992
+      },
+      {
+        "stage": "withdraw-contact",
+        "frame": 44,
+        "timeMs": 1466.6666666666667,
+        "amplitude": 0.14338
+      }
+    ],
+    "note": "Motion supplies envelope shape and phase timing; forces/amplitudes are designed, not measured physical forces. 240 Hz gives 8 full cycles per 30 fps interval so overlapping triangular basis layers have aligned phase."
+  },
+  "rules": [
+    {
+      "id": "preview-failure-1",
+      "event": "lp:update",
+      "where": {
+        "ph": "failurepreview",
+        "variant": "1"
+      },
+      "path": "hd",
+      "priority": "critical",
+      "note": "По анимации: нагрузка → перелом 336 мс → отдача → извлечение → освобождение 1502 мс",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Continuous",
+            "delayMs": 0.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.02014,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 33.333333333333336,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.069527,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 66.66666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.134101,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 100.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.199604,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 133.33333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.250246,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 166.66666666666669,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.27,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 200.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.26535,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 233.33333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.252325,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 266.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.231376,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 336.3003730773926,
+            "freqHz": 210,
+            "intensity": 0.67,
+            "ms": 170,
+            "tauMs": 33,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 4,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 336.3003730773926,
+            "freqHz": 78,
+            "intensity": 0.18,
+            "durationMs": 120,
+            "lengthMs": 120,
+            "decayTauMs": 25,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 336.3003730773926,
+            "freqHz": 520,
+            "intensity": 0.045,
+            "ms": 150,
+            "tauMs": 30,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 366.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.113944,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 400.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.119749,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 433.33333333333337,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.124444,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 466.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.105521,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 500.00000000000006,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.073105,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 533.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.035666,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 566.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.008633,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 600.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.001393,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 633.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.01313,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 666.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.022585,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 700.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.02278,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 733.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.021457,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 766.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.01359,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 800.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.00762,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 833.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.005807,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 866.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.003989,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 900.0000000000001,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.00228,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 933.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.000892,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1200.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.025155,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1233.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.053633,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1266.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.073286,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1300.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.091343,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1333.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.10775,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1366.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.121465,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1400.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.132992,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1433.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.14338,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 1501.8194913864136,
+            "freqHz": 310,
+            "intensity": 0.43,
+            "ms": 30,
+            "tauMs": 8,
+            "attackMs": 0.5,
+            "partial": 2.756,
+            "partialGain": 0.3,
+            "partialTauMs": 2.5,
+            "drive": 1.5,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "durationMs": 2400,
+            "intensity": 0,
+            "freqHz": 180,
+            "noise": 0,
+            "fadeMs": 50
+          }
+        ]
+      }
+    }
+  ]
+}

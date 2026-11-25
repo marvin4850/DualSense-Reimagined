@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "families": [
+    {
+      "id": "blade.draw",
+      "match": "^A_Man_S[12]H_(Un|Tr|Ma)_Draw(Back)?_Montage$",
+      "phases": [
+        {
+          "id": "handle_transfer",
+          "anchor": "AnimNotify_AttachWeapon",
+          "style": "weapon_grip"
+        },
+        {
+          "id": "blade_slide",
+          "anchor": "AnimNotify_PlayFX",
+          "style": "blade_slide"
+        }
+      ],
+      "material": "metal_scabbard"
+    },
+    {
+      "id": "blade.sheathe",
+      "match": "^A_Man_S[12]H_(Un|Tr|Ma)_Shelve(Back)?_Montage$",
+      "phases": [
+        {
+          "id": "blade_slide",
+          "anchor": "AnimNotify_PlayFX",
+          "style": "blade_putaway"
+        },
+        {
+          "id": "handle_release",
+          "anchor": "AnimNotify_DeattachWeapon",
+          "style": "weapon_grip"
+        }
+      ],
+      "material": "metal_scabbard"
+    },
+    {
+      "id": "held.draw",
+      "match": "^A_Man_(A[12]H|M[12]H|Sff2H|Sff|T1H)_(Un|Tr|Ma)_Draw(Back)?_Montage$",
+      "phases": [
+        {
+          "id": "weight_transfer",
+          "anchor": "AnimNotify_AttachWeapon",
+          "style": "weight_transfer"
+        }
+      ],
+      "material": "weighted_handle"
+    },
+    {
+      "id": "held.sheathe",
+      "match": "^A_Man_(A[12]H|M[12]H|Sff2H|Sff|T1H)_(Un|Tr|Ma)_Shelve(Back)?_Montage$",
+      "phases": [
+        {
+          "id": "weight_release",
+          "anchor": "AnimNotify_DeattachWeapon",
+          "style": "weight_transfer"
+        }
+      ],
+      "material": "weighted_handle"
+    },
+    {
+      "id": "bow.equip",
+      "match": "^Man_Bow_(N|STL)_Equip$",
+      "phases": [
+        {
+          "id": "release",
+          "anchor": "verified_bow_release",
+          "style": "bow_release"
+        },
+        {
+          "id": "grip",
+          "anchor": "AnimNotify_AttachWeapon",
+          "style": "bow_grip"
+        }
+      ],
+      "material": "wood_strap",
+      "order": [
+        [
+          "release",
+          "grip"
+        ]
+      ]
+    },
+    {
+      "id": "bow.reload",
+      "match": "^Man_Bow_(N|STL)_Reload_AnimMontage$",
+      "phases": [
+        {
+          "id": "pull_arrow",
+          "anchor": "AnimNotify_HandToQuiver",
+          "style": "arrow_pull"
+        },
+        {
+          "id": "seat_arrow",
+          "anchor": "AnimNotify_ArrowToBowOrCrossbow",
+          "style": "arrow_seat"
+        }
+      ],
+      "material": "arrow_wood",
+      "order": [
+        [
+          "pull_arrow",
+          "seat_arrow"
+        ]
+      ]
+    },
+    {
+      "id": "fists.ready",
+      "match": "^A_Man_Fists_(Un|Tr|Ma)_Draw_Montage$",
+      "phases": [
+        {
+          "id": "raise",
+          "anchor": "start",
+          "style": "hands_raise"
+        },
+        {
+          "id": "clench",
+          "anchor": "AnimNotify_AttachWeapon",
+          "style": "hands_clench"
+        }
+      ],
+      "material": "body",
+      "order": [
+        [
+          "raise",
+          "clench"
+        ]
+      ]
+    },
+    {
+      "id": "fists.relax",
+      "match": "^A_Man_Fists_(Un|Tr|Ma)_Shelve_Montage$",
+      "phases": [
+        {
+          "id": "relax",
+          "anchor": "AnimNotify_DeattachWeapon",
+          "style": "hands_relax"
+        }
+      ],
+      "material": "body"
+    }
+  ],
+  "bindings": {
+    "Man_Bow_N_Equip": {
+      "verified_bow_release": {
+        "notify": "Notify?",
+        "timeMs": 773.7,
+        "toleranceMs": 0.2,
+        "approval": "draw_bow",
+        "session": "session_game91",
+        "assetSha256": "d8614f6f668b837ea4fa29d4560dc9209fba85de9ab72619cf8874aec7e9c60c"
+      }
+    }
+  },
+  "composites": {
+    "bow.prepare": {
+      "segments": [
+        "bow.equip",
+        "bow.reload"
+      ],
+      "required": [
+        "release",
+        "grip",
+        "pull_arrow",
+        "seat_arrow"
+      ],
+      "link": "actual subsequent reload montage, not a fixed delay after equip",
+      "branch": "if the game actually reloads; if already notched it may skip reload",
+      "evidence": "session_game90/91"
+    },
+    "blade.draw": {
+      "segments": [
+        "blade.draw"
+      ],
+      "required": [
+        "handle_transfer",
+        "blade_slide"
+      ]
+    },
+    "chest.close": {
+      "adapter": "chest_close",
+      "required": [
+        "lower_lid",
+        "lid_contact"
+      ],
+      "event": "containerlid:start",
+      "where": {
+        "kind": "close"
+      },
+      "forbidEvents": [
+        "interacting:complete"
+      ],
+      "evidence": "session_game90"
+    },
+    "lockpick.break": {
+      "adapter": "lockpick-failure",
+      "required": [
+        "strain",
+        "fracture",
+        "recoil",
+        "withdraw",
+        "release"
+      ],
+      "event": "lp_break:start",
+      "evidence": "failure-animation-notifies.json, approved failure-animation-sync"
+    }
+  },
+  "notes": [
+    "A native AttachWeapon is a transfer marker, not proof of the instant the fingers first touch the object.",
+    "PlayFX is accepted only inside a narrowly defined family; multiple matching notifies are ambiguous and blocked.",
+    "Moving in air alone does not imply haptics; only specified contact/load phases are generated."
+  ],
+  "intentionalSilenceClasses": [
+    "social.ambient",
+    "stance.idle"
+  ]
+}

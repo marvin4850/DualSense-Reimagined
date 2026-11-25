@@ -1,0 +1,811 @@
+{
+  "bank": "combat",
+  "recipe": "combat.forge.json",
+  "generated": "2026-11-16 15:58",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "game impact sounds",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "hit_blade_flesh",
+      "role": "Hero's blade cuts into an unarmoured body (Impacts_T_Blade_Flesh)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 334.3,
+          "peak": 0.85,
+          "rms20": 0.523,
+          "crest": 3.93,
+          "attackMs": 5.81,
+          "btCorr": 0.86,
+          "btRms20": 0.741,
+          "centroidHz": 112,
+          "dominantHz": 136,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "hit_blade_armor",
+      "role": "Hero's blade stopped by armour / chitin (Impacts_T_Blade_Metal)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 377.4,
+          "peak": 0.85,
+          "rms20": 0.45,
+          "crest": 4.25,
+          "attackMs": 5.67,
+          "btCorr": 0.92,
+          "btRms20": 0.663,
+          "centroidHz": 85,
+          "dominantHz": 72,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.72,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "hit_blunt",
+      "role": "Hero's club / mace / staff / fist into a body: deep thud + crack (Impacts_Melee_Flesh + Melee_Bones)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 165.9,
+          "peak": 0.85,
+          "rms20": 0.51,
+          "crest": 3.39,
+          "attackMs": 1.25,
+          "btCorr": 0.92,
+          "btRms20": 0.716,
+          "centroidHz": 79,
+          "dominantHz": 62,
+          "sub": 0.012,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.51,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "hit_creature",
+      "role": "Hero's weapon into a creature (Impacts_T_FleshCreature)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 172.8,
+          "peak": 0.85,
+          "rms20": 0.503,
+          "crest": 3.9,
+          "attackMs": 1.08,
+          "btCorr": 0.9,
+          "btRms20": 0.717,
+          "centroidHz": 88,
+          "dominantHz": 70,
+          "sub": 0.009,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "take_hit",
+      "role": "The hero is hit: low heavy shove through the body + the flesh impact (Impacts_T_FleshHuman)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 304,
+          "peak": 0.85,
+          "rms20": 0.548,
+          "crest": 4.04,
+          "attackMs": 7.04,
+          "btCorr": 0.95,
+          "btRms20": 0.76,
+          "centroidHz": 58,
+          "dominantHz": 53,
+          "sub": 0.021,
+          "core": 0.979,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.24,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "block_metal",
+      "role": "Metal meets metal in a block: a clang the arms absorb (Impacts_T_Blade_Metal), short ring",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 393.7,
+          "peak": 0.85,
+          "rms20": 0.561,
+          "crest": 3.64,
+          "attackMs": 15.12,
+          "btCorr": 0.92,
+          "btRms20": 0.765,
+          "centroidHz": 81,
+          "dominantHz": 70,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "block_wood",
+      "role": "Wood in a block: dull knock (Impacts_T_Blade_Wood)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 119.3,
+          "peak": 0.85,
+          "rms20": 0.461,
+          "crest": 4.19,
+          "attackMs": 6.15,
+          "btCorr": 0.91,
+          "btRms20": 0.67,
+          "centroidHz": 87,
+          "dominantHz": 88,
+          "sub": 0.011,
+          "core": 0.989,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "block_fists",
+      "role": "Bare hands / creature in a block: soft heavy push (Impacts_Melee_LowPunch)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 257.5,
+          "peak": 0.85,
+          "rms20": 0.589,
+          "crest": 3.04,
+          "attackMs": 7.65,
+          "btCorr": 0.94,
+          "btRms20": 0.784,
+          "centroidHz": 72,
+          "dominantHz": 73,
+          "sub": 0.013,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "deflect_stone",
+      "role": "Hero's weapon bounces off a wall / rock (Impacts_T_Blade_Stone) + recoil",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 255.6,
+          "peak": 0.85,
+          "rms20": 0.566,
+          "crest": 3.51,
+          "attackMs": 6.58,
+          "btCorr": 0.93,
+          "btRms20": 0.778,
+          "centroidHz": 73,
+          "dominantHz": 67,
+          "sub": 0.022,
+          "core": 0.978,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "parry",
+      "role": "Perfect parry: the sharpest, brightest contact + a quick low push back",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 392.7,
+          "peak": 0.85,
+          "rms20": 0.493,
+          "crest": 4.25,
+          "attackMs": 4.58,
+          "btCorr": 0.87,
+          "btRms20": 0.702,
+          "centroidHz": 105,
+          "dominantHz": 70,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.21,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_blade1h",
+      "role": "combat matrix: 1H blade: light, quick, bright edge",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 77.3,
+          "peak": 0.85,
+          "rms20": 0.422,
+          "crest": 3.75,
+          "attackMs": 5.06,
+          "btCorr": 0.83,
+          "btRms20": 0.629,
+          "centroidHz": 126,
+          "dominantHz": 123,
+          "sub": 0.005,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.61,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_blade2h",
+      "role": "combat matrix: 2H blade: long heavy cut, deeper",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 142.9,
+          "peak": 0.85,
+          "rms20": 0.497,
+          "crest": 3.61,
+          "attackMs": 1.25,
+          "btCorr": 0.91,
+          "btRms20": 0.692,
+          "centroidHz": 86,
+          "dominantHz": 88,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_axe1h",
+      "role": "combat matrix: 1H axe: sharp chop + the bite of the head",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 115.9,
+          "peak": 0.85,
+          "rms20": 0.461,
+          "crest": 3.26,
+          "attackMs": 0.96,
+          "btCorr": 0.9,
+          "btRms20": 0.669,
+          "centroidHz": 94,
+          "dominantHz": 70,
+          "sub": 0.019,
+          "core": 0.979,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_axe2h",
+      "role": "combat matrix: 2H axe: heavy chop, deep bite",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 193.5,
+          "peak": 0.85,
+          "rms20": 0.525,
+          "crest": 3.27,
+          "attackMs": 1.6,
+          "btCorr": 0.94,
+          "btRms20": 0.732,
+          "centroidHz": 68,
+          "dominantHz": 53,
+          "sub": 0.057,
+          "core": 0.943,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_mace1h",
+      "role": "1H mace: compact dry blunt strike, distinctly shorter and lighter than the 2H mace",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 115.2,
+          "peak": 0.78,
+          "rms20": 0.446,
+          "crest": 3.8,
+          "attackMs": 1.38,
+          "btCorr": 0.87,
+          "btRms20": 0.672,
+          "centroidHz": 113,
+          "dominantHz": 105,
+          "sub": 0.005,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_mace2h",
+      "role": "combat matrix: 2H mace: crushing, the lowest and longest blow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 329.6,
+          "peak": 0.85,
+          "rms20": 0.527,
+          "crest": 3.77,
+          "attackMs": 6.33,
+          "btCorr": 0.94,
+          "btRms20": 0.757,
+          "centroidHz": 71,
+          "dominantHz": 70,
+          "sub": 0.008,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_staff",
+      "role": "Staff: heavy two-handed wooden body, close to the 2H mace with a hollow upper mode",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 285.8,
+          "peak": 0.85,
+          "rms20": 0.488,
+          "crest": 3.6,
+          "attackMs": 13.77,
+          "btCorr": 0.93,
+          "btRms20": 0.726,
+          "centroidHz": 74,
+          "dominantHz": 73,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "src_fist",
+      "role": "combat matrix: fist: soft heavy punch",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 111.5,
+          "peak": 0.85,
+          "rms20": 0.513,
+          "crest": 3.36,
+          "attackMs": 7.06,
+          "btCorr": 0.93,
+          "btRms20": 0.721,
+          "centroidHz": 73,
+          "dominantHz": 70,
+          "sub": 0.014,
+          "core": 0.986,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "mass_big",
+      "role": "combat matrix: big body: the target barely moves, a deep mass behind the contact",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 323.3,
+          "peak": 0.85,
+          "rms20": 0.596,
+          "crest": 3.2,
+          "attackMs": 8.52,
+          "btCorr": 0.96,
+          "btRms20": 0.788,
+          "centroidHz": 53,
+          "dominantHz": 50,
+          "sub": 0.022,
+          "core": 0.978,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_flesh",
+      "role": "combat matrix: unarmoured human",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 49.2,
+          "peak": 0.85,
+          "rms20": 0.469,
+          "crest": 2.81,
+          "attackMs": 1.67,
+          "btCorr": 0.92,
+          "btRms20": 0.663,
+          "centroidHz": 80,
+          "dominantHz": 64,
+          "sub": 0.032,
+          "core": 0.968,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_creature",
+      "role": "combat matrix: creature hide / flesh",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 225.8,
+          "peak": 0.85,
+          "rms20": 0.419,
+          "crest": 6.74,
+          "attackMs": 1.54,
+          "btCorr": 0.67,
+          "btRms20": 0.589,
+          "centroidHz": 177,
+          "dominantHz": 196,
+          "sub": 0.003,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.3,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_leather",
+      "role": "combat matrix: leather armour: dull slap",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 234.2,
+          "peak": 0.85,
+          "rms20": 0.418,
+          "crest": 6.88,
+          "attackMs": 1.46,
+          "btCorr": 0.67,
+          "btRms20": 0.589,
+          "centroidHz": 177,
+          "dominantHz": 182,
+          "sub": 0.003,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.57,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_metal",
+      "role": "combat matrix: metal / ore armour: hard metallic stop",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 377.6,
+          "peak": 0.85,
+          "rms20": 0.502,
+          "crest": 4.42,
+          "attackMs": 60.85,
+          "btCorr": 0.93,
+          "btRms20": 0.729,
+          "centroidHz": 77,
+          "dominantHz": 72,
+          "sub": 0.003,
+          "core": 0.997,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_stone",
+      "role": "combat matrix: stone golem: hard rock, the weapon rebounds",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 455.2,
+          "peak": 0.85,
+          "rms20": 0.489,
+          "crest": 3.55,
+          "attackMs": 76.98,
+          "btCorr": 0.93,
+          "btRms20": 0.721,
+          "centroidHz": 77,
+          "dominantHz": 78,
+          "sub": 0.01,
+          "core": 0.99,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_ice",
+      "role": "combat matrix: ice golem: hard and brittle, a crack",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 219.5,
+          "peak": 0.85,
+          "rms20": 0.47,
+          "crest": 5.41,
+          "attackMs": 1.65,
+          "btCorr": 0.86,
+          "btRms20": 0.666,
+          "centroidHz": 97,
+          "dominantHz": 70,
+          "sub": 0.031,
+          "core": 0.966,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_bone",
+      "role": "combat matrix: skeleton: dry bone crack",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 198.7,
+          "peak": 0.85,
+          "rms20": 0.418,
+          "crest": 4.71,
+          "attackMs": 3.73,
+          "btCorr": 0.66,
+          "btRms20": 0.583,
+          "centroidHz": 179,
+          "dominantHz": 170,
+          "sub": 0.003,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 2.4,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_zombie",
+      "role": "combat matrix: zombie: soft, soggy give",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 122.1,
+          "peak": 0.85,
+          "rms20": 0.424,
+          "crest": 4.91,
+          "attackMs": 1.19,
+          "btCorr": 0.82,
+          "btRms20": 0.617,
+          "centroidHz": 124,
+          "dominantHz": 64,
+          "sub": 0.037,
+          "core": 0.961,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.42,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "tgt_chitin",
+      "role": "combat matrix: minecrawler chitin: hollow hard shell",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 257.6,
+          "peak": 0.85,
+          "rms20": 0.416,
+          "crest": 4.93,
+          "attackMs": 36.94,
+          "btCorr": 0.66,
+          "btRms20": 0.63,
+          "centroidHz": 182,
+          "dominantHz": 196,
+          "sub": 0.004,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.98,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "hit_punch",
+      "role": "combat: the confirmation of a landed blow - one short dense low punch at the contact (game105: hits lacked a clear impact)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 110.8,
+          "peak": 0.85,
+          "rms20": 0.58,
+          "crest": 3.02,
+          "attackMs": 1.04,
+          "btCorr": 0.92,
+          "btRms20": 0.768,
+          "centroidHz": 79,
+          "dominantHz": 76,
+          "sub": 0.019,
+          "core": 0.98,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "clash_steel",
+      "role": "v5 steel meets steel (game109: the 310-648 Hz ring was weak on the pad): a hard strike click + a ringing blade in the actuators' strong band 200/290/410 Hz, long decay, a light push",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 386.6,
+          "peak": 0.85,
+          "rms20": 0.445,
+          "crest": 4.29,
+          "attackMs": 13.15,
+          "btCorr": 0.61,
+          "btRms20": 0.638,
+          "centroidHz": 195,
+          "dominantHz": 199,
+          "sub": 0.003,
+          "core": 0.988,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 1.06,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "clash_wood",
+      "role": "wood in a clash: dry short knock (higher and shorter than steel, no ring) + a low push",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 89.9,
+          "peak": 0.85,
+          "rms20": 0.492,
+          "crest": 3.43,
+          "attackMs": 1.15,
+          "btCorr": 0.87,
+          "btRms20": 0.686,
+          "centroidHz": 106,
+          "dominantHz": 82,
+          "sub": 0.017,
+          "core": 0.98,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "parry_steel",
+      "role": "v5 perfect parry, steel: the hardest click + the longest blade ring 210/305/430 Hz + a quick low push back",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 483.5,
+          "peak": 0.85,
+          "rms20": 0.473,
+          "crest": 3.8,
+          "attackMs": 11.06,
+          "btCorr": 0.59,
+          "btRms20": 0.668,
+          "centroidHz": 200,
+          "dominantHz": 209,
+          "sub": 0.004,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.94,
+          "warnings": [
+            "Bluetooth: correlation only 0.59"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "src_torch",
+      "role": "Original light staff body retained for torch contacts; staff feedback must not reweight the torch",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 109.7,
+          "peak": 0.85,
+          "rms20": 0.419,
+          "crest": 4.24,
+          "attackMs": 5.44,
+          "btCorr": 0.88,
+          "btRms20": 0.632,
+          "centroidHz": 108,
+          "dominantHz": 105,
+          "sub": 0.006,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.42,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

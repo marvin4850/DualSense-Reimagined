@@ -1,0 +1,45 @@
+{
+  "pack": "threat-lightbar",
+  "description": "AI perception: yellow noticed, red combat directed at hero; independent leased light channel.",
+  "rules": [
+    {
+      "id": "threat-noticed",
+      "event": "threat:update",
+      "where": {
+        "level": "noticed"
+      },
+      "light": {
+        "channel": "threat",
+        "priority": 100,
+        "timeoutMs": 1500,
+        "color": "255,255,0"
+      }
+    },
+    {
+      "id": "threat-combat",
+      "event": "threat:update",
+      "where": {
+        "level": "combat"
+      },
+      "light": {
+        "channel": "threat",
+        "priority": 200,
+        "timeoutMs": 1500,
+        "color": "red"
+      }
+    },
+    {
+      "id": "threat-idle",
+      "event": "threat:update",
+      "where": {
+        "level": "idle"
+      },
+      "light": {
+        "channel": "threat",
+        "priority": 0,
+        "timeoutMs": 1500,
+        "reset": true
+      }
+    }
+  ]
+}

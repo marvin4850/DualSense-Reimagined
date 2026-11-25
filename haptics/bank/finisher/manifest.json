@@ -1,0 +1,185 @@
+{
+  "bank": "finisher",
+  "recipe": "finisher.forge.json",
+  "generated": "2026-11-18 23:03",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "game impact sounds, heavier than a normal hit",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "cut",
+      "role": "Sword (1H/2H) driven into the downed enemy: deep cut, heavier and longer than combat hit_blade_flesh",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 371.4,
+          "peak": 0.85,
+          "rms20": 0.525,
+          "crest": 4.01,
+          "attackMs": 5.69,
+          "btCorr": 0.88,
+          "btRms20": 0.739,
+          "centroidHz": 101,
+          "dominantHz": 136,
+          "sub": 0.005,
+          "core": 0.995,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "chop",
+      "role": "Axe (1H/2H) buried in the body: a chop with a hard wooden stop",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 371.3,
+          "peak": 0.85,
+          "rms20": 0.541,
+          "crest": 3.76,
+          "attackMs": 15.94,
+          "btCorr": 0.9,
+          "btRms20": 0.762,
+          "centroidHz": 87,
+          "dominantHz": 59,
+          "sub": 0.009,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "crush",
+      "role": "Mace / hammer (1H/2H) smashing down: low crushing thud with a bone crack",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 245.1,
+          "peak": 0.85,
+          "rms20": 0.554,
+          "crest": 3.44,
+          "attackMs": 1.31,
+          "btCorr": 0.93,
+          "btRms20": 0.762,
+          "centroidHz": 66,
+          "dominantHz": 53,
+          "sub": 0.017,
+          "core": 0.983,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.65,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "wood",
+      "role": "Torch / staff / club of wood (T1H, Sff2H): dull wooden blow into the body (1HWood_Flesh)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 174.1,
+          "peak": 0.85,
+          "rms20": 0.492,
+          "crest": 3.91,
+          "attackMs": 8.38,
+          "btCorr": 0.93,
+          "btRms20": 0.714,
+          "centroidHz": 72,
+          "dominantHz": 64,
+          "sub": 0.013,
+          "core": 0.987,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.4,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "punch",
+      "role": "Bare-handed finisher: heavy punch into the body (Combat_Fist_L2 + LowPunch)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 226.8,
+          "peak": 0.85,
+          "rms20": 0.521,
+          "crest": 4.22,
+          "attackMs": 7.08,
+          "btCorr": 0.94,
+          "btRms20": 0.744,
+          "centroidHz": 67,
+          "dominantHz": 73,
+          "sub": 0.028,
+          "core": 0.972,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "pull",
+      "role": "The weapon is pulled out (Finisher_AxeRemove): short drag, much softer than the blow",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 254.7,
+          "peak": 0.7,
+          "rms20": 0.412,
+          "crest": 3.07,
+          "attackMs": 40.35,
+          "btCorr": 0.86,
+          "btRms20": 0.648,
+          "centroidHz": 117,
+          "dominantHz": 103,
+          "sub": 0,
+          "core": 0.998,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "weight",
+      "role": "Master's follow-through: one deep, short body-weight thump right after the blow (rhythm cue of mastery)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 195.5,
+          "peak": 0.8,
+          "rms20": 0.568,
+          "crest": 2.83,
+          "attackMs": 9.56,
+          "btCorr": 0.96,
+          "btRms20": 0.774,
+          "centroidHz": 49,
+          "dominantHz": 47,
+          "sub": 0.04,
+          "core": 0.96,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

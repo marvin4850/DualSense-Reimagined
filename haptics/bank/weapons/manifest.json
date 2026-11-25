@@ -1,0 +1,113 @@
+{
+  "bank": "weapons",
+  "recipe": "weapons.forge.json",
+  "generated": "2026-11-16 12:59",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "from game sounds",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "undraw_axe",
+      "role": "Axe back on the belt / back (SFX_COMBAT_Melee_Undraw_1HAxe)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 584.2,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 6.19,
+          "attackMs": 213.08,
+          "btCorr": 0.69,
+          "btRms20": 0.528,
+          "centroidHz": 176,
+          "dominantHz": 151,
+          "sub": 0,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.73,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "undraw_2hblade",
+      "role": "Two-handed blade back into the scabbard (SFX_COMBAT_Melee_Undraw_2HMetalBlade)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 690,
+          "peak": 0.85,
+          "rms20": 0.357,
+          "crest": 5.7,
+          "attackMs": 2.52,
+          "btCorr": 0.64,
+          "btRms20": 0.575,
+          "centroidHz": 190,
+          "dominantHz": 190,
+          "sub": 0,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0.83,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "draw_club",
+      "role": "1H club / staff off the belt: light wood friction + a short grip knock, sword-weight (game106: felt like a huge 2H hammer)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 393.1,
+          "peak": 0.85,
+          "rms20": 0.483,
+          "crest": 2.91,
+          "attackMs": 253.69,
+          "btCorr": 0.81,
+          "btRms20": 0.705,
+          "centroidHz": 136,
+          "dominantHz": 123,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "undraw_club",
+      "role": "1H club / staff back on the belt: light wood friction + a short seat knock",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 397.7,
+          "peak": 0.85,
+          "rms20": 0.453,
+          "crest": 4.14,
+          "attackMs": 375.27,
+          "btCorr": 0.82,
+          "btRms20": 0.674,
+          "centroidHz": 135,
+          "dominantHz": 123,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

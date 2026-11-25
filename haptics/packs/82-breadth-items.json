@@ -1,0 +1,159 @@
+{
+  "pack": "breadth-items",
+  "description": "Baseline physical situations, OFF pending game test. No automatic perceptual approval.",
+  "rules": [
+    {
+      "id": "breadth-item-bottle-handle",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_bottle_handle"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.65,
+        "freqHz": 125,
+        "ms": 85,
+        "tauMs": 26,
+        "partialGain": 0.18
+      },
+      "situation": "item.bottle.handle",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взять бутылку для питья | точка игрового FX; профиль contact; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-item-drink",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_drink"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "FluidMotion",
+        "style": "custom",
+        "intensity": 0.55,
+        "durationMs": 180,
+        "bodyHz": 90,
+        "body": 0.8,
+        "noise": 0.8,
+        "lowpass": 0.06,
+        "lagMs": 20
+      },
+      "situation": "item.drink",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Глоток напитка | точка игрового FX; профиль fluid; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-item-bite",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_bite"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "item.bite",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Откусить пищу | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-item-pickup",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_pickup"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "item.pickup",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взять предмет | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-item-smoke-inhale",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_smoke_inhale"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "FluidMotion",
+        "style": "custom",
+        "intensity": 0.55,
+        "durationMs": 180,
+        "bodyHz": 90,
+        "body": 0.8,
+        "noise": 0.8,
+        "lowpass": 0.06,
+        "lagMs": 20
+      },
+      "situation": "item.smoke.inhale",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Затяжка курительной трубки | точка игрового FX; профиль fluid; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-item-smoke-exhale",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "item_smoke_exhale"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Grain",
+            "intensity": 0.56,
+            "durationMs": 130,
+            "packetMs": 12,
+            "gapMs": 7,
+            "freqLo": 100,
+            "freqHi": 300,
+            "fadeMs": 12
+          },
+          {
+            "preset": "Release",
+            "intensity": 0.32,
+            "durationMs": 160,
+            "freqHz": 90,
+            "noise": 0.35,
+            "delayMs": 65
+          }
+        ]
+      },
+      "situation": "item.smoke.exhale",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Выдох после затяжки | точка игрового FX; профиль release; CANDIDATE, live hook unverified"
+    }
+  ]
+}

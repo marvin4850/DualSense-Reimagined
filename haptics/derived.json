@@ -1,0 +1,21 @@
+// Derived (edge) events: an update / polled event becomes start / complete of a new event type when a formula turns true.
+// Variables: the source event's fields, last_<type>_<field> (current context) and prev_<type>_<field> (value before this update).
+// Derived events are handled like game events (rules, actions, journals) with src=derived_<type>.
+{
+  "derived": [
+    // bow draw (session 73): the game exposes no draw signal - IsAiming (bow aim=1) is already the READY stage (L2, zoom),
+    // IsSecureToFire (sec) = arrow nocked. The draw is the player's R2 while the game says the bow is ready:
+    { "type": "bowdraw", "from": "pad:update",
+      "start":    "=r2 == 1 && prev_pad_r2 != 1 && last_bow_aim == 1 && last_bow_notch != 1 && (last_weapon_fam == 'archery' || last_weapon_fam == 'bow' || last_weapon_fam == 'crossbow')",
+      "complete": "=r2 != 1 && prev_pad_r2 == 1" },
+    // session 75: while R2 is held the game drops IsSecureToFire (sec 1->0, no shot: notch stays 0) after ~5.1 s at full draw
+    // (x3, 5096-5136 ms) = the bow's resistance limit (UBow m_MaximumResistanceTimeWhileDrawing 3/5/10 s by skill), then
+    // re-draws by itself ~420 ms later (sec 0->1) while R2 is still held. -> draw ends, "bowtire" (unpleasant), redraw = new draw.
+    // Draw also starts on sec 0->1 when the pad edge could not start it (R2 before L2 / during reload) or after a tire.
+    { "type": "bowdraw", "from": "bow:update",
+      "start":    "=sec == 1 && prev_bow_sec != 1 && aim == 1 && notch != 1 && last_pad_r2 == 1 && (last_weapon_fam == 'archery' || last_weapon_fam == 'bow' || last_weapon_fam == 'crossbow') && (age_pad_r2 >= 1500 || age_bow_aim < age_pad_r2 || age_bow_notch < age_pad_r2)",
+      "complete": "=(aim != 1 && prev_bow_aim == 1) || (sec != 1 && prev_bow_sec == 1 && aim == 1 && notch != 1 && last_pad_r2 == 1)" },
+    { "type": "bowtire", "from": "bow:update", "update": "=sec != 1 && prev_bow_sec == 1 && aim == 1 && notch != 1 && last_pad_r2 == 1",
+      "fields": { "held": "=held_bow_sec" } }
+  ]
+}

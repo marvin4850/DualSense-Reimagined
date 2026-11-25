@@ -1,0 +1,35 @@
+{
+ "pack": "ladder-slide",
+ "description": "Fast ladder descent (user 17.11.2026): Man_Ladder_Locomotion slide sections -> HD from haptics/forge/ladder.forge.json. Rung contacts (87-feedback) are untouched.",
+ "rules": [
+  {
+   "id": "ladder-slide-in",
+   "event": "craftanim:update",
+   "where": { "m": "Man_Ladder_Locomotion", "sec": ["SlideLeftIn", "SlideRightIn"] },
+   "path": "hd",
+   "priority": "normal",
+   "effect": { "preset": "Sample", "bank": "ladder", "name": "slide_in", "slot": "ladder.slide_in", "variant": "A", "intensity": 0.7 },
+   "continuous": { "loop": false, "maxMs": 400, "stopOn": [], "stopWhen": ["montage:complete", "ladder:complete"], "stopFadeMs": 40 },
+   "note": "Grip loosens, the hero drops onto the rails"
+  },
+  {
+   "id": "ladder-slide-loop",
+   "event": "craftanim:update",
+   "where": { "m": "Man_Ladder_Locomotion", "sec": ["SlideLoop", "SlideLoop2"] },
+   "path": "hd",
+   "priority": "normal",
+   "effect": { "preset": "Sample", "bank": "ladder", "name": "slide_loop", "slot": "ladder.slide_loop", "variant": "A", "intensity": 0.75 },
+   "continuous": { "loop": false, "maxMs": 1500, "stopOn": [], "stopWhen": ["craftanim:update", "montage:complete", "ladder:complete"], "stopFadeMs": 60 },
+   "note": "Sliding down: friction pulsed by passing rungs; stops on the next section (out / idle) or when the ladder ends"
+  },
+  {
+   "id": "ladder-slide-land",
+   "event": "craftanim:update",
+   "where": { "m": "Man_Ladder_Locomotion", "sec": ["SlideOut", "SlideToIdle"] },
+   "path": "hd",
+   "priority": "normal",
+   "effect": { "preset": "Sample", "bank": "ladder", "name": "slide_land", "slot": "ladder.slide_land", "variant": "A", "intensity": "=sec == 'SlideOut' ? 0.85 : 0.5" },
+   "note": "End of the slide: feet on the ground (SlideOut) or a catch on a rung (SlideToIdle, softer)"
+  }
+ ]
+}

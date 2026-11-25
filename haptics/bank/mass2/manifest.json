@@ -1,0 +1,307 @@
+{
+  "bank": "mass2",
+  "recipe": "mass2.forge.json",
+  "generated": "2026-11-16 00:54",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "from game sounds (taxonomy v4)",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "combat_melee_draw_1haxe",
+      "role": "axe / heavy weapon off the belt or back: SFX_COMBAT_Melee_Draw_1HAxe (SFX_COMBAT_Melee_Draw_1HAxe_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 693.9,
+          "peak": 0.85,
+          "rms20": 0.402,
+          "crest": 6.66,
+          "attackMs": 143.44,
+          "btCorr": 0.67,
+          "btRms20": 0.596,
+          "centroidHz": 181,
+          "dominantHz": 145,
+          "sub": 0,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_1haxe_l1",
+      "role": "axe / heavy weapon off the belt or back: SFX_COMBAT_Melee_Draw_1HAxe_L1 (SFX_COMBAT_Melee_Draw_1HAxe_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 690.4,
+          "peak": 0.85,
+          "rms20": 0.456,
+          "crest": 5.39,
+          "attackMs": 84,
+          "btCorr": 0.67,
+          "btRms20": 0.656,
+          "centroidHz": 180,
+          "dominantHz": 122,
+          "sub": 0,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_1haxe_l2",
+      "role": "axe / heavy weapon off the belt or back: SFX_COMBAT_Melee_Draw_1HAxe_L2 (SFX_COMBAT_Melee_Draw_1HAxe_L2_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 272.4,
+          "peak": 0.85,
+          "rms20": 0.377,
+          "crest": 6,
+          "attackMs": 43.62,
+          "btCorr": 0.67,
+          "btRms20": 0.575,
+          "centroidHz": 181,
+          "dominantHz": 180,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_1hwood",
+      "role": "wooden weapon from the belt (not a blade: game92): SFX_COMBAT_Melee_Draw_1HWood (SFX_COMBAT_Melee_Draw_1HWood_L1_02), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 610.2,
+          "peak": 0.85,
+          "rms20": 0.486,
+          "crest": 4.27,
+          "attackMs": 374.58,
+          "btCorr": 0.94,
+          "btRms20": 0.706,
+          "centroidHz": 69,
+          "dominantHz": 60,
+          "sub": 0,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_2haxe_fromback",
+      "role": "axe / heavy weapon off the belt or back: SFX_COMBAT_Melee_Draw_2HAxe_FromBack (SFX_COMBAT_Melee_Draw_1HAxe_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 689.8,
+          "peak": 0.85,
+          "rms20": 0.404,
+          "crest": 6.79,
+          "attackMs": 96.69,
+          "btCorr": 0.68,
+          "btRms20": 0.59,
+          "centroidHz": 176,
+          "dominantHz": 132,
+          "sub": 0,
+          "core": 0.992,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_2hblade",
+      "role": "blade out of the scabbard: SFX_COMBAT_Melee_Draw_2HBlade (SFX_COMBAT_Melee_Draw_2HMetalBlade_L1_01), method scrape",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 692.9,
+          "peak": 0.85,
+          "rms20": 0.366,
+          "crest": 7.66,
+          "attackMs": 119.75,
+          "btCorr": 0.59,
+          "btRms20": 0.567,
+          "centroidHz": 206,
+          "dominantHz": 205,
+          "sub": 0,
+          "core": 0.991,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": [
+            "Bluetooth: correlation only 0.59"
+          ]
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_draw_2hwood",
+      "role": "wooden weapon from the belt (not a blade: game92): SFX_COMBAT_Melee_Draw_2HWood (SFX_COMBAT_Melee_Draw_1HWood_L1_02), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 619.2,
+          "peak": 0.85,
+          "rms20": 0.577,
+          "crest": 3.42,
+          "attackMs": 409.5,
+          "btCorr": 0.94,
+          "btRms20": 0.778,
+          "centroidHz": 67,
+          "dominantHz": 60,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_torch_drop_impact",
+      "role": "torch hits the ground: SFX_COMBAT_Melee_Torch_Drop_Impact (SFX_OBJ_Cargo_Brushwood_Drop_L1_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 371.8,
+          "peak": 0.85,
+          "rms20": 0.384,
+          "crest": 5.98,
+          "attackMs": 266.27,
+          "btCorr": 0.64,
+          "btRms20": 0.586,
+          "centroidHz": 191,
+          "dominantHz": 196,
+          "sub": 0.002,
+          "core": 0.994,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_torch_drop_whoosh",
+      "role": "throw the torch away (arm swing): SFX_COMBAT_Melee_Torch_Drop_Whoosh (SFX_COMBAT_Melee_Swing_Torch_L1_01), method air",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 483.4,
+          "peak": 0.85,
+          "rms20": 0.558,
+          "crest": 3.69,
+          "attackMs": 128.94,
+          "btCorr": 0.95,
+          "btRms20": 0.754,
+          "centroidHz": 60,
+          "dominantHz": 54,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_torch_pickupandequip",
+      "role": "grab the torch: SFX_COMBAT_Melee_Torch_PickUpAndEquip (SFX_COMBAT_Melee_Draw_1HWood_L1_02), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 428.1,
+          "peak": 0.85,
+          "rms20": 0.545,
+          "crest": 3.34,
+          "attackMs": 117.85,
+          "btCorr": 0.81,
+          "btRms20": 0.75,
+          "centroidHz": 137,
+          "dominantHz": 133,
+          "sub": 0.003,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "combat_melee_undraw_1hwood",
+      "role": "wooden weapon back on the belt: SFX_COMBAT_Melee_Undraw_1HWood (SFX_COMBAT_Melee_Undraw_1HWood_L1_01), method friction",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 567.9,
+          "peak": 0.85,
+          "rms20": 0.572,
+          "crest": 3.73,
+          "attackMs": 300.67,
+          "btCorr": 0.94,
+          "btRms20": 0.782,
+          "centroidHz": 68,
+          "dominantHz": 60,
+          "sub": 0.001,
+          "core": 0.999,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "slot": "items_draw",
+      "role": "handling an object: SFX_ITEMS_Draw (SFX_ITEMS_Misc_Medium_PickUp_Clothes_01), method impact_soft",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 410.7,
+          "peak": 0.85,
+          "rms20": 0.506,
+          "crest": 5.39,
+          "attackMs": 4.85,
+          "btCorr": 0.81,
+          "btRms20": 0.72,
+          "centroidHz": 134,
+          "dominantHz": 138,
+          "sub": 0.004,
+          "core": 0.996,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

@@ -1,0 +1,82 @@
+// Generic mod hooks: tags / gameplay events the mod reports WITHOUT hand-written AngelScript.
+// tools/gen_hooks.py turns the enabled groups into Mod/.../DualSenseBridge_Generated.as (+ haptics/registry.generated.json).
+// tags:   owned gameplay tag on the player's ability system -> "<type>:start" when added, "<type>:complete" when removed
+// events: gameplay event received by the player's actor      -> "<type>:start" with mag=<event magnitude>
+// type (optional): event type name [a-z0-9_]; default = tag without "State."/"Event."/"Action.", dots -> "_", lower case.
+// Disable a group ("enabled": false) and regenerate to roll it back (rules for it then simply stop firing).
+{
+  "groups": [
+    {
+      "name": "pilot",
+      "enabled": true,
+      "note": "first batch for the pipeline (13.11.2026): diagnostics only, no rules yet; confirm which ones the player really owns",
+      "tags": [
+        { "tag": "State.Combat",             "type": "combat" },
+        { "tag": "State.ItemDraw",           "type": "itemdraw" },
+        { "tag": "State.Casting",            "type": "casting" },
+        { "tag": "State.LaunchingSpell",     "type": "spellrelease" },
+        { "tag": "State.Knockback",          "type": "knockback" },
+        { "tag": "State.Aiming",             "type": "aiming" },
+        { "tag": "State.Block",              "type": "block" },
+        { "tag": "State.Movement.Crouching", "type": "crouch" },
+        { "tag": "State.PickLock",           "type": "picklock" },
+        { "tag": "State.Conversation",       "type": "conversation" },
+        { "tag": "State.Dead",               "type": "dead" }
+      ],
+      "events": [
+        { "tag": "Event.Damage.Caused",      "type": "dmgcaused" }
+      ]
+    }
+    ,
+    {
+      "name": "batch1",
+      "enabled": true,
+      "note": "mass connection #1 (14.11.2026): player-side states from research/hooks/candidates.md (analyzer), filtered of AI / story / world tags",
+      "tags": [
+        { "tag": "State.Defeated", "type": "defeated" },
+        { "tag": "State.ItemInHand", "type": "iteminhand" },
+        { "tag": "State.Flying", "type": "flying" },
+        { "tag": "State.Controlled", "type": "controlled" },
+        { "tag": "State.Interact", "type": "interact" },
+        { "tag": "State.Interact.Ongoing", "type": "interacting" },
+        { "tag": "State.LockMovement", "type": "lockmove" },
+        { "tag": "State.Invulnerable", "type": "invulnerable" },
+        { "tag": "State.BlockState", "type": "blockstate" },
+        { "tag": "State.DoingMagic", "type": "doingmagic" },
+        { "tag": "State.Aiming.Normal", "type": "aimnormal" },
+        { "tag": "State.Channeling", "type": "channeling" },
+        { "tag": "State.Interact.Body.Execute", "type": "execute" },
+        { "tag": "State.Interact.Body.Loot", "type": "loot" },
+        { "tag": "State.Spell.Light", "type": "spelllight" },
+        { "tag": "State.Cant.Electrified", "type": "electrified" },
+        { "tag": "State.Transformed", "type": "transformed" },
+        { "tag": "State.Speak", "type": "speak" },
+        { "tag": "State.Carrying", "type": "carrying" },
+        { "tag": "State.WallClimbing", "type": "climbing" },
+        { "tag": "State.Ladder", "type": "ladder" },
+        { "tag": "State.Movement.Sprinting", "type": "sprinting" },
+        { "tag": "State.Movement.Running", "type": "running" },
+        { "tag": "State.Movement.Walking", "type": "walking" },
+        { "tag": "State.Ragdoll", "type": "ragdoll" },
+        { "tag": "State.Hiding", "type": "hiding" },
+        { "tag": "State.ConsumingItem", "type": "consuming" },
+        { "tag": "State.Burn", "type": "burning" },
+        { "tag": "State.OutMana", "type": "outmana" },
+        { "tag": "State.Movement.InWater", "type": "shallowwater" },
+        { "tag": "State.InWater.MidWater", "type": "midwater" },
+        { "tag": "State.InWater.DeepWater", "type": "deepwater" },
+        { "tag": "State.Cant.Paralyzed", "type": "paralyzed" },
+        { "tag": "State.Cant.Freeze", "type": "frozen" },
+        { "tag": "State.Stunned", "type": "stunned" },
+        { "tag": "State.Drown", "type": "drowning" },
+        { "tag": "State.Drugs.Forced.Alcohol.High", "type": "drunk_high" },
+        { "tag": "State.Drugs.Forced.Swampweed.High", "type": "weed_high" },
+        { "tag": "State.Hit.BreakSuperArmor", "type": "armorbreak" },
+        { "tag": "State.Executing", "type": "executing" }
+      ],
+      "events": [
+        { "tag": "Event.Hit.BreakArmorHit", "type": "breakarmorhit" }
+      ]
+    }
+  ]
+}

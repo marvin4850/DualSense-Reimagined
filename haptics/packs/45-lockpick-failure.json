@@ -1,0 +1,470 @@
+// Pack 45-lockpick-failure: the approved pick-break scene (Codex + user 15.11.2026, G1R-DualSense/reports/FAILURE_HAPTICS_HANDOFF.md).
+// Layers are copied verbatim from experiments/failure-animation-sync.json by a script: do not edit them by hand.
+{
+  "pack": "lockpick-failure",
+  "version": 1,
+  "description": "v34/v35: the pick breaks - the approved animation-synced HD scene (experiments/failure-animation-sync.json, all active layers unchanged; the stand's silent 2400 ms padding layer dropped) on lp_break:start = the start of A_Lockpicking_BrokenPick.",
+  "rules": [
+    {
+      "id": "lp-break-anim",
+      "event": "lp_break:start",
+      "priority": "critical",
+      "continuous": {
+        "loop": false,
+        "maxMs": 1700,
+        "stopOn": [],
+        "stopWhen": [
+          "lp:complete",
+          "lp:start"
+        ],
+        "stopFadeMs": 30
+      },
+      "effect": {
+        "layers": [
+          {
+            "preset": "Continuous",
+            "delayMs": 0.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.02014,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 33.333333333333336,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.069527,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 66.66666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.134101,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 100.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.199604,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 133.33333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.250246,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 166.66666666666669,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.27,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 200.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.26535,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 233.33333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.252325,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 266.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.231376,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 336.3003730773926,
+            "freqHz": 210,
+            "intensity": 0.67,
+            "ms": 170,
+            "tauMs": 33,
+            "attackMs": 0.25,
+            "partial": 2.76,
+            "partialGain": 0.4,
+            "partialTauMs": 9,
+            "drive": 4,
+            "count": 1
+          },
+          {
+            "preset": "Impact",
+            "delayMs": 336.3003730773926,
+            "freqHz": 78,
+            "intensity": 0.18,
+            "durationMs": 120,
+            "lengthMs": 120,
+            "decayTauMs": 25,
+            "attackMs": 1.1,
+            "weight": 1,
+            "edge": 0,
+            "noise": 0,
+            "tail": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 336.3003730773926,
+            "freqHz": 520,
+            "intensity": 0.045,
+            "ms": 150,
+            "tauMs": 30,
+            "attackMs": 0.8,
+            "partial": 0,
+            "drive": 0,
+            "count": 1
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 366.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.113944,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 400.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.119749,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 433.33333333333337,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.124444,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 466.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.105521,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 500.00000000000006,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.073105,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 533.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.035666,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 566.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.008633,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 600.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.001393,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 633.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.01313,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 666.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.022585,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 700.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.02278,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 733.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.021457,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 766.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.01359,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 800.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.00762,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 833.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.005807,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 866.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.003989,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 900.0000000000001,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.00228,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 933.3333333333334,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.000892,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1200.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.025155,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1233.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.053633,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1266.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.073286,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1300.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.091343,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1333.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.10775,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1366.6666666666667,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.121465,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1400.0,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.132992,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Continuous",
+            "delayMs": 1433.3333333333335,
+            "durationMs": 66.66666666666667,
+            "fadeMs": 33.333333333333336,
+            "intensity": 0.14338,
+            "freqHz": 240,
+            "noise": 0,
+            "pulseHz": 0
+          },
+          {
+            "preset": "Tick",
+            "delayMs": 1501.8194913864136,
+            "freqHz": 310,
+            "intensity": 0.43,
+            "ms": 30,
+            "tauMs": 8,
+            "attackMs": 0.5,
+            "partial": 2.756,
+            "partialGain": 0.3,
+            "partialTauMs": 2.5,
+            "drive": 1.5,
+            "count": 1
+          }
+        ],
+        "motor": {
+          "preset": "Rumble",
+          "steps": [
+            [
+              336,
+              255,
+              0,
+              45
+            ],
+            [
+              476,
+              0,
+              175,
+              160
+            ]
+          ]
+        }
+      },
+      "note": "Strain -> fracture 336.3 ms (AnimNotify_BreakLockPick) -> recoil -> withdrawal -> steel edge 1501.8 ms (AnimNotify_RemoveLockPick), silent after ~1.6 s. Own event type: lp:update cues (guide, lives, trig, settle) never stop it; the window closing (lp:complete) or a new minigame does. Bluetooth: the old lp-break motor pattern moved to the fracture notify (not tested). The old late lp-break skips settle anim=1."
+    },
+    {
+      "id": "lp-break-out",
+      "event": "lp_break:update",
+      "where": { "ph": "out" },
+      "priority": "critical",
+      "continuous": {
+        "loop": false,
+        "maxMs": 700,
+        "stopOn": [],
+        "stopWhen": ["lp:complete", "lp:start"],
+        "stopFadeMs": 30
+      },
+      "effect": {
+        "layers": [
+          { "preset": "Sample", "bank": "lp", "name": "tipout", "variant": "game", "intensity": 1.0 }
+        ],
+        "motor": { "preset": "Rumble", "steps": [[0, 0, 70, 120], [170, 200, 0, 40], [370, 0, 120, 30]] }
+      },
+      "note": "v35: the second part - the broken tip (pick_1) pulled out in A_Lockpicking_BrokenPick_Out, from the moment the mod sees it move. bank/lp/tipout.game.wav (tools/gen_tipout.py): pick_1 speed x the grain envelope of the game's SFX_Objects_Lockpicking_Remove_L1_01 on 230 Hz + grain ticks, release twist ~177 ms (Break_L2_03 transient, 210 Hz), exit edge ~377 ms (310 Hz). Bluetooth motor version not tested."
+    }
+  ]
+}

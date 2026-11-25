@@ -1,0 +1,23 @@
+{
+  "pack": "landing",
+  "description": "Landing v2 (game100: a damaging fall felt like a torch). Replaces base 'land' (same id). Game landing sounds, low, three tiers by effective height eff = net + 0.3 * (drop - net) [cm]: hop < 150 | heavy 150-450 (game LandHeavyStep, game100: eff 232-306) | damaging >= 450 (game100: eff 613 with dmgcaused).",
+  "rules": [
+    { "id": "land", "event": "air:complete",
+      "let": { "eff": "round(has(net) ? net + 0.3 * max(0, drop - net) : drop)",
+               "u": "clamp((eff - 20) / 600, 0, 1)" },
+      "effect": {
+        "layers": [
+          { "preset": "Sample", "bank": "landing", "name": "land_light", "slot": "landing.land_light", "variant": "A",
+            "intensity": "=0.12 + 0.30 * clamp((eff - 20) / 130, 0, 1)", "gain": "=eff < 150 ? 1 : 0" },
+          { "preset": "Sample", "bank": "landing", "name": "land_heavy", "slot": "landing.land_heavy", "variant": "A",
+            "intensity": "=0.55 + 0.30 * clamp((eff - 150) / 300, 0, 1)", "gain": "=eff >= 150 && eff < 450 ? 1 : 0" },
+          { "preset": "Sample", "bank": "landing", "name": "land_crash", "slot": "landing.land_crash", "variant": "A",
+            "intensity": 1.0, "gain": "=eff >= 450 ? 1 : 0" }
+        ],
+        "motor": { "layers": [
+          { "preset": "Rumble", "steps": [[0, "=round(40 + 215 * pow(u, 0.8))", "=round(40 + 215 * pow(u, 0.8))", "=round(60 + 300 * u)"]] },
+          { "preset": "Rumble", "steps": [["=round(60 + 300 * u)", 0, "=eff >= 450 ? 200 : (eff >= 150 ? 110 : 0)", "=eff >= 450 ? 260 : 120"]] }
+        ] } },
+      "note": "v2: sound-based, low, stepped by height; hop stays light (t.61: a jump in place must not feel like a roof fall)" }
+  ]
+}

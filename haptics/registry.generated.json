@@ -1,0 +1,646 @@
+{
+ "generated": "2026-11-16T13:19:02",
+ "build": "4935073e0d",
+ "tags": 51,
+ "eventHooks": 2,
+ "events": [
+  {
+   "type": "combat",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Combat (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "itemdraw",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.ItemDraw (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "casting",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Casting (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "spellrelease",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.LaunchingSpell (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "knockback",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Knockback (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "aiming",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Aiming (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "block",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Block (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "crouch",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Movement.Crouching (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "picklock",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.PickLock (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "conversation",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Conversation (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "dead",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Dead (hooks.json group 'pilot')",
+   "fields": {}
+  },
+  {
+   "type": "dmgcaused",
+   "phases": [
+    "start"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": false,
+   "source": "generic event hook Event.Damage.Caused (hooks.json group 'pilot')",
+   "fields": {
+    "mag": "event magnitude (rounded)"
+   }
+  },
+  {
+   "type": "defeated",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Defeated (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "iteminhand",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.ItemInHand (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "flying",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Flying (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "controlled",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Controlled (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "interact",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Interact (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "interacting",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Interact.Ongoing (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "lockmove",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.LockMovement (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "invulnerable",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Invulnerable (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "blockstate",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.BlockState (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "doingmagic",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.DoingMagic (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "aimnormal",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Aiming.Normal (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "channeling",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Channeling (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "execute",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Interact.Body.Execute (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "loot",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Interact.Body.Loot (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "spelllight",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Spell.Light (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "electrified",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Cant.Electrified (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "transformed",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Transformed (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "speak",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Speak (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "carrying",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Carrying (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "climbing",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.WallClimbing (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "ladder",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Ladder (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "sprinting",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Movement.Sprinting (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "running",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Movement.Running (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "walking",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Movement.Walking (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "ragdoll",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Ragdoll (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "hiding",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Hiding (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "consuming",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.ConsumingItem (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "burning",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Burn (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "outmana",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.OutMana (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "shallowwater",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Movement.InWater (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "midwater",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.InWater.MidWater (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "deepwater",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.InWater.DeepWater (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "paralyzed",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Cant.Paralyzed (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "frozen",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Cant.Freeze (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "stunned",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Stunned (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "drowning",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Drown (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "drunk_high",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Drugs.Forced.Alcohol.High (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "weed_high",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Drugs.Forced.Swampweed.High (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "armorbreak",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Hit.BreakSuperArmor (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "executing",
+   "phases": [
+    "start",
+    "complete"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": true,
+   "source": "generic tag hook State.Executing (hooks.json group 'batch1')",
+   "fields": {}
+  },
+  {
+   "type": "breakarmorhit",
+   "phases": [
+    "start"
+   ],
+   "category": "generated",
+   "status": "IMPLEMENTED",
+   "continuous": false,
+   "source": "generic event hook Event.Hit.BreakArmorHit (hooks.json group 'batch1')",
+   "fields": {
+    "mag": "event magnitude (rounded)"
+   }
+  }
+ ]
+}

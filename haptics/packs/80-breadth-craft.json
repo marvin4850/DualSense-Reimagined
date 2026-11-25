@@ -1,0 +1,699 @@
+{
+  "pack": "breadth-craft",
+  "description": "Baseline physical situations, OFF pending game test. No automatic perceptual approval.",
+  "rules": [
+    {
+      "id": "breadth-craft-hammer-strike",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_hammer_strike"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "intensity": 0.68,
+            "durationMs": 100,
+            "freqHz": 135,
+            "edgeHz": 390,
+            "edge": 0.3,
+            "noise": 0.15
+          },
+          {
+            "preset": "Tick",
+            "intensity": 0.25,
+            "freqHz": 270,
+            "ms": 95,
+            "tauMs": 27,
+            "delayMs": 20
+          }
+        ]
+      },
+      "situation": "craft.hammer.strike",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Удар молотком | точка игрового FX; профиль metal; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-hammer-rebound",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_hammer_rebound"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "craft.hammer.rebound",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Отскок молотка от наковальни | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-workpiece-place",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_workpiece_place"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "intensity": 0.68,
+            "durationMs": 100,
+            "freqHz": 135,
+            "edgeHz": 390,
+            "edge": 0.3,
+            "noise": 0.15
+          },
+          {
+            "preset": "Tick",
+            "intensity": 0.25,
+            "freqHz": 270,
+            "ms": 95,
+            "tauMs": 27,
+            "delayMs": 20
+          }
+        ]
+      },
+      "situation": "craft.workpiece.place",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Положить заготовку на наковальню | точка игрового FX; профиль metal; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-blade-sharpen",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_blade_sharpen"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "craft.blade.sharpen",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Провести клинком по точильному камню | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-grindstone-start",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_grindstone_start"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.46,
+        "freqHz": 140,
+        "ms": 85,
+        "tauMs": 25,
+        "partial": 2,
+        "partialGain": 0.3,
+        "count": 2,
+        "intervalMs": 60,
+        "ampStep": 0.7
+      },
+      "situation": "craft.grindstone.start",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Привести точило в движение | точка игрового FX; профиль mechanism; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-grindstone-stop",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_grindstone_stop"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.46,
+        "freqHz": 140,
+        "ms": 85,
+        "tauMs": 25,
+        "partial": 2,
+        "partialGain": 0.3,
+        "count": 2,
+        "intervalMs": 60,
+        "ampStep": 0.7
+      },
+      "situation": "craft.grindstone.stop",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Остановить точило | точка игрового FX; профиль mechanism; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-wood-grasp",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_wood_grasp"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.wood.grasp",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взять полено | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-wood-place",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_wood_place"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.wood.place",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Поставить полено | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-wood-split",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_wood_split"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.wood.split",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Расколоть дерево | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-axe-extract",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_axe_extract"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "craft.axe.extract",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Выдернуть топор из дерева | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-mill-bucket-lift",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_mill_bucket_lift"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.mill.bucket.lift",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Поднять ведро мельницы | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-mill-bucket-place",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_mill_bucket_place"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.mill.bucket.place",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Поставить ведро мельницы | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-mill-stomp",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_mill_stomp"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.mill.stomp",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Нажать привод мельницы ногой | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-mill-arm",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_mill_arm"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.46,
+        "freqHz": 140,
+        "ms": 85,
+        "tauMs": 25,
+        "partial": 2,
+        "partialGain": 0.3,
+        "count": 2,
+        "intervalMs": 60,
+        "ampStep": 0.7
+      },
+      "situation": "craft.mill.arm",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взвести привод мельницы | точка игрового FX; профиль mechanism; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-mill-chain",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_mill_chain"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "layers": [
+          {
+            "preset": "Impact",
+            "intensity": 0.68,
+            "durationMs": 100,
+            "freqHz": 135,
+            "edgeHz": 390,
+            "edge": 0.3,
+            "noise": 0.15
+          },
+          {
+            "preset": "Tick",
+            "intensity": 0.25,
+            "freqHz": 270,
+            "ms": 95,
+            "tauMs": 27,
+            "delayMs": 20
+          }
+        ]
+      },
+      "situation": "craft.mill.chain",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Натянуть / освободить цепь привода | точка игрового FX; профиль metal; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-herbs-grind",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_herbs_grind"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "craft.herbs.grind",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Растереть травы | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-leather-scrape",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_leather_scrape"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "craft.leather.scrape",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Обработать кожу | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-ore-strike",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_ore_strike"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.75,
+        "durationMs": 150,
+        "freqHz": 70,
+        "edgeHz": 230,
+        "edge": 0.22,
+        "noise": 0.26
+      },
+      "situation": "craft.ore.strike",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Ударить киркой по руде | точка игрового FX; профиль stone; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-saw-stroke",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_saw_stroke"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Grain",
+        "intensity": 0.48,
+        "durationMs": 180,
+        "packetMs": 13,
+        "gapMs": 8,
+        "freqLo": 80,
+        "freqHi": 240,
+        "fadeMs": 18
+      },
+      "situation": "craft.saw.stroke",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Провести пилой | точка игрового FX; профиль scrape; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-carving-grasp",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_carving_grasp"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "craft.carving.grasp",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взять инструмент для резьбы | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-alchemy-ingredient",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_alchemy_ingredient"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "craft.alchemy.ingredient",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Взять реагент | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-alchemy-stir",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_alchemy_stir"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "FluidMotion",
+        "style": "custom",
+        "intensity": 0.55,
+        "durationMs": 180,
+        "bodyHz": 90,
+        "body": 0.8,
+        "noise": 0.8,
+        "lowpass": 0.06,
+        "lagMs": 20
+      },
+      "situation": "craft.alchemy.stir",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Размешать зелье | точка игрового FX; профиль fluid; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-cooking-smash",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_cooking_smash"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.cooking.smash",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Размять пищу в котле | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-cooking-stir",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_cooking_stir"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "FluidMotion",
+        "style": "custom",
+        "intensity": 0.55,
+        "durationMs": 180,
+        "bodyHz": 90,
+        "body": 0.8,
+        "noise": 0.8,
+        "lowpass": 0.06,
+        "lagMs": 20
+      },
+      "situation": "craft.cooking.stir",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Помешать в котле | точка игрового FX; профиль fluid; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-cooking-spice",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_cooking_spice"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "craft.cooking.spice",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Добавить приправу | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-cooking-shake",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_cooking_shake"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Tick",
+        "intensity": 0.48,
+        "freqHz": 160,
+        "ms": 65,
+        "tauMs": 20,
+        "partialGain": 0.15
+      },
+      "situation": "craft.cooking.shake",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Встряхнуть еду на сковороде | точка игрового FX; профиль light; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-cooking-toss",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_cooking_toss"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Impact",
+        "intensity": 0.65,
+        "durationMs": 120,
+        "freqHz": 85,
+        "edgeHz": 200,
+        "edge": 0.17,
+        "noise": 0.14
+      },
+      "situation": "craft.cooking.toss",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Подбросить еду на сковороде | точка игрового FX; профиль wood; CANDIDATE, live hook unverified"
+    },
+    {
+      "id": "breadth-craft-scroll-inscribe",
+      "event": "physicalfx:start",
+      "where": {
+        "kind": "craft_scroll_inscribe"
+      },
+      "path": "hd",
+      "priority": "normal",
+      "group": "breadth-physical",
+      "effect": {
+        "preset": "Release",
+        "intensity": 0.56,
+        "durationMs": 190,
+        "freqHz": 145,
+        "noise": 0.16,
+        "attackMs": 7,
+        "decayTauMs": 55
+      },
+      "situation": "craft.scroll.inscribe",
+      "situationMs": 65,
+      "cooldownMs": 40,
+      "note": "Магический контакт при создании свитка | точка игрового FX; профиль energy; CANDIDATE, live hook unverified"
+    }
+  ]
+}

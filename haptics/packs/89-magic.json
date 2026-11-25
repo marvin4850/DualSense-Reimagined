@@ -1,0 +1,4376 @@
+{
+ "pack": "magic",
+ "description": "GAME magic (tools/magic_library.py): mod v44 spell:start/update/complete + spell damage; components on the cast montages' own section clock; replaces the generic cast buzzes.",
+ "disableRules": [
+  "auto-cast",
+  "auto-channel",
+  "auto-spell"
+ ],
+ "rules": [
+  {
+   "id": "game-magic-firebolt-impact",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~FireBolt",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 350,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_impact",
+    "slot": "magic.firebolt_impact",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Огненная стрела · Impact · огненный хлопок: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-fireball-impact",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~FireBall",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 350,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_impact",
+    "slot": "magic.fireball_impact",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Огненный шар · Impact · объёмный взрыв: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-icebolt-impact",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~IceBolt",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 350,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_impact",
+    "slot": "magic.icebolt_impact",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Ледяная стрела · Impact · осколки: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-iceblock-impact",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~IceBlock",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 350,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_impact",
+    "slot": "magic.iceblock_impact",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Ледяная глыба · Impact · завершающее растрескивание: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-balllightning-impact",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~BallLightning",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 350,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_impact",
+    "slot": "magic.balllightning_impact",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Шаровая молния · Impact · плотная вспышка: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-chainlightning-jump",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1",
+    "itm": "~ChainLightning",
+    "imp": "!dot"
+   },
+   "path": "hd",
+   "priority": "high",
+   "cooldownMs": 120,
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_jump",
+    "slot": "magic.chainlightning_jump",
+    "variant": "A",
+    "intensity": 0.8
+   },
+   "note": "Молния (цепная) · Impact · пробой следующей цели: spell damage by the hero (mod v44 mag=1)"
+  },
+  {
+   "id": "game-magic-damage-quiet",
+   "event": "attack:update",
+   "where": {
+    "res": "contact",
+    "mag": "1"
+   },
+   "path": "hd",
+   "priority": "low",
+   "effect": {
+    "preset": "Tick",
+    "intensity": 0,
+    "ms": 1
+   },
+   "note": "Spell damage without an own impact (rain, waves, burning DoT): no melee contact buzz"
+  },
+  {
+   "id": "game-magic-firebolt-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Firebolt_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_cast",
+    "slot": "magic.firebolt_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 10
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Firebolt_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненная стрела · Cast · зарождение пламени: 10 ms of A_Man_Firebolt_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firebolt-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Firebolt_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_release",
+    "slot": "magic.firebolt_release",
+    "variant": "A",
+    "intensity": 0.8,
+    "delayMs": "=max(0, 1220 - pos)",
+    "gain": "=pos <= 1370 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Firebolt_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненная стрела · Release · резкий выпуск: 1220 ms of A_Man_Firebolt_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_cast",
+    "slot": "magic.fireball_cast",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 30
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Fireball_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шар · Cast · воспламенение: 30 ms of A_Man_Fireball_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge",
+    "slot": "magic.fireball_charge",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 910
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Fireball_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Огненный шар · Charge · первая ступень: 910 ms of A_Man_Fireball_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-charge2",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage",
+    "sec": "Transition1"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge2",
+    "slot": "magic.fireball_charge2",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 1550 - pos)",
+    "gain": "=pos <= 1700 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Fireball_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Огненный шар · Charge · вторая ступень: 1550 ms of A_Man_Fireball_Cast_Montage (section Transition1)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-charge3",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage",
+    "sec": "Transition2"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge3",
+    "slot": "magic.fireball_charge3",
+    "variant": "A",
+    "intensity": 0.8,
+    "delayMs": "=max(0, 2540 - pos)",
+    "gain": "=pos <= 2690 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Fireball_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Огненный шар · Charge · третья ступень: 2540 ms of A_Man_Fireball_Cast_Montage (section Transition2)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-hold",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage",
+    "sec": "Charge3Loop"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_hold",
+    "slot": "magic.fireball_hold",
+    "variant": "A",
+    "intensity": 0.42
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:update",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && m == 'A_Man_Fireball_Cast_Montage') || (phase == 'update' && (m != 'A_Man_Fireball_Cast_Montage' || sec != 'Charge3Loop')) || (phase == 'start' && m != 'A_Man_Fireball_Cast_Montage')"
+   },
+   "note": "Огненный шар · Sustain · удержание заряда (петля): loops while A_Man_Fireball_Cast_Montage stays in Charge3Loop",
+   "also": true
+  },
+  {
+   "id": "game-magic-fireball-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Fireball_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_release",
+    "slot": "magic.fireball_release",
+    "variant": "A",
+    "intensity": 0.9,
+    "delayMs": "=max(0, 3740 - pos)",
+    "gain": "=pos <= 3890 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Fireball_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шар · Release · тяжёлый выброс: 3740 ms of A_Man_Fireball_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_StormOfFire_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_cast",
+    "slot": "magic.firestorm_cast",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 30
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Cast · нагнетание: 30 ms of A_Man_StormOfFire_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-cast-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_StormOfFire_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_cast",
+    "slot": "magic.firestorm_cast",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 18
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Cast · нагнетание: 18 ms of A_Man_Scroll_StormOfFire_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_StormOfFire_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_release",
+    "slot": "magic.firestorm_release",
+    "variant": "A",
+    "intensity": 0.88,
+    "delayMs": "=max(0, 1390 - pos)",
+    "gain": "=pos <= 1540 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Release · выброс вихря: 1390 ms of A_Man_StormOfFire_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_StormOfFire_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_release",
+    "slot": "magic.firestorm_release",
+    "variant": "A",
+    "intensity": 0.88,
+    "delayMs": "=max(0, 1375 - pos)",
+    "gain": "=pos <= 1525 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Release · выброс вихря: 1375 ms of A_Man_Scroll_StormOfFire_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-storm",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_StormOfFire_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_storm",
+    "slot": "magic.firestorm_storm",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 2270 - pos)",
+    "gain": "=pos <= 2420 ? 1 : 0",
+    "count": 2,
+    "intervalMs": 3200
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Sustain · вращающееся пламя (петля): 2270 ms of A_Man_StormOfFire_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-storm-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_StormOfFire_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_storm",
+    "slot": "magic.firestorm_storm",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 2270 - pos)",
+    "gain": "=pos <= 2420 ? 1 : 0",
+    "count": 2,
+    "intervalMs": 3200
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · Sustain · вращающееся пламя (петля): 2270 ms of A_Man_Scroll_StormOfFire_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-end",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_StormOfFire_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_end",
+    "slot": "magic.firestorm_end",
+    "variant": "A",
+    "intensity": 0.55,
+    "delayMs": "=max(0, 8670 - pos)",
+    "gain": "=pos <= 8820 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · End · угасание бури: 8670 ms of A_Man_StormOfFire_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firestorm-end-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_StormOfFire_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_end",
+    "slot": "magic.firestorm_end",
+    "variant": "A",
+    "intensity": 0.55,
+    "delayMs": "=max(0, 8670 - pos)",
+    "gain": "=pos <= 8820 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormOfFire_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный шторм · End · угасание бури: 8670 ms of A_Man_Scroll_StormOfFire_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_FireRain_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_cast",
+    "slot": "magic.firerain_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 260
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Cast · жест: 260 ms of A_Man_FireRain_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-cast-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_FireRain_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_cast",
+    "slot": "magic.firerain_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 23
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Cast · жест: 23 ms of A_Man_Scroll_FireRain_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_FireRain_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_charge",
+    "slot": "magic.firerain_charge",
+    "variant": "A",
+    "intensity": 0.8,
+    "delayMs": 1640
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_FireRain_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Charge · гром и две молнии: 1640 ms of A_Man_FireRain_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-charge-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_FireRain_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_charge",
+    "slot": "magic.firerain_charge",
+    "variant": "A",
+    "intensity": 0.8,
+    "delayMs": 703
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Scroll_FireRain_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Charge · гром и две молнии: 703 ms of A_Man_Scroll_FireRain_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_FireRain_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_release",
+    "slot": "magic.firerain_release",
+    "variant": "A",
+    "intensity": 0.92,
+    "delayMs": "=max(0, 4370 - pos)",
+    "gain": "=pos <= 4520 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Release · удар в землю: 4370 ms of A_Man_FireRain_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_FireRain_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_release",
+    "slot": "magic.firerain_release",
+    "variant": "A",
+    "intensity": 0.92,
+    "delayMs": "=max(0, 4366 - pos)",
+    "gain": "=pos <= 4516 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Release · удар в землю: 4366 ms of A_Man_Scroll_FireRain_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-rain",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_FireRain_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_rain",
+    "slot": "magic.firerain_rain",
+    "variant": "A",
+    "intensity": 0.78,
+    "delayMs": "=max(0, 4630 - pos)",
+    "gain": "=pos <= 4780 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Impact · огненный дождь (отдельные падения): 4630 ms of A_Man_FireRain_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-firerain-rain-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_FireRain_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_rain",
+    "slot": "magic.firerain_rain",
+    "variant": "A",
+    "intensity": 0.78,
+    "delayMs": "=max(0, 4630 - pos)",
+    "gain": "=pos <= 4780 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_FireRain_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Огненный дождь · Impact · огненный дождь (отдельные падения): 4630 ms of A_Man_Scroll_FireRain_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icebolt-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Icebolt_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_cast",
+    "slot": "magic.icebolt_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 20
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Icebolt_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная стрела · Cast · рост кристалла: 20 ms of A_Man_Icebolt_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icebolt-hold",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Icebolt_Cast_Montage",
+    "sec": "ChargeLoop"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_hold",
+    "slot": "magic.icebolt_hold",
+    "variant": "A",
+    "intensity": 0.3
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:update",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && m == 'A_Man_Icebolt_Cast_Montage') || (phase == 'update' && (m != 'A_Man_Icebolt_Cast_Montage' || sec != 'ChargeLoop')) || (phase == 'start' && m != 'A_Man_Icebolt_Cast_Montage')"
+   },
+   "note": "Ледяная стрела · Sustain · удержание (петля): loops while A_Man_Icebolt_Cast_Montage stays in ChargeLoop",
+   "also": true
+  },
+  {
+   "id": "game-magic-icebolt-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Icebolt_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_release",
+    "slot": "magic.icebolt_release",
+    "variant": "A",
+    "intensity": 0.82,
+    "delayMs": "=max(0, 2160 - pos)",
+    "gain": "=pos <= 2310 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Icebolt_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная стрела · Release · резкий выпуск: 2160 ms of A_Man_Icebolt_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-iceblock-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_IceBlock_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_cast",
+    "slot": "magic.iceblock_cast",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 40
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_IceBlock_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная глыба · Cast · уплотнение льда: 40 ms of A_Man_IceBlock_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-iceblock-cast-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_IceBlock_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_cast",
+    "slot": "magic.iceblock_cast",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 61
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_IceBlock_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная глыба · Cast · уплотнение льда: 61 ms of A_Man_Scroll_IceBlock_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-iceblock-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_IceBlock_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_release",
+    "slot": "magic.iceblock_release",
+    "variant": "A",
+    "intensity": 0.88,
+    "delayMs": "=max(0, 2110 - pos)",
+    "gain": "=pos <= 2260 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_IceBlock_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная глыба · Release · тяжёлые хрусты: 2110 ms of A_Man_IceBlock_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-iceblock-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_IceBlock_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_release",
+    "slot": "magic.iceblock_release",
+    "variant": "A",
+    "intensity": 0.88,
+    "delayMs": "=max(0, 2130 - pos)",
+    "gain": "=pos <= 2280 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_IceBlock_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная глыба · Release · тяжёлые хрусты: 2130 ms of A_Man_Scroll_IceBlock_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_IceWave_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_cast",
+    "slot": "magic.icewave_cast",
+    "variant": "A",
+    "intensity": 0.45,
+    "delayMs": 10
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · Cast · холод собирается: 10 ms of A_Man_IceWave_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-cast-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_IceWave_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_cast",
+    "slot": "magic.icewave_cast",
+    "variant": "A",
+    "intensity": 0.45,
+    "delayMs": 48
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · Cast · холод собирается: 48 ms of A_Man_Scroll_IceWave_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_IceWave_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_release",
+    "slot": "magic.icewave_release",
+    "variant": "A",
+    "intensity": 0.82,
+    "delayMs": "=max(0, 2160 - pos)",
+    "gain": "=pos <= 2310 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · Release · волна хрупких щелчков: 2160 ms of A_Man_IceWave_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_IceWave_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_release",
+    "slot": "magic.icewave_release",
+    "variant": "A",
+    "intensity": 0.82,
+    "delayMs": "=max(0, 2198 - pos)",
+    "gain": "=pos <= 2348 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · Release · волна хрупких щелчков: 2198 ms of A_Man_Scroll_IceWave_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-end",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_IceWave_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_end",
+    "slot": "magic.icewave_end",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 4800 - pos)",
+    "gain": "=pos <= 4950 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · End · остаточные трески: 4800 ms of A_Man_IceWave_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-icewave-end-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_IceWave_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_end",
+    "slot": "magic.icewave_end",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 4800 - pos)",
+    "gain": "=pos <= 4950 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_IceWave_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Ледяная волна · End · остаточные трески: 4800 ms of A_Man_Scroll_IceWave_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-balllightning-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_BallLightning_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_cast",
+    "slot": "magic.balllightning_cast",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 560
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_BallLightning_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Шаровая молния · Cast · первый разряд: 560 ms of A_Man_BallLightning_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-balllightning-charge",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_BallLightning_Cast_Montage",
+    "sec": "ChargeLoop1"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_charge",
+    "slot": "magic.balllightning_charge",
+    "variant": "A",
+    "intensity": 0.72,
+    "delayMs": "=max(0, 2120 - pos)",
+    "gain": "=pos <= 2270 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_BallLightning_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Шаровая молния · Charge · накопление (4 разряда по анимации): 2120 ms of A_Man_BallLightning_Cast_Montage (section ChargeLoop1)",
+   "also": true
+  },
+  {
+   "id": "game-magic-balllightning-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_BallLightning_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_release",
+    "slot": "magic.balllightning_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6510 - pos)",
+    "gain": "=pos <= 6660 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_BallLightning_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Шаровая молния · Release · резкий выпуск: 6510 ms of A_Man_BallLightning_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-chainlightning-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_ChainLightning_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_cast",
+    "slot": "magic.chainlightning_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 100
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_ChainLightning_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Молния (цепная) · Cast · искра: 100 ms of A_Man_ChainLightning_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-chainlightning-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_ChainLightning_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_release",
+    "slot": "magic.chainlightning_release",
+    "variant": "A",
+    "intensity": 0.95,
+    "delayMs": "=max(0, 1090 - pos)",
+    "gain": "=pos <= 1240 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_ChainLightning_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Молния (цепная) · Release · мощный первый разряд: 1090 ms of A_Man_ChainLightning_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-chainlightning-chain",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_ChainLightning_Launch_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_chain",
+    "slot": "magic.chainlightning_chain",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Молния (цепная) · Sustain · пробой цели (петля)",
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && (m == 'A_Man_ChainLightning_Launch_Montage')) || (phase == 'start' && !(m == 'A_Man_ChainLightning_Launch_Montage'))"
+   },
+   "also": true
+  },
+  {
+   "id": "game-magic-chainlightning-end",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_ChainLightning_Launch_End_Montage",
+     "A_Man_Scroll_ChainLightning_Launch_End_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_end",
+    "slot": "magic.chainlightning_end",
+    "variant": "A",
+    "intensity": 0.45,
+    "delayMs": 20
+   },
+   "note": "Молния (цепная) · End · угасание",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_FistOfWind_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_charge",
+    "slot": "magic.fistofwind_charge",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 20
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_FistOfWind_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · Charge · сжатие давления: 20 ms of A_Man_FistOfWind_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-charge-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_FistOfWind_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_charge",
+    "slot": "magic.fistofwind_charge",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 11
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Scroll_FistOfWind_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · Charge · сжатие давления: 11 ms of A_Man_Scroll_FistOfWind_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_FistOfWind_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_release",
+    "slot": "magic.fistofwind_release",
+    "variant": "A",
+    "intensity": 0.92,
+    "delayMs": "=max(0, 960 - pos)",
+    "gain": "=pos <= 1110 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_FistOfWind_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · Release · короткий толчок: 960 ms of A_Man_FistOfWind_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_FistOfWind_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_release",
+    "slot": "magic.fistofwind_release",
+    "variant": "A",
+    "intensity": 0.92,
+    "delayMs": "=max(0, 971 - pos)",
+    "gain": "=pos <= 1121 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_FistOfWind_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · Release · короткий толчок: 971 ms of A_Man_Scroll_FistOfWind_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-end",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_FistOfWind_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_end",
+    "slot": "magic.fistofwind_end",
+    "variant": "A",
+    "intensity": 0.4,
+    "delayMs": "=max(0, 1460 - pos)",
+    "gain": "=pos <= 1610 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_FistOfWind_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · End · рассеивание: 1460 ms of A_Man_FistOfWind_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fistofwind-end-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_FistOfWind_Cast_Montage",
+    "sec": "End"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_end",
+    "slot": "magic.fistofwind_end",
+    "variant": "A",
+    "intensity": 0.4,
+    "delayMs": "=max(0, 1471 - pos)",
+    "gain": "=pos <= 1621 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_FistOfWind_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак ветра · End · рассеивание: 1471 ms of A_Man_Scroll_FistOfWind_Cast_Montage (section End)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_StormFist_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_charge",
+    "slot": "magic.stormfist_charge",
+    "variant": "A",
+    "intensity": 0.66,
+    "delayMs": 180
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_StormFist_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · Charge · завывание: 180 ms of A_Man_StormFist_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-charge-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_StormFist_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_charge",
+    "slot": "magic.stormfist_charge",
+    "variant": "A",
+    "intensity": 0.66,
+    "delayMs": 180
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Scroll_StormFist_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · Charge · завывание: 180 ms of A_Man_Scroll_StormFist_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_StormFist_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_release",
+    "slot": "magic.stormfist_release",
+    "variant": "A",
+    "intensity": 1.0,
+    "delayMs": "=max(0, 1190 - pos)",
+    "gain": "=pos <= 1340 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormFist_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · Release · тяжёлый удар воздуха: 1190 ms of A_Man_StormFist_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_StormFist_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_release",
+    "slot": "magic.stormfist_release",
+    "variant": "A",
+    "intensity": 1.0,
+    "delayMs": "=max(0, 1190 - pos)",
+    "gain": "=pos <= 1340 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormFist_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · Release · тяжёлый удар воздуха: 1190 ms of A_Man_Scroll_StormFist_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-end",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_StormFist_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_end",
+    "slot": "magic.stormfist_end",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": "=max(0, 1440 - pos)",
+    "gain": "=pos <= 1590 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_StormFist_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · End · затухающие вихри: 1440 ms of A_Man_StormFist_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-stormfist-end-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_StormFist_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_end",
+    "slot": "magic.stormfist_end",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": "=max(0, 1329 - pos)",
+    "gain": "=pos <= 1479 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_StormFist_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Кулак бури · End · затухающие вихри: 1329 ms of A_Man_Scroll_StormFist_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-pyrokinesis-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Pyrokinesis_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_cast",
+    "slot": "magic.pyrokinesis_cast",
+    "variant": "A",
+    "intensity": 0.72,
+    "delayMs": 20
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Pyrokinesis_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Пирокинез · Cast · воспламенение: 20 ms of A_Man_Pyrokinesis_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-pyrokinesis-burn",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Pyrokinesis_Launch_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_burn",
+    "slot": "magic.pyrokinesis_burn",
+    "variant": "A",
+    "intensity": 0.48
+   },
+   "note": "Пирокинез · Sustain · удерживаемое пламя (петля)",
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && (m == 'A_Man_Pyrokinesis_Launch_Montage')) || (phase == 'start' && !(m == 'A_Man_Pyrokinesis_Launch_Montage'))"
+   },
+   "also": true
+  },
+  {
+   "id": "game-magic-pyrokinesis-end",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Pyrokinesis_Launch_End_Montage",
+     "A_Man_Scroll_Pyrokinesis_Launch_End_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_end",
+    "slot": "magic.pyrokinesis_end",
+    "variant": "A",
+    "intensity": 0.4,
+    "delayMs": 0
+   },
+   "note": "Пирокинез · End · отпускание",
+   "also": true
+  },
+  {
+   "id": "game-magic-sleep-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Sleep_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "sleep_cast",
+    "slot": "magic.sleep_cast",
+    "variant": "A",
+    "intensity": 0.48,
+    "delayMs": 50
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Sleep_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Сон · Cast · убаюкивание: 50 ms of A_Man_Sleep_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-sleep-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Sleep_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "sleep_release",
+    "slot": "magic.sleep_release",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 2490 - pos)",
+    "gain": "=pos <= 2640 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Sleep_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Сон · Release · угасающие импульсы: 2490 ms of A_Man_Sleep_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-charm-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Charm_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_cast",
+    "slot": "magic.charm_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 670
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Charm_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Чары · Cast · две пульсации: 670 ms of A_Man_Charm_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-charm-hold",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Charm_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_hold",
+    "slot": "magic.charm_hold",
+    "variant": "A",
+    "intensity": 0.42
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:update",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && m == 'A_Man_Charm_Cast_Montage') || (phase == 'update' && (m != 'A_Man_Charm_Cast_Montage' || sec != 'Launch')) || (phase == 'start' && m != 'A_Man_Charm_Cast_Montage')"
+   },
+   "note": "Чары · Sustain · сближение (петля): loops while A_Man_Charm_Cast_Montage stays in Launch",
+   "also": true
+  },
+  {
+   "id": "game-magic-charm-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Charm_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_impact",
+    "slot": "magic.charm_impact",
+    "variant": "A",
+    "intensity": 0.52,
+    "delayMs": "=max(0, 2060 - pos)",
+    "gain": "=pos <= 2210 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Charm_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Чары · Impact · гармоничная волна на цели: 2060 ms of A_Man_Charm_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fear-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Fear_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fear_cast",
+    "slot": "magic.fear_cast",
+    "variant": "A",
+    "intensity": 0.9,
+    "delayMs": 30
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Fear_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Страх · Cast · внезапный импульс: 30 ms of A_Man_Fear_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-fear-wave",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Fear_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fear_wave",
+    "slot": "magic.fear_wave",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 650 - pos)",
+    "gain": "=pos <= 800 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Fear_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Страх · Release · тревожное сердцебиение: 650 ms of A_Man_Fear_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-control-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Control_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_cast",
+    "slot": "magic.control_cast",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": 640
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Control_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Контроль · Cast · захват: 640 ms of A_Man_Control_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-control-charge",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Control_Cast_Montage",
+    "sec": "ChargeLoop"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_charge",
+    "slot": "magic.control_charge",
+    "variant": "A",
+    "intensity": 0.55
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:update",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && m == 'A_Man_Control_Cast_Montage') || (phase == 'update' && (m != 'A_Man_Control_Cast_Montage' || sec != 'ChargeLoop')) || (phase == 'start' && m != 'A_Man_Control_Cast_Montage')"
+   },
+   "note": "Контроль · Charge · строгая пульсация (петля): loops while A_Man_Control_Cast_Montage stays in ChargeLoop",
+   "also": true
+  },
+  {
+   "id": "game-magic-control-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Control_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_release",
+    "slot": "magic.control_release",
+    "variant": "A",
+    "intensity": 0.95,
+    "delayMs": "=max(0, 6310 - pos)",
+    "gain": "=pos <= 6460 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Control_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Контроль · Release · сжатие ритма и подчинение: 6310 ms of A_Man_Control_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-control-end",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Control_Launch_End_Montage",
+     "A_Man_Scroll_Control_Launch_End_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_end",
+    "slot": "magic.control_end",
+    "variant": "A",
+    "intensity": 0.4,
+    "delayMs": 0
+   },
+   "note": "Контроль · End · контроль отпущен",
+   "also": true
+  },
+  {
+   "id": "game-magic-telekinesis-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Telekinesis_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_cast",
+    "slot": "magic.telekinesis_cast",
+    "variant": "A",
+    "intensity": 0.58,
+    "delayMs": 40
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Telekinesis_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Телекинез · Cast · захват: 40 ms of A_Man_Telekinesis_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-telekinesis-hold",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Telekinesis_Launch_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_hold",
+    "slot": "magic.telekinesis_hold",
+    "variant": "A",
+    "intensity": 0.32
+   },
+   "note": "Телекинез · Sustain · удержание предмета (петля)",
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && (m == 'A_Man_Telekinesis_Launch_Montage')) || (phase == 'start' && !(m == 'A_Man_Telekinesis_Launch_Montage'))"
+   },
+   "also": true
+  },
+  {
+   "id": "game-magic-telekinesis-end",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Telekinesis_Launch_End_Montage",
+     "A_Man_Telekinesis_Launch_PickUp_End_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_end",
+    "slot": "magic.telekinesis_end",
+    "variant": "A",
+    "intensity": 0.35,
+    "delayMs": 0
+   },
+   "note": "Телекинез · End · мягкое освобождение",
+   "also": true
+  },
+  {
+   "id": "game-magic-summonskeletons-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Skeletons_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_cast",
+    "slot": "magic.summonskeletons_cast",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 80
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Skeletons_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв скелетов · Cast · мрачная пульсация: 80 ms of A_Man_Summon_Skeletons_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summonskeletons-release",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Skeletons_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_release",
+    "slot": "magic.summonskeletons_release",
+    "variant": "A",
+    "intensity": 0.82,
+    "delayMs": 1940
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Skeletons_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв скелетов · Release · удар в землю: 1940 ms of A_Man_Summon_Skeletons_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summonskeletons-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Skeletons_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_charge",
+    "slot": "magic.summonskeletons_charge",
+    "variant": "A",
+    "intensity": 0.66,
+    "delayMs": 3150
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Summon_Skeletons_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Призыв скелетов · Charge · кости собираются: 3150 ms of A_Man_Summon_Skeletons_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summonskeletons-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Summon_Skeletons_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_impact",
+    "slot": "magic.summonskeletons_impact",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 5980 - pos)",
+    "gain": "=pos <= 6130 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Skeletons_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв скелетов · Impact · короткое оживление: 5980 ms of A_Man_Summon_Skeletons_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summongolem-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Golem_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_cast",
+    "slot": "magic.summongolem_cast",
+    "variant": "A",
+    "intensity": 0.66,
+    "delayMs": 80
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Golem_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв голема · Cast · глубокое нарастание: 80 ms of A_Man_Summon_Golem_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summongolem-release",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Golem_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_release",
+    "slot": "magic.summongolem_release",
+    "variant": "A",
+    "intensity": 0.86,
+    "delayMs": 1940
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Golem_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв голема · Release · удар в землю: 1940 ms of A_Man_Summon_Golem_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summongolem-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Golem_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_charge",
+    "slot": "magic.summongolem_charge",
+    "variant": "A",
+    "intensity": 0.75,
+    "delayMs": 2510
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Summon_Golem_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Призыв голема · Charge · смещения камня: 2510 ms of A_Man_Summon_Golem_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summongolem-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Summon_Golem_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_impact",
+    "slot": "magic.summongolem_impact",
+    "variant": "A",
+    "intensity": 1.0,
+    "delayMs": "=max(0, 5980 - pos)",
+    "gain": "=pos <= 6130 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Golem_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв голема · Impact · завершающий удар: 5980 ms of A_Man_Summon_Golem_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summondemon-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Demon_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_cast",
+    "slot": "magic.summondemon_cast",
+    "variant": "A",
+    "intensity": 0.66,
+    "delayMs": 120
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Demon_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв демона · Cast · чужеродная энергия: 120 ms of A_Man_Summon_Demon_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summondemon-release",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Demon_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_release",
+    "slot": "magic.summondemon_release",
+    "variant": "A",
+    "intensity": 0.84,
+    "delayMs": 1980
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Demon_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв демона · Release · удар в землю: 1980 ms of A_Man_Summon_Demon_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summondemon-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_Demon_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_charge",
+    "slot": "magic.summondemon_charge",
+    "variant": "A",
+    "intensity": 0.78,
+    "delayMs": 3170
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Summon_Demon_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Призыв демона · Charge · разрыв пространства: 3170 ms of A_Man_Summon_Demon_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-summondemon-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Summon_Demon_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_impact",
+    "slot": "magic.summondemon_impact",
+    "variant": "A",
+    "intensity": 1.0,
+    "delayMs": "=max(0, 6020 - pos)",
+    "gain": "=pos <= 6170 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_Demon_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Призыв демона · Impact · многослойное появление: 6020 ms of A_Man_Summon_Demon_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-armyofdarkness-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_ArmyOfDarkness_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_cast",
+    "slot": "magic.armyofdarkness_cast",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 90
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_ArmyOfDarkness_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Армия тьмы · Cast · тьма сгущается: 90 ms of A_Man_Summon_ArmyOfDarkness_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-armyofdarkness-release",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Summon_ArmyOfDarkness_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_release",
+    "slot": "magic.armyofdarkness_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": 2000
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_ArmyOfDarkness_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Армия тьмы · Release · широкая тёмная волна: 2000 ms of A_Man_Summon_ArmyOfDarkness_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-armyofdarkness-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Summon_ArmyOfDarkness_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_impact",
+    "slot": "magic.armyofdarkness_impact",
+    "variant": "A",
+    "intensity": 0.84,
+    "delayMs": "=max(0, 5900 - pos)",
+    "gain": "=pos <= 6050 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Summon_ArmyOfDarkness_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Армия тьмы · Impact · пробуждение мёртвых: 5900 ms of A_Man_Summon_ArmyOfDarkness_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-deathtoundead-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_DeathToTheUndead_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_cast",
+    "slot": "magic.deathtoundead_cast",
+    "variant": "A",
+    "intensity": 0.72,
+    "delayMs": 630
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_DeathToTheUndead_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уничтожение нежити · Cast · плотное начало: 630 ms of A_Man_DeathToTheUndead_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-deathtoundead-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_DeathToTheUndead_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_release",
+    "slot": "magic.deathtoundead_release",
+    "variant": "A",
+    "intensity": 0.95,
+    "delayMs": "=max(0, 1050 - pos)",
+    "gain": "=pos <= 1200 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_DeathToTheUndead_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уничтожение нежити · Release · перелом структуры: 1050 ms of A_Man_DeathToTheUndead_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-deathtoundead-impact",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_DeathToTheUndead_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_impact",
+    "slot": "magic.deathtoundead_impact",
+    "variant": "A",
+    "intensity": 0.9,
+    "delayMs": "=max(0, 1320 - pos)",
+    "gain": "=pos <= 1470 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_DeathToTheUndead_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уничтожение нежити · Impact · хрупкое разрушение и тишина: 1320 ms of A_Man_DeathToTheUndead_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-breathofdeath-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_BreathOfDeath_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "breathofdeath_charge",
+    "slot": "magic.breathofdeath_charge",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 30
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_BreathOfDeath_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Дыхание смерти · Charge · вдох: 30 ms of A_Man_BreathOfDeath_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-breathofdeath-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_BreathOfDeath_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "breathofdeath_release",
+    "slot": "magic.breathofdeath_release",
+    "variant": "A",
+    "intensity": 0.88,
+    "delayMs": "=max(0, 1730 - pos)",
+    "gain": "=pos <= 1880 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_BreathOfDeath_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Дыхание смерти · Release · смертоносная волна: 1730 ms of A_Man_BreathOfDeath_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-wavedeath-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_UrizielWaveOfDeath_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_cast",
+    "slot": "magic.wavedeath_cast",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": 40
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_UrizielWaveOfDeath_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Волна смерти Уризеля · Cast · колоссальное нарастание: 40 ms of A_Man_UrizielWaveOfDeath_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-wavedeath-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_UrizielWaveOfDeath_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_release",
+    "slot": "magic.wavedeath_release",
+    "variant": "A",
+    "intensity": 1.0,
+    "delayMs": "=max(0, 2140 - pos)",
+    "gain": "=pos <= 2290 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_UrizielWaveOfDeath_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Волна смерти Уризеля · Release · широкий выброс и распространение: 2140 ms of A_Man_UrizielWaveOfDeath_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-wavedeath-end",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_UrizielWaveOfDeath_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_end",
+    "slot": "magic.wavedeath_end",
+    "variant": "A",
+    "intensity": 0.55,
+    "delayMs": "=max(0, 3960 - pos)",
+    "gain": "=pos <= 4110 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_UrizielWaveOfDeath_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Волна смерти Уризеля · End · глубокое затухание: 3960 ms of A_Man_UrizielWaveOfDeath_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-light-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Light_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_cast",
+    "slot": "magic.light_cast",
+    "variant": "A",
+    "intensity": 0.45,
+    "delayMs": 10
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Light_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Свет · Cast · свет рождается: 10 ms of A_Man_Light_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-light-cast-scroll",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_Light_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_cast",
+    "slot": "magic.light_cast",
+    "variant": "A",
+    "intensity": 0.45,
+    "delayMs": 32
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_Light_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Свет · Cast · свет рождается: 32 ms of A_Man_Scroll_Light_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-light-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Light_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_release",
+    "slot": "magic.light_release",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 2030 - pos)",
+    "gain": "=pos <= 2180 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Light_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Свет · Release · лёгкий импульс: 2030 ms of A_Man_Light_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-light-release-scroll",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_Light_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_release",
+    "slot": "magic.light_release",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 2051 - pos)",
+    "gain": "=pos <= 2201 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_Light_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Свет · Release · лёгкий импульс: 2051 ms of A_Man_Scroll_Light_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-heal-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Heal_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "heal_cast",
+    "slot": "magic.heal_cast",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 10
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Heal_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Исцеление · Cast · спокойные пульсации: 10 ms of A_Man_Heal_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-heal-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Heal_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "heal_release",
+    "slot": "magic.heal_release",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": "=max(0, 1110 - pos)",
+    "gain": "=pos <= 1260 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Heal_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Исцеление · Release · объединённое затухание: 1110 ms of A_Man_Heal_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-shrink-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Shrink_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_cast",
+    "slot": "magic.shrink_cast",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": 300
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Shrink_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уменьшение тролля · Cast · плотное воздействие: 300 ms of A_Man_Shrink_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-shrink-impact",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Shrink_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_impact",
+    "slot": "magic.shrink_impact",
+    "variant": "A",
+    "intensity": 0.78,
+    "delayMs": 2050
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Shrink_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уменьшение тролля · Impact · сжатие масштаба: 2050 ms of A_Man_Shrink_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-shrink-end",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Shrink_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_end",
+    "slot": "magic.shrink_end",
+    "variant": "A",
+    "intensity": 0.5,
+    "delayMs": 6600
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Shrink_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Уменьшение тролля · End · маленький щелчок: 6600 ms of A_Man_Shrink_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-innospray-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_InnosPray_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_cast",
+    "slot": "magic.innospray_cast",
+    "variant": "A",
+    "intensity": 0.55,
+    "delayMs": 1380
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_InnosPray_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Молитва Инносу · Cast · первая волна: 1380 ms of A_Man_Scroll_InnosPray_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-innospray-charge",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Scroll_InnosPray_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_charge",
+    "slot": "magic.innospray_charge",
+    "variant": "A",
+    "intensity": 0.62,
+    "delayMs": 1800
+   },
+   "cancel": {
+    "when": [
+     "spell:complete",
+     "spell:update"
+    ],
+    "if": "m == 'A_Man_Scroll_InnosPray_Cast_Montage' && (int == 1 || contains(sec, 'Launch'))",
+    "fadeMs": 80
+   },
+   "note": "Молитва Инносу · Charge · согласованные волны: 1800 ms of A_Man_Scroll_InnosPray_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-innospray-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Scroll_InnosPray_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_release",
+    "slot": "magic.innospray_release",
+    "variant": "A",
+    "intensity": 0.78,
+    "delayMs": "=max(0, 4410 - pos)",
+    "gain": "=pos <= 4560 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Scroll_InnosPray_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Молитва Инносу · Release · мягкий выразительный финал: 4410 ms of A_Man_Scroll_InnosPray_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-transform-activation",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 60
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "All 17 transformations: the game's one activation sound",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-biter-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBiter"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_biter_restructure",
+    "slot": "magic.tr_biter_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Кусач · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-biter-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBiter"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_biter_release",
+    "slot": "magic.tr_biter_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Кусач · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-bloodfly-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBloodfly"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodfly_restructure",
+    "slot": "magic.tr_bloodfly_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Шершень · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-bloodfly-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBloodfly"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodfly_release",
+    "slot": "magic.tr_bloodfly_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Шершень · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-bloodhound-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBloodhound"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodhound_restructure",
+    "slot": "magic.tr_bloodhound_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ищейка · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-bloodhound-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformBloodhound"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodhound_release",
+    "slot": "magic.tr_bloodhound_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ищейка · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-firelizard-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformFireLizard"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_firelizard_restructure",
+    "slot": "magic.tr_firelizard_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Огненный ящер · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-firelizard-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformFireLizard"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_firelizard_release",
+    "slot": "magic.tr_firelizard_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Огненный ящер · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-harpy-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformHarpy"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_harpy_restructure",
+    "slot": "magic.tr_harpy_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Гарпия · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-harpy-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformHarpy"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_harpy_release",
+    "slot": "magic.tr_harpy_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Гарпия · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-lizard-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformLizard"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lizard_restructure",
+    "slot": "magic.tr_lizard_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ящер · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-lizard-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformLizard"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lizard_release",
+    "slot": "magic.tr_lizard_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ящер · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-lurker-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformLurker"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lurker_restructure",
+    "slot": "magic.tr_lurker_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Шныг · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-lurker-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformLurker"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lurker_release",
+    "slot": "magic.tr_lurker_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Шныг · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-meatbug-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMeatbug"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_meatbug_restructure",
+    "slot": "magic.tr_meatbug_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Мясной жук · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-meatbug-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMeatbug"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_meatbug_release",
+    "slot": "magic.tr_meatbug_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Мясной жук · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-minecrawler-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMinecrawler"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_minecrawler_restructure",
+    "slot": "magic.tr_minecrawler_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ползун · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-minecrawler-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMinecrawler"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_minecrawler_release",
+    "slot": "magic.tr_minecrawler_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Ползун · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-molerat-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMolerat"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_molerat_restructure",
+    "slot": "magic.tr_molerat_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Кротокрыс · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-molerat-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformMolerat"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_molerat_release",
+    "slot": "magic.tr_molerat_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Кротокрыс · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-orcdog-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformOrcDog"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_orcdog_restructure",
+    "slot": "magic.tr_orcdog_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Орочья гончая · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-orcdog-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformOrcDog"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_orcdog_release",
+    "slot": "magic.tr_orcdog_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Орочья гончая · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-razor-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformRazor"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_razor_restructure",
+    "slot": "magic.tr_razor_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Бритвозуб · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-razor-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformRazor"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_razor_release",
+    "slot": "magic.tr_razor_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Бритвозуб · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-scavenger-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformScavenger"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_scavenger_restructure",
+    "slot": "magic.tr_scavenger_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Падальщик · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-scavenger-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformScavenger"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_scavenger_release",
+    "slot": "magic.tr_scavenger_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Падальщик · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-shadowbeast-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformShadowbeast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_shadowbeast_restructure",
+    "slot": "magic.tr_shadowbeast_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Мракорис · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-shadowbeast-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformShadowbeast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_shadowbeast_release",
+    "slot": "magic.tr_shadowbeast_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Мракорис · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-snapper-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformSnapper"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_snapper_restructure",
+    "slot": "magic.tr_snapper_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Глорх · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-snapper-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformSnapper"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_snapper_release",
+    "slot": "magic.tr_snapper_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Глорх · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-swampshark-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformSwampshark"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_swampshark_restructure",
+    "slot": "magic.tr_swampshark_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Болотожор · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-swampshark-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformSwampshark"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_swampshark_release",
+    "slot": "magic.tr_swampshark_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Болотожор · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-wolf-restructure",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformWolf"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_wolf_restructure",
+    "slot": "magic.tr_wolf_restructure",
+    "variant": "A",
+    "intensity": 0.7,
+    "delayMs": "=max(0, 3780 - pos)",
+    "gain": "=pos <= 3930 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Волк · Charge · органическая перестройка: 3780 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-tr-wolf-release",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Transform_Cast_Montage",
+    "sec": "Launch",
+    "itm": "~TransformWolf"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_wolf_release",
+    "slot": "magic.tr_wolf_release",
+    "variant": "A",
+    "intensity": 0.85,
+    "delayMs": "=max(0, 6170 - pos)",
+    "gain": "=pos <= 6320 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Transform_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Превращение: Волк · Release · завершающий импульс: 6170 ms of A_Man_Transform_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-teleport-cast",
+   "event": "spell:start",
+   "where": {
+    "m": "A_Man_Teleport_Cast_Montage"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_cast",
+    "slot": "magic.teleport_cast",
+    "variant": "A",
+    "intensity": 0.6,
+    "delayMs": 330
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Teleport_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Телепортация · Cast · пространство сжимается: 330 ms of A_Man_Teleport_Cast_Montage (section In)",
+   "also": true
+  },
+  {
+   "id": "game-magic-teleport-charge",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Teleport_Cast_Montage",
+    "sec": "Charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_charge",
+    "slot": "magic.teleport_charge",
+    "variant": "A",
+    "intensity": 0.48
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 120000,
+    "stopOn": [],
+    "stopWhen": [
+     "spell:complete",
+     "spell:update",
+     "spell:start"
+    ],
+    "stopFadeMs": 300,
+    "fadeMs": 250,
+    "stopIf": "(phase == 'complete' && m == 'A_Man_Teleport_Cast_Montage') || (phase == 'update' && (m != 'A_Man_Teleport_Cast_Montage' || sec != 'Charge')) || (phase == 'start' && m != 'A_Man_Teleport_Cast_Montage')"
+   },
+   "note": "Телепортация · Sustain · вихрь энергии (петля): loops while A_Man_Teleport_Cast_Montage stays in Charge",
+   "also": true
+  },
+  {
+   "id": "game-magic-teleport-vanish",
+   "event": "spell:update",
+   "where": {
+    "m": "A_Man_Teleport_Cast_Montage",
+    "sec": "Launch"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_vanish",
+    "slot": "magic.teleport_vanish",
+    "variant": "A",
+    "intensity": 0.92,
+    "delayMs": "=max(0, 5060 - pos)",
+    "gain": "=pos <= 5210 ? 1 : 0"
+   },
+   "cancel": {
+    "when": [
+     "spell:complete"
+    ],
+    "if": "m == 'A_Man_Teleport_Cast_Montage' && (int == 1)",
+    "fadeMs": 80
+   },
+   "note": "Телепортация · Release · исчезновение (резкий обрыв): 5060 ms of A_Man_Teleport_Cast_Montage (section Launch)",
+   "also": true
+  },
+  {
+   "id": "game-magic-teleport-arrive",
+   "event": "spell:start",
+   "where": {
+    "m": [
+     "A_Man_Teleport_Launch_End_Montage"
+    ]
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_arrive",
+    "slot": "magic.teleport_arrive",
+    "variant": "A",
+    "intensity": 0.58,
+    "delayMs": 50
+   },
+   "note": "Телепортация · End · материализация",
+   "also": true
+  }
+ ]
+}

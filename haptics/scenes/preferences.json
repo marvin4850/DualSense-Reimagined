@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "source": "user-approved game86/game90/game91 and explicit material/timing feedback; policy calibration, not a learned perceptual model",
+  "roles": {
+    "light": {
+      "peakMax": 0.5,
+      "rms20Min": 0.15,
+      "rms20Max": 0.32,
+      "preferredRms20": 0.22
+    },
+    "handling": {
+      "peakMax": 0.85,
+      "rms20Min": 0.3,
+      "rms20Max": 0.6
+    },
+    "contact": {
+      "peakMax": 0.85,
+      "rms20Min": 0.3,
+      "rms20Max": 0.6
+    },
+    "mechanism": {
+      "peakMax": 0.85,
+      "rms20Min": 0.32,
+      "rms20Max": 0.65
+    },
+    "incidental": {
+      "peakMax": 0.25,
+      "rms20Min": 0.06,
+      "rms20Max": 0.15,
+      "preferredRms20": 0.1
+    }
+  },
+  "forbidden": {
+    "wood_strap": [
+      "blade_slide",
+      "blade_putaway"
+    ],
+    "body": [
+      "blade_slide",
+      "blade_putaway",
+      "weapon_grip"
+    ],
+    "arrow_wood": [
+      "blade_slide",
+      "blade_putaway"
+    ]
+  },
+  "limits": {
+    "maxPhaseMs": 3000,
+    "maxSceneMs": 6000,
+    "minEssentialGain": 0.1,
+    "ceiling": 0.855,
+    "btMinCorr": 0.5,
+    "maxCalibrationScale": 2.5
+  },
+  "materials": {
+    "blade_slide": {
+      "material": "metal_scabbard",
+      "role": "mechanism",
+      "reference": "draw_s1h",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_s1h",
+          "variant": "A",
+          "intensity": 1.0
+        }
+      ],
+      "calibration": {
+        "peak": 0.85,
+        "rms20": 0.4,
+        "layersSha256": "c2d1ffd6e76db6b4654994747cf17af93cd50624202d0470791a2300d6d00142",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_s1h",
+          "variant": "A",
+          "intensity": 1
+        }
+      ]
+    },
+    "blade_putaway": {
+      "material": "metal_scabbard",
+      "role": "mechanism",
+      "reference": "sheathe_s1h",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "sheathe_s1h",
+          "variant": "A",
+          "intensity": 1.0
+        }
+      ],
+      "calibration": {
+        "peak": 0.85,
+        "rms20": 0.37,
+        "layersSha256": "8a4d71a22017523824f5a4f157df13e9d583ddee773cc5f222b2641a2baad334",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "sheathe_s1h",
+          "variant": "A",
+          "intensity": 1
+        }
+      ]
+    },
+    "bow_release": {
+      "material": "wood_strap",
+      "role": "incidental",
+      "reference": "draw_bow",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_bow",
+          "variant": "A",
+          "intensity": 2.5,
+          "durationMs": 75,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.18,
+        "rms20": 0.09,
+        "layersSha256": "a050730e38cce25ad47227f9298b1164400f6874c3980121db5fd0d70ad7d369",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_bow",
+          "variant": "A",
+          "intensity": 1,
+          "durationMs": 75,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "bow_grip": {
+      "material": "wood_strap",
+      "role": "handling",
+      "reference": "draw_bow",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_bow",
+          "variant": "A",
+          "intensity": 0.991304,
+          "offsetMs": 97,
+          "durationMs": 110,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.79,
+        "rms20": 0.45,
+        "layersSha256": "ae96fa3fff7eb4b32445ff67a50481da9f48174df338036f9689d4eec86db8cf",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "draw_bow",
+          "variant": "A",
+          "intensity": 1,
+          "offsetMs": 97,
+          "durationMs": 110,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "arrow_pull": {
+      "material": "arrow_wood",
+      "role": "handling",
+      "reference": "reload_bow",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "reload_bow",
+          "variant": "A",
+          "intensity": 0.9975,
+          "durationMs": 300,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.77,
+        "rms20": 0.4,
+        "layersSha256": "070ecd8575c9c4e9d03800e7d8aa353789d9f0d78b640a5f455812caaa094413",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "reload_bow",
+          "variant": "A",
+          "intensity": 1,
+          "durationMs": 300,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "arrow_seat": {
+      "material": "arrow_wood",
+      "role": "contact",
+      "reference": "reload_bow",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "reload_bow",
+          "variant": "A",
+          "intensity": 1.0,
+          "offsetMs": 380,
+          "durationMs": 70,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.85,
+        "rms20": 0.39,
+        "layersSha256": "5c5b554430ca83db8343580c8f6adef53a65a3bcd4f005eae68ad0dd364a5015",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "reload_bow",
+          "variant": "A",
+          "intensity": 1,
+          "offsetMs": 380,
+          "durationMs": 70,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "hands_raise": {
+      "material": "body",
+      "role": "incidental",
+      "reference": "fists_ready",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_ready",
+          "variant": "A",
+          "intensity": 2.5,
+          "durationMs": 149,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.14,
+        "rms20": 0.07,
+        "layersSha256": "dd558ce813aa78924342d7de6b7af15615aeab8bcdae60bdc1ade5add9830ef0",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_ready",
+          "variant": "A",
+          "intensity": 1,
+          "durationMs": 149,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "hands_clench": {
+      "material": "body",
+      "role": "contact",
+      "reference": "fists_ready",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_ready",
+          "variant": "A",
+          "intensity": 0.992727,
+          "offsetMs": 149,
+          "durationMs": 100,
+          "fadeMs": 3
+        }
+      ],
+      "calibration": {
+        "peak": 0.84,
+        "rms20": 0.54,
+        "layersSha256": "e034536616190ba2be7a97851658a034bc24d7e5b646ad6a8536d8d80f9eff14",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_ready",
+          "variant": "A",
+          "intensity": 1,
+          "offsetMs": 149,
+          "durationMs": 100,
+          "fadeMs": 3
+        }
+      ]
+    },
+    "hands_relax": {
+      "material": "body",
+      "role": "light",
+      "reference": "fists_relax",
+      "layers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_relax",
+          "variant": "A",
+          "intensity": 0.814815
+        }
+      ],
+      "calibration": {
+        "peak": 0.37,
+        "rms20": 0.22,
+        "layersSha256": "e41aef884fd3c0f38eea7c57611d8a4ad08b96659abf9703f1697c1d4c74c3e8",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Sample",
+          "bank": "pilot",
+          "name": "fists_relax",
+          "variant": "A",
+          "intensity": 1
+        }
+      ]
+    },
+    "weight_transfer": {
+      "material": "weighted_handle",
+      "role": "light",
+      "reference": "fists_relax",
+      "layers": [
+        {
+          "preset": "Tick",
+          "freqHz": 110,
+          "ms": 70,
+          "attackMs": 4,
+          "tauMs": 18,
+          "partial": 2,
+          "partialGain": 0.15,
+          "intensity": 0.6
+        }
+      ],
+      "calibration": {
+        "peak": 0.41,
+        "rms20": 0.23,
+        "layersSha256": "31e8d0a58c2685de0f0d0c75bc0ea2bf34d713c97b74549a96382d43d354af8b",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Tick",
+          "freqHz": 110,
+          "ms": 70,
+          "attackMs": 4,
+          "tauMs": 18,
+          "partial": 2,
+          "partialGain": 0.15,
+          "intensity": 0.3
+        }
+      ]
+    },
+    "weapon_grip": {
+      "material": "metal_scabbard",
+      "role": "light",
+      "reference": "fists_relax",
+      "layers": [
+        {
+          "preset": "Tick",
+          "freqHz": 130,
+          "ms": 45,
+          "attackMs": 2,
+          "tauMs": 12,
+          "intensity": 0.55
+        }
+      ],
+      "calibration": {
+        "peak": 0.46,
+        "rms20": 0.19,
+        "layersSha256": "ef5516e2a3315ab41d24049a0f54769f980ce0cc928dbb0df4f91240b7600e4d",
+        "source": "actual DsBridge rules-check renderer; role targets from user-approved references"
+      },
+      "baseLayers": [
+        {
+          "preset": "Tick",
+          "freqHz": 130,
+          "ms": 45,
+          "attackMs": 2,
+          "tauMs": 12,
+          "intensity": 0.22
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Стальная защёлка",
+    "mode": "bow",
+    "pos": 3,
+    "end": 5,
+    "strength": 6,
+    "snap": 8,
+    "pulseAmp": 1,
+    "pulseHz": 200,
+    "pulseMs": 150,
+    "delayMs": 25,
+    "fire": 0.58
+  },
+  {
+    "name": "Сухой спуск",
+    "mode": "weapon",
+    "pos": 4,
+    "end": 5,
+    "strength": 8,
+    "snap": 8,
+    "pulseAmp": 3,
+    "pulseHz": 40,
+    "pulseMs": 150,
+    "delayMs": 5,
+    "fire": 0.58
+  },
+  {
+    "name": "Длинная пружина",
+    "mode": "bow",
+    "pos": 1,
+    "end": 5,
+    "strength": 5,
+    "snap": 8,
+    "pulseAmp": 2,
+    "pulseHz": 160,
+    "pulseMs": 150,
+    "delayMs": 25,
+    "fire": 0.58
+  },
+  {
+    "name": "Глубокий фиксатор",
+    "mode": "bow",
+    "pos": 3,
+    "end": 6,
+    "strength": 7,
+    "snap": 8,
+    "pulseAmp": 1,
+    "pulseHz": 180,
+    "pulseMs": 150,
+    "delayMs": 25,
+    "fire": 0.68
+  },
+  {
+    "name": "Упругий язычок",
+    "mode": "bow",
+    "pos": 2,
+    "end": 5,
+    "strength": 7,
+    "snap": 6,
+    "pulseAmp": 2,
+    "pulseHz": 130,
+    "pulseMs": 150,
+    "delayMs": 28,
+    "fire": 0.58
+  },
+  {
+    "name": "Тяжёлый затвор",
+    "mode": "bow",
+    "pos": 4,
+    "end": 6,
+    "strength": 8,
+    "snap": 8,
+    "pulseAmp": 2,
+    "pulseHz": 220,
+    "pulseMs": 150,
+    "delayMs": 30,
+    "fire": 0.68
+  }
+]

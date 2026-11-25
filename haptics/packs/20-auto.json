@@ -1,0 +1,716 @@
+{
+ "pack": "auto",
+ "description": "generated 2026-11-14T01:00:21 from automap.json by tools/gen_rules.py - do not edit, edit automap.json",
+ "rules": [
+  {
+   "id": "auto-draw",
+   "event": "itemdraw:start",
+   "effect": {
+    "preset": "Mechanical",
+    "intensity": 0.35,
+    "count": 2,
+    "intervalMs": 55,
+    "clickHz": 170,
+    "clickMs": 14
+   },
+   "priority": "low",
+   "note": "auto: style 'draw' (generic tag hook State.ItemDraw (hooks.json group 'pilot'))",
+   "cooldownMs": 400
+  },
+  {
+   "id": "auto-lockpick",
+   "event": "picklock:start",
+   "effect": {
+    "preset": "Mechanical",
+    "intensity": 0.3,
+    "count": 3,
+    "intervalMs": 70,
+    "clickHz": 240,
+    "clickMs": 8,
+    "jitterMs": 15
+   },
+   "priority": "low",
+   "note": "auto: style 'lockpick' (generic tag hook State.PickLock (hooks.json group 'pilot'))"
+  },
+  {
+   "id": "auto-latch",
+   "event": "picklock:complete",
+   "effect": {
+    "preset": "Mechanical",
+    "intensity": 0.4,
+    "count": 1,
+    "clickHz": 150,
+    "clickMs": 25
+   },
+   "priority": "low",
+   "note": "auto: style 'latch' (generic tag hook State.PickLock (hooks.json group 'pilot'))"
+  },
+  {
+   "id": "auto-interact",
+   "event": "interact:start",
+   "effect": {
+    "preset": "Mechanical",
+    "intensity": 0.25,
+    "count": 1,
+    "clickHz": 120,
+    "clickMs": 18
+   },
+   "priority": "low",
+   "note": "auto: style 'touch' (generic tag hook State.Interact (hooks.json group 'batch1'))",
+   "cooldownMs": 500
+  },
+  {
+   "id": "auto-loot",
+   "event": "loot:start",
+   "effect": {
+    "preset": "SurfaceContact",
+    "intensity": 0.25,
+    "durationMs": 140,
+    "surface": "sand"
+   },
+   "priority": "low",
+   "note": "auto: style 'rummage' (generic tag hook State.Interact.Body.Loot (hooks.json group 'batch1'))",
+   "cooldownMs": 500
+  },
+  {
+   "id": "auto-climb",
+   "event": "climbing:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.32,
+    "durationMs": 90,
+    "freqHz": 70,
+    "edge": 0.3
+   },
+   "priority": "low",
+   "note": "auto: style 'grab' (generic tag hook State.WallClimbing (hooks.json group 'batch1'))",
+   "cooldownMs": 300
+  },
+  {
+   "id": "auto-ladder",
+   "event": "ladder:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.18,
+    "durationMs": 90,
+    "freqHz": 70,
+    "edge": 0.3
+   },
+   "priority": "low",
+   "note": "auto: style 'grab' (generic tag hook State.Ladder (hooks.json group 'batch1'))",
+   "cooldownMs": 300
+  },
+  {
+   "id": "auto-outmana",
+   "event": "outmana:start",
+   "effect": {
+    "preset": "Release",
+    "intensity": 0.15,
+    "durationMs": 150,
+    "freqHz": 60,
+    "noise": 0.7
+   },
+   "priority": "low",
+   "note": "auto: style 'fizzle' (generic tag hook State.OutMana (hooks.json group 'batch1'))",
+   "cooldownMs": 800
+  },
+  {
+   "id": "auto-knockback",
+   "event": "knockback:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.55,
+    "durationMs": 200,
+    "tail": 0.6
+   },
+   "priority": "high",
+   "note": "auto: style 'knockback' (generic tag hook State.Knockback (hooks.json group 'pilot'))",
+   "cooldownMs": 300
+  },
+  {
+   "id": "auto-death",
+   "event": "dead:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.65,
+    "durationMs": 280,
+    "tail": 1,
+    "tailHz": 35
+   },
+   "priority": "critical",
+   "note": "auto: style 'death' (generic tag hook State.Dead (hooks.json group 'pilot'))"
+  },
+  {
+   "id": "auto-defeated",
+   "event": "defeated:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.5,
+    "durationMs": 240,
+    "tail": 1
+   },
+   "priority": "high",
+   "note": "auto: style 'knockout' (generic tag hook State.Defeated (hooks.json group 'batch1'))"
+  },
+  {
+   "id": "auto-ragdoll",
+   "event": "ragdoll:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.32,
+    "durationMs": 180
+   },
+   "priority": "normal",
+   "note": "auto: style 'fall_body' (generic tag hook State.Ragdoll (hooks.json group 'batch1'))",
+   "cooldownMs": 500
+  },
+  {
+   "id": "auto-armorbreak",
+   "event": "armorbreak:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.45,
+    "durationMs": 130,
+    "freqHz": 120,
+    "edgeHz": 260,
+    "edge": 0.6,
+    "noise": 0.3
+   },
+   "priority": "high",
+   "note": "auto: style 'metal_hit' (generic tag hook State.Hit.BreakSuperArmor (hooks.json group 'batch1'))",
+   "cooldownMs": 200
+  },
+  {
+   "id": "auto-breakarmor",
+   "event": "breakarmorhit:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.45,
+    "durationMs": 130,
+    "freqHz": 120,
+    "edgeHz": 260,
+    "edge": 0.6,
+    "noise": 0.3
+   },
+   "priority": "high",
+   "note": "auto: style 'metal_hit' (generic event hook Event.Hit.BreakArmorHit (hooks.json group 'batch1'))",
+   "cooldownMs": 200
+  },
+  {
+   "id": "auto-deflected",
+   "event": "attack:update",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.4,
+    "durationMs": 110,
+    "freqHz": 140,
+    "edgeHz": 280,
+    "edge": 0.6,
+    "noise": 0.25
+   },
+   "priority": "normal",
+   "note": "auto: style 'clang' (start: UDataModule_Combat.GetCurrentAttack() change / State.Attack count / OnMontageStarted; update: Event.Damaged.Target.Before (res=contact), Action.Deflected (res=deflected); interrupt: Action.Parried; complete: State.Attack -> 0) - the game's own rumble table has NoRumble for deflected hits -> no double feedback",
+   "where": {
+    "res": "deflected"
+   },
+   "cooldownMs": 120
+  },
+  {
+   "id": "auto-parried",
+   "event": "attack:interrupt",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.45,
+    "durationMs": 150,
+    "freqHz": 90,
+    "edgeHz": 200,
+    "edge": 0.5
+   },
+   "priority": "normal",
+   "note": "auto: style 'jarring' (start: UDataModule_Combat.GetCurrentAttack() change / State.Attack count / OnMontageStarted; update: Event.Damaged.Target.Before (res=contact), Action.Deflected (res=deflected); interrupt: Action.Parried; complete: State.Attack -> 0)",
+   "where": {
+    "res": "parried"
+   },
+   "cooldownMs": 120
+  },
+  {
+   "id": "auto-parry",
+   "event": "parry:start",
+   "effect": {
+    "preset": "Release",
+    "intensity": 0.4,
+    "durationMs": 90,
+    "freqHz": 150,
+    "noise": 0.2
+   },
+   "priority": "normal",
+   "note": "auto: style 'parry_ok' (Action.Parry (player parried; only in ParryMode 1))",
+   "cooldownMs": 120
+  },
+  {
+   "id": "auto-block-up",
+   "event": "block:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.28,
+    "durationMs": 70,
+    "freqHz": 80
+   },
+   "priority": "low",
+   "note": "auto: style 'shield_up' (generic tag hook State.Block (hooks.json group 'pilot'))",
+   "cooldownMs": 300
+  },
+  {
+   "id": "auto-block-hit",
+   "event": "hurt:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.4,
+    "durationMs": 130,
+    "freqHz": 110,
+    "edgeHz": 240,
+    "edge": 0.5
+   },
+   "priority": "high",
+   "note": "auto: style 'shield_hit' (Event.Damaged.Me.Before (player is the target)) - correlated: a hit received while the 'guard' action (block held) is open",
+   "where": {
+    "act_guard": "step"
+   },
+   "cooldownMs": 120
+  },
+  {
+   "id": "auto-cast",
+   "event": "casting:start",
+   "effect": {
+    "preset": "Charge",
+    "intensity": 0.25,
+    "durationMs": 1500,
+    "f0": 50,
+    "f1": 110,
+    "pulseHz": 6
+   },
+   "priority": "normal",
+   "note": "auto: style 'magic_charge' (generic tag hook State.Casting (hooks.json group 'pilot'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 8000
+   }
+  },
+  {
+   "id": "auto-channel",
+   "event": "channeling:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.18,
+    "durationMs": 1000,
+    "freqHz": 55,
+    "noise": 0.3,
+    "pulseHz": 4,
+    "depth": 0.6
+   },
+   "priority": "normal",
+   "note": "auto: style 'channel' (generic tag hook State.Channeling (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 20000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-spell",
+   "event": "spellrelease:start",
+   "effect": {
+    "preset": "Release",
+    "intensity": 0.55,
+    "durationMs": 140,
+    "freqHz": 100,
+    "noise": 0.35
+   },
+   "priority": "normal",
+   "note": "auto: style 'spell_cast' (generic tag hook State.LaunchingSpell (hooks.json group 'pilot'))",
+   "cooldownMs": 150
+  },
+  {
+   "id": "bow-draw",
+   "event": "bowdraw:start",
+   "effect": {
+    "layers": [
+     {
+      "preset": "Charge",
+      "intensity": 0.38,
+      "durationMs": 1000,
+      "f0": 35,
+      "f1": 75,
+      "curve": 1.3,
+      "noise": 0.04
+     },
+     {
+      "preset": "Continuous",
+      "intensity": 0.14,
+      "durationMs": 2600,
+      "freqHz": 72,
+      "noise": 0.1,
+      "fadeMs": 120,
+      "delayMs": 980
+     }
+    ]
+   },
+   "priority": "normal",
+   "note": "auto: style 'bow_draw' (derived.json: R2 pressed while the game says the bow is READY (bow:update aim=1, family archery/bow/crossbow); ends on R2 release or leaving the ready stance)",
+   "group": "bow",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 60000
+   }
+  },
+  {
+   "id": "bow-strain",
+   "event": "overtime:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.3,
+    "durationMs": 1000,
+    "freqHz": 45,
+    "noise": 0.5,
+    "pulseHz": 7,
+    "depth": 0.7,
+    "wobbleHz": 3
+   },
+   "priority": "high",
+   "note": "auto: style 'bow_strain' (an action open longer than its overtimeMs (actions.json))",
+   "where": {
+    "a": "draw"
+   },
+   "group": "bow",
+   "continuous": {
+    "stopWhen": [
+     "bowdraw:complete"
+    ],
+    "untilAction": "draw",
+    "maxMs": 60000,
+    "loop": true,
+    "fadeMs": 400
+   }
+  },
+  {
+   "id": "bow-tire",
+   "event": "bowtire:update",
+   "effect": {
+    "layers": [
+     {
+      "preset": "Release",
+      "intensity": 0.32,
+      "durationMs": 90,
+      "freqHz": 55,
+      "noise": 0.5
+     },
+     {
+      "preset": "Impact",
+      "intensity": 0.26,
+      "durationMs": 320,
+      "freqHz": 38,
+      "noise": 0.6,
+      "edge": 0,
+      "decayTauMs": 140,
+      "delayMs": 30
+     }
+    ]
+   },
+   "priority": "high",
+   "note": "auto: style 'bow_tire' (derived.json: the game drops IsSecureToFire (bow sec 1->0) while aiming with R2 held and no shot = resistance limit reached (session 75: ~5.1 s at full draw)) - game resistance limit: the arm gives out (string slips forward), then the game re-draws by itself",
+   "group": "bow"
+  },
+  {
+   "id": "bow-shot",
+   "event": "montage:start",
+   "effect": {
+    "layers": [
+     {
+      "preset": "Release",
+      "intensity": 0.75,
+      "durationMs": 80,
+      "freqHz": 85,
+      "noise": 0.12
+     },
+     {
+      "preset": "Impact",
+      "intensity": 0.3,
+      "durationMs": 380,
+      "freqHz": 45,
+      "weight": 0.6,
+      "edgeHz": 110,
+      "edge": 0.2,
+      "decayTauMs": 160,
+      "delayMs": 20
+     }
+    ]
+   },
+   "priority": "high",
+   "note": "auto: style 'bow_shot' (UAnimInstance.OnMontageStarted / OnMontageEnded of the player (mod v13): every montage by asset name)",
+   "where": {
+    "m": "~Bow"
+   },
+   "when": "=contains(m, 'ShootReload') && !contains(m, 'Quick') && !contains(m, 'Failure')",
+   "group": "bow"
+  },
+  {
+   "id": "bow-quick",
+   "event": "montage:start",
+   "effect": {
+    "layers": [
+     {
+      "preset": "Release",
+      "intensity": 0.5,
+      "durationMs": 70,
+      "freqHz": 95,
+      "noise": 0.12
+     },
+     {
+      "preset": "Impact",
+      "intensity": 0.18,
+      "durationMs": 250,
+      "freqHz": 50,
+      "decayTauMs": 110,
+      "delayMs": 15
+     }
+    ]
+   },
+   "priority": "high",
+   "note": "auto: style 'bow_quick' (UAnimInstance.OnMontageStarted / OnMontageEnded of the player (mod v13): every montage by asset name)",
+   "where": {
+    "m": "~Bow"
+   },
+   "when": "=contains(m, 'QuickShootReload') && !contains(m, 'Failure')",
+   "group": "bow"
+  },
+  {
+   "id": "bow-fail",
+   "event": "montage:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.35,
+    "durationMs": 160,
+    "freqHz": 50,
+    "edge": 0,
+    "noise": 0.4
+   },
+   "priority": "high",
+   "note": "auto: style 'bow_fail' (UAnimInstance.OnMontageStarted / OnMontageEnded of the player (mod v13): every montage by asset name)",
+   "where": {
+    "m": "~Bow"
+   },
+   "when": "=contains(m, 'Failure')",
+   "group": "bow"
+  },
+  {
+   "id": "xbow-shot",
+   "event": "montage:start",
+   "effect": {
+    "preset": "Impact",
+    "intensity": 0.6,
+    "durationMs": 140,
+    "freqHz": 70,
+    "edgeHz": 180,
+    "edge": 0.5,
+    "noise": 0.2
+   },
+   "priority": "high",
+   "note": "auto: style 'xbow_shot' (UAnimInstance.OnMontageStarted / OnMontageEnded of the player (mod v13): every montage by asset name)",
+   "where": {
+    "m": "~Crossbow"
+   },
+   "when": "=contains(m, 'Shoot') && !contains(m, 'Reload')",
+   "group": "bow"
+  },
+  {
+   "id": "auto-burning",
+   "event": "burning:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.22,
+    "durationMs": 1000,
+    "freqHz": 40,
+    "noise": 0.85,
+    "pulseHz": 9,
+    "depth": 0.6,
+    "lowpass": 0.15
+   },
+   "priority": "normal",
+   "note": "auto: style 'fire' (generic tag hook State.Burn (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 30000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-frozen",
+   "event": "frozen:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.15,
+    "durationMs": 1000,
+    "freqHz": 140,
+    "noise": 0.2
+   },
+   "priority": "normal",
+   "note": "auto: style 'frost' (generic tag hook State.Cant.Freeze (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 20000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-paralyzed",
+   "event": "paralyzed:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.2,
+    "durationMs": 1000,
+    "freqHz": 45,
+    "noise": 0.2,
+    "pulseHz": 2,
+    "depth": 0.9
+   },
+   "priority": "normal",
+   "note": "auto: style 'paralysis' (generic tag hook State.Cant.Paralyzed (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 20000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-stunned",
+   "event": "stunned:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.18,
+    "durationMs": 1400,
+    "freqHz": 50,
+    "noise": 0.3,
+    "wobbleHz": 1.5
+   },
+   "priority": "normal",
+   "note": "auto: style 'daze' (generic tag hook State.Stunned (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 15000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-drowning",
+   "event": "drowning:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.3,
+    "durationMs": 1700,
+    "freqHz": 35,
+    "noise": 0.3,
+    "pulseHz": 1.2,
+    "depth": 0.9
+   },
+   "priority": "high",
+   "note": "auto: style 'choking' (generic tag hook State.Drown (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 60000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-drunk",
+   "event": "drunk_high:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.1,
+    "durationMs": 2500,
+    "freqHz": 40,
+    "noise": 0.3,
+    "wobbleHz": 0.4
+   },
+   "priority": "low",
+   "note": "auto: style 'drunk' (generic tag hook State.Drugs.Forced.Alcohol.High (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 60000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-weed",
+   "event": "weed_high:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.08,
+    "durationMs": 4000,
+    "freqHz": 30,
+    "noise": 0.2,
+    "wobbleHz": 0.25,
+    "pulseHz": 0.5,
+    "depth": 0.5
+   },
+   "priority": "low",
+   "note": "auto: style 'high' (generic tag hook State.Drugs.Forced.Swampweed.High (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 60000,
+    "loop": true
+   }
+  },
+  {
+   "id": "auto-electrified",
+   "event": "electrified:start",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "intensity": 0.25,
+    "durationMs": 1000,
+    "freqHz": 180,
+    "noise": 0.5,
+    "pulseHz": 15,
+    "depth": 0.7
+   },
+   "priority": "high",
+   "note": "auto: style 'shock' (generic tag hook State.Cant.Electrified (hooks.json group 'batch1'))",
+   "continuous": {
+    "stopOn": [
+     "complete"
+    ],
+    "maxMs": 15000,
+    "loop": true
+   }
+  }
+ ]
+}

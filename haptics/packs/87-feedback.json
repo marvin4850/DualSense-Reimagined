@@ -1,0 +1,312 @@
+{
+ "pack": "feedback",
+ "description": "Shared game/library effects from explicit user feedback 16.11.2026. Variations are event driven.",
+ "rules": [
+  {
+   "id": "auto-ladder",
+   "event": "ladder:start",
+   "when": "0 > 1",
+   "effect": {
+    "preset": "Tick",
+    "intensity": 0,
+    "ms": 1
+   },
+   "note": "No rumble on approaching the ladder; only animation contacts below"
+  },
+  {
+   "id": "roll",
+   "event": "roll:start",
+   "path": "auto",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "roll",
+    "slot": "feedback.roll",
+    "variant": "A",
+    "intensity": 0.82
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 1100,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 90
+   },
+   "note": "Shoulder to hip: one soft rolling envelope"
+  },
+  {
+   "id": "auto-weed",
+   "event": "weed_high:start",
+   "path": "hd",
+   "priority": "low",
+   "group": "calm-sway",
+   "effect": {
+    "preset": "Continuous",
+    "loop": 1,
+    "durationMs": 8000,
+    "intensity": 0.016,
+    "freqHz": 64,
+    "noise": 0,
+    "wobbleHz": 0.125,
+    "pulseHz": 0.25,
+    "depth": 0.3
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 1600,
+    "fadeMs": 1600
+   },
+   "note": "Slow L/R travel, two smooth pressure lobes per orbit (figure-eight-like); no clicks, no random noise"
+  },
+  {
+   "id": "ladder-contact-upleftright",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "UpLeftRight"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 34487 - pos)",
+    "gain": "=pos <= 34587 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 54 ms into UpLeftRight; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  },
+  {
+   "id": "ladder-contact-uprightleft",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "UpRightLeft"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 34952 - pos)",
+    "gain": "=pos <= 35052 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 52 ms into UpRightLeft; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  },
+  {
+   "id": "ladder-contact-downleftright",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "DownLeftRight"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 35407 - pos)",
+    "gain": "=pos <= 35507 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 40 ms into DownLeftRight; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  },
+  {
+   "id": "ladder-contact-downrightleft",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "DownRightLeft"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 35901 - pos)",
+    "gain": "=pos <= 36001 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 68 ms into DownRightLeft; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  },
+  {
+   "id": "ladder-contact-upleftrightfast",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "UpLeftRightFast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 38314 - pos)",
+    "gain": "=pos <= 38414 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 36 ms into UpLeftRightFast; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  },
+  {
+   "id": "ladder-contact-uprightleftfast",
+   "event": "craftanim:update",
+   "where": {
+    "m": "Man_Ladder_Locomotion",
+    "sec": "UpRightLeftFast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "feedback",
+    "name": "ladder_contact",
+    "slot": "feedback.ladder_contact",
+    "variant": "A",
+    "intensity": "=(0.62) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.975 : (variation_index == 2 ? 1.025 : (variation_index == 3 ? 1.015 : (variation_index == 4 ? 0.985 : (variation_index == 5 ? 1.035 : (variation_index == 6 ? 0.965 : 1.01))))))))",
+    "delayMs": "=max(0, 38624 - pos)",
+    "gain": "=pos <= 38724 ? 1 : 0",
+    "rate": "=(1) * ((variation_index == 0 ? 1.0 : (variation_index == 1 ? 0.976 : (variation_index == 2 ? 1.024 : (variation_index == 3 ? 0.988 : (variation_index == 4 ? 1.036 : (variation_index == 5 ? 0.964 : (variation_index == 6 ? 1.012 : 1.03))))))))",
+    "pan": "=(variation_index == 0 ? 0 : (variation_index == 1 ? -0.035 : (variation_index == 2 ? 0.03 : (variation_index == 3 ? -0.02 : (variation_index == 4 ? 0.04 : (variation_index == 5 ? 0.015 : (variation_index == 6 ? -0.04 : 0.025)))))))"
+   },
+   "continuous": {
+    "loop": false,
+    "maxMs": 500,
+    "stopOn": [],
+    "stopWhen": [
+     "craftanim:update",
+     "montage:complete",
+     "ladder:complete"
+    ],
+    "stopFadeMs": 30
+   },
+   "note": "Native ladder movement contact at 35 ms into UpRightLeftFast; no free-running timer",
+   "variation": {
+    "mode": "cycle",
+    "count": 8,
+    "group": "ladder_contacts",
+    "scope": "event"
+   }
+  }
+ ]
+}

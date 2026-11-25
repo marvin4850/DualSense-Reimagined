@@ -1,0 +1,41 @@
+{
+  "bank": "bow",
+  "recipe": "bow.forge.json",
+  "generated": "2026-11-16 18:46",
+  "rate": 48000,
+  "variants": [
+    {
+      "name": "A",
+      "label": "from the game's bow-hold sound",
+      "note": "",
+      "auto": false
+    }
+  ],
+  "slots": [
+    {
+      "slot": "hold_creak",
+      "role": "Full draw held: the bow limbs and string creak under tension (SFX_COMBAT_Ranged_Bow_Hold_LayerB_01)",
+      "variants": [
+        {
+          "variant": "A",
+          "ms": 1329.4,
+          "peak": 0.85,
+          "rms20": 0.497,
+          "crest": 5.13,
+          "attackMs": 57.92,
+          "btCorr": 0.8,
+          "btRms20": 0.711,
+          "centroidHz": 136,
+          "dominantHz": 116,
+          "sub": 0,
+          "core": 0.993,
+          "high": 0,
+          "balanceDb": 0,
+          "drive": 0,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "alike": []
+}

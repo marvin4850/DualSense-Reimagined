@@ -1,0 +1,57 @@
+{
+  "enabled": true,
+  "title": "HD: проверка физических событий",
+  "doneMark": "✓",
+  "todoMark": "○",
+  "tasks": [
+    {
+      "id": "stl-bow",
+      "text": "Скрытно: лук достать и убрать",
+      "on": [
+        "rule:breadth-bow-stl-*"
+      ]
+    },
+    {
+      "id": "held",
+      "text": "Факел / дубина: достать и убрать",
+      "on": [
+        "rule:breadth-equipment-nonblade-*"
+      ]
+    },
+    {
+      "id": "extinguish",
+      "text": "Погасить стоячий факел",
+      "on": [
+        "rule:breadth-env-flame-extinguish"
+      ]
+    },
+    {
+      "id": "loot",
+      "text": "Обыскать тело",
+      "on": [
+        "rule:breadth-body-search"
+      ]
+    },
+    {
+      "id": "craft",
+      "text": "Любое доступное ремесло (если рядом)",
+      "on": [
+        "rule:breadth-craft-*"
+      ]
+    },
+    {
+      "id": "object",
+      "text": "Дверь / рычаг (если рядом)",
+      "on": [
+        "rule:breadth-interact-*"
+      ]
+    },
+    {
+      "id": "item",
+      "text": "Зелье / еда (если есть)",
+      "on": [
+        "rule:breadth-item-*"
+      ]
+    }
+  ]
+}

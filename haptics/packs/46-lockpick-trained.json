@@ -1,0 +1,32 @@
+// Pack 46-lockpick-trained (v36, user 15.11.2026): the Trained profile's reward for real progress.
+// The mod sends lp:update ph=progress ONLY after a finished, accepted, legal move that shortened the fewest A/D presses to the
+// open lock (whole lock state, any path - not only the Master route). Nothing before the move, nothing for a strain / reset / break.
+{
+  "pack": "lockpick-trained",
+  "version": 1,
+  "description": "Trained: a crisp double click after a move that brought the lock closer to open (after the settle cascade).",
+  "rules": [
+    {
+      "id": "lp-progress",
+      "event": "lp:update",
+      "where": { "ph": "progress" },
+      "priority": "high",
+      "continuous": {
+        "loop": false,
+        "maxMs": 270,
+        "stopOn": [],
+        "stopWhen": ["lp:update", "lp:complete", "lp:cancel"],
+        "stopFadeMs": 6,
+        "stopIf": "ph == 'press' || ph == 'navpress' || ph == 'sel' || ph == 'strain' || ph == 'motion' || ph == 'settle'"
+      },
+      "effect": {
+        "layers": [
+          { "preset": "Tick", "delayMs": 60, "freqHz": 190, "ms": 70, "tauMs": 24, "attackMs": 1.0, "partial": 2.0, "partialGain": 0.25, "partialTauMs": 10, "drive": 2.5, "intensity": 0.74 },
+          { "preset": "Tick", "delayMs": 130, "freqHz": 290, "ms": 90, "tauMs": 30, "attackMs": 1.0, "partial": 2.0, "partialGain": 0.25, "partialTauMs": 10, "drive": 2.5, "intensity": 0.83 }
+        ],
+        "motor": { "preset": "Rumble", "steps": [[60, 200, 200, 50], [130, 255, 255, 70]] }
+      },
+      "note": "v36c (user 15.11.2026): the reward is the END of the move cascade (motion -> crossings -> detent), right behind the settle detent: rising double pulse 190 Hz / 70 ms at 60 ms and 290 Hz / 90 ms at 130 ms after the settle (v36b had a 170 ms gap and felt detached). A new press / selection cancels a pending one."
+    }
+  ]
+}

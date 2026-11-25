@@ -1,0 +1,22 @@
+// Generated HD profiles the USER approved in game (tools/haptic_intel.py pilot moves their rules from the candidate pack
+// packs/60-pilot.json (off) into packs/55-generated.json (ON in normal play)). Only the user's verdict goes here, with the session.
+// "intensity" = the level the user asked for (rule-level gain); "supersedes" = older generic rules of the same physical moment
+// that the approved profile replaces (switched off by the pack's disableRules while it is on); slot names accept * (fnmatch).
+{
+  "slots": {
+    "draw_bow": {"date": "2026-11-15", "session": "session_game91", "quote": "Даа, отлично. Очень хорошо.", "confirmed": "session_game91: тест выполнен, общий положительный отзыв пользователя"},
+    "sheathe_bow": {"date": "2026-11-15", "session": "session_game91", "quote": "Даа, отлично. Очень хорошо.", "confirmed": "session_game91: тест выполнен, общий положительный отзыв пользователя"},
+    "fists_ready": {"date": "2026-11-15", "session": "session_game91", "quote": "Даа, отлично. Очень хорошо.", "confirmed": "session_game91: тест выполнен, общий положительный отзыв пользователя"},
+    "fists_relax": {"date": "2026-11-15", "session": "session_game91", "quote": "Даа, отлично. Очень хорошо.", "confirmed": "session_game91: тест выполнен, общий положительный отзыв пользователя"},
+    "chest_close": {"date": "2026-11-15", "session": "session_game90", "quote": "теперь всё хорошо, особенно мне очень понравилось закрытие сундука", "confirmed": "session_game90: Out anchor + unchanged material"},
+    "reload_bow": {"date": "2026-11-15", "session": "session_game90", "quote": "теперь всё хорошо", "confirmed": "извлечение/укладывание стрелы; НЕ одобрение старого draw_bow, который пользователь попросил заменить"},
+    "draw_s1h":     { "date": "2026-11-15", "session": "session_game86", "quote": "очень понравилась вибрация доставания оружия",
+                      "supersedes": ["auto-draw"], "confirmed": "session_game91: новая синхронизация по PlayFX одобрена; 3 доставания" },
+    "sheathe_s1h":  { "date": "2026-11-15", "session": "session_game86", "quote": "очень понравилось то, как он его обратно ложит в ножны" },
+    "contact_fist": { "date": "2026-11-15", "session": "session_game86", "quote": "кулаки рабочие, тоже норм" },
+    "contact_s1h":  { "date": "2026-11-15", "session": "session_game88", "quote": "в целом всё работает (4 удара мечом по противнику)" },
+    "chest_open":   { "date": "2026-11-15", "session": "session_game88", "quote": "в целом всё работает (сундук v2 по моменту открытия; просьба: добавить закрывание)" },
+    "step_*_crouch": { "date": "2026-11-15", "session": "session_game86", "intensity": 0.65, "confirmed": "session_game88 (38 шагов, замечаний нет)",
+                       "quote": "ощущаются шаги по разным поверхностям, хорошо по самим вибрациям, просто нужно сделать их чуть тише" }
+  }
+}

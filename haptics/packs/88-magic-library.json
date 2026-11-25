@@ -1,0 +1,2905 @@
+{
+ "pack": "magic-library",
+ "description": "LIBRARY-ONLY magic candidates (tools/magic_library.py). Events magic_lib / magic_hold are sent only by the haptic library; no game hook exists. Disabled in haptics.json.",
+ "rules": [
+  {
+   "id": "magic-firebolt-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firebolt",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_cast",
+    "slot": "magic.firebolt_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Огненная стрела · Cast · зарождение пламени (library-only candidate)"
+  },
+  {
+   "id": "magic-firebolt-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firebolt",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_release",
+    "slot": "magic.firebolt_release",
+    "variant": "A",
+    "intensity": 0.8
+   },
+   "note": "Огненная стрела · Release · резкий выпуск (library-only candidate)"
+  },
+  {
+   "id": "magic-firebolt-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firebolt",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firebolt_impact",
+    "slot": "magic.firebolt_impact",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Огненная стрела · Impact · огненный хлопок (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_cast",
+    "slot": "magic.fireball_cast",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Огненный шар · Cast · воспламенение (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge",
+    "slot": "magic.fireball_charge",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Огненный шар · Charge · первая ступень (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-charge2",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "charge2"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge2",
+    "slot": "magic.fireball_charge2",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Огненный шар · Charge · вторая ступень (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-charge3",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "charge3"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_charge3",
+    "slot": "magic.fireball_charge3",
+    "variant": "A",
+    "intensity": 0.8
+   },
+   "note": "Огненный шар · Charge · третья ступень (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-hold",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "fireball"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_hold",
+    "slot": "magic.fireball_hold",
+    "variant": "A",
+    "intensity": 0.42
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Огненный шар · Sustain · удержание заряда (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_release",
+    "slot": "magic.fireball_release",
+    "variant": "A",
+    "intensity": 0.9
+   },
+   "note": "Огненный шар · Release · тяжёлый выброс (library-only candidate)"
+  },
+  {
+   "id": "magic-fireball-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fireball",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fireball_impact",
+    "slot": "magic.fireball_impact",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Огненный шар · Impact · объёмный взрыв (library-only candidate)"
+  },
+  {
+   "id": "magic-firestorm-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firestorm",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_cast",
+    "slot": "magic.firestorm_cast",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Огненный шторм · Cast · нагнетание (library-only candidate)"
+  },
+  {
+   "id": "magic-firestorm-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firestorm",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_release",
+    "slot": "magic.firestorm_release",
+    "variant": "A",
+    "intensity": 0.88
+   },
+   "note": "Огненный шторм · Release · выброс вихря (library-only candidate)"
+  },
+  {
+   "id": "magic-firestorm-storm",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "firestorm"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_storm",
+    "slot": "magic.firestorm_storm",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Огненный шторм · Sustain · вращающееся пламя (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-firestorm-end",
+   "event": "magic_hold:complete",
+   "where": {
+    "spell": "firestorm"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firestorm_end",
+    "slot": "magic.firestorm_end",
+    "variant": "A",
+    "intensity": 0.55
+   },
+   "note": "Огненный шторм · End · угасание бури (library-only candidate)"
+  },
+  {
+   "id": "magic-firerain-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firerain",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_cast",
+    "slot": "magic.firerain_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Огненный дождь · Cast · жест (library-only candidate)"
+  },
+  {
+   "id": "magic-firerain-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firerain",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_charge",
+    "slot": "magic.firerain_charge",
+    "variant": "A",
+    "intensity": 0.8
+   },
+   "note": "Огненный дождь · Charge · гром и две молнии (library-only candidate)"
+  },
+  {
+   "id": "magic-firerain-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firerain",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_release",
+    "slot": "magic.firerain_release",
+    "variant": "A",
+    "intensity": 0.92
+   },
+   "note": "Огненный дождь · Release · удар в землю (library-only candidate)"
+  },
+  {
+   "id": "magic-firerain-rain",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "firerain",
+    "part": "rain"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "firerain_rain",
+    "slot": "magic.firerain_rain",
+    "variant": "A",
+    "intensity": 0.78
+   },
+   "note": "Огненный дождь · Impact · огненный дождь (отдельные падения) (library-only candidate)"
+  },
+  {
+   "id": "magic-icebolt-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icebolt",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_cast",
+    "slot": "magic.icebolt_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Ледяная стрела · Cast · рост кристалла (library-only candidate)"
+  },
+  {
+   "id": "magic-icebolt-hold",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "icebolt"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_hold",
+    "slot": "magic.icebolt_hold",
+    "variant": "A",
+    "intensity": 0.3
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Ледяная стрела · Sustain · удержание (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-icebolt-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icebolt",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_release",
+    "slot": "magic.icebolt_release",
+    "variant": "A",
+    "intensity": 0.82
+   },
+   "note": "Ледяная стрела · Release · резкий выпуск (library-only candidate)"
+  },
+  {
+   "id": "magic-icebolt-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icebolt",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icebolt_impact",
+    "slot": "magic.icebolt_impact",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Ледяная стрела · Impact · осколки (library-only candidate)"
+  },
+  {
+   "id": "magic-iceblock-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "iceblock",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_cast",
+    "slot": "magic.iceblock_cast",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Ледяная глыба · Cast · уплотнение льда (library-only candidate)"
+  },
+  {
+   "id": "magic-iceblock-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "iceblock",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_release",
+    "slot": "magic.iceblock_release",
+    "variant": "A",
+    "intensity": 0.88
+   },
+   "note": "Ледяная глыба · Release · тяжёлые хрусты (library-only candidate)"
+  },
+  {
+   "id": "magic-iceblock-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "iceblock",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "iceblock_impact",
+    "slot": "magic.iceblock_impact",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Ледяная глыба · Impact · завершающее растрескивание (library-only candidate)"
+  },
+  {
+   "id": "magic-icewave-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icewave",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_cast",
+    "slot": "magic.icewave_cast",
+    "variant": "A",
+    "intensity": 0.45
+   },
+   "note": "Ледяная волна · Cast · холод собирается (library-only candidate)"
+  },
+  {
+   "id": "magic-icewave-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icewave",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_release",
+    "slot": "magic.icewave_release",
+    "variant": "A",
+    "intensity": 0.82
+   },
+   "note": "Ледяная волна · Release · волна хрупких щелчков (library-only candidate)"
+  },
+  {
+   "id": "magic-icewave-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "icewave",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "icewave_end",
+    "slot": "magic.icewave_end",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Ледяная волна · End · остаточные трески (library-only candidate)"
+  },
+  {
+   "id": "magic-balllightning-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "balllightning",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_cast",
+    "slot": "magic.balllightning_cast",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Шаровая молния · Cast · первый разряд (library-only candidate)"
+  },
+  {
+   "id": "magic-balllightning-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "balllightning",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_charge",
+    "slot": "magic.balllightning_charge",
+    "variant": "A",
+    "intensity": 0.72
+   },
+   "note": "Шаровая молния · Charge · накопление (4 разряда по анимации) (library-only candidate)"
+  },
+  {
+   "id": "magic-balllightning-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "balllightning",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_release",
+    "slot": "magic.balllightning_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Шаровая молния · Release · резкий выпуск (library-only candidate)"
+  },
+  {
+   "id": "magic-balllightning-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "balllightning",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "balllightning_impact",
+    "slot": "magic.balllightning_impact",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Шаровая молния · Impact · плотная вспышка (library-only candidate)"
+  },
+  {
+   "id": "magic-chainlightning-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "chainlightning",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_cast",
+    "slot": "magic.chainlightning_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Молния (цепная) · Cast · искра (library-only candidate)"
+  },
+  {
+   "id": "magic-chainlightning-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "chainlightning",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_release",
+    "slot": "magic.chainlightning_release",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Молния (цепная) · Release · мощный первый разряд (library-only candidate)"
+  },
+  {
+   "id": "magic-chainlightning-chain",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "chainlightning"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_chain",
+    "slot": "magic.chainlightning_chain",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Молния (цепная) · Sustain · пробой цели (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-chainlightning-jump",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "chainlightning",
+    "part": "jump"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_jump",
+    "slot": "magic.chainlightning_jump",
+    "variant": "A",
+    "intensity": 0.8,
+    "panFrom": "=pan / 100",
+    "panTo": "=pan / 100"
+   },
+   "note": "Молния (цепная) · Impact · пробой следующей цели (library-only candidate)"
+  },
+  {
+   "id": "magic-chainlightning-end",
+   "event": "magic_hold:complete",
+   "where": {
+    "spell": "chainlightning"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "chainlightning_end",
+    "slot": "magic.chainlightning_end",
+    "variant": "A",
+    "intensity": 0.45
+   },
+   "note": "Молния (цепная) · End · угасание (library-only candidate)"
+  },
+  {
+   "id": "magic-fistofwind-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fistofwind",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_charge",
+    "slot": "magic.fistofwind_charge",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Кулак ветра · Charge · сжатие давления (library-only candidate)"
+  },
+  {
+   "id": "magic-fistofwind-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fistofwind",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_release",
+    "slot": "magic.fistofwind_release",
+    "variant": "A",
+    "intensity": 0.92
+   },
+   "note": "Кулак ветра · Release · короткий толчок (library-only candidate)"
+  },
+  {
+   "id": "magic-fistofwind-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fistofwind",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fistofwind_end",
+    "slot": "magic.fistofwind_end",
+    "variant": "A",
+    "intensity": 0.4
+   },
+   "note": "Кулак ветра · End · рассеивание (library-only candidate)"
+  },
+  {
+   "id": "magic-stormfist-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "stormfist",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_charge",
+    "slot": "magic.stormfist_charge",
+    "variant": "A",
+    "intensity": 0.66
+   },
+   "note": "Кулак бури · Charge · завывание (library-only candidate)"
+  },
+  {
+   "id": "magic-stormfist-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "stormfist",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_release",
+    "slot": "magic.stormfist_release",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Кулак бури · Release · тяжёлый удар воздуха (library-only candidate)"
+  },
+  {
+   "id": "magic-stormfist-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "stormfist",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "stormfist_end",
+    "slot": "magic.stormfist_end",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Кулак бури · End · затухающие вихри (library-only candidate)"
+  },
+  {
+   "id": "magic-pyrokinesis-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "pyrokinesis",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_cast",
+    "slot": "magic.pyrokinesis_cast",
+    "variant": "A",
+    "intensity": 0.72
+   },
+   "note": "Пирокинез · Cast · воспламенение (library-only candidate)"
+  },
+  {
+   "id": "magic-pyrokinesis-burn",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "pyrokinesis"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_burn",
+    "slot": "magic.pyrokinesis_burn",
+    "variant": "A",
+    "intensity": 0.48
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Пирокинез · Sustain · удерживаемое пламя (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-pyrokinesis-end",
+   "event": "magic_hold:complete",
+   "where": {
+    "spell": "pyrokinesis"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "pyrokinesis_end",
+    "slot": "magic.pyrokinesis_end",
+    "variant": "A",
+    "intensity": 0.4
+   },
+   "note": "Пирокинез · End · отпускание (library-only candidate)"
+  },
+  {
+   "id": "magic-sleep-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "sleep",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "sleep_cast",
+    "slot": "magic.sleep_cast",
+    "variant": "A",
+    "intensity": 0.48
+   },
+   "note": "Сон · Cast · убаюкивание (library-only candidate)"
+  },
+  {
+   "id": "magic-sleep-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "sleep",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "sleep_release",
+    "slot": "magic.sleep_release",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Сон · Release · угасающие импульсы (library-only candidate)"
+  },
+  {
+   "id": "magic-charm-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "charm",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_cast",
+    "slot": "magic.charm_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Чары · Cast · две пульсации (library-only candidate)"
+  },
+  {
+   "id": "magic-charm-hold",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "charm"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_hold",
+    "slot": "magic.charm_hold",
+    "variant": "A",
+    "intensity": 0.42
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Чары · Sustain · сближение (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-charm-impact",
+   "event": "magic_hold:complete",
+   "where": {
+    "spell": "charm"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "charm_impact",
+    "slot": "magic.charm_impact",
+    "variant": "A",
+    "intensity": 0.52
+   },
+   "note": "Чары · Impact · гармоничная волна на цели (library-only candidate)"
+  },
+  {
+   "id": "magic-fear-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fear",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fear_cast",
+    "slot": "magic.fear_cast",
+    "variant": "A",
+    "intensity": 0.9
+   },
+   "note": "Страх · Cast · внезапный импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-fear-wave",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "fear",
+    "part": "wave"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "fear_wave",
+    "slot": "magic.fear_wave",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Страх · Release · тревожное сердцебиение (library-only candidate)"
+  },
+  {
+   "id": "magic-control-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "control",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_cast",
+    "slot": "magic.control_cast",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Контроль · Cast · захват (library-only candidate)"
+  },
+  {
+   "id": "magic-control-charge",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "control"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_charge",
+    "slot": "magic.control_charge",
+    "variant": "A",
+    "intensity": 0.55
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Контроль · Charge · строгая пульсация (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-control-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "control",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_release",
+    "slot": "magic.control_release",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Контроль · Release · сжатие ритма и подчинение (library-only candidate)"
+  },
+  {
+   "id": "magic-control-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "control",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "control_end",
+    "slot": "magic.control_end",
+    "variant": "A",
+    "intensity": 0.4
+   },
+   "note": "Контроль · End · контроль отпущен (library-only candidate)"
+  },
+  {
+   "id": "magic-telekinesis-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "telekinesis",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_cast",
+    "slot": "magic.telekinesis_cast",
+    "variant": "A",
+    "intensity": 0.58
+   },
+   "note": "Телекинез · Cast · захват (library-only candidate)"
+  },
+  {
+   "id": "magic-telekinesis-hold",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "telekinesis"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_hold",
+    "slot": "magic.telekinesis_hold",
+    "variant": "A",
+    "intensity": 0.32
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Телекинез · Sustain · удержание предмета (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-telekinesis-end",
+   "event": "magic_hold:complete",
+   "where": {
+    "spell": "telekinesis"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "telekinesis_end",
+    "slot": "magic.telekinesis_end",
+    "variant": "A",
+    "intensity": 0.35
+   },
+   "note": "Телекинез · End · мягкое освобождение (library-only candidate)"
+  },
+  {
+   "id": "magic-summonskeletons-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summonskeletons",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_cast",
+    "slot": "magic.summonskeletons_cast",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Призыв скелетов · Cast · мрачная пульсация (library-only candidate)"
+  },
+  {
+   "id": "magic-summonskeletons-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summonskeletons",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_release",
+    "slot": "magic.summonskeletons_release",
+    "variant": "A",
+    "intensity": 0.82
+   },
+   "note": "Призыв скелетов · Release · удар в землю (library-only candidate)"
+  },
+  {
+   "id": "magic-summonskeletons-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summonskeletons",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_charge",
+    "slot": "magic.summonskeletons_charge",
+    "variant": "A",
+    "intensity": 0.66
+   },
+   "note": "Призыв скелетов · Charge · кости собираются (library-only candidate)"
+  },
+  {
+   "id": "magic-summonskeletons-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summonskeletons",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summonskeletons_impact",
+    "slot": "magic.summonskeletons_impact",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Призыв скелетов · Impact · короткое оживление (library-only candidate)"
+  },
+  {
+   "id": "magic-summongolem-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summongolem",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_cast",
+    "slot": "magic.summongolem_cast",
+    "variant": "A",
+    "intensity": 0.66
+   },
+   "note": "Призыв голема · Cast · глубокое нарастание (library-only candidate)"
+  },
+  {
+   "id": "magic-summongolem-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summongolem",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_release",
+    "slot": "magic.summongolem_release",
+    "variant": "A",
+    "intensity": 0.86
+   },
+   "note": "Призыв голема · Release · удар в землю (library-only candidate)"
+  },
+  {
+   "id": "magic-summongolem-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summongolem",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_charge",
+    "slot": "magic.summongolem_charge",
+    "variant": "A",
+    "intensity": 0.75
+   },
+   "note": "Призыв голема · Charge · смещения камня (library-only candidate)"
+  },
+  {
+   "id": "magic-summongolem-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summongolem",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summongolem_impact",
+    "slot": "magic.summongolem_impact",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Призыв голема · Impact · завершающий удар (library-only candidate)"
+  },
+  {
+   "id": "magic-summondemon-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summondemon",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_cast",
+    "slot": "magic.summondemon_cast",
+    "variant": "A",
+    "intensity": 0.66
+   },
+   "note": "Призыв демона · Cast · чужеродная энергия (library-only candidate)"
+  },
+  {
+   "id": "magic-summondemon-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summondemon",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_release",
+    "slot": "magic.summondemon_release",
+    "variant": "A",
+    "intensity": 0.84
+   },
+   "note": "Призыв демона · Release · удар в землю (library-only candidate)"
+  },
+  {
+   "id": "magic-summondemon-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summondemon",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_charge",
+    "slot": "magic.summondemon_charge",
+    "variant": "A",
+    "intensity": 0.78
+   },
+   "note": "Призыв демона · Charge · разрыв пространства (library-only candidate)"
+  },
+  {
+   "id": "magic-summondemon-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "summondemon",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "summondemon_impact",
+    "slot": "magic.summondemon_impact",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Призыв демона · Impact · многослойное появление (library-only candidate)"
+  },
+  {
+   "id": "magic-armyofdarkness-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "armyofdarkness",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_cast",
+    "slot": "magic.armyofdarkness_cast",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Армия тьмы · Cast · тьма сгущается (library-only candidate)"
+  },
+  {
+   "id": "magic-armyofdarkness-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "armyofdarkness",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_release",
+    "slot": "magic.armyofdarkness_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Армия тьмы · Release · широкая тёмная волна (library-only candidate)"
+  },
+  {
+   "id": "magic-armyofdarkness-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "armyofdarkness",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "armyofdarkness_impact",
+    "slot": "magic.armyofdarkness_impact",
+    "variant": "A",
+    "intensity": 0.84
+   },
+   "note": "Армия тьмы · Impact · пробуждение мёртвых (library-only candidate)"
+  },
+  {
+   "id": "magic-deathtoundead-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "deathtoundead",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_cast",
+    "slot": "magic.deathtoundead_cast",
+    "variant": "A",
+    "intensity": 0.72
+   },
+   "note": "Уничтожение нежити · Cast · плотное начало (library-only candidate)"
+  },
+  {
+   "id": "magic-deathtoundead-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "deathtoundead",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_release",
+    "slot": "magic.deathtoundead_release",
+    "variant": "A",
+    "intensity": 0.95
+   },
+   "note": "Уничтожение нежити · Release · перелом структуры (library-only candidate)"
+  },
+  {
+   "id": "magic-deathtoundead-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "deathtoundead",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "deathtoundead_impact",
+    "slot": "magic.deathtoundead_impact",
+    "variant": "A",
+    "intensity": 0.9
+   },
+   "note": "Уничтожение нежити · Impact · хрупкое разрушение и тишина (library-only candidate)"
+  },
+  {
+   "id": "magic-breathofdeath-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "breathofdeath",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "breathofdeath_charge",
+    "slot": "magic.breathofdeath_charge",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Дыхание смерти · Charge · вдох (library-only candidate)"
+  },
+  {
+   "id": "magic-breathofdeath-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "breathofdeath",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "breathofdeath_release",
+    "slot": "magic.breathofdeath_release",
+    "variant": "A",
+    "intensity": 0.88
+   },
+   "note": "Дыхание смерти · Release · смертоносная волна (library-only candidate)"
+  },
+  {
+   "id": "magic-wavedeath-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "wavedeath",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_cast",
+    "slot": "magic.wavedeath_cast",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Волна смерти Уризеля · Cast · колоссальное нарастание (library-only candidate)"
+  },
+  {
+   "id": "magic-wavedeath-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "wavedeath",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_release",
+    "slot": "magic.wavedeath_release",
+    "variant": "A",
+    "intensity": 1.0
+   },
+   "note": "Волна смерти Уризеля · Release · широкий выброс и распространение (library-only candidate)"
+  },
+  {
+   "id": "magic-wavedeath-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "wavedeath",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "wavedeath_end",
+    "slot": "magic.wavedeath_end",
+    "variant": "A",
+    "intensity": 0.55
+   },
+   "note": "Волна смерти Уризеля · End · глубокое затухание (library-only candidate)"
+  },
+  {
+   "id": "magic-light-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "light",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_cast",
+    "slot": "magic.light_cast",
+    "variant": "A",
+    "intensity": 0.45
+   },
+   "note": "Свет · Cast · свет рождается (library-only candidate)"
+  },
+  {
+   "id": "magic-light-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "light",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "light_release",
+    "slot": "magic.light_release",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Свет · Release · лёгкий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-heal-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "heal",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "heal_cast",
+    "slot": "magic.heal_cast",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Исцеление · Cast · спокойные пульсации (library-only candidate)"
+  },
+  {
+   "id": "magic-heal-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "heal",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "heal_release",
+    "slot": "magic.heal_release",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Исцеление · Release · объединённое затухание (library-only candidate)"
+  },
+  {
+   "id": "magic-shrink-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "shrink",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_cast",
+    "slot": "magic.shrink_cast",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Уменьшение тролля · Cast · плотное воздействие (library-only candidate)"
+  },
+  {
+   "id": "magic-shrink-impact",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "shrink",
+    "part": "impact"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_impact",
+    "slot": "magic.shrink_impact",
+    "variant": "A",
+    "intensity": 0.78
+   },
+   "note": "Уменьшение тролля · Impact · сжатие масштаба (library-only candidate)"
+  },
+  {
+   "id": "magic-shrink-end",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "shrink",
+    "part": "end"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "shrink_end",
+    "slot": "magic.shrink_end",
+    "variant": "A",
+    "intensity": 0.5
+   },
+   "note": "Уменьшение тролля · End · маленький щелчок (library-only candidate)"
+  },
+  {
+   "id": "magic-innospray-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "innospray",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_cast",
+    "slot": "magic.innospray_cast",
+    "variant": "A",
+    "intensity": 0.55
+   },
+   "note": "Молитва Инносу · Cast · первая волна (library-only candidate)"
+  },
+  {
+   "id": "magic-innospray-charge",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "innospray",
+    "part": "charge"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_charge",
+    "slot": "magic.innospray_charge",
+    "variant": "A",
+    "intensity": 0.62
+   },
+   "note": "Молитва Инносу · Charge · согласованные волны (library-only candidate)"
+  },
+  {
+   "id": "magic-innospray-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "innospray",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "innospray_release",
+    "slot": "magic.innospray_release",
+    "variant": "A",
+    "intensity": 0.78
+   },
+   "note": "Молитва Инносу · Release · мягкий выразительный финал (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-biter-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-biter",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Кусач · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-biter-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-biter",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_biter_restructure",
+    "slot": "magic.tr_biter_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Кусач · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-biter-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-biter",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_biter_release",
+    "slot": "magic.tr_biter_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Кусач · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodfly-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodfly",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Шершень · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodfly-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodfly",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodfly_restructure",
+    "slot": "magic.tr_bloodfly_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Шершень · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodfly-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodfly",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodfly_release",
+    "slot": "magic.tr_bloodfly_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Шершень · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodhound-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodhound",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Ищейка · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodhound-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodhound",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodhound_restructure",
+    "slot": "magic.tr_bloodhound_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Ищейка · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-bloodhound-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-bloodhound",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_bloodhound_release",
+    "slot": "magic.tr_bloodhound_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Ищейка · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-firelizard-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-firelizard",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Огненный ящер · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-firelizard-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-firelizard",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_firelizard_restructure",
+    "slot": "magic.tr_firelizard_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Огненный ящер · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-firelizard-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-firelizard",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_firelizard_release",
+    "slot": "magic.tr_firelizard_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Огненный ящер · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-harpy-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-harpy",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Гарпия · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-harpy-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-harpy",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_harpy_restructure",
+    "slot": "magic.tr_harpy_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Гарпия · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-harpy-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-harpy",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_harpy_release",
+    "slot": "magic.tr_harpy_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Гарпия · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lizard-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lizard",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Ящер · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lizard-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lizard",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lizard_restructure",
+    "slot": "magic.tr_lizard_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Ящер · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lizard-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lizard",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lizard_release",
+    "slot": "magic.tr_lizard_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Ящер · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lurker-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lurker",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Шныг · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lurker-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lurker",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lurker_restructure",
+    "slot": "magic.tr_lurker_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Шныг · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-lurker-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-lurker",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_lurker_release",
+    "slot": "magic.tr_lurker_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Шныг · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-meatbug-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-meatbug",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Мясной жук · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-meatbug-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-meatbug",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_meatbug_restructure",
+    "slot": "magic.tr_meatbug_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Мясной жук · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-meatbug-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-meatbug",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_meatbug_release",
+    "slot": "magic.tr_meatbug_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Мясной жук · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-minecrawler-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-minecrawler",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Ползун · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-minecrawler-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-minecrawler",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_minecrawler_restructure",
+    "slot": "magic.tr_minecrawler_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Ползун · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-minecrawler-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-minecrawler",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_minecrawler_release",
+    "slot": "magic.tr_minecrawler_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Ползун · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-molerat-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-molerat",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Кротокрыс · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-molerat-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-molerat",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_molerat_restructure",
+    "slot": "magic.tr_molerat_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Кротокрыс · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-molerat-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-molerat",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_molerat_release",
+    "slot": "magic.tr_molerat_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Кротокрыс · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-orcdog-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-orcdog",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Орочья гончая · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-orcdog-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-orcdog",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_orcdog_restructure",
+    "slot": "magic.tr_orcdog_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Орочья гончая · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-orcdog-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-orcdog",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_orcdog_release",
+    "slot": "magic.tr_orcdog_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Орочья гончая · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-razor-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-razor",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Бритвозуб · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-razor-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-razor",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_razor_restructure",
+    "slot": "magic.tr_razor_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Бритвозуб · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-razor-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-razor",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_razor_release",
+    "slot": "magic.tr_razor_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Бритвозуб · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-scavenger-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-scavenger",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Падальщик · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-scavenger-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-scavenger",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_scavenger_restructure",
+    "slot": "magic.tr_scavenger_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Падальщик · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-scavenger-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-scavenger",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_scavenger_release",
+    "slot": "magic.tr_scavenger_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Падальщик · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-shadowbeast-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-shadowbeast",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Мракорис · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-shadowbeast-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-shadowbeast",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_shadowbeast_restructure",
+    "slot": "magic.tr_shadowbeast_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Мракорис · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-shadowbeast-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-shadowbeast",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_shadowbeast_release",
+    "slot": "magic.tr_shadowbeast_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Мракорис · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-snapper-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-snapper",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Глорх · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-snapper-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-snapper",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_snapper_restructure",
+    "slot": "magic.tr_snapper_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Глорх · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-snapper-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-snapper",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_snapper_release",
+    "slot": "magic.tr_snapper_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Глорх · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-swampshark-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-swampshark",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Болотожор · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-swampshark-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-swampshark",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_swampshark_restructure",
+    "slot": "magic.tr_swampshark_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Болотожор · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-swampshark-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-swampshark",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_swampshark_release",
+    "slot": "magic.tr_swampshark_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Болотожор · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-wolf-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-wolf",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "transform_activation",
+    "slot": "magic.transform_activation",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Превращение: Волк · Cast · магическая активация (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-wolf-restructure",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-wolf",
+    "part": "restructure"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_wolf_restructure",
+    "slot": "magic.tr_wolf_restructure",
+    "variant": "A",
+    "intensity": 0.7
+   },
+   "note": "Превращение: Волк · Charge · органическая перестройка (library-only candidate)"
+  },
+  {
+   "id": "magic-tr-wolf-release",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "tr-wolf",
+    "part": "release"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "tr_wolf_release",
+    "slot": "magic.tr_wolf_release",
+    "variant": "A",
+    "intensity": 0.85
+   },
+   "note": "Превращение: Волк · Release · завершающий импульс (library-only candidate)"
+  },
+  {
+   "id": "magic-teleport-cast",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "teleport",
+    "part": "cast"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_cast",
+    "slot": "magic.teleport_cast",
+    "variant": "A",
+    "intensity": 0.6
+   },
+   "note": "Телепортация · Cast · пространство сжимается (library-only candidate)"
+  },
+  {
+   "id": "magic-teleport-charge",
+   "event": "magic_hold:start",
+   "where": {
+    "spell": "teleport"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_charge",
+    "slot": "magic.teleport_charge",
+    "variant": "A",
+    "intensity": 0.48
+   },
+   "continuous": {
+    "loop": true,
+    "maxMs": 600000,
+    "stopOn": [
+     "complete",
+     "cancel",
+     "interrupt"
+    ],
+    "stopOnFadeMs": 350,
+    "fadeMs": 250
+   },
+   "note": "Телепортация · Sustain · вихрь энергии (петля) (library-only candidate)"
+  },
+  {
+   "id": "magic-teleport-vanish",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "teleport",
+    "part": "vanish"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_vanish",
+    "slot": "magic.teleport_vanish",
+    "variant": "A",
+    "intensity": 0.92
+   },
+   "note": "Телепортация · Release · исчезновение (резкий обрыв) (library-only candidate)"
+  },
+  {
+   "id": "magic-teleport-arrive",
+   "event": "magic_lib:start",
+   "where": {
+    "spell": "teleport",
+    "part": "arrive"
+   },
+   "path": "hd",
+   "priority": "normal",
+   "effect": {
+    "preset": "Sample",
+    "bank": "magic",
+    "name": "teleport_arrive",
+    "slot": "magic.teleport_arrive",
+    "variant": "A",
+    "intensity": 0.58
+   },
+   "note": "Телепортация · End · материализация (library-only candidate)"
+  }
+ ]
+}
